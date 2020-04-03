@@ -16,8 +16,9 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="index.scss" />
-    <script src="index.js"></script>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+    <!-- <link rel="stylesheet" href="index.scss" />
+    <script src="index.js"></script> -->
     <style>
       .wrapper {
         position: relative;
@@ -40,56 +41,15 @@
         /* text-align: center; */
         /* border: 1px black solid; */
       }
-      .shanxing {
-        position: relative;
-        width: 200px;
-        height: 200px;
-        border-radius: 100px;
-        background-color: yellow;
-      }
-      .sx1 {
+      #main {
         position: absolute;
-        width: 200px;
-        height: 200px;
-        transform: rotate(0deg);
-        clip: rect(
-          0px,
-          100px,
-          200px,
-          0px
-        ); /*这个clip属性用来绘制半圆，在clip的rect范围内的内容显示出来，使用clip属性，元素必须是absolute的 */
-        border-radius: 100px;
-        background-color: #f00;
-        /*-webkit-animation: an1 2s infinite linear; */
-      }
-      .sx2 {
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        transform: rotate(0deg);
-        clip: rect(0px, 100px, 200px, 0px);
-        border-radius: 100px;
-        background-color: #f00;
-        /*-webkit-animation: an2 2s infinite linear;*/
-      }
-
-      /*绘制一个不同颜色半圆夹角 */
-      .shanxing5 .sx1 {
-        transform: rotate(45deg);
-        background-color: #f00;
-      }
-      .shanxing5 .sx2 {
-        transform: rotate(-45deg);
-        background-color: #0f0;
-      }
-      .sx2:hover {
-        transform: translate(5px, 5px);
+        left: 45%;
       }
     </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="piano.html">Navbar</a>
+      <a class="navbar-brand" href="http://lesandoz.nctu.me/piano">Navbar</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -153,7 +113,7 @@
       class="carousel slide"
       data-ride="carousel"
     >
-      <div class="carousel-inner">
+      <!-- <div class="carousel-inner">
         <div class="carousel-item active">
           <img class="d-block w-100" src="./img/bite.jpg" alt="First slide" />
         </div>
@@ -190,72 +150,68 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
-    </div>
-    <h1>何彥穎的首頁</h1>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <div class="container wrapper">
-      <h2>我會的技能</h2>
-      <ul class="nav nav-tabs">
-        <li class="nav-item" id="pokemon1" data-effect="show1">
-          <a class="nav-link active" href="#">基礎</a>
-        </li>
-        <li class="nav-item" id="pokemon2" data-effect="show2">
-          <a class="nav-link" href="#">前端</a>
-        </li>
-        <li class="nav-item" id="pokemon3" data-effect="show3">
-          <a class="nav-link" href="#">後端</a>
-        </li>
-        <li class="nav-item" id="pokemon4" data-effect="show4">
-          <a class="nav-link" href="#">其他</a>
-        </li>
-      </ul>
-      <div class="tab-content border" id="content1">
-        <div>
-          <h3>基礎技能</h3>
-          <ul>
-            <li>HTML5</li>
-            <li>CSS/SASS/SCSS</li>
-            <li>JavaScript /jQuery</li>
-          </ul>
+    </div> -->
+      <h1>何彥穎的首頁</h1>
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <div class="container wrapper">
+        <h2>我會的技能</h2>
+        <ul class="nav nav-tabs">
+          <li class="nav-item" id="pokemon1" data-effect="show1">
+            <a class="nav-link active" href="#">基礎</a>
+          </li>
+          <li class="nav-item" id="pokemon2" data-effect="show2">
+            <a class="nav-link" href="#">前端</a>
+          </li>
+          <li class="nav-item" id="pokemon3" data-effect="show3">
+            <a class="nav-link" href="#">後端</a>
+          </li>
+          <li class="nav-item" id="pokemon4" data-effect="show4">
+            <a class="nav-link" href="#">其他</a>
+          </li>
+        </ul>
+        <div class="tab-content border" id="content1">
+          <div>
+            <h3>基礎技能</h3>
+            <ul>
+              <li>HTML5</li>
+              <li>CSS/SASS/SCSS</li>
+              <li>JavaScript /jQuery</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-content border" id="content2">
+          <div>
+            <h3>前端技能</h3>
+            <ul>
+              <li>React</li>
+              <li>Redux</li>
+              <li>RWD</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-content border" id="content3">
+          <div>
+            <h3>後端技能</h3>
+            <ul>
+              <li>Php</li>
+              <li>Node.js</li>
+              <li>MySQL</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-content border" id="content4">
+          <div>
+            <h3>其他技能</h3>
+            <ul>
+              <li>photoshop</li>
+              <li>illustrator</li>
+              <li>Adobe XD</li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="tab-content border" id="content2">
-        <div>
-          <h3>前端技能</h3>
-          <ul>
-            <li>React</li>
-            <li>Redux</li>
-            <li>RWD</li>
-          </ul>
-        </div>
-      </div>
-      <div class="tab-content border" id="content3">
-        <div>
-          <h3>後端技能</h3>
-          <ul>
-            <li>Php</li>
-            <li>Node.js</li>
-            <li>MySQL</li>
-          </ul>
-        </div>
-      </div>
-      <div class="tab-content border" id="content4">
-        <div>
-          <h3>其他技能</h3>
-          <ul>
-            <li>photoshop</li>
-            <li>illustrator</li>
-            <li>Adobe XD</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <p>/*绘制一个不同颜色半圆夹角 */</p>
-    <div class="shanxing shanxing5">
-      <div class="sx1"></div>
-      <div class="sx2"></div>
+      <div id="main" style="width: 600px;height:400px;"></div>
     </div>
     <!-- <div class="sector" style="border-radius: 0;"></div> -->
     <script
@@ -310,6 +266,27 @@
           .addClass("active");
         //     $(this).find("a").addClass("active")
         //   .end().siblings().find("a").removeClass("active")
+      });
+    </script>
+    <script type="text/javascript">
+      // 基于准备好的dom，初始化echarts实例
+      var myChart = echarts.init(document.getElementById("main"));
+
+      myChart.setOption({
+        series: [
+          {
+            name: "访问来源",
+            type: "pie", // 设置图表类型为饼图
+            radius: "85%", // 饼图的半径，外半径为可视区尺寸（容器高宽中较小一项）的 55% 长度。
+            data: [
+              // 数据数组，name 为数据项名称，value 为数据项值
+              { value: 45, name: "基礎" },
+              { value: 32, name: "前端" },
+              { value: 30, name: "後端" },
+              { value: 22, name: "其他" }
+            ]
+          }
+        ]
       });
     </script>
   </body>
