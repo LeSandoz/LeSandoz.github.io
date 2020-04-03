@@ -40,50 +40,13 @@
         /* text-align: center; */
         /* border: 1px black solid; */
       }
-      .shanxing {
-        position: relative;
-        width: 200px;
-        height: 200px;
-        border-radius: 100px;
-        background-color: yellow;
+      canvas {
+        /* border: 1px solid red; */
+        transform: translate(110%, -40%);
       }
-      .sx1 {
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        transform: rotate(0deg);
-        clip: rect(
-          0px,
-          100px,
-          200px,
-          0px
-        ); /*这个clip属性用来绘制半圆，在clip的rect范围内的内容显示出来，使用clip属性，元素必须是absolute的 */
-        border-radius: 100px;
-        background-color: #f00;
-        /*-webkit-animation: an1 2s infinite linear; */
-      }
-      .sx2 {
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        transform: rotate(0deg);
-        clip: rect(0px, 100px, 200px, 0px);
-        border-radius: 100px;
-        background-color: #f00;
-        /*-webkit-animation: an2 2s infinite linear;*/
-      }
-
-      /*绘制一个不同颜色半圆夹角 */
-      .shanxing5 .sx1 {
-        transform: rotate(45deg);
-        background-color: #f00;
-      }
-      .shanxing5 .sx2 {
-        transform: rotate(-45deg);
-        background-color: #0f0;
-      }
-      .sx2:hover {
+      .float {
         transform: translate(5px, 5px);
+        box-shadow: gray 5px 5px 5px;
       }
     </style>
   </head>
@@ -251,12 +214,7 @@
         </div>
       </div>
     </div>
-
-    <p>/*绘制一个不同颜色半圆夹角 */</p>
-    <div class="shanxing shanxing5">
-      <div class="sx1"></div>
-      <div class="sx2"></div>
-    </div>
+    <canvas id="cvs" width="500" height="500"></canvas>
     <!-- <div class="sector" style="border-radius: 0;"></div> -->
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -311,6 +269,57 @@
         //     $(this).find("a").addClass("active")
         //   .end().siblings().find("a").removeClass("active")
       });
+    </script>
+    <script>
+      var cvs = document.getElementById("cvs");
+      var ctx = cvs.getContext("2d");
+      var cty = cvs.getContext("2d");
+      var ctv = cvs.getContext("2d");
+      var ctw = cvs.getContext("2d");
+
+      /*
+       * 畫弧( 畫的是路徑 )
+       * ctx.arc( 圓心x軸座標，圓心y軸座標，半徑, 起點弧度，結束點弧度，是否逆時針畫(可選) )  //預設順時針
+       * arc方法內部會先從當前路徑結束點到弧的起點畫一條路徑線。
+       * 起點弧度、結束點弧度以及弧度的方向共同決定了弧的大小。
+       * */
+
+      // 把角度轉換為弧度
+      function angleToRadian(angle) {
+        return (Math.PI / 180) * angle;
+      }
+
+      ctx.beginPath();
+      ctx.moveTo(100, 300);
+      ctx.arc(100, 300, 90, angleToRadian(45), angleToRadian(180));
+      ctx.closePath();
+      ctx.fillStyle = "#FBB917";
+      ctx.fill();
+      ctx.stroke();
+
+      cty.beginPath();
+      cty.moveTo(100, 300);
+      cty.arc(100, 300, 90, angleToRadian(180), angleToRadian(225));
+      cty.closePath();
+      cty.fillStyle = "#eaea90";
+      cty.fill();
+      cty.stroke();
+
+      ctv.beginPath();
+      ctv.moveTo(100, 300);
+      ctv.arc(100, 300, 90, angleToRadian(225), angleToRadian(300));
+      ctv.closePath();
+      ctv.fillStyle = "#4d90fe";
+      ctv.fill();
+      ctv.stroke();
+
+      ctw.beginPath();
+      ctw.moveTo(100, 300);
+      ctw.arc(100, 300, 90, angleToRadian(300), angleToRadian(45));
+      ctw.closePath();
+      ctw.fillStyle = "#39b93b";
+      ctw.fill();
+      ctw.stroke();
     </script>
   </body>
 </html>

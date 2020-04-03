@@ -1,0 +1,22 @@
+.wrapper {
+  position: relative;
+  /* border: 1px black solid; */
+}
+#content2 {
+  display: none;
+}
+#content3 {
+  display: none;
+}
+.tab-content {
+  width: 400px;
+  max-height: 800px;
+  position: absolute;
+  padding: 20px;
+  /* text-align: center; */
+  /* border: 1px black solid; */
+}
+#flotcontainer {
+  width: 500px;
+  height: 400px;
+}
