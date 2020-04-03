@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="piano.css" />
+    <link rel="stylesheet" href="drums.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script src="piano.js"></script>
+  </head>
+  <body>
+    <div class="container piano d-flex">
+      <div class="eight-degree d-flex">
+        <div class="box-container d-flex">
+          <div class="w_box-container d-flex">
+            <div class="w_box" data-id="C" onclick="clickC()" id="C-note">
+              C1
+            </div>
+            <div class="w_box" data-id="D" onclick="clickD()" id="D-note">
+              D
+            </div>
+            <div class="w_box" data-id="E" onclick="clickE()" id="E-note">
+              E
+            </div>
+            <div class="w_box" data-id="F" onclick="clickF()" id="F-note">
+              F
+            </div>
+            <div class="w_box" data-id="G" onclick="clickG()" id="G-note">
+              G
+            </div>
+            <div class="w_box" data-id="A" onclick="clickA()" id="A-note">
+              A
+            </div>
+            <div class="w_box" data-id="B" onclick="clickB()" id="B-note">
+              B
+            </div>
+          </div>
+          <div class="b_box-container d-flex text-white ">
+            <div class="b_box" data-id="Db" onclick="clickDb()" id="Db-note">
+              Db
+            </div>
+            <div class="b_box" data-id="Eb" onclick="clickEb()" id="Eb-note">
+              Eb
+            </div>
+            <div class="b_box o_box">D#</div>
+            <div class="b_box" data-id="Gb" onclick="clickGb()" id="Gb-note">
+              Gb
+            </div>
+            <div class="b_box" data-id="Ab" onclick="clickAb()" id="Ab-note">
+              Ab
+            </div>
+            <div class="b_box" data-id="Bb" onclick="clickBb()" id="Bb-note">
+              Bb
+            </div>
+            <div class="b_box o_box">A#</div>
+          </div>
+        </div>
+      </div>
+      <div class="eight-degree d-flex">
+        <div class="box-container d-flex">
+          <div class="w_box-container d-flex">
+            <div class="w_box" data-id="C2" onclick="clickC2()" id="C2-note">
+              C2
+            </div>
+            <div class="w_box" data-id="D2" onclick="clickD2()" id="D2-note">
+              D2
+            </div>
+            <div class="w_box" data-id="E2" onclick="clickE2()" id="E2-note">
+              E2
+            </div>
+            <div class="w_box" data-id="F2" onclick="clickF2()" id="F2-note">
+              F2
+            </div>
+            <div class="w_box" data-id="G2" onclick="clickG2()" id="G2-note">
+              G2
+            </div>
+            <div class="w_box" data-id="A2" onclick="clickA2()" id="A2-note">
+              A2
+            </div>
+            <div class="w_box" data-id="B2" onclick="clickB2()" id="B2-note">
+              B2
+            </div>
+            <div class="w_box" data-id="C3" onclick="clickC3()" id="C3-note">
+              C3
+            </div>
+          </div>
+          <div class="b_box-container d-flex text-white ">
+            <div class="b_box" data-id="Db2" onclick="clickDb2()" id="Db-note">
+              Db2
+            </div>
+            <div class="b_box" data-id="Eb2" onclick="clickEb2()" id="Eb-note">
+              Eb2
+            </div>
+            <div class="b_box o_box">D#</div>
+            <div class="b_box" data-id="Gb2" onclick="clickGb2()" id="Gb-note">
+              Gb2
+            </div>
+            <div class="b_box" data-id="Ab2" onclick="clickAb2()" id="Ab-note">
+              Ab2
+            </div>
+            <div class="b_box" data-id="Bb2" onclick="clickBb2()" id="Bb-note">
+              Bb2
+            </div>
+            <div class="b_box o_box">A#</div>
+          </div>
+        </div>
+      </div>
+      <div class="audio">
+        <audio id="C" src="notes/C.mp3"></audio>
+        <audio id="Db" src="notes/Db.mp3"></audio>
+        <audio id="D" src="notes/D.mp3"></audio>
+        <audio id="Eb" src="notes/Eb.mp3"></audio>
+        <audio id="E" src="notes/E.mp3"></audio>
+        <audio id="F" src="notes/F.mp3"></audio>
+        <audio id="Gb" src="notes/Gb.mp3"></audio>
+        <audio id="G" src="notes/G.mp3"></audio>
+        <audio id="Ab" src="notes/Ab.mp3"></audio>
+        <audio id="A" src="notes/A.mp3"></audio>
+        <audio id="Bb" src="notes/Bb.mp3"></audio>
+        <audio id="B" src="notes/B.mp3"></audio>
+        <audio id="C2" src="notes/C2.mp3"></audio>
+        <audio id="D2" src="notes/D2.mp3"></audio>
+        <audio id="E2" src="notes/E2.mp3"></audio>
+        <audio id="F2" src="notes/F2.mp3"></audio>
+        <audio id="G2" src="notes/G2.mp3"></audio>
+        <audio id="A2" src="notes/A2.mp3"></audio>
+        <audio id="B2" src="notes/B2.mp3"></audio>
+        <audio id="C3" src="notes/C3.mp3"></audio>
+      </div>
+
+      <div class="drums-container">
+        <div class="drums">
+          <div class="sd" onclick="clicksd()">
+            sd<audio id="sd" src="drums/606-snare2.wav"></audio>
+          </div>
+          <div class="bd" onclick="clickbd()">
+            bd<audio id="bd" src="drums/606-tom4.wav"></audio>
+          </div>
+          <div class="hh" onclick="clickhh()">
+            hh<audio id="hh" src="drums/606-cymbal7.wav"></audio>
+          </div>
+          <div class="tom tom1" onclick="clicktom1()">
+            t1<audio id="tom1" src="drums/606-tom1.wav"></audio>
+          </div>
+          <div class="tom tom2" onclick="clicktom2()">
+            t2<audio id="tom2" src="drums/606-tom2.wav"></audio>
+          </div>
+          <div class="tom tom3" onclick="clicktom3()">
+            t3<audio id="tom3" src="drums/606-tom3.wav"></audio>
+          </div>
+          <div class="cc" onclick="clickcc()">
+            cc<audio id="cc" src="drums/606-cymbal2.wav"></audio>
+          </div>
+          <div class="rc" onclick="clickrc()">
+            rc<audio id="rc" src="drums/606-cymbal6.wav"></audio>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="piano.js"></script>
+    <script>
+      //   $(".piano").keydown(function(event){
+      //     if(event.keyCode==81){$("#C").click(); console.log(keydown)}
+      //     if(event.keyCode==87){$("#D").click();}
+      //     if(event.keyCode==69){$("#E").click();}
+      //     if(event.keyCode==82){$("#F").click();}
+      //     if(event.keyCode==84){$("#G").click();}
+      //     if(event.keyCode==89){$("#A").click();}
+      //     if(event.keyCode==85){$("#B").click();}
+      //     if(event.keyCode==50){$("#Db").click();}
+      //     if(event.keyCode==51){$("#Eb").click();}
+      //     if(event.keyCode==53){$("#Gb").click();}
+      //     if(event.keyCode==54){$("#Ab").click();}
+      //     if(event.keyCode==55){$("#Bb").click();}
+      // });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+body{
+    background: lightgray;
+    font-size: 40px;
+}
+.piano{
+    /* transform: scale(0.5); */
+}
+.w_box-container{
+    position: absolute;
+}
+.w_box{
+    width: 90px;
+    height: 300px;
+    background: white;
+    text-align: center;
+    line-height: 480px;
+    border: black 1px solid;
+    border-radius:5%;
+    padding: 0;
+}
+.w_box:active{
+    background: rgb(236, 236, 236);
+    transform: translate(3px,6px);
+}
+.active_piano{
+    background: rgb(236, 236, 236);
+    transform: translate(3px,6px);
+}
+.w_box:hover{
+    cursor: pointer;
+}
+.b_box-container{
+    position: relative;
+    left: 55px;
+}
+.b_box{
+    width: 70px;
+    height: 180px;
+    background: black;
+    text-align: center;
+    line-height: 280px;
+    border-radius:5%;
+    margin-right: 20px;
+    padding: 0;
+    /* border: red 1px solid; */
+}
+.b_box:active{
+    background: rgb(46, 46, 46);
+    transform: translate(3px,3px);
+}
+.b_box:hover{
+    cursor: pointer;
+}
+.b_box button{
+    color: rgb(255, 255, 255);
+}
+.o_box{
+    opacity: 0;
+    z-index: -2;
+}
+.sheet{
+    background: white;
+    width: 700px;
+    height: 300px;
+    position: absolute;
+    transform: translateY(160px);
+    top: 200px;
+    margin: 0;
+    padding: 0;
+
+}
+.sheet-box{
+    width: 650px;
+    height: 40px;
+    border-bottom: 2px black solid;
+    position: relative;
+    top: 30px;
+    left: 25px;
+}
