@@ -1,69 +1,166 @@
 
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Title</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="piano.css" />
+    <link rel="stylesheet" href="drums.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script src="piano.js"></script>
   </head>
-  <style>
-  body{
-      font-family: "微軟正黑體";
-  }
-  </style>
   <body>
-      <div class="container">
-        <div class="card-wrap d-flex">
-            <div class="card" style="width: 18rem;">
-                <img src="./img/GameDesigner.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h3>遊戲軟體設計師</h3>
-                        <ul class="list-group">  
-                            <li class="list-group-item" title="甲山林建設機構_甲山林廣告股份有限公司 "> <a href="https://www.104.com.tw/job/6qtgq?jobsource=jolist_c_relevance">【研發部】遊戲程式設計師</a></li>
-                            <li class="list-group-item" title="宇峻奧汀科技股份有限公司 "><a href="https://www.104.com.tw/job/97g?jobsource=jolist_c_relevance">遊戲程式設計師</a></li>
-                            <li class="list-group-item" title="Finger Game_芬格國際有限公司 "><a href="https://www.104.com.tw/job/5pow8?jobsource=jolist_c_relevance">HTML5 遊戲程式設計師</a></li>
-                            <li class="list-group-item" title="天火數位股份有限公司 "><a href="https://www.104.com.tw/job/6jqez?jobsource=jolist_c_relevance">Unity遊戲程式設計師</a></li>
-                            <li class="list-group-item" title="無限創意科技有限公司 "><a href="https://www.104.com.tw/job/60o91?jobsource=jolist_c_relevance">互動遊戲程式設計師(180603)</a></li>
-                          </ul>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;">
-                <img src="./img/front.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h3>前端工程師</h3>
-                        <ul class="list-group">
-                            <li class="list-group-item" title="莫莫行銷有限公司  "> <a href="https://www.104.com.tw/job/6x85p?jobsource=hotjob_chr">網頁設計工程師 </a></li>
-                            <li class="list-group-item" title="台灣天絡股份有限公司  "><a href="https://www.104.com.tw/job/6cdb0?jobsource=jolist_c_relevance">前端工程師</a></li>
-                            <li class="list-group-item" title="本事數位科技有限公司 "><a href="https://www.104.com.tw/job/6qxdd?jobsource=jolist_c_relevance">前端工程師</a></li>
-                            <li class="list-group-item" title="大連科技有限公司  "><a href="https://www.104.com.tw/job/6p7yt?jobsource=jolist_c_relevance">網頁前端工程師</a></li>
-                            <li class="list-group-item" title="艾米科技有限公司  "><a href="https://www.104.com.tw/job/6h9rt?jobsource=jolist_c_relevance">前端工程師 </a></li>
-                          </ul>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;">
-                <img src="./img/GameProject.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h3>遊戲企劃人員</h3>
-                        <ul class="list-group">
-                            <li class="list-group-item" title="勁偉國際股份有限公司  "> <a href="https://www.104.com.tw/job/6vjqi?jobsource=jolist_c_relevance">遊戲企劃人員</a></li>
-                            <li class="list-group-item" title="家庭億得行銷股份有限公司  "><a href="https://www.104.com.tw/job/6w7u8?jobsource=jolist_c_relevance">遊戲企劃</a></li>
-                            <li class="list-group-item" title="砌禾數位動畫股份有限公司 "><a href="https://www.104.com.tw/job/6ut56?jobsource=jolist_c_relevance">遊戲企劃</a></li>
-                            <li class="list-group-item" title="法亞科技整合行銷股份有限公司  "><a href="https://www.104.com.tw/job/6wio6?jobsource=jolist_c_relevance">遊戲企劃(闇橡科技)</a></li>
-                            <li class="list-group-item" title="東方龍數位股份有限公司  "><a href="https://www.104.com.tw/job/5ecke?jobsource=jolist_c_relevance">手機遊戲企劃</a></li>
-                          </ul>
-                </div>
-              </div>
+    <div class="container piano d-flex">
+      <div class="eight-degree d-flex">
+        <div class="box-container d-flex">
+          <div class="w_box-container d-flex">
+            <div class="w_box" data-id="C" onclick="clickC()" id="C-note">
+              C1
+            </div>
+            <div class="w_box" data-id="D" onclick="clickD()" id="D-note">
+              D
+            </div>
+            <div class="w_box" data-id="E" onclick="clickE()" id="E-note">
+              E
+            </div>
+            <div class="w_box" data-id="F" onclick="clickF()" id="F-note">
+              F
+            </div>
+            <div class="w_box" data-id="G" onclick="clickG()" id="G-note">
+              G
+            </div>
+            <div class="w_box" data-id="A" onclick="clickA()" id="A-note">
+              A
+            </div>
+            <div class="w_box" data-id="B" onclick="clickB()" id="B-note">
+              B
+            </div>
           </div>
+          <div class="b_box-container d-flex text-white ">
+            <div class="b_box" data-id="Db" onclick="clickDb()" id="Db-note">
+              Db
+            </div>
+            <div class="b_box" data-id="Eb" onclick="clickEb()" id="Eb-note">
+              Eb
+            </div>
+            <div class="b_box o_box">D#</div>
+            <div class="b_box" data-id="Gb" onclick="clickGb()" id="Gb-note">
+              Gb
+            </div>
+            <div class="b_box" data-id="Ab" onclick="clickAb()" id="Ab-note">
+              Ab
+            </div>
+            <div class="b_box" data-id="Bb" onclick="clickBb()" id="Bb-note">
+              Bb
+            </div>
+            <div class="b_box o_box">A#</div>
+          </div>
+        </div>
       </div>
-     
+      <div class="eight-degree d-flex">
+        <div class="box-container d-flex">
+          <div class="w_box-container d-flex">
+            <div class="w_box" data-id="C2" onclick="clickC2()" id="C2-note">
+              C2
+            </div>
+          </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="audio">
+        <audio id="C" src="notes/C.mp3"></audio>
+        <audio id="Db" src="notes/Db.mp3"></audio>
+        <audio id="D" src="notes/D.mp3"></audio>
+        <audio id="Eb" src="notes/Eb.mp3"></audio>
+        <audio id="E" src="notes/E.mp3"></audio>
+        <audio id="F" src="notes/F.mp3"></audio>
+        <audio id="Gb" src="notes/Gb.mp3"></audio>
+        <audio id="G" src="notes/G.mp3"></audio>
+        <audio id="Ab" src="notes/Ab.mp3"></audio>
+        <audio id="A" src="notes/A.mp3"></audio>
+        <audio id="Bb" src="notes/Bb.mp3"></audio>
+        <audio id="B" src="notes/B.mp3"></audio>
+        <audio id="C2" src="notes/C2.mp3"></audio>
+       
+      </div>
+
+      <!-- <div class="drums-container">
+        <div class="drums">
+          <div class="sd" onclick="clicksd()">
+            sd<audio id="sd" src="drums/606-snare2.wav"></audio>
+          </div>
+          <div class="bd" onclick="clickbd()">
+            bd<audio id="bd" src="drums/606-tom4.wav"></audio>
+          </div>
+          <div class="hh" onclick="clickhh()">
+            hh<audio id="hh" src="drums/606-cymbal7.wav"></audio>
+          </div>
+          <div class="tom tom1" onclick="clicktom1()">
+            t1<audio id="tom1" src="drums/606-tom1.wav"></audio>
+          </div>
+          <div class="tom tom2" onclick="clicktom2()">
+            t2<audio id="tom2" src="drums/606-tom2.wav"></audio>
+          </div>
+          <div class="tom tom3" onclick="clicktom3()">
+            t3<audio id="tom3" src="drums/606-tom3.wav"></audio>
+          </div>
+          <div class="cc" onclick="clickcc()">
+            cc<audio id="cc" src="drums/606-cymbal2.wav"></audio>
+          </div>
+          <div class="rc" onclick="clickrc()">
+            rc<audio id="rc" src="drums/606-cymbal6.wav"></audio>
+          </div>
+        </div> -->
+      </div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="piano.js"></script>
+    <script>
+      //   $(".piano").keydown(function(event){
+      //     if(event.keyCode==81){$("#C").click(); console.log(keydown)}
+      //     if(event.keyCode==87){$("#D").click();}
+      //     if(event.keyCode==69){$("#E").click();}
+      //     if(event.keyCode==82){$("#F").click();}
+      //     if(event.keyCode==84){$("#G").click();}
+      //     if(event.keyCode==89){$("#A").click();}
+      //     if(event.keyCode==85){$("#B").click();}
+      //     if(event.keyCode==50){$("#Db").click();}
+      //     if(event.keyCode==51){$("#Eb").click();}
+      //     if(event.keyCode==53){$("#Gb").click();}
+      //     if(event.keyCode==54){$("#Ab").click();}
+      //     if(event.keyCode==55){$("#Bb").click();}
+      // });
+    </script>
   </body>
 </html>
