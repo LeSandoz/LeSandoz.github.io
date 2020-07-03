@@ -1,0 +1,71 @@
+@charset "UTF-8";
+.wrapper {
+  background: silver;
+  background-size: cover;
+  font-family: "微軟正黑體",serif;
+  position: relative;
+}
+
+.wrapper header {
+  height: 130px;
+  background: skyblue;
+}
+
+.wrapper header .option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  height: 45px;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.wrapper header .option li {
+  width: 20%;
+  border: 1px solid gray;
+  text-align: center;
+  margin: 0 10px 0 10px;
+  cursor: pointer;
+}
+
+.wrapper main {
+  height: 1600px;
+  background: plum;
+  text-align: center;
+  margin: 20px -60px;
+}
+
+.wrapper main .main1 {
+  width: 70%;
+  background: papayawhip;
+}
+
+.wrapper main .main1 .img_container img {
+  width: 400px;
+}
+
+.wrapper main .main2 {
+  width: 30%;
+  background: slategray;
+}
+
+.wrapper main .main2 .sub_content_wrapper .sub_content {
+  height: 200px;
+  background: aliceblue;
+  margin: 40px 10px;
+}
+
+.wrapper footer {
+  height: 60px;
+  background: ivory;
+}
+
+.wrapper .menu {
+  position: fixed;
+  background: rgba(240, 230, 140, 0.452);
+  height: 80px;
+  width: 200px;
+  right: 0;
+}
+/*# sourceMappingURL=recipe_home.css.map */

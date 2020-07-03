@@ -1,0 +1,36 @@
+.grid_wrap{
+    display: grid;
+    grid-template-columns: 200px 50px auto 50px 200px;
+    grid-template-rows: 15% 60% 25%;
+    grid-template-areas:
+      "header header header header header"
+      "side  main main main main"
+      "side footer footer footer footer";
+    height: 100vh;
+    width: 940px;
+    margin: 0 auto;
+/* header */
+    .header{
+        grid-area: header;
+        background-color: purple;
+    }
+
+    .side_bar{
+        grid-area: side;
+        background-color: green;
+    }
+
+
+
+    /* main */
+    .main{
+        grid-area: main;
+        background-color: orange;
+    }
+
+    /* footer */
+    .footer{
+        grid-area: footer;
+        background-color: gray;
+    }
+}

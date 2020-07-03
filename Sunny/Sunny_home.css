@@ -1,0 +1,48 @@
+.grid_wrap {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 200px 50px auto 50px 200px;
+      grid-template-columns: 200px 50px auto 50px 200px;
+  -ms-grid-rows: 15% 60% 25%;
+      grid-template-rows: 15% 60% 25%;
+      grid-template-areas: "header header header header header" "side  main main main main" "side footer footer footer footer";
+  height: 100vh;
+  width: 940px;
+  margin: 0 auto;
+  /* header */
+  /* main */
+  /* footer */
+}
+
+.grid_wrap .header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: header;
+  background-color: purple;
+}
+
+.grid_wrap .side_bar {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: side;
+  background-color: green;
+}
+
+.grid_wrap .main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-area: main;
+  background-color: orange;
+}
+
+.grid_wrap .footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-area: footer;
+  background-color: gray;
+}
+/*# sourceMappingURL=Sunny_home.css.map */
