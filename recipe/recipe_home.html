@@ -15,7 +15,8 @@
       <div class="wrapper">
         <header>
             <div class="d-flex justify-content-between">
-                <h1>食譜網站</h1>
+                <!-- <h1><a href="http://lesandoz.nctu.me/recipe/recipe_home">食譜網站</a></h1> -->
+                <h1><a href="/recipe/recipe_home.html">食譜網站</a></h1>
                 <div>
                     <input type="text" placeholder="Search">
                     <i class="fa fa-search" aria-hidden="true"></i>
@@ -23,12 +24,12 @@
             </div>
             <hr>
             <ul class="option container">
-                <li>輕食菜單</li>
-                <li>健身菜單</li>
-                <li>蔬食菜單</li>
-                <li>大魚大肉</li>
-                <li>飲料專區</li>
-                <li>熱呼湯品</li>
+                <li title="light" id="light">輕食菜單</li>
+                <li title="fit" id="fit">健身菜單</li>
+                <li title="vega" id="vega">蔬食菜單</li>
+                <li title="meat" id="meat">大魚大肉</li>
+                <li title="drinks" id="drinks">飲料專區</li>
+                <li title="soup" id="soup">熱呼湯品</li>
             </ul>
         </header>
         <div class="menu">
@@ -121,5 +122,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="/recipe/recipe_home.js"></script>
   </body>
 </html>

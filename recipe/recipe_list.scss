@@ -1,0 +1,59 @@
+.wrapper{
+    // width: 1280px;
+    // text-align: center;
+    background: silver;
+    background-size: cover;
+    font-family: "微軟正黑體",serif;
+    position: relative;
+    header{
+        height: 130px;
+        background: linear-gradient(163deg, rgba(149,247,231,1) 0%, rgba(255,109,109,0.8379726890756303) 100%);;
+
+        h1{
+            a{
+                text-decoration: none;
+            }
+        }
+        .option{
+            display: flex;
+            list-style: none;
+            // background: wheat;
+            height: 45px;
+            transform: translateY(-10px);
+            li{
+                width: 20%;
+                border: 1px solid gray;
+                text-align: center;
+                margin:0 10px 0 10px;
+                cursor: pointer;
+                line-height: 45px;
+            }
+        }
+    }
+    main{
+        height: 1600px;
+        background: rosybrown;
+        text-align: center; 
+        margin: 20px -60px;
+        .img_wrapper{
+            margin: 20px;
+            img{
+                max-width: 200px;
+                border-radius: 40px;
+                margin: 16px;
+            }
+        }
+
+    }
+    footer{
+        height: 60px;
+        background: ivory;
+    }
+    .menu{
+        position: fixed;
+        background: rgba(240, 230, 140, 0.452);
+        height: 80px;
+        width: 200px;
+        right: 0;
+    }
+}
