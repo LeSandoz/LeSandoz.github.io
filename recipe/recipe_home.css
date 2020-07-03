@@ -27,6 +27,7 @@
   text-align: center;
   margin: 0 10px 0 10px;
   cursor: pointer;
+  line-height: 45px;
 }
 
 .wrapper main {
@@ -46,9 +47,18 @@
 }
 
 .wrapper main .main1 .recommend_wrapper {
-  width: 100%;
   background: pink;
-  height: 200px;
+  height: 160px;
+  margin: 40px 20px;
+}
+
+.wrapper main .main1 .recommend_wrapper .recommend {
+  width: 33.3%;
+  background: url(https://i.imgur.com/CUG0Aof.jpg);
+  background-size: cover;
+  margin: 20px;
+  color: white;
+  text-align: left;
 }
 
 .wrapper main .main2 {
@@ -60,6 +70,14 @@
   height: 200px;
   background: aliceblue;
   margin: 40px 10px;
+}
+
+.wrapper main .main2 .sub_content_wrapper .sub_content .sub_content_text p {
+  width: 20%;
+}
+
+.wrapper main .main2 .sub_content_wrapper .sub_content .sub_content_text img {
+  width: 45%;
 }
 
 .wrapper footer {

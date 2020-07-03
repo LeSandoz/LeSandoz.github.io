@@ -21,6 +21,7 @@
                 text-align: center;
                 margin:0 10px 0 10px;
                 cursor: pointer;
+                line-height: 45px;
             }
         }
     }
@@ -41,9 +42,18 @@
                 }
             }
             .recommend_wrapper{
-                width: 100%;
                 background: pink;
-                height: 200px;
+                height: 160px;
+                margin: 40px 20px;
+
+                .recommend{
+                    width: 33.3%;
+                    background: url(https://i.imgur.com/CUG0Aof.jpg);
+                    background-size: cover;
+                    margin: 20px;
+                    color: white;
+                    text-align: left;
+                }
             }
         }
         .main2{
@@ -55,6 +65,17 @@
                     height: 200px;
                     background: aliceblue;
                     margin: 40px 10px;
+
+
+                    .sub_content_text{
+                        p{
+                            width: 20%;
+                        }
+                            
+                        img{
+                            width: 45%;
+                        }
+                    }
                 }
             }
         }
