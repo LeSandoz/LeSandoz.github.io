@@ -1,39 +1,52 @@
 // home  &  list
+
 $("#light").on("click", function(){
+    // thisID = $(this).attr("data-name")
     window.localStorage.removeItem("option")
     window.localStorage.setItem("option", "light")
     window.location.href =  "/recipe/recipe_list.html"
-    console.log($("#light").attr("id"))
+    // console.log($("#light").attr("id"))
+    // console.log(thisID)
 })
 $("#fit").on("click", function(){
+    // thisID = $(this).attr("data-name")
     window.localStorage.removeItem("option")
     window.localStorage.setItem("option", "fit")
     window.location.href =  "/recipe/recipe_list.html"
-    console.log($("#fit").attr("id"))
+    // console.log($("#fit").attr("id"))
+    // console.log(thisID)
 })
 $("#vega").on("click", function(){
+    // thisID = $(this).attr("data-name")
     window.localStorage.removeItem("option")
     window.localStorage.setItem("option", "vega")
     window.location.href =  "/recipe/recipe_list.html"
-    console.log($("#vega").attr("id"))
+    // console.log($("#vega").attr("id"))
+    // console.log(thisID)
 })
 $("#meat").on("click", function(){
+    // thisID = $(this).attr("data-name")
     window.localStorage.removeItem("option")
     window.localStorage.setItem("option", "meat")
     window.location.href =  "/recipe/recipe_list.html"
-    console.log($("#meat").attr("id"))
+    // console.log($("#meat").attr("id"))
+    // console.log(thisID)
 })
 $("#drinks").on("click", function(){
+    // thisID = $(this).attr("data-name")
     window.localStorage.removeItem("option")
     window.localStorage.setItem("option", "drinks")
     window.location.href =  "/recipe/recipe_list.html"
-    console.log($("#drinks").attr("id"))
+    // console.log($("#drinks").attr("id"))
+    // console.log(thisID)
 })
 $("#soup").on("click", function(){
+    // thisID = $(this).attr("data-name")
     window.localStorage.removeItem("option")
     window.localStorage.setItem("option", "soup")
     window.location.href =  "/recipe/recipe_list.html"
-    console.log($("#soup").attr("id"))
+    // console.log($("#soup").attr("id"))
+    // console.log(thisID)
 })
 
 //home

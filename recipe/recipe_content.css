@@ -40,52 +40,24 @@
 
 .wrapper main {
   height: 1600px;
-  background: plum;
+  background: rosybrown;
   text-align: center;
   margin: 20px -60px;
 }
 
-.wrapper main .main1 {
-  width: 70%;
-  background: papayawhip;
-}
-
-.wrapper main .main1 .img_container img {
-  width: 400px;
-}
-
-.wrapper main .main1 .recommend_wrapper {
-  background: pink;
-  height: 160px;
-  margin: 40px 20px;
-}
-
-.wrapper main .main1 .recommend_wrapper .recommend {
-  width: 33.3%;
-  background: url(https://i.imgur.com/CUG0Aof.jpg);
-  background-size: cover;
+.wrapper main .img_wrapper {
   margin: 20px;
-  color: white;
-  text-align: left;
+  cursor: pointer;
 }
 
-.wrapper main .main2 {
-  width: 30%;
-  background: slategray;
+.wrapper main .img_wrapper img {
+  max-width: 200px;
+  border-radius: 40px;
+  margin: 16px;
 }
 
-.wrapper main .main2 .sub_content_wrapper .sub_content {
-  height: 200px;
-  background: aliceblue;
-  margin: 40px 10px;
-}
-
-.wrapper main .main2 .sub_content_wrapper .sub_content .sub_content_text p {
-  width: 20%;
-}
-
-.wrapper main .main2 .sub_content_wrapper .sub_content .sub_content_text img {
-  width: 45%;
+.wrapper main .img_wrapper:hover {
+  opacity: .8;
 }
 
 .wrapper footer {
@@ -100,4 +72,4 @@
   width: 200px;
   right: 0;
 }
-/*# sourceMappingURL=recipe_home.css.map */
+/*# sourceMappingURL=recipe_content.css.map */
