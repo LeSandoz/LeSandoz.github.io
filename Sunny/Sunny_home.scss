@@ -1,36 +1,99 @@
-.grid_wrap{
-    display: grid;
-    grid-template-columns: 200px 50px auto 50px 200px;
-    grid-template-rows: 15% 60% 25%;
-    grid-template-areas:
-      "header header header header header"
-      "side  main main main main"
-      "side footer footer footer footer";
-    height: 100vh;
-    width: 940px;
-    margin: 0 auto;
+body{
+    font-family: "微軟正黑體";
 /* header */
-    .header{
-        grid-area: header;
-        background-color: purple;
+header{
+    // background-color: rosybrown;
+    height: 80px;
+    img{
+        height: 36px;
+        margin: 22px 10px;
     }
+    .search{
+        border: 1px rgb(180, 180, 180) solid;
+        border-radius: 5px;
+        width: 200px;
+        height: 35px;
+        margin: 22px 10px;
+        .search_content{
+            color: rgb(180, 180, 180);
+            margin-top: -15px;
+            margin-left: 50px;
+            img{
+                height: 24px;
+                margin-right: 5px;
+            }
+        }
 
-    .side_bar{
-        grid-area: side;
-        background-color: green;
     }
-
-
-
-    /* main */
-    .main{
-        grid-area: main;
-        background-color: orange;
+    .header_icon{
+        img{
+            height: 28px;
+            margin: 22px 10px;
+        }
+        .header_head{
+            border-radius: 50%;
+            border: 1px black solid;
+        }
     }
+}
 
-    /* footer */
-    .footer{
-        grid-area: footer;
-        background-color: gray;
+
+
+
+/* main */
+main{
+    // background-color: tan;
+    min-height: 800px;
+    .main_bar{
+        // background-color: khaki;
+        height: 300px;
+        position: relative;
+        img{
+            border-radius: 50%;
+            height: 200px;
+            position: absolute;
+            top: 50px;
+            left: 120px;
+        }
+        .main_bar_text{
+            color: gray;
+            position: absolute;
+            top: 50px;
+            left: 400px;
+            .profile_text{
+                transform: translate(10px,10px);
+            }
+            .profile_setting{
+                transform: translate(320px,-37px);
+                height: 20px;
+            }
+            .profile_info{
+                font-size: 16px;
+            }
+            .tw_name{
+                font-weight: bold;
+            }
+        }
     }
+    .main_img_container{
+        height: 300px;
+        margin-bottom: 60px;
+        // border: 1px solid black;
+        img{
+            height: 320px;
+            width: 320px;
+            // border: 1px solid black;
+            object-fit: cover;
+            background: white;
+        }
+    }
+}
+
+/* footer */
+footer{
+    // background-color: pink;
+    height: 180px;
+}
+
+
 }
