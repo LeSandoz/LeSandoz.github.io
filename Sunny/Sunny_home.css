@@ -37,6 +37,7 @@ body header .search .search_content img {
 body header .header_icon img {
   height: 28px;
   margin: 22px 10px;
+  cursor: pointer;
 }
 
 body header .header_icon .header_head {
@@ -77,6 +78,7 @@ body main .main_bar .main_bar_text .profile_setting {
   -webkit-transform: translate(320px, -37px);
           transform: translate(320px, -37px);
   height: 20px;
+  cursor: pointer;
 }
 
 body main .main_bar .main_bar_text .profile_info {
@@ -113,6 +115,11 @@ body main .main_img_container .main_img_box .main_img_icon .main_sm_img {
   display: none;
 }
 
+body main .main_img_container .main_img_box .main_img_icon p {
+  color: white;
+  font-weight: bold;
+}
+
 body main .main_img_container .main_img_box:hover .main_img {
   opacity: 0.8;
   -webkit-filter: blur(2px);
@@ -122,6 +129,11 @@ body main .main_img_container .main_img_box:hover .main_img {
 
 body main .main_img_container .main_img_box:hover .main_sm_img {
   display: inline;
+}
+
+body main .main_img_container .main_img_box:hover .main_sm_img:hover {
+  -webkit-transform: scale(2);
+          transform: scale(2);
 }
 
 body footer {

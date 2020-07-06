@@ -1,0 +1,28 @@
+{
+    "profile":{
+        "account": "sunny_always_hungry",
+        "password": "agmp8217",
+        "name": "我是桑尼 我不是柯基" ,
+        "src": "/Sunny/images/Sunny_head.png",
+        "post": "43",
+        "follower": "121",
+        "following": "34"
+    },
+
+    "home_img_list": {
+        
+        "1":{
+            "src": "/Sunny/images/main_img_1.png",
+            "like": "59",
+            "comments": "12",
+            "content": "這是我的新車車"
+        },
+        "2":{
+            "src": "/Sunny/images/main_img_2.png",
+            "like": "19",
+            "comments": "5",
+            "content": "偶笑得很開心"
+        }
+
+    }
+}
