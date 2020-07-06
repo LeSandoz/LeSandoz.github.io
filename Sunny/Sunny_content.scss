@@ -1,0 +1,59 @@
+body{
+    font-family: "微軟正黑體";
+/* header */
+header{
+    // background-color: rosybrown;
+    height: 80px;
+    img{
+        height: 36px;
+        margin: 22px 10px;
+    }
+    .search{
+        border: 1px rgb(180, 180, 180) solid;
+        border-radius: 5px;
+        width: 200px;
+        height: 35px;
+        margin: 22px 10px;
+        .search_content{
+            color: rgb(180, 180, 180);
+            margin-top: -15px;
+            margin-left: 50px;
+            img{
+                height: 24px;
+                margin-right: 5px;
+            }
+        }
+
+    }
+    .header_icon{
+        img{
+            height: 28px;
+            margin: 22px 10px;
+            cursor: pointer;
+        }
+        .header_head{
+            border-radius: 50%;
+            border: 1px black solid;
+        }
+    }
+}
+
+
+
+
+/* main */
+main{
+   .content_img{
+       width: 400px;
+       margin: 10px;
+   }
+}
+
+/* footer */
+footer{
+    // background-color: pink;
+    height: 180px;
+}
+
+
+}

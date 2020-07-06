@@ -1,0 +1,56 @@
+@charset "UTF-8";
+body {
+  font-family: "微軟正黑體";
+  /* header */
+  /* main */
+  /* footer */
+}
+
+body header {
+  height: 80px;
+}
+
+body header img {
+  height: 36px;
+  margin: 22px 10px;
+}
+
+body header .search {
+  border: 1px #b4b4b4 solid;
+  border-radius: 5px;
+  width: 200px;
+  height: 35px;
+  margin: 22px 10px;
+}
+
+body header .search .search_content {
+  color: #b4b4b4;
+  margin-top: -15px;
+  margin-left: 50px;
+}
+
+body header .search .search_content img {
+  height: 24px;
+  margin-right: 5px;
+}
+
+body header .header_icon img {
+  height: 28px;
+  margin: 22px 10px;
+  cursor: pointer;
+}
+
+body header .header_icon .header_head {
+  border-radius: 50%;
+  border: 1px black solid;
+}
+
+body main .content_img {
+  width: 400px;
+  margin: 10px;
+}
+
+body footer {
+  height: 180px;
+}
+/*# sourceMappingURL=Sunny_content.css.map */
