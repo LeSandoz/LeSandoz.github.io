@@ -90,6 +90,7 @@ body main .main_bar .main_bar_text .tw_name {
 body main .main_img_container {
   height: 300px;
   margin-bottom: 60px;
+  position: relative;
 }
 
 body main .main_img_container img {
@@ -97,7 +98,30 @@ body main .main_img_container img {
   width: 320px;
   -o-object-fit: cover;
      object-fit: cover;
-  background: white;
+}
+
+body main .main_img_container .main_img_box .main_img_icon {
+  position: absolute;
+  top: 140px;
+  left: 90px;
+}
+
+body main .main_img_container .main_img_box .main_img_icon .main_sm_img {
+  height: 24px;
+  width: 24px;
+  margin-right: 60px;
+  display: none;
+}
+
+body main .main_img_container .main_img_box:hover .main_img {
+  opacity: 0.8;
+  -webkit-filter: blur(2px);
+  -webkit-filter: brightness(0.9);
+  cursor: pointer;
+}
+
+body main .main_img_container .main_img_box:hover .main_sm_img {
+  display: inline;
 }
 
 body footer {

@@ -78,14 +78,43 @@ main{
     .main_img_container{
         height: 300px;
         margin-bottom: 60px;
+        position: relative;
         // border: 1px solid black;
         img{
             height: 320px;
             width: 320px;
             // border: 1px solid black;
             object-fit: cover;
-            background: white;
+            // background: white;
         }
+        .main_img_box{
+            .main_img_icon{
+                // border: black solid 1px;
+                position: absolute;
+                top: 140px;
+                left: 90px;
+                .main_sm_img{
+                    height: 24px;
+                    width: 24px;
+                    margin-right: 60px;
+                    display: none;
+
+                }
+            }
+        }
+
+        .main_img_box:hover{
+            .main_img{
+                opacity: 0.8;
+                -webkit-filter:blur(2px);
+                -webkit-filter:brightness(0.9);
+                cursor: pointer;
+            }
+            .main_sm_img{
+                display: inline;
+            }
+        }
+
     }
 }
 
