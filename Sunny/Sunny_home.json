@@ -22,6 +22,34 @@
             "like": "19",
             "comments": "5",
             "content": "偶笑得很開心"
+        
+        },
+        "3":{
+            "src": "/Sunny/images/main_img_3.png",
+            "like": "19",
+            "comments": "5",
+            "content": "偶家廚房"
+        
+        },
+        "4":{
+            "src": "/Sunny/images/main_img_4.png",
+            "like": "19",
+            "comments": "5",
+            "content": "睡覺才能養顏美容"
+        
+        },
+        "5":{
+            "src": "/Sunny/images/main_img_5.png",
+            "like": "19",
+            "comments": "5",
+            "content": "不要跟偶搶鏡頭啦"
+        
+        },
+        "6":{
+            "src": "/Sunny/images/main_img_6.png",
+            "like": "19",
+            "comments": "5",
+            "content": "廢物狗生"
         }
 
     }

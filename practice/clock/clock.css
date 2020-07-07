@@ -1,0 +1,50 @@
+body {
+  background: black;
+}
+
+body .clock {
+  background: whitesmoke;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+}
+
+body .clock .hand {
+  width: 4px;
+  height: 50%;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  background-color: red;
+  position: absolute;
+  left: 50%;
+}
+
+body .clock .hour-hand {
+  width: 12px;
+  height: 50%;
+  background-color: cornflowerblue;
+}
+
+body .clock .min-hand {
+  width: 8px;
+  height: 50%;
+  background-color: rosybrown;
+}
+
+body .e_clock {
+  width: 300px;
+  height: 140px;
+  background: floralwhite;
+  position: absolute;
+  left: 10%;
+  top: 35%;
+  text-align: center;
+  line-height: 140px;
+  font-size: 48px;
+}
+/*# sourceMappingURL=clock.css.map */
