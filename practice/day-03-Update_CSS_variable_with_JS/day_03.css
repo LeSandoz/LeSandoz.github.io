@@ -1,0 +1,39 @@
+:root {
+  --base: #ffc600;
+  --spacing: 10px;
+  --blur: 10px;
+  --brightness: 1;
+  --opacity: 1;
+  --contrast: 1;
+}
+
+body {
+  text-align: center;
+  background: #193549;
+  color: white;
+  font-family: 'helvetica neue', sans-serif;
+  font-weight: 100;
+  font-size: 50px;
+}
+
+body img {
+  width: 500px;
+  padding: var(--spacing);
+  background: var(--base);
+  -webkit-filter: blur(var(--blur)) brightness(var(--brightness)) contrast(var(--contrast));
+          filter: blur(var(--blur)) brightness(var(--brightness)) contrast(var(--contrast));
+  opacity: var(--opacity);
+}
+
+body .hl {
+  color: var(--base);
+}
+
+body .controls {
+  margin-bottom: 50px;
+}
+
+body .controls input {
+  width: 100px;
+}
+/*# sourceMappingURL=day_03.css.map */
