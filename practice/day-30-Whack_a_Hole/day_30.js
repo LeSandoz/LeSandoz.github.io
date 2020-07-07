@@ -4,7 +4,6 @@ const moles = document.querySelectorAll('.mole');
 let lastHole;
 let timeUp = false;
 let score = 0;
-
 function randomTime(min, max){
   return Math.round(Math.random() * (max-min) + min);
 }
@@ -22,7 +21,7 @@ function randomHole(holes){
 }
 
 function peep(){
-  const time = randomTime(20, 1000);
+  const time = randomTime(100, 1000);
   const hole = randomHole(holes);
   hole.classList.add('up');
   setTimeout(()=>{
@@ -36,7 +35,15 @@ function startGame(){
   scoreBoard.textContent = score;
   timeUp = false;
   peep();
-  setTimeout(()=> timeUp = true, 10000);
+  setTimeout(()=>{
+    timeUp = true
+  if(score >= 10){
+    alert("You Win!")
+  }else{
+    alert("Game Over!")
+  }
+  }, 10000);
+
 }
 
 function bonk(e){
