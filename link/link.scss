@@ -1,0 +1,37 @@
+html{
+    background: ivory;
+    body{
+        font-family: "微軟正黑體";
+        header{
+            background: khaki;
+            height: 120px;
+        }
+        main{
+            background: lightblue;
+            min-height: 800px;
+
+            .tools_container{
+                width: 90%;
+                height: 300px;
+                // background: lightsalmon;
+                margin: 0px auto;
+                transform: translateY(40px);
+                .tools{
+                    width: 40%;
+                    height: 280px;
+                    // background: lightskyblue;
+                    margin-top: 20px;
+
+                    img{
+                        width: 400px;
+                        height: 200px;
+                    }
+                }
+            }
+        }
+        footer{
+            background: lightgreen;
+            height: 200px;
+        }
+    }
+}

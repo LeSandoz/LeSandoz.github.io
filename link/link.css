@@ -1,0 +1,43 @@
+@charset "UTF-8";
+html {
+  background: ivory;
+}
+
+html body {
+  font-family: "微軟正黑體";
+}
+
+html body header {
+  background: khaki;
+  height: 120px;
+}
+
+html body main {
+  background: lightblue;
+  min-height: 800px;
+}
+
+html body main .tools_container {
+  width: 90%;
+  height: 300px;
+  margin: 0px auto;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+}
+
+html body main .tools_container .tools {
+  width: 40%;
+  height: 280px;
+  margin-top: 20px;
+}
+
+html body main .tools_container .tools img {
+  width: 400px;
+  height: 200px;
+}
+
+html body footer {
+  background: lightgreen;
+  height: 200px;
+}
+/*# sourceMappingURL=link.css.map */
