@@ -80,7 +80,7 @@ $("input").on("change", function(){
     var color = $("#color").val()
 
     ctx.strokeStyle = color;
-    
+    $("#colorText").val(color)
     ctx.lineWidth = size;
 
 
