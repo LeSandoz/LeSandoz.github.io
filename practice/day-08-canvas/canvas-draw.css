@@ -8,6 +8,10 @@ body h1 {
   text-align: center;
 }
 
+body #colorText {
+  width: 80px;
+}
+
 body #draw {
   border: 1px black solid;
   background-color: white;

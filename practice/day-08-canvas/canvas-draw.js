@@ -90,3 +90,9 @@ $("input").on("change", function(){
 $("#eraser").on("click",function(){
     ctx.strokeStyle = '#ffffff';
 })
+$("#colorText").val(ctx.strokeStyle)
+$("#colorText").on("blur", function(){
+    var colorText = $("#colorText").val()
+    $("#color").val(colorText) 
+    ctx.strokeStyle = colorText
+})
