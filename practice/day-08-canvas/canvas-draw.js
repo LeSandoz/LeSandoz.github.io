@@ -30,30 +30,33 @@ let lastX = 0;
 let lastY = 0;
 let hue = 0;
 let direction = true;
-let canvasHistory = [];
 let step = -1;
+let userhistory = [];
 
-function draw(e){
-  if (!isDrawing) return;
-  ctx.beginPath();
-  ctx.moveTo(lastX, lastY);
-  ctx.lineTo(e.offsetX, e.offsetY); //畫到的位置。
-  ctx.stroke();
-}
 
+//滑鼠按下後
 canvas.addEventListener('mousedown', (e)=> {
   isDrawing = true;
   [lastX, lastY] = [e.offsetX, e.offsetY];
 }); //開始繪圖
 
+//滑鼠放開後
+canvas.addEventListener('mouseup', (e) => {
+    push(); //跑進計算步數的 function 後面會提到
+    isDrawing = false; //判斷是否正在畫畫
+});
+
 function draw(e){
     if (!isDrawing) return;
     ctx.beginPath();
+    //開始
     ctx.moveTo(lastX, lastY);
-    ctx.lineTo(e.offsetX, e.offsetY); //畫到的位置。
+    //結束
+    ctx.lineTo(e.offsetX, e.offsetY);
+    //畫圖
     ctx.stroke();
     [lastX, lastY] = [e.offsetX, e.offsetY];
-    ctx.save(); // 保存默認的狀態
+    
     // ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;//重新定義顏色
     // hue++;
     // if(hue>=360){
@@ -68,6 +71,46 @@ function draw(e){
     //   }else{
     //     ctx.lineWidth--
     //   }
+}
+function push() {
+    step++;
+    console.log(step)
+    if (step < userhistory.length - 1) {
+        userhistory.length = step + 1
+    }
+    userhistory.push(canvas.toDataURL()); //當前影像存成 Base64 編碼的字串並放入陣列
+}
+
+function undo() {
+    if (step > 0) {
+        step--;
+        let canvaspic = new Image(); //建立新的 Image
+        canvaspic.src = userhistory[step]; //載入剛剛存放的影像
+        canvaspic.onload = function() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.drawImage(canvaspic, 0, 0) //匯出影像並從座標 x:0 y:0 開始
+        }
+    }
+    //最後這邊是讓上一步下一步可以在不能使用時顯示灰色及更改鼠標，可以不加
+    if (step < userhistory.length && step > 0) {
+        // console.log("已經沒有上一步")
+    }
+}
+
+function redo() {
+    if (step < userhistory.length - 1) {
+        step++;
+        let canvaspic = new Image(); //建立新的 Image
+        canvaspic.src = userhistory[step]; //載入剛剛存放的影像
+        canvaspic.onload = function() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.drawImage(canvaspic, 0, 0) //匯出影像並從座標 x:0 y:0 開始
+        }
+    }
+    //最後這邊是讓上一步下一步可以在不能使用時顯示灰色及更改鼠標，可以不加
+    if (step < userhistory.length && step > 0) {
+        // console.log("已經是最新一步")
+    }
 }
 function clearAll(){
     canvas.width = 800

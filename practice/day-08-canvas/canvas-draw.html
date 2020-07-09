@@ -25,8 +25,9 @@
                 <input type="range" name="" id="size" min="5" max="120" data-sizing="px" value="12" class="mr-4"><br>
                 <button type="button" class="btn btn-danger mr-2" id="eraser">Eraser</button>
                 <button type="button" class="btn btn-info" onclick="clearAll()">Clear</button><br>
+                <button type="button" class="btn btn-primary mt-3 mr-2" onclick="undo()">Undo</button>
+                <button type="button" class="btn btn-primary mt-3" onclick="redo()">Redo</button><br>
                 <a href="#" download="downloadCanvas.png" onclick="this.href = canvas.toDataURL();" class="btn btn-success mt-3 mr-2">下載</a>
-                <!-- <button type="button" class="btn btn-primary mt-3" onclick="canvasUndo()">上一步</button><br> -->
               </div>
             <canvas id="draw" width="800" height="600"></canvas>
           </div>
