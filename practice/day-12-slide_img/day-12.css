@@ -9,7 +9,7 @@ html {
 body {
   margin: 0;
   background: #a7e751;
-  background: radial-gradient(circle, rgba(167, 231, 81, 0.902398) 7%, rgba(37, 71, 223, 0.902398) 23%, rgba(149, 247, 215, 0.902398) 51%, #7196c5 89%, rgba(0, 1, 255, 0.944415) 100%);
+  background: radial-gradient(circle, rgba(167, 231, 81, 0.902398) 0%, #2d6745 19%, rgba(20, 40, 129, 0.902398) 36%, rgba(149, 247, 215, 0.902398) 66%, #7196c5 82%, rgba(0, 0, 128, 0.944415) 97%);
 }
 
 *, *:before, *:after {
