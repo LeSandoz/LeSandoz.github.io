@@ -8,7 +8,7 @@ jQuery(function() {
         .attr("height", height);
 
     var projection = d3.geo.mercator()
-        .center([121, 24])
+        .center([119.5, 24])
         .scale(6000);
 
     var path = d3.geo.path()
@@ -51,7 +51,7 @@ jQuery(function() {
 
             }).on("click", function(d){
                 console.log(d.properties["COUNTYNAME"])
-                alert("這裡是" + d.properties["COUNTYNAME"])
+                alert("這裡是" + d.properties["COUNTYNAME"] + "\n身分證開頭為：" + d.properties["COUNTYID"])
             });
     });
 })

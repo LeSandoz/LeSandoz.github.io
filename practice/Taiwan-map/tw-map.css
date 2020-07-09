@@ -14,14 +14,9 @@ body {
 
 body .scale {
   position: fixed;
-  top: 620px;
+  left: 650px;
+  top: 300px;
   z-index: 3;
-}
-
-body .scale button {
-  width: 40px;
-  height: 40px;
-  margin-top: 6px;
 }
 
 .subunit-boundary {

@@ -15,14 +15,15 @@ body {
     // position: relative;
     .scale{
         position: fixed;
-        // left: 360px;
-        top: 620px;
+        left: 650px;
+        top: 300px;
         z-index: 3;
-        // opacity: 60%;
-        button{
-            width: 40px;
-            height: 40px;
-            margin-top: 6px;
+        input{
+        // transform: rotate(-90deg);
+        }
+
+        label{
+        // transform: rotate(90deg);
         }
     }
 }
