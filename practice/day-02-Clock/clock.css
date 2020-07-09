@@ -3,73 +3,122 @@ body {
 }
 
 body .clock {
-  background: whitesmoke;
-  width: 400px;
-  height: 400px;
+  background: url(https://lh3.googleusercontent.com/proxy/Rr5IDy_FMGhVCHrFHZIpugpMv0hY8RwsfGHENhbqPGmsFilCSuXAz8mg0WECkZ3VwD9vKvCRX2ZRRtRufoiJqApZ4g) center center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   text-align: center;
-  line-height: 400px;
+  line-height: 300px;
   position: absolute;
-  left: 50%;
-  top: 20%;
+  top: 3%;
 }
 
-body .clock .hand {
+body .clock-tw {
+  background: url(https://lh3.googleusercontent.com/proxy/Rr5IDy_FMGhVCHrFHZIpugpMv0hY8RwsfGHENhbqPGmsFilCSuXAz8mg0WECkZ3VwD9vKvCRX2ZRRtRufoiJqApZ4g) center center;
+  background-size: cover;
+  left: 50%;
+}
+
+body .clock-jp {
+  background: url(https://cdn.countryflags.com/thumbs/japan/flag-3d-round-250.png) center center;
+  background-size: cover;
+  left: 72%;
+}
+
+body .clock-usa {
+  background: url(https://cdn.countryflags.com/thumbs/united-states-of-america/flag-button-round-250.png) center center;
+  background-size: cover;
+  left: 50%;
+  top: 50%;
+}
+
+body .clock-uk {
+  background: url(https://f1.pngfuel.com/png/96/541/251/flag-union-jack-flag-of-england-united-kingdom-flag-of-new-zealand-flag-of-bermuda-tshirt-flag-of-montserrat-png-clip-art.png) center center;
+  background-size: cover;
+  left: 72%;
+  top: 50%;
+}
+
+body .hand {
   width: 4px;
-  height: 50%;
+  height: 46%;
   -webkit-transform-origin: 50% 100%;
           transform-origin: 50% 100%;
-  background-color: red;
+  background-color: black;
   position: absolute;
   left: 50%;
+  top: 4%;
+  border-radius: 10px;
 }
 
-body .clock .hour-hand {
+body .hour-hand {
   width: 12px;
-  height: 50%;
-  background-color: cornflowerblue;
+  height: 20%;
+  background-color: black;
+  position: absolute;
+  top: 30%;
 }
 
-body .clock .min-hand {
+body .min-hand {
   width: 8px;
-  height: 50%;
-  background-color: rosybrown;
+  height: 35%;
+  background-color: black;
+  position: absolute;
+  top: 15%;
 }
 
 body .e_clock {
   width: 300px;
   height: 140px;
-  background: floralwhite;
+  background: #c5c5c6;
+  background: radial-gradient(circle, #c5c5c6 0%, #5e5d5d 100%);
   position: absolute;
   left: 10%;
   top: 35%;
   text-align: center;
   line-height: 140px;
   font-size: 48px;
-  -webkit-box-shadow: 10px 10px 5px 2px yellow;
-          box-shadow: 10px 10px 5px 2px yellow;
+  z-index: 3;
+  border: 1px black solid;
 }
 
-body .a_clock {
+body .e_clock_3d_top {
   width: 300px;
   height: 140px;
-  background: floralwhite;
+  background: #c5c5c6;
+  background: radial-gradient(circle, #c5c5c6 0%, #5e5d5d 100%);
   position: absolute;
-  left: 10%;
-  top: 5%;
-  text-align: center;
-  line-height: 140px;
-  font-size: 48px;
-}
-
-body .e_clock_3d {
-  width: 300px;
-  height: 140px;
-  background: red;
-  position: absolute;
-  left: 10%;
-  top: 15%;
+  left: 13%;
+  top: 14%;
   -webkit-transform: skewX(-30deg);
           transform: skewX(-30deg);
+  z-index: 2;
+  border: 1px black solid;
+}
+
+body .e_clock_3d_bot {
+  width: 300px;
+  height: 140px;
+  background: #c5c5c6;
+  background: radial-gradient(circle, #c5c5c6 0%, #5e5d5d 100%);
+  position: absolute;
+  left: 13%;
+  top: 35%;
+  -webkit-transform: skewX(-30deg);
+          transform: skewX(-30deg);
+  border: 1px black solid;
+}
+
+body .e_clock_3d_back {
+  width: 300px;
+  height: 140px;
+  background: #c5c5c6;
+  background: radial-gradient(circle, #c5c5c6 0%, #5e5d5d 100%);
+  position: absolute;
+  left: 16%;
+  top: 14%;
+  text-align: center;
+  border-right: 1px black solid;
 }
 /*# sourceMappingURL=clock.css.map */

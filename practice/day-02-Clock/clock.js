@@ -2,54 +2,54 @@
 setInterval(timer, 1000);
 
 //宣告待會兒計時器中會用到的變數
-var now;  //儲存當下日期時間等資料
 
-var second;  //儲存當下秒數
-var secondDeg;  // 儲存秒針的度數
-var secondHand = document.querySelector('.second-hand');  // 選取器指向秒針
 
-function timer(){
-  now = new Date();  //  透過 new 一個 Date() 取得當下時間
-
-  second = now.getSeconds();  // 使用 getSeconds() 取得當下的秒數 (0-59)
-  secondDeg = ((second / 60) * 360);  // 利用秒數計算出指針的角度
-  secondHand.style.transform = `rotate(${secondDeg}deg)`;  // 將資料圖像化
-}
-
-secondDeg = (second / 60) * 360;
-
-secondHand.style.transform = `rotate(${secondDeg}deg)`;
-
-// secondHand.css({
-//     transform: `rotate(${secondDeg}deg)`
-// });
 
 var second;
 var secondDeg;
-var secondHand = document.querySelector('.second-hand');
+var secondHandTw = document.querySelector('.clock-tw .second-hand');
+var secondHandJp = document.querySelector('.clock-jp .second-hand');
+var secondHandUSA = document.querySelector('.clock-usa .second-hand');
+var secondHandUK = document.querySelector('.clock-uk .second-hand');
 
 var min;
 var minDeg;
-var minHand = document.querySelector('.min-hand');
+var minHandTw = document.querySelector('.clock-tw .min-hand');
+var minHandJp = document.querySelector('.clock-jp .min-hand');
+var minHandUSA = document.querySelector('.clock-usa .min-hand');
+var minHandUK = document.querySelector('.clock-uk .min-hand');
 
 var hour;
 var hourDeg;
-var hourHand = document.querySelector('.hour-hand');
+var hourHandTw = document.querySelector('.clock-tw .hour-hand');
+var hourHandJp = document.querySelector('.clock-jp .hour-hand');
+var hourHandUSA = document.querySelector('.clock-usa .hour-hand');
+var hourHandUK = document.querySelector('.clock-uk .hour-hand');
 
 function timer(){
   now = new Date();
-
+  //tw
   second = now.getSeconds();
   secondDeg = (second / 60) * 360;
-  secondHand.style.transform = `rotate(${secondDeg}deg)`;
+  secondHandTw.style.transform = `rotate(${secondDeg}deg)`;
+  secondHandJp.style.transform = `rotate(${secondDeg}deg)`;
+  secondHandUSA.style.transform = `rotate(${secondDeg}deg)`;
+  secondHandUK.style.transform = `rotate(${secondDeg}deg)`;
 
   min = now.getMinutes();
   minDeg = (min / 60) * 360;
-  minHand.style.transform = `rotate(${minDeg}deg)`;
+  minHandTw.style.transform = `rotate(${minDeg}deg)`;
+  minHandJp.style.transform = `rotate(${minDeg}deg)`;
+  minHandUSA.style.transform = `rotate(${minDeg}deg)`;
+  minHandUK.style.transform = `rotate(${minDeg}deg)`;
 
   hour = now.getHours();
   hourDeg = (hour / 12) * 360;
-  hourHand.style.transform = `rotate(${hourDeg}deg)`;
+  hourHandTw.style.transform = `rotate(${hourDeg}deg)`;
+  hourHandJp.style.transform = `rotate(${hourDeg + 30}deg)`;
+  hourHandUSA.style.transform = `rotate(${hourDeg}deg)`;
+  hourHandUK.style.transform = `rotate(${hourDeg + 150}deg)`;
+
   var time_now = hour + ':' + min + ':' + second
   console.log(time_now)
   $(".e_clock").text(time_now)
