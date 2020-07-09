@@ -71,6 +71,9 @@ function draw(e){
 function clearAll(){
     canvas.width = 800
     ctx.strokeStyle = '#000000';
+    $("#color").val('#000000')
+    $("#colorText").val('#000000')
+    $("#size").val(12)
     ctx.lineJoin = 'round'; //round為圓弧。
     ctx.lineCap = 'round'; //round為圓弧。
     ctx.lineWidth = 12;
