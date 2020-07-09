@@ -30,7 +30,8 @@ let lastX = 0;
 let lastY = 0;
 let hue = 0;
 let direction = true;
-
+let canvasHistory = [];
+let step = -1;
 
 function draw(e){
   if (!isDrawing) return;
@@ -52,7 +53,7 @@ function draw(e){
     ctx.lineTo(e.offsetX, e.offsetY); //畫到的位置。
     ctx.stroke();
     [lastX, lastY] = [e.offsetX, e.offsetY];
-
+    ctx.save(); // 保存默認的狀態
     // ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;//重新定義顏色
     // hue++;
     // if(hue>=360){
@@ -95,8 +96,25 @@ $("#eraser").on("click",function(){
     $("#colorText").val('#ffffff')
 })
 $("#colorText").val(ctx.strokeStyle)
+$("#bg-colorText").val("#ffffff")
+$("#bg-color").val("#ffffff")
+$("#bg-colorText").on("change", function(){
+    var bgcolorText = $("#bg-colorText").val()
+    $("#bg-color").val(bgcolorText) 
+    $("#draw").css("background", bgcolorText)
+})
 $("#colorText").on("blur", function(){
     var colorText = $("#colorText").val()
     $("#color").val(colorText) 
     ctx.strokeStyle = colorText
 })
+
+$("#bg-color").on("change", function(){
+    var bgColor = $("#bg-color").val()
+    $("#draw").css("background", bgColor)
+    $("#bg-colorText").val(bgColor)
+})
+function back(){
+    ctx.restore();
+}
+
