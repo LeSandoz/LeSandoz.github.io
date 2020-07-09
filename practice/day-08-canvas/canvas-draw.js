@@ -75,20 +75,21 @@ function clearAll(){
     ctx.lineCap = 'round'; //round為圓弧。
     ctx.lineWidth = 12;
 }
-$("input").on("change", function(){
-    var size = $("#size").val()
+$("#color").on("change", function(){
     var color = $("#color").val()
-
     ctx.strokeStyle = color;
     $("#colorText").val(color)
-    ctx.lineWidth = size;
-
-
     console.log(color)
+})
+$("#size").on("change", function(){
+    var size = $("#size").val()
+    ctx.lineWidth = size;
     // console.log(size)
 })
 $("#eraser").on("click",function(){
     ctx.strokeStyle = '#ffffff';
+    $("#color").val('#ffffff')
+    $("#colorText").val('#ffffff')
 })
 $("#colorText").val(ctx.strokeStyle)
 $("#colorText").on("blur", function(){
