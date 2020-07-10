@@ -1,5 +1,7 @@
 body{
     font-family: "微軟正黑體";
+    background: rgb(223, 223, 223);
+
 }
 
 h1{
@@ -16,13 +18,13 @@ h2{
 .ground{
     width: auto;
     height: 500px;
-    background: darkgray;
+    background: rgb(223, 223, 223);
     margin-top: 40px;
     position: relative;
     .player, .computer{
         width: 40%;
         height: 90%;
-        background: royalblue;
+        // background: rgb(128, 160, 255);
         margin: 25px 60px;
         text-align: center;
         line-height: 440px;

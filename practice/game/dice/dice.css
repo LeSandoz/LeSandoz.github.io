@@ -1,6 +1,7 @@
 @charset "UTF-8";
 body {
   font-family: "微軟正黑體";
+  background: #dfdfdf;
 }
 
 h1 {
@@ -19,7 +20,7 @@ h2 {
 .ground {
   width: auto;
   height: 500px;
-  background: darkgray;
+  background: #dfdfdf;
   margin-top: 40px;
   position: relative;
 }
@@ -27,7 +28,6 @@ h2 {
 .ground .player, .ground .computer {
   width: 40%;
   height: 90%;
-  background: royalblue;
   margin: 25px 60px;
   text-align: center;
   line-height: 440px;

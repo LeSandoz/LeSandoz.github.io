@@ -1,0 +1,51 @@
+@charset "UTF-8";
+html {
+  background: ivory;
+}
+
+html body {
+  font-family: "微軟正黑體";
+  background: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/p-395-ted3873-ae-a.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=694915dcd618f72ae6bcfde136dc8ea6);
+}
+
+html body header {
+  background: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/pf-41-lukestackpoole-greenland-cabin-01a.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=7987619d68048365c36f6e57e3c54cfe);
+  background-size: cover;
+  background-position: bottom;
+  height: 120px;
+}
+
+html body header a, html body header h1 {
+  color: white;
+}
+
+html body main {
+  background: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/pf-misctexture01-tong-019-chim-02_1_3.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=2c732ce5066026b4fe5ca5d78abbe706);
+  min-height: 800px;
+}
+
+html body main .tools_container {
+  width: 90%;
+  height: 300px;
+  margin: 0px auto;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+}
+
+html body main .tools_container .tools {
+  width: 40%;
+  height: 280px;
+  margin-top: 20px;
+}
+
+html body main .tools_container .tools img {
+  width: 400px;
+  height: 200px;
+}
+
+html body footer {
+  background: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/co1_6322.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=fc552e7c6b3a1b388fc816d0ed3dd89c) bottom;
+  background-size: cover;
+  height: 200px;
+}
+/*# sourceMappingURL=link.css.map */

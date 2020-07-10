@@ -1,0 +1,44 @@
+html{
+    background: ivory;
+    body{
+        font-family: "微軟正黑體";
+        background: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/p-395-ted3873-ae-a.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=694915dcd618f72ae6bcfde136dc8ea6);
+        header{
+            background: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/pf-41-lukestackpoole-greenland-cabin-01a.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=7987619d68048365c36f6e57e3c54cfe);
+            background-size: cover;
+            background-position: bottom;
+            height: 120px;
+            a, h1{
+                color: white;
+            }
+        }
+        main{
+            background: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/pf-misctexture01-tong-019-chim-02_1_3.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=2c732ce5066026b4fe5ca5d78abbe706);
+            min-height: 800px;
+
+            .tools_container{
+                width: 90%;
+                height: 300px;
+                // background: lightsalmon;
+                margin: 0px auto;
+                transform: translateY(40px);
+                .tools{
+                    width: 40%;
+                    height: 280px;
+                    // background: lightskyblue;
+                    margin-top: 20px;
+
+                    img{
+                        width: 400px;
+                        height: 200px;
+                    }
+                }
+            }
+        }
+        footer{
+            background: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/co1_6322.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=fc552e7c6b3a1b388fc816d0ed3dd89c) bottom;
+            background-size: cover;
+            height: 200px;
+        }
+    }
+}
