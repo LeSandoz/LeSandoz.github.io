@@ -1,0 +1,38 @@
+body{
+    font-family: "微軟正黑體";
+    h1{
+        text-align: center;
+        margin-top: 10px;
+        position: relative;
+    } 
+    #again{
+        position: absolute;
+        left: 46%;
+    }
+    .OOXX_box{
+        width: 500px;
+        height: 500px;
+        background: rgb(0, 0, 0);
+        margin: 50px auto;
+
+        .box{
+            width: 155px;
+            height: 155px;
+            background: rgb(221, 158, 158);
+            cursor: pointer;
+            text-align: center;
+            line-height: 155px;
+            font-size: 100px;
+        }
+        .box1_container .box{
+            margin: 8px 0 0 9px;
+        }
+        .box2_container .box{
+            margin: 8px 0 0 9px;
+        }
+        .box3_container .box{
+            margin: 8px 0 8px 9px;
+        }
+
+    }
+}

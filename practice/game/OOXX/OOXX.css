@@ -1,0 +1,45 @@
+@charset "UTF-8";
+body {
+  font-family: "微軟正黑體";
+}
+
+body h1 {
+  text-align: center;
+  margin-top: 10px;
+  position: relative;
+}
+
+body #again {
+  position: absolute;
+  left: 46%;
+}
+
+body .OOXX_box {
+  width: 500px;
+  height: 500px;
+  background: black;
+  margin: 50px auto;
+}
+
+body .OOXX_box .box {
+  width: 155px;
+  height: 155px;
+  background: #dd9e9e;
+  cursor: pointer;
+  text-align: center;
+  line-height: 155px;
+  font-size: 100px;
+}
+
+body .OOXX_box .box1_container .box {
+  margin: 8px 0 0 9px;
+}
+
+body .OOXX_box .box2_container .box {
+  margin: 8px 0 0 9px;
+}
+
+body .OOXX_box .box3_container .box {
+  margin: 8px 0 8px 9px;
+}
+/*# sourceMappingURL=OOXX.css.map */
