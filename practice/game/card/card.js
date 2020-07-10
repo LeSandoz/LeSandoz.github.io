@@ -1,12 +1,12 @@
 
 
 var num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-var result = [];//∂}•t§@≠”™≈∞}¶C
+var result = [];//ÈñãÂè¶‰∏ÄÂÄãÁ©∫Èô£Âàó
 var ranNum = 24;
 
 for (var i = 0; i < ranNum; i++) {
     var ran = Math.floor(Math.random() * num.length);
-    result.push(num.splice(ran, 1)[0]); //¬¬∞}¶C•h∞£º∆¶r¬‡≤æ®Ï∑s∞}¶C
+    result.push(num.splice(ran, 1)[0]); //ËàäÈô£ÂàóÂéªÈô§Êï∏Â≠óËΩâÁßªÂà∞Êñ∞Èô£Âàó
 };
 // console.log(result)
 
@@ -16,6 +16,7 @@ $(".cards-back").each(function(){
         document.getElementsByClassName("cards-back")[i].style.backgroundSize = "cover";
     }
 })
+var optionA = []
 
 $(".cards-head").click(function(){
     $(this).css({"transform":"rotateY(180deg)",
@@ -24,13 +25,47 @@ $(".cards-head").click(function(){
     $(this).next(".cards-back").css({"transform":"rotateY(180deg)",
                     "opacity":"1",
                     "z-index":"1"})
-                    console.log($(this).attr("class"))
+    $(this).attr("data-open", "t")
+    $(this).next(".cards-back").attr("data-open", "t")
+    console.log($(this).attr("data-open"))                
+    optionA.push($(this).next(".cards-back").css("background-image"))
+    console.log(optionA[0])
+    console.log(optionA[1])
+    if(optionA.length > 1){
+        if(optionA[0] == optionA[1]){
+            // $(this).css({"opacity":"0"})
+            // $(this).next(".cards-back").css({"opacity":"0"})
+            setTimeout(function(){
+                $(".card-box").find("[data-open = 't']").css({"display":"none"})
+            },800)
+            console.log("‰∏ÄÊ®£")
+            optionA = [];
+
+        }else{
+            console.log("‰∏ç‰∏ÄÊ®£")
+            setTimeout(function(){
+                $(".cards-head").css({"transform":"rotateY(0deg)",
+                                      "opacity":"1",
+                                      "z-index":"1"})
+                $(".cards-back").css({"transform":"rotateY(0deg)",
+                                      "opacity":"0",
+                                      "z-index":"-1"})
+                $(".card-box").find("[data-open = 't']").attr("data-open", "f") 
+            },800)
+
+            optionA = [];
+        }
+    }else{
+        
+    }
+
 })
-$(".cards-back").click(function(){
-    $(this).css({"transform":"rotateY(0deg)",
-                    "opacity":"0",
-                    "z-index":"-1"})
-    $(this).prev(".cards-head").css({"transform":"rotateY(0deg)",
-                    "opacity":"1",
-                    "z-index":"1"})
-})
+// $(".cards-back").click(function(){
+//     $(this).css({"transform":"rotateY(0deg)",
+//                     "opacity":"0",
+//                     "z-index":"-1"})
+//     $(this).prev(".cards-head").css({"transform":"rotateY(0deg)",
+//                     "opacity":"1",
+//                     "z-index":"1"})
+//     $(this).prev(".cards-head").attr("data-open", "f")               
+// })

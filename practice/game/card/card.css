@@ -19,8 +19,8 @@ body .card-box .cards {
   width: 124px;
   height: 180px;
   border-radius: 6px;
-  -webkit-transition: 2s;
-  transition: 2s;
+  -webkit-transition: 1s;
+  transition: 1s;
   text-align: center;
   line-height: 180px;
   font-size: 30px;
@@ -31,16 +31,16 @@ body .card-box .cards-head {
   background-size: cover;
   z-index: 1;
   position: relative;
-  transition: all 2s;
-  -webkit-transition: all 2s;
+  transition: all 1s;
+  -webkit-transition: all 1s;
 }
 
 body .card-box .cards-back {
   background: url();
   background-size: cover;
   position: absolute;
-  transition: all 2s;
-  -webkit-transition: all 2s;
+  transition: all 1s;
+  -webkit-transition: all 1s;
   opacity: 0;
   border: 1px solid black;
 }
