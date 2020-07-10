@@ -27,7 +27,7 @@ body .card-box .cards {
 }
 
 body .card-box .cards-head {
-  background: url(/practice/game/card/images/back.jpg);
+  background: url(../card/images/back.jpg);
   background-size: cover;
   z-index: 1;
   position: relative;
