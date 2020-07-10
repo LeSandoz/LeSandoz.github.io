@@ -8,8 +8,10 @@ $(".box").click(function(){
     if(click == "t"){
         if((times % 2) !== 1){
             $(this).text("O")
+            $("h1").text("XXX Turn!")
         }else{
             $(this).text("X")
+            $("h1").text("OOO Turn!")
         }
         $(this).attr("data-click","f")
         times++
