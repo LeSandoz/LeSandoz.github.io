@@ -1,0 +1,57 @@
+@charset "UTF-8";
+body {
+  font-family: "微軟正黑體";
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  color: #d84a31;
+}
+
+#start, #stop {
+  position: absolute;
+  top: 50px;
+}
+
+.ground {
+  width: auto;
+  height: 500px;
+  background: darkgray;
+  margin-top: 40px;
+  position: relative;
+}
+
+.ground .player, .ground .computer {
+  width: 40%;
+  height: 90%;
+  background: royalblue;
+  margin: 25px 60px;
+  text-align: center;
+  line-height: 440px;
+  font-size: 60px;
+}
+
+.ground .player img, .ground .computer img {
+  width: 200px;
+  height: 200px;
+  background: white;
+  border-radius: 27px;
+}
+
+.ground .alertbox {
+  width: 300px;
+  height: 100px;
+  background: #e9f0f8;
+  position: absolute;
+  top: 30%;
+  left: 36.5%;
+  border-radius: 20px;
+  font-size: 50px;
+  color: tomato;
+  text-align: center;
+  line-height: 100px;
+}
+/*# sourceMappingURL=dice.css.map */

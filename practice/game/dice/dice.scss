@@ -1,0 +1,52 @@
+body{
+    font-family: "微軟正黑體";
+}
+
+h1{
+    text-align: center;
+}
+h2{
+    color: rgb(216, 74, 49);
+}
+#start, #stop{
+    position: absolute;
+    top: 50px;
+}
+
+.ground{
+    width: auto;
+    height: 500px;
+    background: darkgray;
+    margin-top: 40px;
+    position: relative;
+    .player, .computer{
+        width: 40%;
+        height: 90%;
+        background: royalblue;
+        margin: 25px 60px;
+        text-align: center;
+        line-height: 440px;
+        font-size: 60px;
+
+        img{
+            width: 200px;
+            height: 200px;
+            background: white;
+            border-radius: 27px;
+        }
+    }
+    .alertbox{
+        width: 300px;
+        height: 100px;
+        background: rgb(233, 240, 248);
+        position: absolute;
+        top: 30%;
+        left: 36.5%;
+        border-radius: 20px;
+        font-size: 50px;
+        color: tomato;
+        text-align: center;
+        line-height: 100px;
+    }
+}
+
