@@ -1,0 +1,48 @@
+body{
+    font-family: "微軟正黑體";
+    background: honeydew;
+    h1{
+        text-align: center;
+    }
+    .card-box{
+        background: honeydew;
+        width: auto;
+        height: 180px;
+        margin: 10px;
+        .cards{
+            width: 124px;
+            height: 180px;
+            border-radius: 6px;
+            transition: 2s;
+            text-align: center;
+            line-height: 180px;
+            font-size: 30px;
+        }
+        .cards-head{
+            background: url(/practice/game/card/images/back.jpg);
+            background-size: cover;
+            z-index: 1;
+            position: relative;
+            transition: all 2s;
+            -webkit-transition: all 2s;
+
+        }
+        .cards-back{
+            background: url();
+            background-size: cover;
+            position: absolute;
+            transition: all 2s;
+            -webkit-transition: all 2s;
+            opacity: 0;
+            border: 1px solid black;
+        }
+        // .cards:hover{
+        //     transform: rotateY(180deg);
+        //     transition: 2s;
+        // }
+        // .cards-shadow:hover{
+        //     transform: rotateY(180deg);
+        //     transition: 2s;
+        // }
+    }
+}
