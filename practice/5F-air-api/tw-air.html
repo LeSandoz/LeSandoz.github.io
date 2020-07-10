@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="tw-air.css">
+  </head>
+  <body>
+    <div class="container mt-4">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-12 mb-4">
+            <div class="title">空氣品質指標(AQI)</div>
+            <select class="form-control form-control-lg selectBorder CountyList">
+              <option>請選擇地區</option>
+            </select>
+          </div>
+          <div class="col-lg-8 col-md-8 col-12 mb-4">
+            <table class="table table-border table-responsive">
+              <thead>
+                <tr class="range_AQI">
+                  <td class="align-middle text-center" style="background: #95F084;">0～50</td>
+                  <td class="align-middle text-center" style="background: #FFE695;">51～100</td>
+                  <td class="align-middle text-center" style="background: #FFAF6A;">101～150</td>
+                  <td class="align-middle text-center" style="background: #FF5757;">151～200</td>
+                  <td class="align-middle text-center" style="background: #9777FF;">201～300</td>
+                  <td class="align-middle text-center" style="background: #AD1774;">301～400</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="answer_AQI">
+                  <td class="align-middle text-center">良好</td>
+                  <td class="align-middle text-center">普通</td>
+                  <td class="align-middle text-center">對敏感族群<br>不健康</td>
+                  <td class="align-middle text-center">對所有族群<br>不健康</td>
+                  <td class="align-middle text-center">非常不健康</td>
+                  <td class="align-middle text-center">危害</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="CountyUpdate">
+          <div class="title County"></div>
+          <div class="point align-self-center"></div>
+          <div class="updateTime PublishTime"></div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+            <table class="table table-border-marge">
+              <thead>
+                <tr>
+                  <td class="align-middle text-center bg-white region SiteName_select text-nowrap"></td>
+                  <td class="align-middle text-center region_AQI AQI_select"></td>
+                </tr>
+              </thead>
+              <tbody class="bg-white">
+                <tr>
+                  <td class="align-middle text-center" colspan="2">
+                    <table class="table table-bottom-border mb-0">
+                      <tbody>
+                        <tr>
+                          <td>臭氧<span>O<sub>3</sub>(ppb)</span></td>
+                          <td class="O3"></td>
+                        </tr>
+                        <tr>
+                          <td>懸浮微粒<span>PM<sub>10</sub>(μg/m<sup>3</sup>)</span></td>
+                          <td class="PM10"></td>
+                        </tr>
+                        <tr>
+                          <td>細懸浮微粒<span>PM<sub>2.5</sub>(μg/m<sup>3</sup>)</span></td>
+                          <td class="PM2"></td>
+                        </tr>
+                        <tr>
+                          <td>一氧化碳<span>CO(ppm)</span></td>
+                          <td class="CO"></td>
+                        </tr>
+                        <tr>
+                          <td>二氧化硫<span>SO<sub>2</sub>(ppb)</span></td>
+                          <td class="SO2"></td>
+                        </tr>
+                        <tr>
+                          <td>二氧化氮<span>NO<sub>2</sub>(ppb)</span></td>
+                          <td class="NO2"></td>
+                        </tr>
+      
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-lg-8 col-md-8 col-12">
+            <div class="row justify-content-start table_list pl-1"></div>
+      
+          </div>
+        </div>
+      
+      </div>
+      <div class="footer row justify-content-center">
+        <div class="col-lg-3 col-md-6 col-12 text-white">資料來源：行政院環境保護署</div>
+        <div class="col-lg-4 text-nowrap col-md-6 col-12 text-white footer-copy">Copyright © 2019 HexSchool. All rights reserved.</div>
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="tw-air.js"></script>
+  </body>
+</html>
