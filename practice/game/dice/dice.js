@@ -3,8 +3,8 @@ $("#start").click(function(){
 
     $("#start").addClass("d-none")
     $("#stop").removeClass("d-none")
-    $(".player .point img").attr("src", "/practice/game/dice/images/dice-roll.gif")
-    $(".computer .point img").attr("src", "/practice/game/dice/images/dice-roll.gif")
+    $(".player .point img").attr("src", "./images/dice-roll.gif")
+    $(".computer .point img").attr("src", "./images/dice-roll.gif")
     $(".alertbox").addClass("d-none")
 });
 
@@ -20,8 +20,8 @@ $("#stop").click(function(){
     $(".player .point h3").text(pointArrPlayer[pointPlayer])
     $(".computer .point h3").text(pointArrCom[pointCom])
 
-    $(".player .point img").attr("src", "/practice/game/dice/images/Dice-"+ (pointPlayer + 1) +".svg.png")
-    $(".computer .point img").attr("src", "/practice/game/dice/images/Dice-"+ (pointCom + 1) +".svg.png")
+    $(".player .point img").attr("src", "./images/Dice-"+ (pointPlayer + 1) +".svg.png")
+    $(".computer .point img").attr("src", "./images/Dice-"+ (pointCom + 1) +".svg.png")
 
     if(pointPlayer > pointCom){
         $(".alertbox").removeClass("d-none").text("You Win!!!")
