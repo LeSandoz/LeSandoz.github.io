@@ -1,0 +1,46 @@
+@charset "UTF-8";
+body {
+  font-family: "微軟正黑體";
+}
+
+body h1 {
+  text-align: center;
+  margin: 20px;
+}
+
+body .card-container {
+  background: seashell;
+}
+
+body .card-container .card {
+  margin: 0 auto;
+  background: silver;
+  width: 280px;
+  margin-top: 30px;
+}
+
+body .card-container .card .content {
+  -webkit-transform: translateX(25%);
+          transform: translateX(25%);
+}
+
+body .card-container .card .next {
+  height: 30px;
+  text-align: center;
+  line-height: 15px;
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  margin-top: -15px;
+}
+
+body .card-container .card .prev {
+  height: 30px;
+  text-align: center;
+  line-height: 15px;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  left: -5%;
+}
+/*# sourceMappingURL=forecast.css.map */

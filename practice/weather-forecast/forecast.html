@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Weather Forecast</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="forecast.css">
+  </head>
+  <body>
+      <div class="container">
+        <h1>天氣預報</h1>
+        <div class="all">
+            <div class="card-container d-flex">
+                <div class="card card1">
+                    <div class="card-body d-flex">
+                        <div class="content">
+                            <h4 class="card-title">嘉義縣1</h4>
+                            <p class="card-text">2020-07-13 12:00:00</p>
+                            <p class="card-text">2020-07-13 18:00:00</p>
+                            <p class="card-text">多雲</p>
+                            <p class="card-text">降雨機率: 10%</p>
+                            <p class="card-text">31度-34度</p>
+                            <p class="card-text">悶熱至易中暑</p>
+                        </div>
+                        <button type="button" class="btn btn-info next next1">＞</button>
+                    </div>
+                </div>
+                <div class="card d-none card2">
+                    <div class="card-body d-flex">
+                        <button type="button" class="btn btn-info prev prev1">＜</button>
+                        <div class="content">
+                            <h4 class="card-title">嘉義縣2</h4>
+                            <p class="card-text">2020-07-13 18:00:00</p>
+                            <p class="card-text">2020-07-14 06:00:00</p>
+                            <p class="card-text">多雲</p>
+                            <p class="card-text">降雨機率: 0%</p>
+                            <p class="card-text">27度-31度</p>
+                            <p class="card-text">舒適至悶熱</p>
+                        </div>
+                        <button type="button" class="btn btn-info next next2">＞</button>
+                    </div>
+                </div>
+                <div class="card d-none card3">
+                    <div class="card-body d-flex">
+                        <button type="button" class="btn btn-info prev prev2">＜</button>
+                        <div class="content">
+                            <h4 class="card-title">嘉義縣3</h4>
+                            <p class="card-text">2020-07-14 06:00:00</p>
+                            <p class="card-text">2020-07-14 18:00:00</p>
+                            <p class="card-text">多雲午後短暫雷陣雨</p>
+                            <p class="card-text">降雨機率: 30%</p>
+                            <p class="card-text">27度-34度</p>
+                            <p class="card-text">舒適至悶熱</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="forecast.js"></script>
+  </body>
+</html>

@@ -23,6 +23,7 @@ fetch('https://script.googleusercontent.com/macros/echo?user_content_key=C1hU2sD
                     </tr>`
     }
     list.innerHTML = str;
+    console.log(result)
     $(document).on("click", ".more", function(){
         arrLength += 10;
         str = '';

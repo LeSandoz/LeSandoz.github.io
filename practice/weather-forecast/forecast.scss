@@ -1,0 +1,40 @@
+body{
+    font-family: "微軟正黑體";
+    // text-align: center;
+    h1{
+        text-align: center;
+        margin: 20px;
+    }
+    .card-container{
+        background: seashell;
+        .card{
+            margin: 0 auto;
+            background: silver;
+            width: 280px;
+            margin-top: 30px;
+
+            .content{
+                transform: translateX(25%);
+            }
+            .next{
+                height: 30px;
+                text-align: center;
+                line-height: 15px;
+                position: absolute;
+                top: 50%;
+                left: 90%;
+                margin-top: -15px;
+            }
+            .prev{
+                height: 30px;
+                text-align: center;
+                line-height: 15px;
+                position: absolute;
+                top: 50%;
+                margin-top: -15px;
+                left: -5%;
+
+            }
+        }
+    }
+}
