@@ -1,0 +1,21 @@
+@charset "UTF-8";
+body {
+  font-family: "微軟正黑體";
+}
+
+body h1 {
+  text-align: center;
+  margin: 40px 0;
+}
+
+body .table_list tr:hover {
+  background: rgba(188, 143, 143, 0.555);
+  cursor: pointer;
+}
+
+body .more {
+  position: fixed;
+  bottom: 10%;
+  left: 90%;
+}
+/*# sourceMappingURL=u-bike.css.map */
