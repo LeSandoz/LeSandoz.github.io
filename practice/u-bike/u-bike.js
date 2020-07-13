@@ -1,4 +1,10 @@
+let myHeaders = new Headers({
+    'Access-Control-Allow-Origin': '*',
+    'Content-Type': 'text/plain'
+});
+
 fetch('https://script.googleusercontent.com/macros/echo?user_content_key=C1hU2sDZcxImNfhKczMdiZwsxixRD4IfRPmoNXAkNr1_9meUzCw6sT1BvRavQXG01hH5i5Ky0bqoglGD9EdUSg3q8_t21uaPOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa2nCQdzj0xaveqj_aTMGhcOgACOoWSznLeycE0b6pUjYUSBIj_zmygdTizpQPW66RJmYY5VWNeg0SXadqjNzSGMoMmxOzy6jE9XbhKgcWebsKkourV1Kaoz58c6zYdGFC3PMXlJAeqAFrEwo82IiTMAixelIRi4nAMaNHffJA7gmOx5xLD8uBuDznnLJsP_IYY6Yu90O9CkL&lib=MU7uPymDDbcE3lDdK1Ircj_pRVCifQbmI')
+// fetch('http://data.ntpc.gov.tw/​/api​/datasets​/2924FBE5-852F-46F4-A829-45BECD75EFF5​/json')
 .then(res => {
     // 處理 response
     return res.json();
