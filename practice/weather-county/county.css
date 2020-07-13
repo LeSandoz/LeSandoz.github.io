@@ -1,0 +1,16 @@
+@charset "UTF-8";
+body {
+  font-family: "微軟正黑體";
+}
+
+body h1 {
+  margin: 20px;
+  text-align: center;
+}
+
+body select {
+  position: absolute;
+  top: 9.6%;
+  left: 83.8%;
+}
+/*# sourceMappingURL=county.css.map */
