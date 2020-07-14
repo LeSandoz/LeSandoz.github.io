@@ -13,4 +13,8 @@ body select {
   top: 9.6%;
   left: 83.8%;
 }
+
+body .content:hover {
+  cursor: pointer;
+}
 /*# sourceMappingURL=county.css.map */

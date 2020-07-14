@@ -34,7 +34,7 @@ fetch('https://opendata.cwb.gov.tw/fileapi/v1/opendataapi/F-D0047-071?Authorizat
                 for(let i = 0; i < 14; i++){
                     let startTime = jsonData.location[n].weatherElement[0].time[i].startTime.substr(5,11).replace("T","\n\n\n\n ").replace("-","/")
                     let endTime = jsonData.location[n].weatherElement[0].time[i].endTime.substr(5,11).replace("T","\n\n\n\n ").replace("-","/")
-                    str += `<tr>
+                    str += `<tr class="content">
                                 <td>${locationName}</td>
                                 <td>${jsonData.location[n].weatherElement[0].time[i].elementValue.value}度</td>
                                 <td>${jsonData.location[n].weatherElement[1].time[i].elementValue.value}度</td>
@@ -59,7 +59,7 @@ fetch('https://opendata.cwb.gov.tw/fileapi/v1/opendataapi/F-D0047-071?Authorizat
             for(let i = 0; i < 14; i++){
                 let startTime = jsonData.location[n].weatherElement[0].time[i].startTime.substr(5,11).replace("T","\n\n\n\n ").replace("-","/")
                 let endTime = jsonData.location[n].weatherElement[0].time[i].endTime.substr(5,11).replace("T","\n\n\n\n ").replace("-","/")
-                str += `<tr>
+                str += `<tr class="content">
                             <td>${locationName}</td>
                             <td>${jsonData.location[n].weatherElement[0].time[i].elementValue.value}度</td>
                             <td>${jsonData.location[n].weatherElement[1].time[i].elementValue.value}度</td>
