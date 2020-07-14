@@ -23,25 +23,27 @@ fetch('https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.jso
                     + "兒童口罩數量: " + result.features[i].properties.mask_child + "\n"
 
         let content = ` <div style="font-family:'微軟正黑體';">
-                            <h2><i class="fa fa-hospital-o" aria-hidden="true"></i>${result.features[i].properties.name}</h2>
-                            <hr>
-                            <div>
-                                <div><i class="fa fa-map-marker" aria-hidden="true"></i>${result.features[i].properties.address}</div>
-                                <div><i class="fa fa-phone" aria-hidden="true"></i></i>${result.features[i].properties.phone}</div>
-                                <div><i class="fa fa-info-circle" aria-hidden="true"></i></i>${result.features[i].properties.note}</div>
-                                <div><i class="fa fa-clock-o" aria-hidden="true"></i></i>${result.features[i].properties.updated}</div>
-                            </div>
-                            <hr>
-                            <div class="d-flex"> 
-                                <div class="mr-4">
-                                    <div><h4>成人口罩</h4></div>
-                                    <div><h5>${result.features[i].properties.mask_adult}片</h5></div>
-                                </div>       
-                                <div>
-                                    <div><h4>兒童口罩</h4></div>
-                                    <div><h5>${result.features[i].properties.mask_child}片</h5></div>
-                                </div>     
-                            </div>
+                          <h2><i class="fa fa-hospital-o" aria-hidden="true"></i>${result.features[i].properties.name}</h2>
+                          <hr>
+                          <div class="">
+                            <div class="mb-2"><i class="fa fa-map-marker" aria-hidden="true"></i> ${result.features[i].properties.address}</div>
+                            <div class="mb-2"><i class="fa fa-phone" aria-hidden="true"></i></i> ${result.features[i].properties.phone}</div>
+                            <div class="mb-2"><i class="fa fa-info" aria-hidden="true"></i></i> ${result.features[i].properties.note}</div>
+                            <div class="mb-2"><i class="fa fa-clock-o" aria-hidden="true"></i></i> ${result.features[i].properties.updated}</div>
+                          </div>
+                          <hr>
+                          <div class="d-flex"> 
+                              <div class="p-2 mr-4 mask-box" style="background:rgb(245, 220, 187, 0.884); border-radius: 10px">
+                                  <div><h4>成人口罩</h4></div>
+                                  <div><h5>${result.features[i].properties.mask_adult}片</h5></div>
+                              </div>       
+                              <div class="p-2 mask-box" style="background:rgba(153, 208, 229, 0.884); border-radius: 10px">
+                                  <div><h4>兒童口罩</h4></div>
+                                  <div><h5>${result.features[i].properties.mask_child}片</h5></div>
+                              </div>
+   
+                          </div>
+                          <div><a href="https://www.google.com.tw/maps/search/${result.features[i].geometry.coordinates}">前往Google地圖</a></div>  
                         </div>`;
         position.push({title: title,
                        title1: content,
