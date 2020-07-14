@@ -10,12 +10,15 @@
     <link rel="stylesheet" href="mask-map.css">
   </head>
   <body>
-    <div id="app" class="container">
-        <div class="row">
-          <div class="col">
-            <div id="map" class="embed-responsive embed-responsive-16by9"></div>
-            <div class="update">123</div>
-          </div>
+    <div id="app" class="d-flex">
+        <div id="map" class="embed-responsive embed-responsive-16by9"></div>
+        <div class="side-bar">
+            <button type="button" class="btn btn-light">
+                <img class="back" src="./images/back.png" alt="">
+                <img class="left-arrow d-none" src="./images/left-arrow.png" alt="">
+            </button>
+            side-bar
+            <div class="update d-none">update-time</div>
         </div>
       </div>
     <script>
