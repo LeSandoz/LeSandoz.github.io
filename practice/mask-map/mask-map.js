@@ -2,7 +2,7 @@ let map;
 let marker = [];
 let position = [];
 let infowindow = [];
-
+let currentInfoWindow = ''; //Global variable   
 // console.log(position)
 fetch('https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.json')
 .then(res => {
@@ -17,12 +17,34 @@ fetch('https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.jso
     // console.log("lng: " + result.features[0].geometry.coordinates[0])
     // console.log("lat: " + result.features[0].geometry.coordinates[1])
     for(let i = 0; i < result.features.length; i++){
-        let title = result.features[i].properties.name + "\n"
-                  + result.features[i].properties.address + "\n"
-                  + "成人口罩數量: " + result.features[i].properties.mask_adult + "\n"
-                  + "兒童口罩數量: " + result.features[i].properties.mask_child + "\n"
-        let content = title
+        let title   = result.features[i].properties.name + "\n"
+                    + result.features[i].properties.address + "\n"
+                    + "成人口罩數量: " + result.features[i].properties.mask_adult + "\n"
+                    + "兒童口罩數量: " + result.features[i].properties.mask_child + "\n"
+
+        let content = ` <div style="font-family:'微軟正黑體';">
+                            <h2><i class="fa fa-hospital-o" aria-hidden="true"></i>${result.features[i].properties.name}</h2>
+                            <hr>
+                            <div>
+                                <div><i class="fa fa-map-marker" aria-hidden="true"></i>${result.features[i].properties.address}</div>
+                                <div><i class="fa fa-phone" aria-hidden="true"></i></i>${result.features[i].properties.phone}</div>
+                                <div><i class="fa fa-info-circle" aria-hidden="true"></i></i>${result.features[i].properties.note}</div>
+                                <div><i class="fa fa-clock-o" aria-hidden="true"></i></i>${result.features[i].properties.updated}</div>
+                            </div>
+                            <hr>
+                            <div class="d-flex"> 
+                                <div class="mr-4">
+                                    <div><h4>成人口罩</h4></div>
+                                    <div><h5>${result.features[i].properties.mask_adult}片</h5></div>
+                                </div>       
+                                <div>
+                                    <div><h4>兒童口罩</h4></div>
+                                    <div><h5>${result.features[i].properties.mask_child}片</h5></div>
+                                </div>     
+                            </div>
+                        </div>`;
         position.push({title: title,
+                       title1: content,
                        lat: result.features[i].geometry.coordinates[1],
                        lng: result.features[i].geometry.coordinates[0]})
     }
@@ -61,12 +83,12 @@ function initMap() {
           });
 
         infowindow[i] = new google.maps.InfoWindow({
-            content: position[i].title,
+            content: position[i].title1,
             position: {
                 lat: position[i].lat,
                 lng: position[i].lng
             },
-            maxWidth: 200,
+            maxWidth: 280,
             pixelOffset: new google.maps.Size(100, -20) 
         });
         // infowindow.open(map);
@@ -77,7 +99,9 @@ function initMap() {
         });
     }
 
-
+    google.maps.event.addListener('click',function(){
+        infowindow.close();
+    });
 
 
   }
