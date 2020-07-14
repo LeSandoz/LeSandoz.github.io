@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": ";AAAA,sDAAsD;AACtD,AAAA,IAAI,EAAE,IAAI,CAAC;EACP,MAAM,EAAE,IAAI;EACZ,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,WAAW,EAAE,YAAY;CAC5B;;AACD;mCACmC;AACnC,AAAA,IAAI,CAAC;EACD,MAAM,EAAE,IAAI;CACf;;AACD,AAAA,OAAO,CAAA;EACH,UAAU,EAAE,KAAK;CACpB",
+    "sources": [
+        "mask-map.scss"
+    ],
+    "names": [],
+    "file": "mask-map.css"
+}
