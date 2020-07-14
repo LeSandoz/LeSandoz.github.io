@@ -1,5 +1,5 @@
 let map;
-let markers = [];
+let marker = [];
 let position = [];
 
 // console.log(position)
@@ -38,38 +38,50 @@ function initMap() {
       }
     });
     
-
     for (let i = 0; i < position.length; i++) {
-      addMarker(i);
+        marker[i] = new google.maps.Marker({
+            position: {
+              lat: position[i].lat,
+              lng: position[i].lng
+            },
+            map: map,
+            title: position[i].title,
+
+          });
+          
     }
+    // google.maps.event.addListener(marker, function(){
+    //     console.log("click")
+    // })
+    marker.addListener('click',function(){
+        if(marker.getAnimation() == null){
+            marker.setAnimation(google.maps.Animation.BOUNCE);
+        }else{
+          marker.setAnimation(null);
+        }
+    });
+    
+
 
   }
   initMap();
-  function addMarker(e) {
-
-
-    markers[e] = new google.maps.Marker({
-      position: {
-        lat: position[e].lat,
-        lng: position[e].lng
-      },
-      map: map,
-      title: position[e].title,
-      // draggable: true
-
-    });
-  }
-//   var infowindow = new google.maps.InfoWindow({
-//     content:"Hello World!"
+//   function addMarker(e) {
+//     marker[e] = new google.maps.Marker({
+//       position: {
+//         lat: position[e].lat,
+//         lng: position[e].lng
+//       },
+//       map: map,
+//       title: position[e].title,
 //     });
-    
-//     google.maps.event.addListener(marker, 'click', function() {
-//     infowindow.open(map,marker);
-//     });
+
+//   }
 
 }).catch(function(err) {
     // 錯誤處理
 });
+
+
 
 
 
