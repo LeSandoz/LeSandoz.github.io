@@ -10,14 +10,14 @@ let currentInfoWindow = ''; //Global variable
 /** fetch api url by cors-anywhere */
 axios.get(`${cors}${url}`)
   .then((response) => {
-    console.log(response.data)
-    console.log(response.data[0].storeNm)
-    console.log(response.data[0].addr)
-    console.log(response.data[0].latitude)
-    console.log(response.data[0].longitude)
-    console.log(response.data[0].tel)
-    console.log(response.data[0].total)
-    console.log(response.data[0].updateTime)
+    // console.log(response.data)
+    // console.log(response.data[0].storeNm)
+    // console.log(response.data[0].addr)
+    // console.log(response.data[0].latitude)
+    // console.log(response.data[0].longitude)
+    // console.log(response.data[0].tel)
+    // console.log(response.data[0].total)
+    // console.log(response.data[0].updateTime)
     for(let i = 0; i < response.data.length; i++){
         total.push(response.data[i].total)
         let title   = response.data[i].storeNm + "\n"
@@ -51,11 +51,29 @@ axios.get(`${cors}${url}`)
                        lng: parseFloat(response.data[i].longitude)})
                      
     }
-    console.log(total)
+    // console.log(total)
 
     // console.log(position[0].lat)  
     function initMap() { 
-    
+      var sunny = new google.maps.LatLng(24.9456985, 121.3802776);   
+          
+      if(window.navigator.geolocation){   
+          var geolocation = window.navigator.geolocation;   
+          console.log(window.navigator.geolocation);   
+          geolocation.getCurrentPosition(getPositionSuccess);   
+      }else{   
+          alert("你的瀏覽器不支援地理定位");   
+          console.log("你的瀏覽器不支援地理定位");   
+          map.setCenter(sunny);   
+      }   
+      function getPositionSuccess(position){   
+          initialLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);   
+          //定位到目前位置   
+          map.setCenter(initialLocation);   
+          console.log("IN啦");   
+          console.log(window.navigator.geolocation);   
+  
+      }  
         map = new google.maps.Map(document.getElementById('map'), {
             zoom: 15,
             center: {
