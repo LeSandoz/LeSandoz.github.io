@@ -25,7 +25,7 @@ axios.get(`${cors}${url}`)
                     + "電話: " + response.data[i].tel + "\n"
                     + "三倍券剩餘數量: " + response.data[i].total + "\n";
         let content = ` <div style="font-family:'微軟正黑體';">
-                            <h2><i class="fa fa-hospital-o" aria-hidden="true"></i> ${response.data[i].storeNm}</h2>
+                            <h3><i class="fa fa-hospital-o" aria-hidden="true"></i> ${response.data[i].storeNm}</h3>
                             <hr>
                             <div class="">
                             <div class="mb-2"><i class="fa fa-map-marker" aria-hidden="true"></i> ${response.data[i].addr}</div>
@@ -36,8 +36,7 @@ axios.get(`${cors}${url}`)
                             <hr>
                             <div class="d-flex"> 
                                 <div class="p-2 mr-4 mask-box" style="background:rgb(245, 220, 187, 0.884); border-radius: 10px; width: 300px" onMouseOver="this.style.color='#00F';this.style.cursor='pointer'" onMouseOut="this.style.color='#000000';this.style.cursor='default'">
-                                    <div><h5>三倍券剩餘數量</h5></div>
-                                    <div><h6>${response.data[i].total}份</h6></div>
+                                    <div><h6>三倍券剩餘數量: ${response.data[i].total}份</h6></div>
                                 </div>       
                             </div>
                             <hr>
