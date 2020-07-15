@@ -111,8 +111,8 @@ axios.get(`${cors}${url}`)
                   // console.log(currentInfoWindow)
                   currentInfoWindow.open(map,marker[i]);
               });
-              // var markerCluster = new MarkerClusterer(map, marker,{imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'}); //點聚合
-              // var markerCluster = new MarkerClusterer(map, marker);
+            //   var markerCluster = new MarkerClusterer(map, marker,{imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'}); //點聚合
+            //   var markerCluster = new MarkerClusterer(map, marker);
           }
       
       
