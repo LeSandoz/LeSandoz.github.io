@@ -36,7 +36,7 @@ axios.get(`${cors}${url}`)
                             <hr>
                             <div class="d-flex"> 
                                 <div class="p-2 mr-4 mask-box" style="background:rgb(245, 220, 187, 0.884); border-radius: 10px; width: 300px" onMouseOver="this.style.color='#00F';this.style.cursor='pointer'" onMouseOut="this.style.color='#000000';this.style.cursor='default'">
-                                    <div><h6>三倍券剩餘數量: ${response.data[i].total}份</h6></div>
+                                    <div class="text-center"><h6>三倍券剩餘數量: ${response.data[i].total}份</h6></div>
                                 </div>       
                             </div>
                             <hr>
