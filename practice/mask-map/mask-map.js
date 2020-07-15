@@ -30,7 +30,7 @@ fetch('https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.jso
                             <div class="mb-2"><i class="fa fa-map-marker" aria-hidden="true"></i> ${result.features[i].properties.address}</div>
                             <div class="mb-2"><i class="fa fa-phone" aria-hidden="true"></i></i> ${result.features[i].properties.phone}</div>
                             <div class="mb-2"><i class="fa fa-info" aria-hidden="true"></i></i> ${result.features[i].properties.note}</div>
-                            <div class="mb-2"><i class="fa fa-clock-o" aria-hidden="true"></i></i> ${result.features[i].properties.updated}</div>
+                            <div class="mb-2"><i class="fa fa-clock-o" aria-hidden="true"></i></i>更新時間: ${result.features[i].properties.updated}</div>
                           </div>
                           <hr>
                           <div class="d-flex"> 
@@ -56,7 +56,7 @@ fetch('https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.jso
     }
     let updateTime = result.features[0].properties.updated
     $(".update").text("最後更新時間: " + updateTime)
-// console.log(position)
+console.log(position)
 
 function initMap() {
 
