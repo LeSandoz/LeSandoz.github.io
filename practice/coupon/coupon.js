@@ -5,7 +5,7 @@ let marker = [];
 let markers = [];
 let position = [];
 let infowindow = [];
-let total = []
+let total = [];
 let currentInfoWindow = ''; //Global variable  
 /** fetch api url by cors-anywhere */
 axios.get(`${cors}${url}`)
