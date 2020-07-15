@@ -1,5 +1,6 @@
 let map;
 let marker = [];
+let markers = [];
 let position = [];
 let infowindow = [];
 let currentInfoWindow = ''; //Global variable   
@@ -58,14 +59,204 @@ fetch('https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.jso
 // console.log(position)
 
 function initMap() {
+
+    var sunny = new google.maps.LatLng(24.9456985, 121.3802776);   
+    console.log(window.navigator.geolocation);   
+        
+    if(window.navigator.geolocation){   
+        var geolocation = window.navigator.geolocation;   
+        geolocation.getCurrentPosition(getPositionSuccess);   
+    }else{   
+        alert("你的瀏覽器不支援地理定位");   
+        console.log("你的瀏覽器不支援地理定位");   
+        map.setCenter(sunny);   
+    }   
+    function getPositionSuccess(position){   
+        initialLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);   
+        //定位到目前位置   
+        map.setCenter(initialLocation);   
+        console.log("IN啦");   
+        console.log(window.navigator.geolocation);   
+
+    }  
+    function showTest(){
+      let nightMode = [ {
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#242f3e"
+          }
+        ]
+      },
+      {
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#746855"
+          }
+        ]
+      },
+      {
+        "elementType": "labels.text.stroke",
+        "stylers": [
+          {
+            "color": "#242f3e"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative.locality",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#d59563"
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#d59563"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.park",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#263c3f"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.park",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#6b9a76"
+          }
+        ]
+      },
+      {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#38414e"
+          }
+        ]
+      },
+      {
+        "featureType": "road",
+        "elementType": "geometry.stroke",
+        "stylers": [
+          {
+            "color": "#212a37"
+          }
+        ]
+      },
+      {
+        "featureType": "road",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#9ca5b3"
+          }
+        ]
+      },
+      {
+        "featureType": "road.highway",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#746855"
+          }
+        ]
+      },
+      {
+        "featureType": "road.highway",
+        "elementType": "geometry.stroke",
+        "stylers": [
+          {
+            "color": "#1f2835"
+          }
+        ]
+      },
+      {
+        "featureType": "road.highway",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#f3d19c"
+          }
+        ]
+      },
+      {
+        "featureType": "transit",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#2f3948"
+          }
+        ]
+      },
+      {
+        "featureType": "transit.station",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#d59563"
+          }
+        ]
+      },
+      {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#17263c"
+          }
+        ]
+      },
+      {
+        "featureType": "water",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#515c6d"
+          }
+        ]
+      },
+      {
+        "featureType": "water",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+          {
+            "color": "#17263c"
+          }
+        ]
+      }]
+      map.setOptions({styles: nightMode});
+    }
+
     map = new google.maps.Map(document.getElementById('map'), {
       zoom: 16,
       center: {
         lat: 24.9456985,
         lng: 121.3802776
-      }
+      },
+      styles:[],
+      hideStyle: [{
+        featureType: 'poi.business',
+        stylers: [{
+          visibility: 'off'
+        }]
+      }]
     });
-
+    console.log(map.styles)
     var marker1= new google.maps.Marker({
         map: map,
         position: {lat: 24.9456985, lng: 121.3802776},
@@ -107,34 +298,26 @@ function initMap() {
             // console.log(currentInfoWindow)
             currentInfoWindow.open(map,marker[i]);
         });
+        // var markerCluster = new MarkerClusterer(map, marker,{imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'}); //點聚合
+        // var markerCluster = new MarkerClusterer(map, marker);
     }
 
-    // google.maps.event.addListener('center_changed',function(){
-    //     for(let i = 0; i < infowindow.length; i++) {   
-    //         infowindow[i].close();   
-    //      }   
-    // });
+
 
 
   }
   initMap();
-//   function addMarker(e) {
-//     marker[e] = new google.maps.Marker({
-//       position: {
-//         lat: position[e].lat,
-//         lng: position[e].lng
-//       },
-//       map: map,
-//       title: position[e].title,
-//     });
-
-//   }
+  $(document).on("click", ".textDiv", function(){
+    showTest();
+  })
+  // google.maps.event.addDomListener(testDiv, 'click', showTest);
+  
 
 }).catch(function(err) {
     // 錯誤處理
 });
 
-
+console.log(position.coords);
 
 $(document).on("click",".left-arrow", function(){
     // console.log(123)
