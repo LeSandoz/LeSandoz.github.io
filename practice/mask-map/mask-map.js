@@ -23,7 +23,7 @@ fetch('https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.jso
                     + "兒童口罩數量: " + result.features[i].properties.mask_child + "\n"
 
         let content = ` <div style="font-family:'微軟正黑體';">
-                          <h2><i class="fa fa-hospital-o" aria-hidden="true"></i>${result.features[i].properties.name}</h2>
+                          <h2><i class="fa fa-hospital-o" aria-hidden="true"></i> ${result.features[i].properties.name}</h2>
                           <hr>
                           <div class="">
                             <div class="mb-2"><i class="fa fa-map-marker" aria-hidden="true"></i> ${result.features[i].properties.address}</div>
@@ -33,17 +33,20 @@ fetch('https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.jso
                           </div>
                           <hr>
                           <div class="d-flex"> 
-                              <div class="p-2 mr-4 mask-box" style="background:rgb(245, 220, 187, 0.884); border-radius: 10px">
-                                  <div><h4>成人口罩</h4></div>
-                                  <div><h5>${result.features[i].properties.mask_adult}片</h5></div>
+                              <div class="p-2 mr-4 mask-box" style="background:rgb(245, 220, 187, 0.884); border-radius: 10px" onMouseOver="this.style.color='#00F';this.style.cursor='pointer'" onMouseOut="this.style.color='#000000';this.style.cursor='default'">
+                                  <div><h5>成人口罩</h5></div>
+                                  <div><h6>${result.features[i].properties.mask_adult}片</h6></div>
                               </div>       
-                              <div class="p-2 mask-box" style="background:rgba(153, 208, 229, 0.884); border-radius: 10px">
-                                  <div><h4>兒童口罩</h4></div>
-                                  <div><h5>${result.features[i].properties.mask_child}片</h5></div>
+                              <div class="p-2 mask-box" style="background:rgba(196, 236, 251, 0.89); border-radius: 10px" onMouseOver="this.style.color='#00F';this.style.cursor='pointer'" onMouseOut="this.style.color='#000000';this.style.cursor='default'">
+                                  <div><h5>兒童口罩</h5></div>
+                                  <div><h6>${result.features[i].properties.mask_child}片</h6></div>
                               </div>
    
                           </div>
-                          <div><a href="https://www.google.com.tw/maps/search/${result.features[i].geometry.coordinates}">前往Google地圖</a></div>  
+                          <hr>
+                          <div class="text-center">
+                            <a href="https://www.google.com.tw/maps/search/${result.features[i].properties.name} ${result.features[i].properties.address}" target="_blank"><h6>前往Google地圖</h6></a>
+                          </div>  
                         </div>`;
         position.push({title: title,
                        title1: content,
@@ -52,7 +55,7 @@ fetch('https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.jso
     }
     let updateTime = result.features[0].properties.updated
     $(".update").text("最後更新時間: " + updateTime)
-console.log(position)
+// console.log(position)
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
@@ -96,14 +99,21 @@ function initMap() {
         // infowindow.open(map);
         // console.log(infowindow)
         marker[i].addListener('click',function(){
-            console.log(infowindow[i])
-            infowindow[i].open(map,marker[i]);
+            currentInfoWindow = infowindow[i]
+            // console.log(infowindow.length)
+            for(let i = 0; i < infowindow.length; i++) {   
+                infowindow[i].close();   
+             }   
+            // console.log(currentInfoWindow)
+            currentInfoWindow.open(map,marker[i]);
         });
     }
 
-    google.maps.event.addListener('click',function(){
-        infowindow.close();
-    });
+    // google.maps.event.addListener('center_changed',function(){
+    //     for(let i = 0; i < infowindow.length; i++) {   
+    //         infowindow[i].close();   
+    //      }   
+    // });
 
 
   }
@@ -127,15 +137,15 @@ function initMap() {
 
 
 $(document).on("click",".left-arrow", function(){
-    console.log(123)
+    // console.log(123)
     $(".side-bar").css("width", 0)
     $(".update").addClass("d-none")
     $(".left-arrow").addClass("d-none")
     $(".back").removeClass("d-none")
 })
 $(document).on("click",".back", function(){
-    console.log(123)
-    $(".side-bar").css("width", "20%")
+    // console.log(123)
+    $(".side-bar").css("width", "24%")
     $(".update").removeClass("d-none")
     $(".left-arrow").removeClass("d-none")
     $(".back").addClass("d-none")
