@@ -148,20 +148,20 @@ axios.get(`${cors}${url}`)
 // });
 
 
-// $(document).on("click",".left-arrow", function(){
-//     // console.log(123)
-//     $(".side-bar").css("width", 0)
-//     $(".update").addClass("d-none")
-//     $(".left-arrow").addClass("d-none")
-//     $(".back").removeClass("d-none")
-// })
-// $(document).on("click",".back", function(){
-//     // console.log(123)
-//     $(".side-bar").css("width", "24%")
-//     $(".update").removeClass("d-none")
-//     $(".left-arrow").removeClass("d-none")
-//     $(".back").addClass("d-none")
-// })
+$(document).on("click",".left-arrow", function(){
+    // console.log(123)
+    $(".side-bar").css("width", 0)
+    $(".update").addClass("d-none")
+    $(".left-arrow").addClass("d-none")
+    $(".back").removeClass("d-none")
+})
+$(document).on("click",".back", function(){
+    // console.log(123)
+    $(".side-bar").css("width", "24%")
+    $(".update").removeClass("d-none")
+    $(".left-arrow").removeClass("d-none")
+    $(".back").addClass("d-none")
+})
 
 //   center: {lat: 24.9456985, lng: 121.3802776}
 
