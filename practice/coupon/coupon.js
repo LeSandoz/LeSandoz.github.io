@@ -7,6 +7,7 @@ let position = [];
 let infowindow = [];
 let total = [];
 let currentInfoWindow = ''; //Global variable  
+let markerCluster;
 /** fetch api url by cors-anywhere */
 axios.get(`${cors}${url}`)
   .then((response) => {
@@ -109,7 +110,8 @@ axios.get(`${cors}${url}`)
                   title: position[i].title,
                 //   content: `<img src="./images/post-office.png">`
                 });
-      
+                markers.push(marker[i])
+                // console.log(markers)
               infowindow[i] = new google.maps.InfoWindow({
                   content: position[i].title1,
                   position: {
@@ -132,6 +134,23 @@ axios.get(`${cors}${url}`)
               });
             //   var markerCluster = new MarkerClusterer(map, marker,{imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'}); //點聚合
             //   var markerCluster = new MarkerClusterer(map, marker);
+        //     var clusterStyles = [
+        //       {
+        //           url: './images/cluster_icon.png',
+        //           textSize: 0.001,
+        //           textColor: 'transparent',
+        //           height: 58,
+        //           width: 58
+        //       }
+      
+        //   ];
+        //   markerCluster = new MarkerClusterer(map, markers,
+        //     {
+        //         maxZoom: 13,
+        //         gridSize: 80,
+        //         styles: clusterStyles,
+        //     }
+        // );
           }
       
       
