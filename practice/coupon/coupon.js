@@ -1,5 +1,5 @@
 const cors = 'https://cors-anywhere.herokuapp.com/'; // use cors-anywhere to fetch api data
-const url = 'https://quality.data.gov.tw/dq_download_json.php?nid=127751&md5_url=ff02dedeecfbc115c19dd0dd37db17f4'; // origin api url
+const url = 'https://3000.gov.tw/hpgapi-openmap/api/getPostData'; // origin api url
 let map;
 let marker = [];
 let markers = [];
@@ -24,19 +24,20 @@ axios.get(`${cors}${url}`)
                     + response.data[i].addr + "\n"
                     + "電話: " + response.data[i].tel + "\n"
                     + "三倍券剩餘數量: " + response.data[i].total + "\n";
-        let content = ` <div style="font-family:'微軟正黑體';">
+        let content = ` <div style="font-family:'微軟正黑體';font-size:16px">
                             <h3><i class="fa fa-hospital-o" aria-hidden="true"></i> ${response.data[i].storeNm}</h3>
                             <hr>
                             <div class="">
-                            <div class="mb-2"><i class="fa fa-map-marker" aria-hidden="true"></i> ${response.data[i].addr}</div>
-                            <div class="mb-2"><i class="fa fa-phone" aria-hidden="true"></i></i> ${response.data[i].tel}</div>
-                            <div class="mb-2"><i class="fa fa-info" aria-hidden="true"></i></i>  ${response.data[i].busiTime}</div>
+                            <div class="mb-2"><i class="fa fa-map-marker" aria-hidden="true"></i>${response.data[i].addr}</div>
+                            <div class="mb-2"><i class="fa fa-phone" aria-hidden="true"></i></i>${response.data[i].tel}</div>
+                            <div class="mb-2"><i class="fa fa-info" aria-hidden="true"></i></i>${response.data[i].busiTime}</div>
+                            <div class="mb-2"><i class="fa fa-info" aria-hidden="true"></i></i>${response.data[i].busiMemo}</div>
                             <div class="mb-2"><i class="fa fa-clock-o" aria-hidden="true"></i></i>更新時間: ${response.data[i].updateTime}</div>
                             </div>
                             <hr>
                             <div class="d-flex"> 
-                                <div class="p-2 mr-4 mask-box" style="background:rgb(245, 220, 187, 0.884); border-radius: 10px; width: 300px" onMouseOver="this.style.color='#00F';this.style.cursor='pointer'" onMouseOut="this.style.color='#000000';this.style.cursor='default'">
-                                    <div class="text-center"><h6>三倍券剩餘數量: ${response.data[i].total}份</h6></div>
+                                <div class="p-2 mr-4 mask-box" style="background:rgb(245, 220, 187, 0.884); border-radius: 10px; width: 360px" onMouseOver="this.style.color='#00F';this.style.cursor='pointer'" onMouseOut="this.style.color='#000000';this.style.cursor='default'">
+                                    <div class="text-center"><h6>三倍券存量: ${response.data[i].total}份</h6></div>
                                 </div>       
                             </div>
                             <hr>
@@ -103,7 +104,7 @@ axios.get(`${cors}${url}`)
                     lat: position[i].lat,
                     lng: position[i].lng
                   },
-                //   icon: './images/post-office.png',
+                  icon: './images/高存量-圓.png',
                   map: map,
                   title: position[i].title,
                 //   content: `<img src="./images/post-office.png">`
@@ -115,7 +116,7 @@ axios.get(`${cors}${url}`)
                       lat: position[i].lat,
                       lng: position[i].lng
                   },
-                  maxWidth: 280,
+                  maxWidth: 360,
                   pixelOffset: new google.maps.Size(100, -20) 
               });
               // infowindow.open(map);
