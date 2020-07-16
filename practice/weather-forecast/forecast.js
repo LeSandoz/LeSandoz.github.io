@@ -112,3 +112,4 @@ function prev1(){
     $(".card1").removeClass("d-none")
 }
 
+console.log(window.navigator.geolocation);   

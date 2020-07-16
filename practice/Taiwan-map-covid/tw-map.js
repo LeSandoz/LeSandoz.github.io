@@ -64,5 +64,8 @@ var n = 1
         $("svg").css("transform","scale(" + scale + ") ")
     })
 
+    $(document).bind("mousewheel", function(){
+        $("svg").css("transform","scale(" + scale + ") ")
+    })
 
 

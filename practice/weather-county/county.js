@@ -75,5 +75,18 @@ fetch('https://opendata.cwb.gov.tw/fileapi/v1/opendataapi/F-D0047-071?Authorizat
 }).catch(function(err) {
     // 錯誤處理
 });
+navigator.geolocation.getCurrentPosition(function(position){
+    var longitude = position.coords.longitude;
+    var latitude = position.coords.latitude;
+console.log(position)
 
+})
+// if(window.navigator.geolocation){   
+//     var geolocation = window.navigator.geolocation;   
+// console.log(window.navigator.geolocation);   
 
+// }else{   
+//     alert("你的瀏覽器不支援地理定位");   
+//     console.log("你的瀏覽器不支援地理定位");   
+//     map.setCenter(sunny);   
+// }   
