@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": ";AAAA,AAAA,IAAI,CAAA;EACA,WAAW,EAAE,YAAY;CAC5B",
+    "sources": [
+        "hotZone.scss"
+    ],
+    "names": [],
+    "file": "hotZone.css"
+}
