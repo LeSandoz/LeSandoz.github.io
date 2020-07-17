@@ -29,10 +29,10 @@ axios.get(`${cors}${url}`)
                             <h3><i class="fa fa-hospital-o" aria-hidden="true"></i> ${response.data[i].storeNm}</h3>
                             <hr>
                             <div class="">
-                            <div class="mb-2"><i class="fa fa-map-marker" aria-hidden="true"></i>${response.data[i].addr}</div>
-                            <div class="mb-2"><i class="fa fa-phone" aria-hidden="true"></i></i>${response.data[i].tel}</div>
-                            <div class="mb-2"><i class="fa fa-info" aria-hidden="true"></i></i>${response.data[i].busiTime}</div>
-                            <div class="mb-2"><i class="fa fa-info" aria-hidden="true"></i></i>${response.data[i].busiMemo}</div>
+                            <div class="mb-2"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp  ${response.data[i].addr}</div>
+                            <div class="mb-2"><i class="fa fa-phone" aria-hidden="true"></i></i>  ${response.data[i].tel}</div>
+                            <div class="mb-2"><i class="fa fa-info" aria-hidden="true"></i></i>&nbsp  ${response.data[i].busiTime}</div>
+                            <div class="mb-2"><i class="fa fa-info" aria-hidden="true"></i></i>&nbsp  ${response.data[i].busiMemo}</div>
                             <div class="mb-2"><i class="fa fa-clock-o" aria-hidden="true"></i></i>更新時間: ${response.data[i].updateTime}</div>
                             </div>
                             <hr>
