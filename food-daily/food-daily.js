@@ -50,7 +50,7 @@ fetch("https://spreadsheets.google.com/feeds/list/1-wq8eoxaqm27o0PPeF36RONth1Ze2
                         <td>${lunch}</td>
                         <td>${dinner}</td>
                         <td>${snack}</td>
-                        <td>${totalCalories}</td>
+                        <td>${totalCalories}大卡</td>
                         <td>${water}</td>
                         <td>${fit}</td>
                         <td>${sleep}</td>
@@ -123,7 +123,7 @@ fetch("https://spreadsheets.google.com/feeds/list/1-wq8eoxaqm27o0PPeF36RONth1Ze2
                         <td>${lunch}</td>
                         <td>${dinner}</td>
                         <td>${snack}</td>
-                        <td>${totalCalories}</td>
+                        <td>${totalCalories}大卡</td>
                         <td>${water}</td>
                         <td>${fit}</td>
                         <td>${sleep}</td>
