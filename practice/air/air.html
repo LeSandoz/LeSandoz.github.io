@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>AirQQ</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="air.css">
+  </head>
+  <body>
+      <div class="container">
+          <h1>空氣指標品質</h1>
+          <header>
+              <select name="" id="countryList" class="form-control form-control-lg">
+                  <option value="#">--請選擇--</option>
+              </select>
+          </header>
+          <main>
+            <table class="table table-border table-responsive">
+                <thead>
+                  <tr class="range_AQI">
+                    <td class="align-middle text-center" style="background: #95F084;">0～50</td>
+                    <td class="align-middle text-center" style="background: #FFE695;">51～100</td>
+                    <td class="align-middle text-center" style="background: #FFAF6A;">101～150</td>
+                    <td class="align-middle text-center" style="background: #FF5757;">151～200</td>
+                    <td class="align-middle text-center" style="background: #9777FF;">201～300</td>
+                    <td class="align-middle text-center" style="background: #AD1774;">301～400</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="answer_AQI">
+                    <td class="align-middle text-center">良好</td>
+                    <td class="align-middle text-center">普通</td>
+                    <td class="align-middle text-center">對敏感族群<br>不健康</td>
+                    <td class="align-middle text-center">對所有族群<br>不健康</td>
+                    <td class="align-middle text-center">非常不健康</td>
+                    <td class="align-middle text-center">危害</td>
+                  </tr>
+                </tbody>
+              </table>
+          </main>
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="air.js"></script>
+  </body>
+</html>

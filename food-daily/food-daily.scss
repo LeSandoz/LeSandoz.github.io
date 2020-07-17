@@ -1,0 +1,23 @@
+body{
+    font-family: "微軟正黑體";
+    
+    h1{
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    h2{
+        span{
+            cursor: pointer;
+        }
+    }
+    tbody:hover{
+        cursor: pointer;
+    }
+    .background-blue{
+        background: rgba(150, 229, 253, 0.507);
+    }
+    .background-pink{
+        background: rgba(250, 200, 208, 0.418);
+    }
+}

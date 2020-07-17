@@ -1,0 +1,212 @@
+{
+    "1": {
+        "name": "何彥穎",
+        "info": [
+            {
+                "date": "7/1",
+                "weight": "63.8",
+                "fat": "21.7",
+                "breakfast": [
+
+                ],
+                "lunch": [
+                    {
+                        "name": "雞胸",
+                        "calories": "140"
+                    },
+                    {
+                        "name": "雞胗",
+                        "calories": "220"
+                    },
+                    {
+                        "name": "洋蔥",
+                        "calories": "30"
+                    },
+                    {
+                        "name": "薯泥",
+                        "calories": "150"
+                    },
+                    {
+                        "name": "蘋果",
+                        "calories": "40"
+                    }
+                ],
+                "dinner": [
+                    {
+                        "name": "麥當勞大薯",
+                        "calories": "700"
+                    },
+                    {
+                        "name": "炸雞腿",
+                        "calories": "250"
+                    },
+                    {
+                        "name": "炸雞翅",
+                        "calories": "180"
+                    }
+                ],
+                "snack": [
+
+                ],
+                "water": "2000",
+                "fit": "yoga",
+                "sleep": "1:00"
+            },
+            {
+                "date": "7/2",
+                "weight": "63.8",
+                "fat": "21.7",
+                "breakfast": [
+
+                ],
+                "lunch": [
+                    {
+                        "name": "雞胸",
+                        "calories": "140"
+                    },
+                    {
+                        "name": "雞胗",
+                        "calories": "220"
+                    },
+                    {
+                        "name": "洋蔥",
+                        "calories": "30"
+                    },
+                    {
+                        "name": "薯泥",
+                        "calories": "150"
+                    },
+                    {
+                        "name": "蘋果",
+                        "calories": "40"
+                    }
+                ],
+                "dinner": [
+                    {
+                        "name": "麥當勞大薯",
+                        "calories": "700"
+                    },
+                    {
+                        "name": "炸雞腿",
+                        "calories": "250"
+                    },
+                    {
+                        "name": "炸雞翅",
+                        "calories": "180"
+                    }
+                ],
+                "snack": [
+
+                ],
+                "water": "2000",
+                "fit": "yoga",
+                "sleep": "1:00"
+            }
+        ]
+    },
+    "2": {
+        "name": "劉怡婷",
+        "info": [
+            {
+                "date": "7/1",
+                "weight": "50.8",
+                "fat": "21.7",
+                "breakfast": [
+
+                ],
+                "lunch": [
+                    {
+                        "name": "雞胸",
+                        "calories": "140"
+                    },
+                    {
+                        "name": "雞胗",
+                        "calories": "220"
+                    },
+                    {
+                        "name": "洋蔥",
+                        "calories": "30"
+                    },
+                    {
+                        "name": "薯泥",
+                        "calories": "150"
+                    },
+                    {
+                        "name": "蘋果",
+                        "calories": "40"
+                    }
+                ],
+                "dinner": [
+                    {
+                        "name": "麥當勞大薯",
+                        "calories": "700"
+                    },
+                    {
+                        "name": "炸雞腿",
+                        "calories": "250"
+                    },
+                    {
+                        "name": "炸雞翅",
+                        "calories": "180"
+                    }
+                ],
+                "snack": [
+
+                ],
+                "water": "2000",
+                "fit": "yoga",
+                "sleep": "1:00"
+            },
+            {
+                "date": "7/2",
+                "weight": "50.8",
+                "fat": "21.7",
+                "breakfast": [
+
+                ],
+                "lunch": [
+                    {
+                        "name": "雞胸",
+                        "calories": "140"
+                    },
+                    {
+                        "name": "雞胗",
+                        "calories": "220"
+                    },
+                    {
+                        "name": "洋蔥",
+                        "calories": "30"
+                    },
+                    {
+                        "name": "薯泥",
+                        "calories": "150"
+                    },
+                    {
+                        "name": "蘋果",
+                        "calories": "40"
+                    }
+                ],
+                "dinner": [
+                    {
+                        "name": "麥當勞大薯",
+                        "calories": "700"
+                    },
+                    {
+                        "name": "炸雞腿",
+                        "calories": "250"
+                    },
+                    {
+                        "name": "炸雞翅",
+                        "calories": "180"
+                    }
+                ],
+                "snack": [
+
+                ],
+                "water": "2000",
+                "fit": "yoga",
+                "sleep": "1:00"
+            }
+        ]
+    }
+}
