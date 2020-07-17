@@ -39,33 +39,50 @@ fetch("https://spreadsheets.google.com/feeds/list/1-wq8eoxaqm27o0PPeF36RONth1Ze2
     if(totalSnackCalories == undefined){
         totalSnackCalories = 0
     }
-
+    
     let totalCalories = totalBreakfastCalories + totalLunchCalories + totalDinnerCalories + totalSnackCalories
+
+    if (totalCalories > 1500){
+        totalCaloriesHTML = `
+                                <td class="totalCalories totalCaloriesStyle">${totalCalories}大卡</td>
+
+                            `
+    }else{
+        totalCaloriesHTML = `
+        <td class="totalCalories">${totalCalories}大卡</td>
+
+    `
+    }
     contentHo += `
                     <tr>
                         <td>${date}</td>
                         <td>${weight}</td>
                         <td>${fat}</td>
-                        <td>${breakfast}</td>
-                        <td>${lunch}</td>
-                        <td>${dinner}</td>
-                        <td>${snack}</td>
-                        <td>${totalCalories}大卡</td>
+                        <td>${breakfast}<br>總熱量: ${totalBreakfastCalories}大卡</td>
+                        <td>${lunch}<br>總熱量: ${totalLunchCalories}大卡</td>
+                        <td>${dinner}<br>總熱量: ${totalDinnerCalories}大卡</td>
+                        <td>${snack}<br>總熱量: ${totalSnackCalories}大卡</td>
+                        ${totalCaloriesHTML}
                         <td>${water}</td>
                         <td>${fit}</td>
                         <td>${sleep}</td>
                     </tr>
                 `
   
-
+                // <td>${breakfast}<br>早餐總熱量: ${totalBreakfastCalories}</td>
+                // <td>${lunch}<br>午餐總熱量: ${totalLLunchCalories}</td>
+                // <td>${dinner}<br>晚餐總熱量: ${totalDinnerCalories}</td>
+                // <td>${snack}<br>消夜總熱量: ${totalSnackCalories}</td>
 
     // console.log(contentHo);
-    // console.log(lunch);
+    console.log(dinner);
     // console.log(LunchCalories);
     // console.log(totalCalories);
   }
   document.querySelector("#Ho").innerHTML = contentHo;
 
+
+// console.log($(".totalCalories").text().replace("大卡",""))
 }).catch(function(err) {
 
 });
@@ -112,6 +129,18 @@ fetch("https://spreadsheets.google.com/feeds/list/1-wq8eoxaqm27o0PPeF36RONth1Ze2
     }
 
     let totalCalories = totalBreakfastCalories + totalLunchCalories + totalDinnerCalories + totalSnackCalories
+    let totalCaloriesHTML = ''
+    if (totalCalories > 1500){
+        totalCaloriesHTML = `
+                                <td class="totalCalories totalCaloriesStyle">${totalCalories}大卡</td>
+
+                            `
+    }else{
+        totalCaloriesHTML = `
+        <td class="totalCalories">${totalCalories}大卡</td>
+
+    `
+    }
     // console.log(contentHo);
     // console.log(lunch);
     contentLiu += `
@@ -119,11 +148,11 @@ fetch("https://spreadsheets.google.com/feeds/list/1-wq8eoxaqm27o0PPeF36RONth1Ze2
                         <td>${date}</td>
                         <td>${weight}</td>
                         <td>${fat}</td>
-                        <td>${breakfast}</td>
-                        <td>${lunch}</td>
-                        <td>${dinner}</td>
-                        <td>${snack}</td>
-                        <td>${totalCalories}大卡</td>
+                        <td>${breakfast}<br>總熱量: ${totalBreakfastCalories}大卡</td>
+                        <td>${lunch}<br>總熱量: ${totalLunchCalories}大卡</td>
+                        <td>${dinner}<br>總熱量: ${totalDinnerCalories}大卡</td>
+                        <td>${snack}<br>總熱量: ${totalSnackCalories}大卡</td>
+                        ${totalCaloriesHTML}
                         <td>${water}</td>
                         <td>${fit}</td>
                         <td>${sleep}</td>
@@ -152,3 +181,5 @@ fetch("https://spreadsheets.google.com/feeds/list/1-wq8eoxaqm27o0PPeF36RONth1Ze2
             $("#Liu").removeClass("d-none")
             $("#Ho").addClass("d-none")
         })
+
+
