@@ -20,6 +20,10 @@ body tbody:hover {
   cursor: pointer;
 }
 
+body thead tr:hover {
+  background: #454d55;
+}
+
 body .background-blue {
   background: rgba(150, 229, 253, 0.507);
 }

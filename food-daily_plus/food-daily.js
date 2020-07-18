@@ -27,10 +27,13 @@ fetch("https://spreadsheets.google.com/feeds/list/1qF0VQyE6PSVwkBZDviMitvIVfZdiA
         if(dinnerCal == undefined){dinnerCal = 0}
         if(snackCal == undefined){snackCal = 0}
         let totalCal = breakfastCal + lunchCal + dinnerCal + snackCal
-        let  totalCalHTML = `
-        <td class="totalCalories totalCaloriesStyle">${totalCal}大卡</td>
+        let  totalCalHTML = ''
+        if(totalCal >= 1500){
+            totalCalHTML = `<td class="totalCalories text-danger">${totalCal}大卡</td>`
+        }else{
+            totalCalHTML = `<td class="">${totalCal}大卡</td>`
+        }
 
-    `
         let water = entry[i].gsx$飲水量.$t;
         let fit = entry[i].gsx$運動.$t;
         let sleep = entry[i].gsx$睡覺時間.$t;
@@ -47,7 +50,7 @@ fetch("https://spreadsheets.google.com/feeds/list/1qF0VQyE6PSVwkBZDviMitvIVfZdiA
                                 <td class="lunch">${lunch}</td>
                                 <td class="dinner">${dinner}</td>
                                 <td class="snack">${snack}</td>
-                                <td>${totalCal}</td>
+                                ${totalCalHTML}
                                 <td>${water}</td>
                                 <td>${fit}</td>
                                 <td>${sleep}</td>
@@ -64,7 +67,7 @@ fetch("https://spreadsheets.google.com/feeds/list/1qF0VQyE6PSVwkBZDviMitvIVfZdiA
                                 <td class="lunch">${lunch}</td>
                                 <td class="dinner">${dinner}</td>
                                 <td class="snack">${snack}</td>
-                                <td>${totalCal}</td>
+                                ${totalCalHTML}
                                 <td>${water}</td>
                                 <td>${fit}</td>
                                 <td>${sleep}</td>
