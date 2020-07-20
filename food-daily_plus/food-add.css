@@ -18,6 +18,7 @@ body input, body button {
 
 body .border-red {
   border: 2px red solid;
+  background: pink;
 }
 
 .breakfastBox, .lunchBox, .dinnerBox, .snackBox {
