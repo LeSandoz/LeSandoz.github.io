@@ -1,5 +1,19 @@
 @charset "UTF-8";
 body {
   font-family: "微軟正黑體";
+  margin: 0px auto;
+  text-align: right;
+}
+
+body h1 {
+  margin: 20px 0;
+}
+
+body input, body button {
+  margin: 5px 0;
+}
+
+body .border-red {
+  border: 2px red solid;
 }
 /*# sourceMappingURL=food-add.css.map */

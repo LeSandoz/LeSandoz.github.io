@@ -3,8 +3,7 @@ let today = new Date();
 let datetime = today.getFullYear()+ "/" + (today.getMonth()+1) + "/" + today.getDate() + " " + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 // console.log($('input:text[name="breakfastText[]"]')[0].value)
 function send() {
-    alert("已新增")
-    window.setTimeout(" window.location.href = 'https://lesandoz.nctu.me/food-daily_plus/food-daily'", 1000)
+
 
     let name = document.querySelector('#name').value;
     let date = document.querySelector('#date').value;
@@ -98,31 +97,47 @@ function send() {
     let fit = document.querySelector('#fit').value;
     let sleep = document.querySelector('#sleep').value;
     console.log("breakfast: " + breakfast)
-    $.ajax({
-        url: "https://script.google.com/macros/s/AKfycbx7aV1yqwC-iho3TjiDDdIklkeigOnXgQnYRIcQrMq_dd2OqeSS/exec",
-        data: {
-            "time": datetime,
-            "name": name,
-            "date": date,
-            "weight": weight,
-            "fat": fat,
-            "breakfast": breakfast,
-            "lunch": lunch,
-            "dinner": dinner,
-            "snack": snack,
-            "water": water,
-            "fit": fit,
-            "sleep": sleep
-        },
-        success: function(response) {
-        if(response == "成功"){
-            alert("成功");
 
-        }
-        },
-    });
+    //驗證
+    if(name == ''){
+        alert("請確實輸入名字")
+        $("#name").addClass("border-red")
+    }else if(date == ''){
+        alert("請確實輸入日期")
+        $("#date").addClass("border-red")
+    }else{
+        alert("已新增")
+        window.setTimeout(" window.location.href = 'https://lesandoz.nctu.me/food-daily_plus/food-daily'", 1000)
+        $.ajax({
+            url: "https://script.google.com/macros/s/AKfycbx7aV1yqwC-iho3TjiDDdIklkeigOnXgQnYRIcQrMq_dd2OqeSS/exec",
+            data: {
+                "time": datetime,
+                "name": name,
+                "date": date,
+                "weight": weight,
+                "fat": fat,
+                "breakfast": breakfast,
+                "lunch": lunch,
+                "dinner": dinner,
+                "snack": snack,
+                "water": water,
+                "fit": fit,
+                "sleep": sleep
+            },
+            success: function(response) {
+            if(response == "成功"){
+                // alert("成功");
+    
+            }
+            },
+        });
+    }
+    
 };
-
+$("#name, #date").on("blur", function(){
+    $("#name").removeClass("border-red")
+    $("#date").removeClass("border-red")
+})
 $(document).on("click", ".add", function(){
     let parent = $(this).parent()
     let parentHtml = `<div class="d-flex">${parent.html()}</div>`

@@ -36,7 +36,8 @@ fetch("https://spreadsheets.google.com/feeds/list/1qF0VQyE6PSVwkBZDviMitvIVfZdiA
 
         let water = entry[i].gsx$飲水量.$t;
         let fit = entry[i].gsx$運動.$t;
-        let sleep = entry[i].gsx$睡覺時間.$t.substr(0,7);
+        let sleep = entry[i].gsx$睡覺時間.$t;
+        let sleepNew = entry[i].gsx$睡覺時間.$t.substr(0,sleep.length - 3);
         
 
         if(name == '阿何'){
@@ -53,7 +54,7 @@ fetch("https://spreadsheets.google.com/feeds/list/1qF0VQyE6PSVwkBZDviMitvIVfZdiA
                                 ${totalCalHTML}
                                 <td>${water}c.c</td>
                                 <td>${fit}</td>
-                                <td>${sleep}</td>
+                                <td>${sleepNew}</td>
                             </tr>
                         `
         }else if(name == '阿婷'){
@@ -70,7 +71,7 @@ fetch("https://spreadsheets.google.com/feeds/list/1qF0VQyE6PSVwkBZDviMitvIVfZdiA
                                 ${totalCalHTML}
                                 <td>${water}</td>
                                 <td>${fit}</td>
-                                <td>${sleep}</td>
+                                <td>${sleepNew}</td>
                             </tr>
                         `
         }
