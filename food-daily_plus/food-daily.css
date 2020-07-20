@@ -39,5 +39,6 @@ body .totalCaloriesStyle {
 
 body .breakfast, body .lunch, body .dinner, body .snack {
   width: 180px;
+  text-align: left;
 }
 /*# sourceMappingURL=food-daily.css.map */
