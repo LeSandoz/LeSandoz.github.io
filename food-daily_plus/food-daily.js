@@ -10,7 +10,7 @@ fetch("https://spreadsheets.google.com/feeds/list/1qF0VQyE6PSVwkBZDviMitvIVfZdiA
     for(let i = 0; i < entry.length; i++){
         // console.log(entry[i])
         let name = entry[i].gsx$名字.$t;
-        let date = entry[i].gsx$日期.$t;
+        let date = entry[i].gsx$日期.$t.substr(5).replace("-","/");
         let weight = entry[i].gsx$早晨體重.$t;
         let fat = entry[i].gsx$體脂.$t;
         let breakfast = entry[i].gsx$早餐.$t.replace(/,/g, '<br>');
@@ -36,7 +36,7 @@ fetch("https://spreadsheets.google.com/feeds/list/1qF0VQyE6PSVwkBZDviMitvIVfZdiA
 
         let water = entry[i].gsx$飲水量.$t;
         let fit = entry[i].gsx$運動.$t;
-        let sleep = entry[i].gsx$睡覺時間.$t;
+        let sleep = entry[i].gsx$睡覺時間.$t.substr(0,7);
         
 
         if(name == '阿何'){
@@ -51,7 +51,7 @@ fetch("https://spreadsheets.google.com/feeds/list/1qF0VQyE6PSVwkBZDviMitvIVfZdiA
                                 <td class="dinner">${dinner}</td>
                                 <td class="snack">${snack}</td>
                                 ${totalCalHTML}
-                                <td>${water}</td>
+                                <td>${water}c.c</td>
                                 <td>${fit}</td>
                                 <td>${sleep}</td>
                             </tr>

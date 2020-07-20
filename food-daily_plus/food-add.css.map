@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": ";AAAA,AAAA,IAAI,CAAA;EACA,WAAW,EAAE,YAAY;CAC5B",
+    "sources": [
+        "food-add.scss"
+    ],
+    "names": [],
+    "file": "food-add.css"
+}
