@@ -78,8 +78,12 @@ body .totalCaloriesStyle {
 }
 
 body .breakfast, body .lunch, body .dinner, body .snack {
-  width: 190px;
+  width: 175px;
   text-align: left;
+}
+
+body .sleep, body .fit {
+  width: 110px;
 }
 
 body #cardHo .card {

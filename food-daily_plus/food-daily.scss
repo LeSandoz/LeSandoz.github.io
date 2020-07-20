@@ -70,8 +70,11 @@ body{
         background: plum;
     }
     .breakfast, .lunch, .dinner, .snack{
-        width: 190px;
+        width: 175px;
         text-align: left;
+    }
+    .sleep, .fit{
+        width: 110px;
     }
     #cardHo .card{
         background: rgba(150, 229, 253, 0.507);

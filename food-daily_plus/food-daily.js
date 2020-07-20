@@ -55,8 +55,8 @@ fetch("https://spreadsheets.google.com/feeds/list/1qF0VQyE6PSVwkBZDviMitvIVfZdiA
                                 <td class="snack">${snack}</td>
                                 ${totalCalHTML}
                                 <td>${water}c.c</td>
-                                <td>${fit}</td>
-                                <td>${sleepNew}</td>
+                                <td class="fit">${fit}</td>
+                                <td class="sleep">${sleepNew}</td>
                             </tr>
                         `
             cardHo +=`
@@ -102,8 +102,8 @@ fetch("https://spreadsheets.google.com/feeds/list/1qF0VQyE6PSVwkBZDviMitvIVfZdiA
                                 <td class="snack">${snack}</td>
                                 ${totalCalHTML}
                                 <td>${water}c.c</td>
-                                <td>${fit}</td>
-                                <td>${sleepNew}</td>
+                                <td class="fit">${fit}</td>
+                                <td class="sleep">${sleepNew}</td>
                             </tr>
                         `
             cardLiu +=`
