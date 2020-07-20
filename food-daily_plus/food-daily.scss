@@ -70,7 +70,7 @@ body{
         background: plum;
     }
     .breakfast, .lunch, .dinner, .snack{
-        width: 180px;
+        width: 190px;
         text-align: left;
     }
     #cardHo .card{
@@ -96,9 +96,11 @@ body{
     }
     #cardHo .card{
         box-shadow: grey 6px 6px 6px;
+        border-radius: 12px;
     }
     #cardLiu .card{
         box-shadow: grey 6px 6px 6px;
+        border-radius: 12px;
     }
     .ho_table{
         display: none;

@@ -78,7 +78,7 @@ body .totalCaloriesStyle {
 }
 
 body .breakfast, body .lunch, body .dinner, body .snack {
-  width: 180px;
+  width: 190px;
   text-align: left;
 }
 
@@ -108,10 +108,12 @@ body #cardLiu .card {
   #cardHo .card {
     -webkit-box-shadow: grey 6px 6px 6px;
             box-shadow: grey 6px 6px 6px;
+    border-radius: 12px;
   }
   #cardLiu .card {
     -webkit-box-shadow: grey 6px 6px 6px;
             box-shadow: grey 6px 6px 6px;
+    border-radius: 12px;
   }
   .ho_table {
     display: none;
