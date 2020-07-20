@@ -15,19 +15,56 @@ body{
             cursor: pointer;
         }
     }
-    tbody:hover{
-        cursor: pointer;
+    .ho_table,table{
+        border-radius: 20px;
+        box-shadow: gray 10px 10px 16px;
+        thead{
+            background: none;
+            th:first-child{
+                border-radius: 20px 0 0 0;
+            }
+            th:last-child{
+                border-radius: 0 20px 0 0;
+            }
+            th{
+                background: #343a40;
+                border-top: white 1px solid;
+            }
+        }
+        
+        tbody:hover{
+            cursor: pointer;
+    
+        }
+        thead tr:hover{
+            background: #454d55;
+        }
+    }
 
+    // .background-blue{
+    //     background: rgba(150, 229, 253, 0.507);
+    // }
+    #Ho tr td{
+        background: rgba(150, 229, 253, 0.267);
     }
-    thead tr:hover{
-        background: #454d55;
+    #Ho tr:last-child td:first-child{
+        border-radius: 0 0 0 20px;
     }
-    .background-blue{
-        background: rgba(150, 229, 253, 0.507);
+    #Ho tr:last-child td:last-child{
+        border-radius: 0 0 20px 0;
     }
-    .background-pink{
-        background: rgba(250, 200, 208, 0.418);
+    #Liu tr td{
+        background: rgba(250, 200, 208, 0.158);
     }
+    #Liu tr:last-child td:first-child{
+        border-radius: 0 0 0 20px;
+    }
+    #Liu tr:last-child td:last-child{
+        border-radius: 0 0 20px 0;
+    }
+    // .background-pink{
+    //     background: rgba(250, 200, 208, 0.418);
+    // }
     .totalCaloriesStyle{
         color: red;
         background: plum;
@@ -56,6 +93,12 @@ body{
 @media screen and (max-width: 600px){
     #cardHo{
         display: block;
+    }
+    #cardHo .card{
+        box-shadow: grey 6px 6px 6px;
+    }
+    #cardLiu .card{
+        box-shadow: grey 6px 6px 6px;
     }
     .ho_table{
         display: none;

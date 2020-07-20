@@ -17,20 +17,59 @@ body h2 span {
   cursor: pointer;
 }
 
-body tbody:hover {
+body .ho_table, body table {
+  border-radius: 20px;
+  -webkit-box-shadow: gray 10px 10px 16px;
+          box-shadow: gray 10px 10px 16px;
+}
+
+body .ho_table thead, body table thead {
+  background: none;
+}
+
+body .ho_table thead th:first-child, body table thead th:first-child {
+  border-radius: 20px 0 0 0;
+}
+
+body .ho_table thead th:last-child, body table thead th:last-child {
+  border-radius: 0 20px 0 0;
+}
+
+body .ho_table thead th, body table thead th {
+  background: #343a40;
+  border-top: white 1px solid;
+}
+
+body .ho_table tbody:hover, body table tbody:hover {
   cursor: pointer;
 }
 
-body thead tr:hover {
+body .ho_table thead tr:hover, body table thead tr:hover {
   background: #454d55;
 }
 
-body .background-blue {
-  background: rgba(150, 229, 253, 0.507);
+body #Ho tr td {
+  background: rgba(150, 229, 253, 0.267);
 }
 
-body .background-pink {
-  background: rgba(250, 200, 208, 0.418);
+body #Ho tr:last-child td:first-child {
+  border-radius: 0 0 0 20px;
+}
+
+body #Ho tr:last-child td:last-child {
+  border-radius: 0 0 20px 0;
+}
+
+body #Liu tr td {
+  background: rgba(250, 200, 208, 0.158);
+}
+
+body #Liu tr:last-child td:first-child {
+  border-radius: 0 0 0 20px;
+}
+
+body #Liu tr:last-child td:last-child {
+  border-radius: 0 0 20px 0;
 }
 
 body .totalCaloriesStyle {
@@ -65,6 +104,14 @@ body #cardLiu .card {
 @media screen and (max-width: 600px) {
   #cardHo {
     display: block;
+  }
+  #cardHo .card {
+    -webkit-box-shadow: grey 6px 6px 6px;
+            box-shadow: grey 6px 6px 6px;
+  }
+  #cardLiu .card {
+    -webkit-box-shadow: grey 6px 6px 6px;
+            box-shadow: grey 6px 6px 6px;
   }
   .ho_table {
     display: none;
