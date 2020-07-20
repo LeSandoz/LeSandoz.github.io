@@ -1,6 +1,7 @@
 @charset "UTF-8";
 body {
   font-family: "微軟正黑體";
+  font-weight: 800;
   margin: 0px auto;
   text-align: right;
   background: url("https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-full-light-watercolor-background-colorblueliterarywatercolorpigmentbackground-image_84591.jpg"), linear-gradient(274deg, rgba(173, 255, 236, 0.63069) 0%, rgba(232, 255, 134, 0.493435) 48%, rgba(238, 56, 99, 0.723127) 100%);
