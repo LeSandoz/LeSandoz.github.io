@@ -11,15 +11,15 @@
     <link rel="stylesheet" href="food-daily.css">
   </head>
   <body>
-      <div class="container_box">
+    <div class="container_box">
           <h1><a href="https://lesandoz.nctu.me/food-daily_plus/food-add" target="_blank">每日飲食統計</a></h1>
           <h2 class="d-flex justify-content-between">
               <div>
-                <span class="Ho" style="color:red">何彥穎</span> &nbsp&nbsp&nbsp&nbsp&nbsp
+                <span class="Ho" style="color:red">何彥穎</span>
                 <span class="Liu">劉怡婷</span>
               </div>
 
-              <a href="https://docs.google.com/spreadsheets/d/1qF0VQyE6PSVwkBZDviMitvIVfZdiAEh4YUheRPH2TK8/edit#gid=1595672708" target="_blank">修改資料</a>
+              <a class="change" href="https://docs.google.com/spreadsheets/d/1qF0VQyE6PSVwkBZDviMitvIVfZdiAEh4YUheRPH2TK8/edit#gid=1595672708" target="_blank">修改資料</a>
           </h2>
           <table class="table ho_table table-hover table-striped">
               <thead class="table-dark text-center">
@@ -66,7 +66,41 @@
                   </tr>
               </tbody>
           </table>
-      </div>
+          <div id="cardHo">
+            <div class="card">
+                <img class="card-img-top" src="" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">日期</h4>
+                    <div class="d-flex">
+                      <p class="card-text mr-4">體重</p>
+                      <p class="card-text">體脂</p>
+                    </div>
+                    <div class="d-flex">
+                      <p class="card-text mr-4">早餐</p>
+                    </div>
+                    <div class="d-flex">
+                      <p class="card-text mr-4">午餐</p>
+                    </div>
+                    <div class="d-flex">
+                      <p class="card-text mr-4">晚餐</p>
+                    </div>
+                    <div class="d-flex">
+                      <p class="card-text mr-4">消夜點心</p>
+                    </div>
+                    <p class="card-text mr-4">總熱量</p>
+                    <div class="d-flex">
+                      <p class="card-text mr-4">飲水量</p>
+                      <p class="card-text mr-4">運動</p>
+                      <p class="card-text mr-4">睡覺時間</p>
+                    </div>
+                </div>
+          </div>
+        　</div>
+        <div id="cardLiu" style="display: none;">
+
+           </div>
+        </div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

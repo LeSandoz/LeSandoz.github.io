@@ -1,4 +1,5 @@
 body{
+    background: rgba(233, 232, 232, 0.418);
     .container_box{
         margin: 0 40px;
     }
@@ -35,5 +36,37 @@ body{
         width: 180px;
         text-align: left;
     }
-
+    #cardHo .card{
+        background: rgba(150, 229, 253, 0.507);
+        margin-bottom: 20px;
+    }
+    #cardLiu .card{
+        background: rgba(250, 200, 208, 0.418);
+        margin-bottom: 20px;
+    }
+}
+@media screen and (min-width: 600px){
+    #cardHo{
+        display: none;
+    }
+    .ho_table{
+        display: block;
+    }
+}
+@media screen and (max-width: 600px){
+    #cardHo{
+        display: block;
+    }
+    .ho_table{
+        display: none;
+    }
+    .Ho, .Liu, .change{
+        font-size: 16px;
+    }
+    .change{
+        transform: translateY(14px);
+    }
+    h1{
+        font-size: 26px;
+    }
 }

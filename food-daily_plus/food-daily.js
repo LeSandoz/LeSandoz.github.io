@@ -7,6 +7,8 @@ fetch("https://spreadsheets.google.com/feeds/list/1qF0VQyE6PSVwkBZDviMitvIVfZdiA
     // console.log(sleep)
     let contentHo = ''
     let contentLiu = ''
+    let cardLiu = ''
+    let cardHo = ''
     for(let i = 0; i < entry.length; i++){
         // console.log(entry[i])
         let name = entry[i].gsx$名字.$t;
@@ -57,8 +59,38 @@ fetch("https://spreadsheets.google.com/feeds/list/1qF0VQyE6PSVwkBZDviMitvIVfZdiA
                                 <td>${sleepNew}</td>
                             </tr>
                         `
+            cardHo +=`
+                        <div class="card" style="width:300px">
+                            <img class="card-img-top" src="" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title">${date}</h4>
+                                <div class="d-flex">
+                                <p class="card-text mr-4">體重：${weight}</p>
+                                <p class="card-text">體脂：${fat}</p>
+                                </div>
+                                <div class="d-flex">
+                                <p class="card-text mr-4">早餐：${breakfast}</p>
+                                </div>
+                                <div class="d-flex">
+                                <p class="card-text mr-4">午餐：${lunch}</p>
+                                </div>
+                                <div class="d-flex">
+                                <p class="card-text mr-4">晚餐：${dinner}</p>
+                                </div>
+                                <div class="d-flex">
+                                <p class="card-text mr-4">消夜點心：${snack}</p>
+                                </div>
+                                <p class="card-text mr-4">總熱量：${totalCalHTML}</p>
+                                <div class="d-flex">
+                                    <p class="card-text mr-4">飲水量：${water}</p>
+                                    <p class="card-text mr-4">運動：${fit}</p>
+                                </div>
+                                <p class="card-text mr-4">睡覺時間：${sleepNew}</p> 
+                            </div>
+                        </div>
+                    `
         }else if(name == '阿婷'){
-            console.log(breakfastName)
+            // console.log(breakfastName)
             contentLiu += `
                             <tr>
                                 <td>${date}</td>
@@ -69,39 +101,104 @@ fetch("https://spreadsheets.google.com/feeds/list/1qF0VQyE6PSVwkBZDviMitvIVfZdiA
                                 <td class="dinner">${dinner}</td>
                                 <td class="snack">${snack}</td>
                                 ${totalCalHTML}
-                                <td>${water}</td>
+                                <td>${water}c.c</td>
                                 <td>${fit}</td>
                                 <td>${sleepNew}</td>
                             </tr>
                         `
+            cardLiu +=`
+                        <div class="card" style="width:300px">
+                            <img class="card-img-top" src="" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title">${date}</h4>
+                                <div class="d-flex">
+                                <p class="card-text mr-4">體重：${weight}</p>
+                                <p class="card-text">體脂：${fat}</p>
+                                </div>
+                                <div class="d-flex">
+                                <p class="card-text mr-4">早餐：${breakfast}</p>
+                                </div>
+                                <div class="d-flex">
+                                <p class="card-text mr-4">午餐：${lunch}</p>
+                                </div>
+                                <div class="d-flex">
+                                <p class="card-text mr-4">晚餐：${dinner}</p>
+                                </div>
+                                <div class="d-flex">
+                                <p class="card-text mr-4">消夜點心：${snack}</p>
+                                </div>
+                                <p class="card-text mr-4">總熱量：${totalCalHTML}</p>
+                                <div class="d-flex">
+                                    <p class="card-text mr-4">飲水量：${water}</p>
+                                    <p class="card-text mr-4">運動：${fit}</p>
+                                </div>
+                                <p class="card-text mr-4">睡覺時間：${sleepNew}</p> 
+                            </div>
+                        </div>
+                    `
         }
-        // console.log(contentHo)
 
         // console.log(snack)
         // console.log(totalCal)
 
     }
+        // console.log(cardLiu)
+
     document.querySelector("#Ho").innerHTML = contentHo;
     document.querySelector("#Liu").innerHTML = contentLiu;
+    document.querySelector("#cardHo").innerHTML = cardHo;
+    document.querySelector("#cardLiu").innerHTML = cardLiu;
+
+
 }).catch(function(err) {
 
 });
+console.log($(window).width())
 
-
-        $(".Ho").on("click", function(){
-            console.log('Ho')
-            $(".Ho").css("color", "red")
-            $(".Liu").css("color", "black")
+    $(".Ho").on("click", function(){
+        console.log('Ho')
+        $(".Ho").css("color", "red")
+        $(".Liu").css("color", "black")
+        if($(window).width() < 600){
+            $("#cardHo").removeClass("d-none")
+            $("#cardLiu").addClass("d-none")
+        }else{
             $("#Ho").removeClass("d-none")
             $("#Liu").addClass("d-none")
-        })
-    
-        $(".Liu").on("click", function(){
-            console.log('Liu')
-            $(".Liu").css("color", "red")
-            $(".Ho").css("color", "black")
+            $("#cardLiu").addClass("d-none")
+            $("#cardHo").addClass("d-none")
+        }
+    })
+
+    $(".Liu").on("click", function(){
+        console.log('Liu')
+        $(".Liu").css("color", "red")
+        $(".Ho").css("color", "black")
+        if($(window).width() < 600){
+            $("#cardLiu").css("display", "block")
+            $("#cardLiu").removeClass("d-none")
+            $("#cardHo").addClass("d-none")
+        }else{
             $("#Liu").removeClass("d-none")
             $("#Ho").addClass("d-none")
-        })
+            $("#cardLiu").addClass("d-none")
+            $("#cardHo").addClass("d-none")
+        }
+
+
+
+    })
+    $(window).resize(function() {
+        console.log($(window).width())
+        if($(window).width() < 600){
+            $(".ho_table").addClass("d-none")
+            $("#cardLiu").removeClass("d-none")
+            $("#cardHo").removeClass("d-none")
+        }else{
+            $(".ho_table").removeClass("d-none")
+            $("#cardLiu").addClass("d-none")
+            $("#cardHo").addClass("d-none")
+        }
+    });
 
 
