@@ -1,6 +1,7 @@
 @charset "UTF-8";
 body {
-  background: rgba(233, 232, 232, 0.418);
+  background: url("https://lh3.googleusercontent.com/proxy/g5IrebJ83tB6rqGVTRzLrpXlGnGEM_1f3ph8WfuPyvRUH1tqvg0PcTplaSTuE4-QmlP53oyDMET6K_G999JYBDnXmZ4EdVyeVFPjQEsLjmaJGHQxNO7jbqlx4CU"), rgba(233, 232, 232, 0.418);
+  background-size: cover;
   font-family: "微軟正黑體";
 }
 
@@ -49,7 +50,7 @@ body .ho_table thead tr:hover, body table thead tr:hover {
 }
 
 body #Ho tr td {
-  background: rgba(150, 229, 253, 0.267);
+  background: rgba(150, 229, 253, 0.699);
 }
 
 body #Ho tr:last-child td:first-child {
@@ -61,7 +62,7 @@ body #Ho tr:last-child td:last-child {
 }
 
 body #Liu tr td {
-  background: rgba(250, 200, 208, 0.158);
+  background: rgba(250, 200, 208, 0.801);
 }
 
 body #Liu tr:last-child td:first-child {
@@ -87,12 +88,12 @@ body .sleep, body .fit {
 }
 
 body #cardHo .card {
-  background: rgba(150, 229, 253, 0.507);
+  background: rgba(145, 229, 255, 0.651);
   margin-bottom: 20px;
 }
 
 body #cardLiu .card {
-  background: rgba(250, 200, 208, 0.418);
+  background: rgba(255, 169, 184, 0.651);
   margin-bottom: 20px;
 }
 
@@ -106,6 +107,10 @@ body #cardLiu .card {
 }
 
 @media screen and (max-width: 600px) {
+  body {
+    background-image: url("https://cdn.shopify.com/s/files/1/1914/7785/products/2829-82065_12829_2048x2048.jpg?v=1563394545");
+    background-size: contain;
+  }
   #cardHo {
     display: block;
   }

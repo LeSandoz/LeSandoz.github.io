@@ -4,7 +4,9 @@ body{
     margin: 0px auto;
     text-align: right;
 
-    background: url("https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-full-light-watercolor-background-colorblueliterarywatercolorpigmentbackground-image_84591.jpg"), linear-gradient(274deg, rgba(173,255,236,0.6306897759103641) 0%, rgba(232,255,134,0.49343487394957986) 48%, rgba(238,56,99,0.7231267507002801) 100%);
+    background: url("https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-1.2.1&w=1000&q=80"), linear-gradient(274deg, rgba(173,255,236,0.6306897759103641) 0%, rgba(232,255,134,0.49343487394957986) 48%, rgba(238,56,99,0.7231267507002801) 100%);
+    // background: url("https://image.freepik.com/free-photo/abstract-paper-is-colorful-background-creative-design-pastel-wallpaper_6529-1319.jpg"), linear-gradient(274deg, rgba(173,255,236,0.6306897759103641) 0%, rgba(232,255,134,0.49343487394957986) 48%, rgba(238,56,99,0.7231267507002801) 100%);
+    // background: url("https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-full-light-watercolor-background-colorblueliterarywatercolorpigmentbackground-image_84591.jpg"), linear-gradient(274deg, rgba(173,255,236,0.6306897759103641) 0%, rgba(232,255,134,0.49343487394957986) 48%, rgba(238,56,99,0.7231267507002801) 100%);
     // background: rgb(173,255,236);
     // background: linear-gradient(274deg, rgba(173,255,236,0.6306897759103641) 0%, rgba(232,255,134,0.49343487394957986) 48%, rgba(238,56,99,0.7231267507002801) 100%);
     background-size: cover;
@@ -32,5 +34,8 @@ body{
     .breakfastBox, .lunchBox, .dinnerBox, .snackBox{
         display: block;
         text-align: left;
+    }
+    body{
+        background-image: url('https://cdn3.vectorstock.com/i/1000x1000/67/27/banana-fruit-tropical-food-wallpaper-vector-14286727.jpg');
     }
 }

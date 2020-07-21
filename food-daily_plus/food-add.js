@@ -144,4 +144,13 @@ $(document).on("click", ".add", function(){
     $(this).addClass("d-none")
     parent.parent().append(parentHtml)
 })
+
+$(window).resize(function() {
+    console.log($(window).width())
+    if($(window).width() < 600){
+        $("body").css("background-image", "url('https://cdn3.vectorstock.com/i/1000x1000/67/27/banana-fruit-tropical-food-wallpaper-vector-14286727.jpg')");
+    }else{
+        $("body").css("background-image", "url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-1.2.1&w=1000&q=80')");
+    }
+});
 sendButton.addEventListener('click', send);

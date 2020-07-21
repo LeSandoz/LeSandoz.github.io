@@ -9,7 +9,8 @@ fetch("https://spreadsheets.google.com/feeds/list/1qF0VQyE6PSVwkBZDviMitvIVfZdiA
     let contentLiu = ''
     let cardLiu = ''
     let cardHo = ''
-    for(let i = 0; i < entry.length; i++){
+    // for(let i = 0; i < entry.length; i++){
+    for(let i = entry.length - 1; i >= 0; i--){
         // console.log(entry[i])
         let name = entry[i].gsx$名字.$t;
         let date = entry[i].gsx$日期.$t.substr(5).replace("-","/");
@@ -158,7 +159,7 @@ console.log($(window).width())
     $(".Ho").on("click", function(){
         console.log('Ho')
         $(".Ho").css("color", "red")
-        $(".Liu").css("color", "black")
+        $(".Liu").css("color", "white")
         if($(window).width() < 600){
             $("#cardHo").removeClass("d-none")
             $("#cardLiu").addClass("d-none")
@@ -173,7 +174,7 @@ console.log($(window).width())
     $(".Liu").on("click", function(){
         console.log('Liu')
         $(".Liu").css("color", "red")
-        $(".Ho").css("color", "black")
+        $(".Ho").css("color", "white")
         if($(window).width() < 600){
             $("#cardLiu").css("display", "block")
             $("#cardLiu").removeClass("d-none")

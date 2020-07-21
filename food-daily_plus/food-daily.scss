@@ -1,5 +1,6 @@
 body{
-    background: rgba(233, 232, 232, 0.418);
+    background: url("https://lh3.googleusercontent.com/proxy/g5IrebJ83tB6rqGVTRzLrpXlGnGEM_1f3ph8WfuPyvRUH1tqvg0PcTplaSTuE4-QmlP53oyDMET6K_G999JYBDnXmZ4EdVyeVFPjQEsLjmaJGHQxNO7jbqlx4CU"),rgba(233, 232, 232, 0.418);
+    background-size: cover;
     .container_box{
         margin: 0 40px;
     }
@@ -45,7 +46,7 @@ body{
     //     background: rgba(150, 229, 253, 0.507);
     // }
     #Ho tr td{
-        background: rgba(150, 229, 253, 0.267);
+        background: rgba(150, 229, 253, 0.699);
     }
     #Ho tr:last-child td:first-child{
         border-radius: 0 0 0 20px;
@@ -54,7 +55,7 @@ body{
         border-radius: 0 0 20px 0;
     }
     #Liu tr td{
-        background: rgba(250, 200, 208, 0.158);
+        background: rgba(250, 200, 208, 0.801);
     }
     #Liu tr:last-child td:first-child{
         border-radius: 0 0 0 20px;
@@ -77,11 +78,11 @@ body{
         width: 110px;
     }
     #cardHo .card{
-        background: rgba(150, 229, 253, 0.507);
+        background: rgba(145, 229, 255, 0.651);
         margin-bottom: 20px;
     }
     #cardLiu .card{
-        background: rgba(250, 200, 208, 0.418);
+        background: rgba(255, 169, 184, 0.651);
         margin-bottom: 20px;
     }
 }
@@ -94,6 +95,10 @@ body{
     }
 }
 @media screen and (max-width: 600px){
+    body{
+        background-image: url("https://cdn.shopify.com/s/files/1/1914/7785/products/2829-82065_12829_2048x2048.jpg?v=1563394545");
+        background-size: contain;
+    }
     #cardHo{
         display: block;
     }
