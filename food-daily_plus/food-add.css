@@ -4,7 +4,7 @@ body {
   font-weight: 800;
   margin: 0px auto;
   text-align: right;
-  background: url("https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-1.2.1&w=1000&q=80"), linear-gradient(274deg, rgba(173, 255, 236, 0.63069) 0%, rgba(232, 255, 134, 0.493435) 48%, rgba(238, 56, 99, 0.723127) 100%);
+  background: url("images/food-bg.jfif"), linear-gradient(274deg, rgba(173, 255, 236, 0.63069) 0%, rgba(232, 255, 134, 0.493435) 48%, rgba(238, 56, 99, 0.723127) 100%);
   background-size: cover;
 }
 
@@ -34,6 +34,7 @@ body .border-red {
   }
   body {
     background-image: url("https://cdn3.vectorstock.com/i/1000x1000/67/27/banana-fruit-tropical-food-wallpaper-vector-14286727.jpg");
+    background-attachment: fixed;
   }
 }
 /*# sourceMappingURL=food-add.css.map */
