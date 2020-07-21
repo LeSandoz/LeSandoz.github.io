@@ -20,14 +20,14 @@ function send() {
                 breakfast += ''
             }else{
                 breakfast += $('input:text[name="breakfastText[]"]')[i].value
-                breakfast += "Ôº?" + $('input:text[name="breakfastCal[]"]')[i].value
+                breakfast += "Ôºö?" + $('input:text[name="breakfastCal[]"]')[i].value
             }
         }else{
             if($('input:text[name="breakfastText[]"]')[i].value == ''){
                 breakfast += ''
             }else{
                 breakfast += "," + $('input:text[name="breakfastText[]"]')[i].value
-                breakfast += "Ôº?" + $('input:text[name="breakfastCal[]"]')[i].value
+                breakfast += "Ôºö?" + $('input:text[name="breakfastCal[]"]')[i].value
             }
 
         }
@@ -40,14 +40,14 @@ function send() {
                 lunch += ''
             }else{
                 lunch += $('input:text[name="lunchText[]"]')[i].value
-                lunch += "Ôº?" + $('input:text[name="lunchCal[]"]')[i].value
+                lunch += "Ôºö?" + $('input:text[name="lunchCal[]"]')[i].value
             }
         }else{
             if($('input:text[name="lunchText[]"]')[i].value == ''){
                 lunch += ''
             }else{
                 lunch += "," + $('input:text[name="lunchText[]"]')[i].value
-                lunch += "Ôº?" + $('input:text[name="lunchCal[]"]')[i].value
+                lunch += "Ôºö?" + $('input:text[name="lunchCal[]"]')[i].value
             }
 
         }
@@ -60,14 +60,14 @@ function send() {
                 dinner += ''
             }else{
                 dinner += $('input:text[name="dinnerText[]"]')[i].value
-                dinner += "Ôº?" + $('input:text[name="dinnerCal[]"]')[i].value
+                dinner += "Ôºö?" + $('input:text[name="dinnerCal[]"]')[i].value
             }
         }else{
             if($('input:text[name="dinnerText[]"]')[i].value == ''){
                 dinner += ''
             }else{
                 dinner += "," + $('input:text[name="dinnerText[]"]')[i].value
-                dinner += "Ôº?" + $('input:text[name="dinnerCal[]"]')[i].value
+                dinner += "Ôºö?" + $('input:text[name="dinnerCal[]"]')[i].value
             }
 
         }
@@ -80,14 +80,14 @@ function send() {
                 snack += ''
             }else{
                 snack += $('input:text[name="snackText[]"]')[i].value
-                snack += "Ôº?" + $('input:text[name="snackCal[]"]')[i].value
+                snack += "Ôºö?" + $('input:text[name="snackCal[]"]')[i].value
             }
         }else{
             if($('input:text[name="snackText[]"]')[i].value == ''){
                 snack += ''
             }else{
                 snack += "," + $('input:text[name="snackText[]"]')[i].value
-                snack += "Ôº?" + $('input:text[name="snackCal[]"]')[i].value
+                snack += "Ôºö?" + $('input:text[name="snackCal[]"]')[i].value
             }
 
         }
@@ -98,15 +98,15 @@ function send() {
     let sleep = document.querySelector('#sleep').value;
     console.log("breakfast: " + breakfast)
 
-    //È©?Ë≠?
+    //È©óË≠â
     if(name == ''){
-        alert("Ë´?Á¢∫ÂØ¶Ëº∏Â?•Â??Â≠?")
+        alert("Ë´ãÁ¢∫ÂØ¶Ëº∏ÂÖ•ÂêçÂ≠ó")
         $("#name").addClass("border-red")
     }else if(date == ''){
-        alert("Ë´?Á¢∫ÂØ¶Ëº∏Â?•Ê?•Ê??")
+        alert("Ë´ãÁ¢∫ÂØ¶Ëº∏ÂÖ•Êó•Êúü")
         $("#date").addClass("border-red")
     }else{
-        alert("Â∑≤Ê?∞Â??")
+        alert("Â∑≤Êñ∞Â¢û")
         window.setTimeout(" window.location.href = 'https://lesandoz.nctu.me/food-daily_plus/food-daily'", 1000)
         $.ajax({
             url: "https://script.google.com/macros/s/AKfycbx7aV1yqwC-iho3TjiDDdIklkeigOnXgQnYRIcQrMq_dd2OqeSS/exec",
@@ -125,8 +125,8 @@ function send() {
                 "sleep": sleep
             },
             success: function(response) {
-            if(response == "??????"){
-                // alert("??????");
+            if(response == "ÊàêÂäü"){
+                // alert("ÊàêÂäü");
     
             }
             },
