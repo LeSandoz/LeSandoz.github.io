@@ -44,6 +44,11 @@ body .ho_table, body table {
 
 body .ho_table thead, body table thead {
   background: none;
+  color: white;
+}
+
+body .ho_table thead tr, body table thead tr {
+  border-radius: 20px;
 }
 
 body .ho_table thead th:first-child, body table thead th:first-child {
@@ -56,11 +61,11 @@ body .ho_table thead th:last-child, body table thead th:last-child {
 
 body .ho_table thead th, body table thead th {
   background: #343a40;
-  border-top: white 1px solid;
 }
 
-body .ho_table tbody:hover, body table tbody:hover {
+body .ho_table tbody tr:hover, body table tbody tr:hover {
   cursor: pointer;
+  background: white;
 }
 
 body .ho_table thead tr:hover, body table thead tr:hover {

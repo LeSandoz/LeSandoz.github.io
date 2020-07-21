@@ -34,6 +34,10 @@ body{
         box-shadow: gray 10px 10px 16px;
         thead{
             background: none;
+            color: white;
+            tr{
+                border-radius: 20px;
+            }
             th:first-child{
                 border-radius: 20px 0 0 0;
             }
@@ -42,13 +46,14 @@ body{
             }
             th{
                 background: #343a40;
-                border-top: white 1px solid;
+                // border-top: white 1px solid;
             }
         }
         
-        tbody:hover{
+        tbody tr:hover{
             cursor: pointer;
-    
+            background: white;
+            // opacity: 80%;
         }
         thead tr:hover{
             background: #454d55;
