@@ -1,0 +1,37 @@
+body{
+    font-family: "微軟正黑體";
+    .checkerboard{
+        margin: 0 auto;
+        border: black 1px solid;
+        width: 802px;
+        height: 410px;
+        .checkerboardRow{
+            width: 800px;
+            border: black 1px solid;
+                .checker{
+                    width: 100px;
+                    height: 100px;
+                    background: rgb(245, 197, 109);
+                    border: black 1px solid;
+
+                    .chessman{
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 50%;
+                        background: cadetblue;
+                        margin: 10px auto;
+                        line-height: 80px;
+                        text-align: center;
+                        box-shadow: rgb(59, 59, 59) 5px 5px 5px;
+                    }
+                    .chessman:hover{
+                        cursor: pointer;
+                    }
+                }
+        }
+    }
+    .controller{
+        margin: 30px auto;
+        text-align: center;
+    }
+}

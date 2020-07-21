@@ -1,0 +1,45 @@
+@charset "UTF-8";
+body {
+  font-family: "微軟正黑體";
+}
+
+body .checkerboard {
+  margin: 0 auto;
+  border: black 1px solid;
+  width: 802px;
+  height: 410px;
+}
+
+body .checkerboard .checkerboardRow {
+  width: 800px;
+  border: black 1px solid;
+}
+
+body .checkerboard .checkerboardRow .checker {
+  width: 100px;
+  height: 100px;
+  background: #f5c56d;
+  border: black 1px solid;
+}
+
+body .checkerboard .checkerboardRow .checker .chessman {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: cadetblue;
+  margin: 10px auto;
+  line-height: 80px;
+  text-align: center;
+  -webkit-box-shadow: #3b3b3b 5px 5px 5px;
+          box-shadow: #3b3b3b 5px 5px 5px;
+}
+
+body .checkerboard .checkerboardRow .checker .chessman:hover {
+  cursor: pointer;
+}
+
+body .controller {
+  margin: 30px auto;
+  text-align: center;
+}
+/*# sourceMappingURL=c-chess.css.map */
