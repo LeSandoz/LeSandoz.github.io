@@ -7,7 +7,9 @@ $("#start").click(function(){
     $(".computer .point img").attr("src", "./images/dice-roll.gif")
     $(".alertbox").addClass("d-none")
 });
-
+let pWin = 0
+let cWin = 0
+let drew = 0
 $("#stop").click(function(){
     $("#stop").addClass("d-none")
     $("#start").removeClass("d-none")
@@ -25,10 +27,18 @@ $("#stop").click(function(){
 
     if(pointPlayer > pointCom){
         $(".alertbox").removeClass("d-none").text("You Win!!!")
+        pWin++
+        $(".total .pwin").text(pWin)
+        console.log("pWin: " + pWin)
     }else if(pointPlayer == pointCom){
         $(".alertbox").removeClass("d-none").text("Drew...")
+        drew++
+        $(".total .drew").text(drew)
+        console.log("drew: " + drew)
     }else{
         $(".alertbox").removeClass("d-none").text("You Lose!!!")
-
+        cWin++
+        $(".total .cwin").text(cWin)
+        console.log("cWin: " + cWin)
     }
 })

@@ -2,11 +2,12 @@ body{
     background: url("images/wallpaper.jpg"),rgba(233, 232, 232, 0.418);
     background-size: cover;
     background-attachment: fixed;
+    font-family: "微軟正黑體";
+    font-weight: 800;
     .container_box{
         margin: 0 40px;
     }
-    font-family: "微軟正黑體";
-    
+
     h1{
         text-align: center;
         margin-top: 20px;

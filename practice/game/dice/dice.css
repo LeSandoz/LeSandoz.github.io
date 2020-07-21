@@ -17,6 +17,13 @@ h2 {
   top: 50px;
 }
 
+.total {
+  position: absolute;
+  top: 100px;
+  left: 75px;
+  z-index: 3;
+}
+
 .ground {
   width: auto;
   height: 500px;

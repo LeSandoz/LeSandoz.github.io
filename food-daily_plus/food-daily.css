@@ -4,6 +4,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   font-family: "微軟正黑體";
+  font-weight: 800;
 }
 
 body .container_box {
