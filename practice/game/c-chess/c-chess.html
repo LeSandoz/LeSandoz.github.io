@@ -12,7 +12,10 @@
   </head>
   <body>
       <div class="container">
-          <h1 class="text-center mt-4">國際暗棋大賽</h1>
+        <h1 class="text-center mt-4">國際暗棋大賽</h1>
+        <h5 class="text-right">輪到<span class="turn black">誰</span>了</h5>
+        <div class="d-flex">
+
             <div class="checkerboard">
                 <div class="checkerboardRow d-flex">
                     <div class="checker 1A"><span>1A</span><div class="chessman"></div><div class="chessmanBack"></div></div>
@@ -55,12 +58,22 @@
                     <div class="checker 8D"><span>8D</span><div class="chessman"></div><div class="chessmanBack d-none"></div></div>
                 </div>
             </div>
-            <div class="controller">
-                <input type="text form-control" class="moveBefore"> to
-                <input type="text form-control" class="moveAfter">
-                <button type="button" class="btn btn-info move">MOVE</button>
-            </div>
 
+            <!-- <div class="dead-chess dead-chess-red"></div>
+            <div class="dead-chess dead-chess-black"></div> -->
+
+        </div>
+        <div class="controller">
+          <!-- <select name="" id="moveBefore">
+            <option value="">請選擇</option>
+          </select> to
+          <select name="" id="moveAfter">
+            <option value="">請選擇</option>
+          </select> -->
+          <input type="text" class="moveBefore"> to
+          <input type="text" class="moveAfter">
+          <button type="button" class="btn btn-info move">MOVE</button>
+      </div>
       </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
