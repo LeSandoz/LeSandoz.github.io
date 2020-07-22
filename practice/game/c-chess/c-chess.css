@@ -8,6 +8,8 @@ body .checkerboard {
   border: black 1px solid;
   width: 802px;
   height: 410px;
+  -webkit-box-shadow: #494848 20px 20px 30px;
+          box-shadow: #494848 20px 20px 30px;
 }
 
 body .checkerboard .checkerboardRow {
@@ -20,6 +22,11 @@ body .checkerboard .checkerboardRow .checker {
   height: 100px;
   background: #f5c56d;
   border: black 1px solid;
+  position: relative;
+}
+
+body .checkerboard .checkerboardRow .checker span {
+  position: absolute;
 }
 
 body .checkerboard .checkerboardRow .checker .chessman {
@@ -32,14 +39,45 @@ body .checkerboard .checkerboardRow .checker .chessman {
   text-align: center;
   -webkit-box-shadow: #3b3b3b 5px 5px 5px;
           box-shadow: #3b3b3b 5px 5px 5px;
+  font-size: 24px;
+  font-weight: bolder;
+  -webkit-transition: .5s;
+  transition: .5s;
+  position: relative;
 }
 
 body .checkerboard .checkerboardRow .checker .chessman:hover {
   cursor: pointer;
 }
 
+body .checkerboard .checkerboardRow .checker .chessmanBack {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #fcedd7;
+  margin: 10px 9px;
+  line-height: 64px;
+  text-align: center;
+  -webkit-box-shadow: #3b3b3b 5px 5px 5px;
+          box-shadow: #3b3b3b 5px 5px 5px;
+  font-size: 32px;
+  font-weight: bolder;
+  -webkit-transition: .5s;
+  transition: .5s;
+  border: 8px solid cadetblue;
+  position: absolute;
+}
+
 body .controller {
   margin: 30px auto;
   text-align: center;
+}
+
+body .disappear {
+  display: none;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 /*# sourceMappingURL=c-chess.css.map */

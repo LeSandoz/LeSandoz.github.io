@@ -5,6 +5,7 @@ body{
         border: black 1px solid;
         width: 802px;
         height: 410px;
+        box-shadow: rgb(73, 72, 72) 20px 20px 30px;
         .checkerboardRow{
             width: 800px;
             border: black 1px solid;
@@ -13,7 +14,10 @@ body{
                     height: 100px;
                     background: rgb(245, 197, 109);
                     border: black 1px solid;
-
+                    position: relative;
+                    span{
+                        position: absolute;
+                    }
                     .chessman{
                         width: 80px;
                         height: 80px;
@@ -23,15 +27,40 @@ body{
                         line-height: 80px;
                         text-align: center;
                         box-shadow: rgb(59, 59, 59) 5px 5px 5px;
+                        font-size: 24px;
+                        font-weight: bolder;
+                        transition: .5s;
+                        position: relative;
                     }
                     .chessman:hover{
                         cursor: pointer;
                     }
+                    .chessmanBack{
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 50%;
+                        background: rgb(252, 237, 215);
+                        margin: 10px 9px;
+                        line-height: 64px;
+                        text-align: center;
+                        box-shadow: rgb(59, 59, 59) 5px 5px 5px;
+                        font-size: 32px;
+                        font-weight: bolder;
+                        transition: .5s;
+                        border: 8px solid cadetblue;
+                        position: absolute;
+                    }
+                    .B4D{}
                 }
         }
     }
     .controller{
         margin: 30px auto;
         text-align: center;
+    }
+    .disappear{
+        display: none;
+        transform: rotateX(180deg);
+        transition: 1s;
     }
 }
