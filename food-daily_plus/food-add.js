@@ -20,14 +20,14 @@ function send() {
                 breakfast += ''
             }else{
                 breakfast += $('input:text[name="breakfastText[]"]')[i].value
-                breakfast += "：?" + $('input:text[name="breakfastCal[]"]')[i].value
+                breakfast += "：" + $('input:text[name="breakfastCal[]"]')[i].value
             }
         }else{
             if($('input:text[name="breakfastText[]"]')[i].value == ''){
                 breakfast += ''
             }else{
                 breakfast += "," + $('input:text[name="breakfastText[]"]')[i].value
-                breakfast += "：?" + $('input:text[name="breakfastCal[]"]')[i].value
+                breakfast += "：" + $('input:text[name="breakfastCal[]"]')[i].value
             }
 
         }
@@ -40,14 +40,14 @@ function send() {
                 lunch += ''
             }else{
                 lunch += $('input:text[name="lunchText[]"]')[i].value
-                lunch += "：?" + $('input:text[name="lunchCal[]"]')[i].value
+                lunch += "：" + $('input:text[name="lunchCal[]"]')[i].value
             }
         }else{
             if($('input:text[name="lunchText[]"]')[i].value == ''){
                 lunch += ''
             }else{
                 lunch += "," + $('input:text[name="lunchText[]"]')[i].value
-                lunch += "：?" + $('input:text[name="lunchCal[]"]')[i].value
+                lunch += "：" + $('input:text[name="lunchCal[]"]')[i].value
             }
 
         }
@@ -60,14 +60,14 @@ function send() {
                 dinner += ''
             }else{
                 dinner += $('input:text[name="dinnerText[]"]')[i].value
-                dinner += "：?" + $('input:text[name="dinnerCal[]"]')[i].value
+                dinner += "：" + $('input:text[name="dinnerCal[]"]')[i].value
             }
         }else{
             if($('input:text[name="dinnerText[]"]')[i].value == ''){
                 dinner += ''
             }else{
                 dinner += "," + $('input:text[name="dinnerText[]"]')[i].value
-                dinner += "：?" + $('input:text[name="dinnerCal[]"]')[i].value
+                dinner += "：" + $('input:text[name="dinnerCal[]"]')[i].value
             }
 
         }
