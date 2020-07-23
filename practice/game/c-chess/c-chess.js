@@ -229,6 +229,7 @@ $(".checker").on("click", function(){
 $(".clearx").on("click", function(){
     $(".moveAfter").val('')
     $(".moveBefore").val('')
+    $(".chessmanBack").css("transform", "translate(0px,0px)")
 })
 $(".reset").on("click", function(){
     // history.go(0)
