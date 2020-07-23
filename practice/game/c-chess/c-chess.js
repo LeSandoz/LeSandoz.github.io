@@ -119,6 +119,7 @@ $(document).on("change", ".moveBefore", function(){
 $(document).on("change", ".moveAfter", function(){
     moveAfter = $(".moveAfter").val()
     $("." + moveAfter).children(".chessmanBack").css("transform", "translate(8px,-12px)")
+    $("." + moveAfter).css("background", "red")
 })
 
 $(".move").on("click", function(){
@@ -211,42 +212,81 @@ $(".move").on("click", function(){
 // })
 $(".checker").attr("data-open", "no")
 $(".checker").attr("data-move", "no")
+
+
 $(".checker").on("click", function(){
     let pos = $(this).attr("data-pos")
     // console.log(pos)
-
-    if($(this).attr("data-open") == 'yes'){
-        if($(".moveBefore").val() == ''){
-            input = $(this).find("span").text()
-            $(".moveBefore").val($(this).find("span").text())
-            $(this).find(".chessmanBack").css("transform", "translate(8px,-12px)")
-            for(let i =0; i < 32; i++){
-                if($(".checker").eq(i).attr("data-pos") == pos){
-                    $(".checker").eq(i + 8).css("background", "red").attr("data-move", "yes")
-                    $(".checker").eq(i - 8).css("background", "red").attr("data-move", "yes")
-                    $(".checker").eq(i + 1).css("background", "red").attr("data-move", "yes")
-                    $(".checker").eq(i - 1).css("background", "red").attr("data-move", "yes")
-                }
-            }
-
-            
-        }else{
-            console.log($(this).attr("data-move"))
-            console.log($(this).find("span").text())
-            if($(this).attr("data-move") == "yes"){
-                $(".moveAfter").val($(this).find("span").text())
+    if($(this).find(".chessmanBack").attr("data-size") !== "0"){
+        if($(this).attr("data-open") == 'yes'){
+            if($(".moveBefore").val() == ''){
+                input = $(this).find("span").text()
+                $(".moveBefore").val($(this).find("span").text())
                 $(this).find(".chessmanBack").css("transform", "translate(8px,-12px)")
-                $(".checker").css("background", "rgb(245, 197, 109)")
-                $(this).css("background", "red")
-                $(".checker").attr("data-move", "no")
+                for(let i =0; i < 32; i++){
+                    if($(".checker").eq(i).attr("data-pos") == pos){
+                        $(".checker").eq(i + 8).css("background", "red").attr("data-move", "yes")
+                        $(".checker").eq(i - 8).css("background", "red").attr("data-move", "yes")
+                        $(".checker").eq(i + 1).css("background", "red").attr("data-move", "yes")
+                        $(".checker").eq(i - 1).css("background", "red").attr("data-move", "yes")
+                    }
+                }
+    
+                
             }else{
-                alert("走不到喔")
+                console.log($(this).attr("data-move"))
+                console.log($(this).find("span").text())
+                if($(this).attr("data-move") == "yes"){
+                    $(".moveAfter").val($(this).find("span").text())
+                    $(this).find(".chessmanBack").css("transform", "translate(8px,-12px)")
+                    $(".checker").css("background", "rgb(245, 197, 109)")
+                    $(this).css("background", "red")
+                    $(".checker").attr("data-move", "no")
+                }else{
+                    alert("走不到喔") 
+                }
+                input = ''
             }
-            input = ''
+            // console.log(input)
         }
-        // console.log(input)
+    }else{
+        if($(this).attr("data-open") == 'yes'){
+        alert("砲還沒做好啦 請在下面欄位輸入想前往的格子")
+            if($(".moveBefore").val() == ''){
+                input = $(this).find("span").text()
+                $(".moveBefore").val($(this).find("span").text())
+                $(this).find(".chessmanBack").css("transform", "translate(8px,-12px)")
+                // for(let i =0; i < 32; i++){
+                //     if($(".checker").eq(i).attr("data-pos") == pos){
+                //         $(".checker").eq(i + 16).css("background", "red").attr("data-move", "yes")
+                //         $(".checker").eq(i - 16).css("background", "red").attr("data-move", "yes")
+                //         $(".checker").eq(i + 2).css("background", "red").attr("data-move", "yes")
+                //         $(".checker").eq(i - 2).css("background", "red").attr("data-move", "yes")
+                //     }
+                // }
+    
+                
+            }
+            // else{
+            //     console.log($(this).attr("data-move"))
+            //     console.log($(this).find("span").text())
+            //     if($(this).attr("data-move") == "yes"){
+            //         $(".moveAfter").val($(this).find("span").text())
+            //         $(this).find(".chessmanBack").css("transform", "translate(8px,-12px)")
+            //         $(".checker").css("background", "rgb(245, 197, 109)")
+            //         $(this).css("background", "red")
+            //         $(".checker").attr("data-move", "no")
+            //     }else{
+            //         alert("走不到喔") 
+            //     }
+            //     input = ''
+            // }
+            // console.log(input)
+        }
     }
-    $(this).attr("data-open", "yes")
+// $(this).find(".chessman").attr("class") == "chessman disappear"
+        $(this).attr("data-open", "yes")
+
 
 
 })
@@ -258,11 +298,11 @@ $(".clearx").on("click", function(){
     $(".checker").css("background", "rgb(245, 197, 109)")
 })
 $(".reset").on("click", function(){
-    // history.go(0)
-    $(".chessman").removeClass("disappear")
-    $(".chessmanBack").addClass("d-none")
-    $(".checker").attr("data-open", "no")
-    $(".turn").removeClass().addClass("turn black").text("誰")
+    history.go(0)
+    // $(".chessman").removeClass("disappear")
+    // $(".chessmanBack").addClass("d-none")
+    // $(".checker").attr("data-open", "no")
+    // $(".turn").removeClass().addClass("turn black").text("誰")
 })
 
 
