@@ -22,6 +22,7 @@ for (var i = 0; i < 32; i++) {
     all_result.push(all_chessman.splice(all_index, 1)[0]); //舊陣列去除數字轉移到新陣列
 };
 // console.log(all_result)
+
 for(let i = 0; i < $(".chessman").length; i++){
     // $(".chessman").eq(i).text(all_result[i])
     // console.log($(".checker").eq(i).children("span").text())
@@ -194,17 +195,46 @@ $(".move").on("click", function(){
     // }
 })
 
-$(".chessmanBack").on("click", function(){
-    console.log(input)
-    console.log($(this))
-    $(this).css("transform", "translate(8px,-12px)")
-    if(input == ''){
-        input = $(this).parent().find("span").text()
-        $(".moveBefore").val($(this).parent().find("span").text())
-    }else{
-        input = ''
-        $(".moveAfter").val($(this).parent().find("span").text())
+// $(".chessmanBack").on("click", function(){
+//     console.log(input)
+//     console.log($(this))
+//     $(this).css("transform", "translate(8px,-12px)")
+//     if(input == ''){
+//         input = $(this).parent().find("span").text()
+//         $(".moveBefore").val($(this).parent().find("span").text())
+//     }else{
+//         input = ''
+//         $(".moveAfter").val($(this).parent().find("span").text())
+//     }
+// })
+$(".checker").attr("data-open", "no")
+$(".checker").on("click", function(){
+    console.log($(this).attr("data-open"))
+    if($(this).attr("data-open") == 'yes'){
+        if(input == ''){
+            input = $(this).find("span").text()
+            $(".moveBefore").val($(this).find("span").text())
+            $(this).find(".chessmanBack").css("transform", "translate(8px,-12px)")
+        }else{
+            input = ''
+            $(".moveAfter").val($(this).find("span").text())
+            $(this).find(".chessmanBack").css("transform", "translate(8px,-12px)")
+        }
+        // console.log(input)
     }
+    $(this).attr("data-open", "yes")
+
+
+})
+$(".clearx").on("click", function(){
+    $(".moveAfter").val('')
+    $(".moveBefore").val('')
+})
+$(".reset").on("click", function(){
+    // history.go(0)
+    $(".chessman").removeClass("disappear")
+    $(".chessmanBack").addClass("d-none")
+    $(".checker").attr("data-open", "no")
 })
 
 
