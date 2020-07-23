@@ -27,6 +27,7 @@ for(let i = 0; i < $(".chessman").length; i++){
     // $(".chessman").eq(i).text(all_result[i])
     // console.log($(".checker").eq(i).children("span").text())
     $(".chessmanBack").eq(i).text(all_result[i])
+    $(".checker").eq(i).attr("data-pos", `${i + 1}`)
     optionBefore += `    
                         <option value="${$(".checker").eq(i).children("span").text()}">${$(".checker").eq(i).children("span").text()}</option>       
                     `
@@ -91,18 +92,18 @@ $(".chessman").on("click", function(){
     let turnColor = $(this).parent().find(".chessmanBack").css("color")
     // console.log(turnColor)
     if(turnColor == "rgb(0, 0, 0)" && colorTurn == ''){
-        // console.log(1)
+        console.log(1)
         colorTurn = "black"
         $(".turn").removeClass("black").addClass("red").text("紅方")
     }else if(turnColor == "rgb(255, 0, 0)" && colorTurn == ''){
-        // console.log(2)
+        console.log(2)
         colorTurn = "red"
         $(".turn").removeClass("red").addClass("black").text("黑方")
     }else if($(".turn").css("color") == "rgb(255, 0, 0)"){
-        // console.log(3)
+        console.log(3)
         $(".turn").removeClass("red").addClass("black").text("黑方")
     }else if($(".turn").css("color") == "rgb(0, 0, 0)"){
-        // console.log(4)
+        console.log(4)
         $(".turn").removeClass("black").addClass("red").text("紅方")
     }
     // console.log(colorTurn)
@@ -180,19 +181,20 @@ $(".move").on("click", function(){
         $("." + moveBefore).children(".chessmanBack").css("transform", "")
         input = ''
     }
+    $(".checker").css("background", "rgb(245, 197, 109)")
     $("input").val('')
     moveAfter = ''
     moveBefore = ''
     // console.log($(".turn").css("color"))
-    // if($(".turn").css("color") == "rgb(255, 0, 0)"){
-    //     colorTurn = "black"
-    //     $(".turn").css("color", "black").text("黑方")
-    //     console.log(1)
-    // }else if($(".turn").css("color") == "rgb(0, 0, 0)"){
-    //     colorTurn = "red"
-    //     $(".turn").css("color", "red").text("紅方")
-    //     console.log(2)
-    // }
+    if($(".turn").css("color") == "rgb(255, 0, 0)"){
+        // colorTurn = "black"
+        $(".turn").removeClass("red").addClass("black").text("黑方")
+        console.log(1)
+    }else if($(".turn").css("color") == "rgb(0, 0, 0)"){
+        // colorTurn = "red"
+        $(".turn").removeClass("black").addClass("red").text("紅方")
+        console.log(2)
+    }
 })
 
 // $(".chessmanBack").on("click", function(){
@@ -208,17 +210,39 @@ $(".move").on("click", function(){
 //     }
 // })
 $(".checker").attr("data-open", "no")
+$(".checker").attr("data-move", "no")
 $(".checker").on("click", function(){
-    console.log($(this).attr("data-open"))
+    let pos = $(this).attr("data-pos")
+    // console.log(pos)
+
     if($(this).attr("data-open") == 'yes'){
-        if(input == ''){
+        if($(".moveBefore").val() == ''){
             input = $(this).find("span").text()
             $(".moveBefore").val($(this).find("span").text())
             $(this).find(".chessmanBack").css("transform", "translate(8px,-12px)")
+            for(let i =0; i < 32; i++){
+                if($(".checker").eq(i).attr("data-pos") == pos){
+                    $(".checker").eq(i + 8).css("background", "red").attr("data-move", "yes")
+                    $(".checker").eq(i - 8).css("background", "red").attr("data-move", "yes")
+                    $(".checker").eq(i + 1).css("background", "red").attr("data-move", "yes")
+                    $(".checker").eq(i - 1).css("background", "red").attr("data-move", "yes")
+                }
+            }
+
+            
         }else{
+            console.log($(this).attr("data-move"))
+            console.log($(this).find("span").text())
+            if($(this).attr("data-move") == "yes"){
+                $(".moveAfter").val($(this).find("span").text())
+                $(this).find(".chessmanBack").css("transform", "translate(8px,-12px)")
+                $(".checker").css("background", "rgb(245, 197, 109)")
+                $(this).css("background", "red")
+                $(".checker").attr("data-move", "no")
+            }else{
+                alert("走不到喔")
+            }
             input = ''
-            $(".moveAfter").val($(this).find("span").text())
-            $(this).find(".chessmanBack").css("transform", "translate(8px,-12px)")
         }
         // console.log(input)
     }
@@ -230,6 +254,8 @@ $(".clearx").on("click", function(){
     $(".moveAfter").val('')
     $(".moveBefore").val('')
     $(".chessmanBack").css("transform", "translate(0px,0px)")
+    $(".checker").attr("data-move", "no")
+    $(".checker").css("background", "rgb(245, 197, 109)")
 })
 $(".reset").on("click", function(){
     // history.go(0)
