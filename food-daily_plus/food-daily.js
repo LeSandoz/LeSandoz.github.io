@@ -40,7 +40,8 @@ fetch("https://spreadsheets.google.com/feeds/list/1qF0VQyE6PSVwkBZDviMitvIVfZdiA
         let water = entry[i].gsx$飲水量.$t;
         let fit = entry[i].gsx$運動.$t;
         let sleep = entry[i].gsx$睡覺時間.$t;
-        let sleepNew = entry[i].gsx$睡覺時間.$t.substr(0,sleep.length - 3);
+        // let sleepNew = entry[i].gsx$睡覺時間.$t.substr(0,sleep.length - 3);
+        let sleepNew = entry[i].gsx$睡覺時間.$t;
         
 
         if(name == '阿何'){
