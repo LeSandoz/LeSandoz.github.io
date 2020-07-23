@@ -262,6 +262,7 @@ $(".reset").on("click", function(){
     $(".chessman").removeClass("disappear")
     $(".chessmanBack").addClass("d-none")
     $(".checker").attr("data-open", "no")
+    $(".turn").removeClass().addClass("turn black").text("誰")
 })
 
 
