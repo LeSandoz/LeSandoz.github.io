@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>分組</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <style>
+      body{
+          font-family: "微軟正黑體";
+      }
+      button{
+          height: 36px;
+      }
+      .left_box, .right_box{
+          width: 50%;
+      }
+      #group{
+          margin: 0 auto;
+      }
+  </style>
+  <body>
+    <div class="container mt-4">
+        <h1 class="text-center">分組啦</h1>
+        <label for="name">請輸入人名：</label>
+        <div class="d-flex top_box">
+            <input type="text" class="form-control mb-4" name="name" id="name" aria-describedby="helpId" placeholder="">
+            <button type="button" class="btn btn-primary" id="add">add</button>
+        </div>
+
+        <div class="d-flex">
+            <div class="left_box">
+                <h3 class="">有誰呢</h3>
+                <div id="name_list"></div>
+            </div>
+            <div class="right_box">
+                <h3>分組結果</h3>
+                <div id="result"></div>
+            </div>
+            <button type="button" class="btn btn-primary" id="group">group</button>
+        </div>
+
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        let nameArr = []
+        $("#add").on("click", function(){
+            let val = $("#name").val()
+            $("#name").val('')
+            nameArr.push(val)
+            console.log(nameArr)
+
+            document.getElementById("name_list").innerHTML += (val + "<br>")
+            var str = '';
+            var arr = [];
+            for(i = 0; i < nameArr.length; i++){
+                str = Math.round(Math.random() * nameArr.length);
+                for(j = 0; j < nameArr.length; j++){
+                        if(arr[j] == str){
+                            arr.splice(j, 1);
+                            i--;
+                        }
+                    }
+                arr.push(str);
+            }
+            console.log(arr)
+            for(i = 0; i < nameArr.length; i++){
+                let result = nameArr[arr[i]]
+                console.log(result)
+                document.getElementById("result").innerHTML = (result + "<br>")
+            }
+        });
+    </script>
+  </body>
+</html>

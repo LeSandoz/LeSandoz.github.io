@@ -80,14 +80,14 @@ function send() {
                 snack += ''
             }else{
                 snack += $('input:text[name="snackText[]"]')[i].value
-                snack += "：?" + $('input:text[name="snackCal[]"]')[i].value
+                snack += "：" + $('input:text[name="snackCal[]"]')[i].value
             }
         }else{
             if($('input:text[name="snackText[]"]')[i].value == ''){
                 snack += ''
             }else{
                 snack += "," + $('input:text[name="snackText[]"]')[i].value
-                snack += "：?" + $('input:text[name="snackCal[]"]')[i].value
+                snack += "：" + $('input:text[name="snackCal[]"]')[i].value
             }
 
         }
