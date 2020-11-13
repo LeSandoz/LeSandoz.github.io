@@ -66,6 +66,12 @@ main{
             font-weight: bolder;
             top: calc(50% - 30px);
             left: calc(50% - 130px);
+            a{
+                color: black;
+            }
+            a:hover{
+                text-decoration: none;
+            }
         }
         .start_your_project:hover{
             cursor: pointer;

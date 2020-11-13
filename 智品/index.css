@@ -78,6 +78,14 @@ main .slider .start_your_project {
   left: calc(50% - 130px);
 }
 
+main .slider .start_your_project a {
+  color: black;
+}
+
+main .slider .start_your_project a:hover {
+  text-decoration: none;
+}
+
 main .slider .start_your_project:hover {
   cursor: pointer;
   -webkit-transform: scale(1.2);
