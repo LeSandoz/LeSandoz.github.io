@@ -61,14 +61,14 @@ header .header_list_bot li a:hover {
   text-decoration: none;
 }
 
-main .slider {
+.index main .slider {
   max-width: 1600px;
   height: 600px;
   background: url(./img/slider2.png) center center;
   position: relative;
 }
 
-main .slider .start_your_project {
+.index main .slider .start_your_project {
   width: 270px;
   text-align: center;
   font-size: 20px;
@@ -80,15 +80,15 @@ main .slider .start_your_project {
   left: calc(50% - 130px);
 }
 
-main .slider .start_your_project a {
+.index main .slider .start_your_project a {
   color: black;
 }
 
-main .slider .start_your_project a:hover {
+.index main .slider .start_your_project a:hover {
   text-decoration: none;
 }
 
-main .slider .start_your_project:hover {
+.index main .slider .start_your_project:hover {
   cursor: pointer;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
@@ -96,25 +96,25 @@ main .slider .start_your_project:hover {
   transition: .5s;
 }
 
-main .our_services {
+.index main .our_services {
   max-width: 1600px;
   height: 400px;
 }
 
-main .our_services .our_services_text {
+.index main .our_services .our_services_text {
   font-size: 24px;
   text-align: center;
   font-weight: bolder;
   margin-top: 50px;
 }
 
-main .our_services .item_wrap {
+.index main .our_services .item_wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main .our_services .item_wrap .box {
+.index main .our_services .item_wrap .box {
   width: 25%;
   background: white;
   background: linear-gradient(52deg, white 0%, #fcfcfc 24%, lightgray 43%, white 74%, #e0e0e0 100%);
@@ -124,66 +124,93 @@ main .our_services .item_wrap .box {
   line-height: 250px;
 }
 
-main .our_services .item_wrap .box .box_text {
+.index main .our_services .item_wrap .box .box_text {
   -webkit-transform: translateY(100px);
           transform: translateY(100px);
   font-size: 18px;
 }
 
-main .step {
+.index main .step {
   max-width: 1600px;
   height: 600px;
   position: relative;
 }
 
-main .step .step_text {
+.index main .step .step_text {
   font-size: 24px;
   text-align: center;
   margin: 20px 0;
   font-weight: bolder;
 }
 
-main .step .file {
+.index main .step .file {
   position: absolute;
   top: 10%;
   left: 20%;
 }
 
-main .step .file img {
+.index main .step .file img {
   padding-right: 40px;
 }
 
-main .step .next_step {
+.index main .step .next_step {
   position: absolute;
   top: 40%;
   left: 20%;
   margin-top: 40px;
 }
 
-main .step .next_step img {
+.index main .step .next_step img {
   padding-right: 70px;
 }
 
-main .other_services {
+.index main .other_services {
   max-width: 1600px;
   height: 400px;
   position: relative;
 }
 
-main .other_services .other_text {
+.index main .other_services .other_text {
   font-size: 24px;
   text-align: center;
   font-weight: bolder;
 }
 
-main .other_services .other {
+.index main .other_services .other {
   position: absolute;
   top: 20%;
   left: 18%;
 }
 
-main .other_services .other img {
+.index main .other_services .other img {
   padding-right: 70px;
+}
+
+.item main {
+  max-width: 1600px;
+  height: 800px;
+  margin-top: 40px;
+  background: blanchedalmond;
+}
+
+.item main .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.item main .list li {
+  padding: 8px 16px;
+}
+
+.item main .list li a {
+  color: black;
+  padding: 4px 10px;
+}
+
+.item main .list li a:hover {
+  color: #5adbbb;
 }
 
 footer {

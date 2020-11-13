@@ -1,5 +1,5 @@
 
-//header
+//header樣式
 header{
     max-width: 1600px; //最大寬度
     height: 120px;  //高度
@@ -56,113 +56,138 @@ header{
         }
     }
 }
-//主要架構(除了header/footer)
-main{
-    //最上面大圖內容
-    .slider{
-        max-width: 1600px;  //最大寬度
-        height: 600px;  //高度
-        background: url(./img/slider2.png) center center; //背景樣式 url(圖片位置) center(左右置中) center(上下置中)
-        position: relative; //位置 absolute按到relative位置移動
-        .start_your_project{
-            width: 270px;  //寬度
-            text-align: center;  //文字左右置中
-            font-size: 20px;  //字體大小
-            background: white; //背景樣式 顏色
-            position: absolute; //位置 absolute按到relative位置移動
-            padding: 12px 26px; //內縮寬度
-            font-weight: bolder;  //字體粗度
-            top: calc(50% - 30px); //位置 top: 距離relative最高點位置
-            left: calc(50% - 130px); //位置 right: 距離relative最右點位置
-            a{
-                color: black; //字體顏色
+//首頁樣式
+.index{
+    main{
+        //最上面大圖內容
+        .slider{
+            max-width: 1600px;  //最大寬度
+            height: 600px;  //高度
+            background: url(./img/slider2.png) center center; //背景樣式 url(圖片位置) center(左右置中) center(上下置中)
+            position: relative; //位置 absolute按到relative位置移動
+            .start_your_project{
+                width: 270px;  //寬度
+                text-align: center;  //文字左右置中
+                font-size: 20px;  //字體大小
+                background: white; //背景樣式 顏色
+                position: absolute; //位置 absolute按到relative位置移動
+                padding: 12px 26px; //內縮寬度
+                font-weight: bolder;  //字體粗度
+                top: calc(50% - 30px); //位置 top: 距離relative最高點位置
+                left: calc(50% - 130px); //位置 right: 距離relative最右點位置
+                a{
+                    color: black; //字體顏色
+                }
+                a:hover{  //hover: 滑鼠移上去後之效果
+                    text-decoration: none;  //將預設底線拿掉
+                }
             }
-            a:hover{  //hover: 滑鼠移上去後之效果
-                text-decoration: none;  //將預設底線拿掉
+            .start_your_project:hover{  //hover: 滑鼠移上去後之效果
+                cursor: pointer;  //滑鼠樣式 pointer: 手指頭
+                transform: scale(1.2); //有hover 移上去之後之效果  transform: 效果 scale: 縮放效果(倍數)
+                transition: .5s;  //動畫時間
             }
         }
-        .start_your_project:hover{  //hover: 滑鼠移上去後之效果
-            cursor: pointer;  //滑鼠樣式 pointer: 手指頭
-            transform: scale(1.2); //有hover 移上去之後之效果  transform: 效果 scale: 縮放效果(倍數)
-            transition: .5s;  //動畫時間
-        }
-    }
-    .our_services{
-        max-width: 1600px;  //最大寬度
-        height: 400px;  //高度
-        .our_services_text{
-            font-size: 24px;  //字體大小
-            text-align: center;  //字體左右置中
-            font-weight: bolder;  //字體粗度
-            margin-top: 50px;  //對外寬度
-        }
-        .item_wrap{
-            display: flex;  //讓box並排
-            .box{
-                width: 25%;  //寬度1/4
-                background: rgb(255,255,255);  //背景 顏色
-                background: linear-gradient(52deg, rgba(255,255,255,1) 0%, rgb(252, 252, 252) 24%, rgb(211, 211, 211) 43%, rgba(255,255,255,1) 74%, rgba(224,224,224,1) 100%);  //背景 漸層
-                height: 250px;  //高度
-                margin: 70px 5px 5px 5px;  //對外寬度
+        .our_services{
+            max-width: 1600px;  //最大寬度
+            height: 400px;  //高度
+            .our_services_text{
+                font-size: 24px;  //字體大小
                 text-align: center;  //字體左右置中
-                line-height: 250px;  //字體上下置中(填入此區塊之高度)
-                .box_text{
-                    transform: translateY(100px);  //效果 translateY: 向Y軸正向移動
-                    font-size: 18px;  //字體大小
+                font-weight: bolder;  //字體粗度
+                margin-top: 50px;  //對外寬度
+            }
+            .item_wrap{
+                display: flex;  //讓box並排
+                .box{
+                    width: 25%;  //寬度1/4
+                    background: rgb(255,255,255);  //背景 顏色
+                    background: linear-gradient(52deg, rgba(255,255,255,1) 0%, rgb(252, 252, 252) 24%, rgb(211, 211, 211) 43%, rgba(255,255,255,1) 74%, rgba(224,224,224,1) 100%);  //背景 漸層
+                    height: 250px;  //高度
+                    margin: 70px 5px 5px 5px;  //對外寬度
+                    text-align: center;  //字體左右置中
+                    line-height: 250px;  //字體上下置中(填入此區塊之高度)
+                    .box_text{
+                        transform: translateY(100px);  //效果 translateY: 向Y軸正向移動
+                        font-size: 18px;  //字體大小
+                    }
+                }
+            }
+        }
+        .step{
+            max-width: 1600px;  //最大寬度
+            height: 600px;  //高度
+            position: relative;   //位置 absolute按到relative位置移動
+            .step_text{
+                font-size: 24px;  //字體大小
+                text-align: center;  //字體左右置中
+                margin:20px 0;  //對外寬度(上 右 下 左   or  上下  左右  or  全部  三種方法)
+                font-weight: bolder;  //字體粗度
+            }
+            .file{
+                position: absolute;   //位置 absolute按到relative位置移動
+                top: 10%; //位置 top: 距離relative最高點位置
+                left: 20%; //位置 left: 距離relative最左點位置
+                img{
+                    padding-right: 40px; //對內右邊寬度
+                }
+            }
+            .next_step{
+                position: absolute;   //位置 absolute按到relative位置移動
+                top: 40%; //位置 top: 距離relative最高點位置
+                left: 20%; //位置 left: 距離relative最左點位置
+                margin-top: 40px;  //對外上邊寬度
+                img{
+                    padding-right: 70px;  //對內又邊寬度
+                }
+            }
+        }
+        .other_services{
+            max-width: 1600px;  //最大寬度
+            height: 400px;  //高度
+            position: relative;  //位置 absolute按到relative位置移動
+            .other_text{
+                font-size: 24px;  //字體大小
+                text-align: center;  //字體左右置中
+                font-weight: bolder;  //字體粗度
+            }
+            .other{
+                position: absolute;  //位置 absolute按到relative位置移動
+                top: 20%; //位置 top: 距離relative最高點位置
+                left: 18%; //位置 left: 距離relative最左點位置
+                img{
+                    padding-right: 70px;  //對內又邊寬度
                 }
             }
         }
     }
-    .step{
-        max-width: 1600px;  //最大寬度
-        height: 600px;  //高度
-        position: relative;   //位置 absolute按到relative位置移動
-        .step_text{
-            font-size: 24px;  //字體大小
-            text-align: center;  //字體左右置中
-            margin:20px 0;  //對外寬度(上 右 下 左   or  上下  左右  or  全部  三種方法)
-            font-weight: bolder;  //字體粗度
-        }
-        .file{
-            position: absolute;   //位置 absolute按到relative位置移動
-            top: 10%; //位置 top: 距離relative最高點位置
-            left: 20%; //位置 left: 距離relative最左點位置
-            img{
-                padding-right: 40px; //對內右邊寬度
+}
+//商品頁樣式
+.item{
+    main{
+        max-width: 1600px;
+        height: 800px;
+        margin-top: 40px;
+        background: blanchedalmond;
+        .list{
+            display: flex;
+            list-style: none;
+            li{
+                padding:  8px 16px;  //內縮寬度
+                a{
+                    color: black;  //字體顏色
+                    padding: 4px 10px;  //內縮寬度
+                }
+                a:hover{ //hover: 滑鼠移上去後之效果
+                    color: rgb(90, 219, 187); //字體顏色
+                }
             }
         }
-        .next_step{
-            position: absolute;   //位置 absolute按到relative位置移動
-            top: 40%; //位置 top: 距離relative最高點位置
-            left: 20%; //位置 left: 距離relative最左點位置
-            margin-top: 40px;  //對外上邊寬度
-            img{
-                padding-right: 70px;  //對內又邊寬度
-            }
-        }
-    }
-    .other_services{
-        max-width: 1600px;  //最大寬度
-        height: 400px;  //高度
-        position: relative;  //位置 absolute按到relative位置移動
-        .other_text{
-            font-size: 24px;  //字體大小
-            text-align: center;  //字體左右置中
-            font-weight: bolder;  //字體粗度
-        }
-        .other{
-            position: absolute;  //位置 absolute按到relative位置移動
-            top: 20%; //位置 top: 距離relative最高點位置
-            left: 18%; //位置 left: 距離relative最左點位置
-            img{
-                padding-right: 70px;  //對內又邊寬度
-            }
-        }
-    }
+    } 
 }
 
 
-//footer
+//footer樣式
 footer{
     max-width: 1600px;  //最大寬度
     height: 360px;  //高度
