@@ -1,0 +1,39 @@
+
+//header
+header{
+    max-width: 1600px;
+    height: 200px;
+    background:rgb(255, 244, 233)
+}
+
+//中間所有內容(包含左右側邊攔)
+.content_wrap{
+    max-width: 1600px;
+    min-height: 600px;
+    display: flex;
+
+    //左側邊攔
+    .sidebar_left{
+        background: darkkhaki;
+        width: 15%;
+    }
+    //中間內容
+    .content{
+        background: rgb(125, 255, 113);
+        width: 70%;
+    }
+    //右側邊攔
+    .sidebar_right{
+        background: rgb(231, 185, 139);
+        width: 15%;
+
+    }
+}
+
+//footer
+footer{
+    max-width: 1600px;
+    height: 200px;
+    background: rgb(185, 156, 166);
+}
+

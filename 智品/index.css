@@ -1,0 +1,35 @@
+header {
+  max-width: 1600px;
+  height: 200px;
+  background: #fff4e9;
+}
+
+.content_wrap {
+  max-width: 1600px;
+  min-height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content_wrap .sidebar_left {
+  background: darkkhaki;
+  width: 15%;
+}
+
+.content_wrap .content {
+  background: #7dff71;
+  width: 70%;
+}
+
+.content_wrap .sidebar_right {
+  background: #e7b98b;
+  width: 15%;
+}
+
+footer {
+  max-width: 1600px;
+  height: 200px;
+  background: #b99ca6;
+}
+/*# sourceMappingURL=index.css.map */
