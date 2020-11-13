@@ -6,23 +6,23 @@ header{
     background:rgb(255, 244, 233)
 }
 
-//¤¤¶¡©Ò¦³¤º®e(¥]§t¥ª¥k°¼ÃäÄd)
+//ä¸­é–“æ‰€æœ‰å…§å®¹(åŒ…å«å·¦å³å´é‚Šæ””)
 .content_wrap{
     max-width: 1600px;
     min-height: 600px;
     display: flex;
 
-    //¥ª°¼ÃäÄd
+    //å·¦å´é‚Šæ””
     .sidebar_left{
         background: darkkhaki;
         width: 15%;
     }
-    //¤¤¶¡¤º®e
+    //ä¸­é–“å…§å®¹
     .content{
         background: rgb(125, 255, 113);
         width: 70%;
     }
-    //¥k°¼ÃäÄd
+    //å³å´é‚Šæ””
     .sidebar_right{
         background: rgb(231, 185, 139);
         width: 15%;
