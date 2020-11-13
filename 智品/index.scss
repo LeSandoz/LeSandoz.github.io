@@ -65,6 +65,8 @@ main{
         background: url(./img/slider2.png) center center; //背景樣式 url(圖片位置) center(左右置中) center(上下置中)
         position: relative; //位置 absolute按到relative位置移動
         .start_your_project{
+            width: 270px;  //寬度
+            text-align: center;  //文字左右置中
             font-size: 20px;  //字體大小
             background: white; //背景樣式 顏色
             position: absolute; //位置 absolute按到relative位置移動
