@@ -1,38 +1,43 @@
 
 //header樣式
-header{
+header{//最上方區塊樣式
+
     max-width: 1600px; //最大寬度
     height: 120px;  //高度
     background:rgb(255, 255, 255);  //背景 rgb:顏色
     position: relative; //位置 absolute按到relative位置移動
-    font-family: "微軟正黑體", "Segoe UI";
+    font-family: "微軟正黑體", "Segoe UI"; //字型(優先選擇，替代方案)
 
     //icon
-    .zhipin_icon_wrap{
-        display: flex;
-        .zhipin_icon{
+    .zhipin_icon_wrap{//icon外框樣式
+        display: flex;//讓物件並排
+
+        .zhipin_icon{//icon本身樣式
             width:70px; //寬度
-            height: 70px;
-            margin: 10px;
+            height: 70px; //高度
+            margin: 10px; //對外寬度
         }
-        .logo_text{
-            text-align: center;
-            line-height: 90px;
-            font-size: 20px;
-            font-weight: 500;
+
+        .logo_text{//logo文字樣式
+            text-align: center;  //左右置中
+            line-height: 90px;  //上下置中
+            font-size: 20px;  //字體大小
+            font-weight: 500;  //字體粗度
         }
     }
 
 
 
     //主選單
-    .header_list_top{
+    .header_list_top{  //上方主選單(雷切/真空/共享空間)
+
         display: flex; //讓列表並排
         list-style: none; //list取消預設樣式
         font-size: 14px;  //字體大小
         position: absolute; //位置 absolute按到relative位置移動
         top: 0%; //位置 top: 距離relative最高點位置
         right: 2%; //位置 right: 距離relative最右點位置
+
         li{
             padding:  8px 16px;  //內縮寬度
             a{
@@ -46,16 +51,18 @@ header{
             }
         }
     }
-    .header_list_bot{
+    .header_list_bot{ //上方主選單(首頁/3D列印/作品/商店/聯絡我們/電話)
+
         display: flex;  //讓列表並排
         list-style: none;  //list取消預設樣式
         font-size: 14px;  //字體大小
         position: absolute; //位置 absolute按到relative位置移動
         bottom: -10%; //位置 top: 距離relative最高點位置
         right: 2%; //位置 right: 距離relative最右點位置
+        
         li{
             padding:  8px 16px;  //內縮寬度
-            a{
+            a{  //超連結樣式
                 color: black;  //字體顏色
                 font-weight: 600;  //字體粗度
             }
@@ -66,58 +73,60 @@ header{
             }
         }
     }
-    .header_list_bot_1000{
-        display: none;
+    .header_list_bot_600{  //手機版選單(三條橫線，預設隱藏)
+        display: none;  //隱藏
     }
-    .menu{
-        width: 30px;
-        height: 30px;
-        display: none;
+    .menu{  //手機版選單按鈕(三條橫線，預設隱藏)
+        width: 30px;  //寬度
+        height: 30px;  //高度
+        display: none;  //隱藏
     }
-    @media screen and (max-width: 600px){
-        .en{
-            font-size: 10px;
+    @media screen and (max-width: 600px){  //當螢幕寬度小於600px
+        .en{  //英文文字樣式
+            font-size: 10px;  //字體大小
         }
-        .zhipin_icon_wrap{
-            .zhipin_icon{
-                width: 100px;
-                height: auto;
-                display: block;
-                margin: auto;
+        .zhipin_icon_wrap{  //logo外框樣式
+
+            .zhipin_icon{  //logo樣式
+                width: 100px; //寬度
+                height: auto;  //高度(隨著寬度改變)
+                display: block;  //取消隱藏
+                margin: auto;  //logo置中
             }
-            .logo_text{
-                display: none;
+
+            .logo_text{  //logo文字樣式
+                display: none;  //隱藏logo文字
             }
         }
 
-        .header_list_top{
-            display: none;
+        .header_list_top{  //電腦版選單樣式
+            display: none;  //隱藏
         }
-        .header_list_bot{
+        .header_list_bot{  //電腦版選單樣式
             li{
-                display: none;
+                display: none;  //隱藏
             }
-            .menu{
-                display: block;
-                position: relative;
+            .menu{  //手機版選單按鈕樣式
+                display: block;  //取消隱藏
+                position: relative;   //位置 absolute按到relative位置移動
             }
-            .menu:hover{
-                cursor: pointer;
+            .menu:hover{  //手機版選單按鈕 hover(滑鼠移上去後之效果)
+                cursor: pointer;  //滑鼠樣式改為手指
             }
         }
-        .header_list_bot_1000{
-            z-index: 10;
-            background: rgba(110, 110, 110, 0.658);
-            width: 180px;
-            list-style: none;
-            position: absolute;
-            right: 0;
-            top: 100%;
-            font-size: 14px;
-            a{
-                color: white;
+        .header_list_bot_600{  //手機版選單樣式
+            z-index: 10;  //出現在最上面(數字越大越上面)
+            background: rgba(110, 110, 110, 0.658);  //背景顏色(R, G, B, 透明度)
+            width: 180px;  //寬度
+            list-style: none;  //列表樣式取消
+            position: absolute;  //位置 absolute按到relative位置移動
+            right: 0;  //位置 right: 距離relative最右點位置
+            top: 100%;  //位置 top: 距離relative最高點位置
+            font-size: 14px;  //字體大小
+            a{  //超連結樣式
+                color: white;  //字體顏色
             }
-            a:hover{
+            a:hover{  //超連結樣式(當滑鼠移上去後)
                 color: rgb(90, 219, 187);  //字體顏色
                 text-decoration: none;  //將預設底線拿掉
             }
@@ -125,18 +134,19 @@ header{
 
     }
 }
-.slider{
-    font-family: "微軟正黑體", "Segoe UI";
+.slider{  //首頁大圖樣式
+    font-family: "微軟正黑體", "Segoe UI";  //字型選擇
     max-width: 1600px;  //最大寬度
     height: 600px;  //高度
     background: url(./img/slider2.png) center center; //背景樣式 url(圖片位置) center(左右置中) center(上下置中)
-    background-size: cover;
+    background-size: cover;  //全版背景(延展)
     position: relative; //位置 absolute按到relative位置移動
-    .start_your_project{
+
+    .start_your_project{  //開始專案按鈕樣式
         width: 300px;  //寬度
-        height: 65px;
+        height: 65px;  //高度
         text-align: center;  //文字左右置中
-        line-height: 35px;
+        line-height: 35px;  //上下置中
         font-size: 20px;  //字體大小
         background: white; //背景樣式 顏色
         position: absolute; //位置 absolute按到relative位置移動
@@ -144,7 +154,8 @@ header{
         font-weight: bolder;  //字體粗度
         top: calc(50% - 36px); //位置 top: 距離relative最高點位置
         left: calc(50% - 150px); //位置 right: 距離relative最右點位置
-        a{
+
+        a{  //超連結樣式
             color: black; //字體顏色
         }
         a:hover{  //hover: 滑鼠移上去後之效果
@@ -159,22 +170,25 @@ header{
 }
 //首頁樣式
 .index{
-    font-family: "微軟正黑體", "Segoe UI";
-    main{
-        //最上面大圖內容
-        
-        .our_services{
+    font-family: "微軟正黑體", "Segoe UI";  //字型選擇
+    main{   //首頁主要內容(我們的服務/步驟/其他服務)
+
+        .our_services{  //我們的服務區塊樣式
             max-width: 1600px;  //最大寬度
             height: 400px;  //高度
-            .our_services_text{
+
+            .our_services_text{  //我們的服務文字樣式
                 font-size: 24px;  //字體大小
                 text-align: center;  //字體左右置中
                 font-weight: bolder;  //字體粗度
                 margin-top: 50px;  //對外寬度
             }
-            .item_wrap{
+
+            .item_wrap{  //(建築模型/公仔模型/機構模型/產品設計)上述四項外框樣式
+
                 display: flex;  //讓box並排
-                .box{
+
+                .box{  //四項內容樣式
                     width: 25%;  //寬度1/4
                     background: rgb(255,255,255);  //背景 顏色
                     background: linear-gradient(52deg, rgba(255,255,255,1) 0%, rgb(252, 252, 252) 24%, rgb(211, 211, 211) 43%, rgba(255,255,255,1) 74%, rgba(224,224,224,1) 100%);  //背景 漸層
@@ -182,129 +196,134 @@ header{
                     margin: 70px 5px 5px 5px;  //對外寬度
                     text-align: center;  //字體左右置中
                     line-height: 250px;  //字體上下置中(填入此區塊之高度)
-                    .box_text{
+
+                    .box_text{  //內容文字樣式
                         transform: translateY(100px);  //效果 translateY: 向Y軸正向移動
                         font-size: 18px;  //字體大小
                     }
                 }
             }
         }
-        .step{
+        .step{  //步驟樣式
             max-width: 1600px;  //最大寬度
             height: 900px;  //高度
-            .step_text{
+
+            .step_text{  //步驟文字樣式
                 font-size: 24px;  //字體大小
                 text-align: center;  //字體左右置中
                 margin:20px 0;  //對外寬度(上 右 下 左   or  上下  左右  or  全部  三種方法)
                 font-weight: bolder;  //字體粗度
             }
-            .step_img_wrap{
-                width: 400px;
-                height: 350px;
-                display:block;
-                margin: 50px auto -50px;
-                .step_img{
-                    transform: translateX(10%);
+            .step_img_wrap{  //步驟圖片外框樣式
+                width: 400px;  //寬度
+                height: 350px;  //高度
+                display:block;  //左右置中
+                margin: 50px auto -50px;  //對外寬度(上 左右 下(左右用auto可讓物件置中))
+                .step_img{  //步驟圖片樣式
+                    transform: translateX(10%);  //向右移動10%
                 }
-                .step_img_STL_file, .step_img_No_file{
-                    width: 140px;
-                    height: auto;
-                    display:block;
-                    margin:auto;
+                .step_img_STL_file, .step_img_No_file{  //有檔案之圖片樣式, 沒檔案之圖片樣式
+                    width: 140px;  //寬度
+                    height: auto;  //高度，隨寬度改變
+                    display:block;  //左右置中
+                    margin:auto;  //左右置中
                 }
-                .step_img_3D_printing{
-                    width: 230px;
-                    height: auto;
-                    display:block;
-                    margin:auto;
+                .step_img_3D_printing{  //3D列印之圖片樣式
+                    width: 230px;  //寬度
+                    height: auto;  //高度，隨寬度改變
+                    display:block;  //左右置中
+                    margin:auto;  //左右置中
                 }
-                .step_img_Dispatch{
-                    width: 300px;
-                    height: auto;
-                    display:block;
-                    margin:auto;
+                .step_img_Dispatch{  //寄送之圖片樣式
+                    width: 300px;  //寬度
+                    height: auto;  //高度，隨寬度改變
+                    display:block;  //左右置中
+                    margin:auto;  //左右置中
                 }
-                .img_text{
-                    text-align: center;
-                    transform: translateY(50%);
+                .img_text{  //文字圖片樣式
+                    text-align: center;  //上下置中
+                    transform: translateY(50%);  //向下移動50%
                 }
             }
 
-            .file{
-                display: flex;
-                img{
+            .file{ //有檔案跟無檔案之圖片外框樣式
+                display: flex;  //並排
+                img{  //圖片樣式
                     padding-right: 40px; //對內右邊寬度
                 }
             }
-            .next_step{
-                display: flex;
+            .next_step{  //步驟2跟步驟3外框樣式
+                display: flex;  //並排
                 margin-top: 40px;  //對外上邊寬度
-                img{
+                img{  //圖片樣式
                     padding-right: 70px;  //對內又邊寬度
                 }
             }
         }
-        .other_services{
+        .other_services{  //其他服務區塊樣式
             max-width: 1600px;  //最大寬度
-            height: 500px;  //高度
-            .other_text{
+            height: 600px;  //高度
+
+            .other_text{  //其他服務文字樣式
                 font-size: 24px;  //字體大小
                 text-align: center;  //字體左右置中
                 font-weight: bolder;  //字體粗度
             }
-            .other{
-                display: flex;
-                .other_img_wrap{
-                    width: 400px;
-                    height: 350px;
-                    display:block;
-                    margin: 50px auto -50px;
-                    .other_img{
-                        width: 200px;
-                        height: auto;
-                        display:block;
-                        margin: 50px auto -50px;
+            .other{  //其他服務外框樣式
+                display: flex;  //並排
+                .other_img_wrap{  //其他服務圖片外框樣式
+                    width: 400px;  //寬度
+                    height: 350px;  //高度
+                    display:block;  //左右置中
+                    margin: 50px auto -50px;  //左右置中
+
+                    .other_img{  //其他服務圖片樣式
+                        width: 200px;  //寬度
+                        height: auto;  //高度
+                        display:block;  //左右置中
+                        margin: 50px auto -50px;  //左右置中
                     }
-                    .img_text{
-                        text-align: center;
-                        transform: translateY(200%);
+                    .img_text{  //圖片文字樣式
+                        text-align: center;  //左右置中
+                        transform: translateY(200%);  //向下移動200%距離
                     }
-                    .img_text_vacuum{
-                        transform: translateY(180%);
+                    .img_text_vacuum{  //真空圖片文字樣式
+                        transform: translateY(180%);  //向下移動180%
                     }
                 }
             }
         }
     }
-    @media screen and (max-width: 600px){
-        main{
-            .our_services{
-                height: 1200px;
-                .item_wrap{
-                    display: block;
-                    .box{
-                        width: 100%;
+    @media screen and (max-width: 600px){  //當螢幕寬度小於600px時，改為以下(手機版)樣式
+        main{   //首頁主要內容(我們的服務/步驟/其他服務)
+            .our_services{  //我們的服務區塊樣式
+                height: 1200px;  //改為1200px高度，因手機版會拉長
+
+                .item_wrap{    //(建築模型/公仔模型/機構模型/產品設計)上述四項外框樣式
+                    display: block;  //取消並排，改為直行排列
+                    .box{    //四項內容樣式
+                        width: 100%;  //寬度
                         margin: 20px 5px 5px 5px;  //對外寬度
                     }
                 }
             }
-            .step{
-                height: 1500px;
-                .file{
-                    display: block;
+            .step{    //步驟樣式
+                height: 1500px;  //改為1500px，手機版較長
+                .file{   //有檔案跟無檔案之圖片外框樣式
+                    display: block;  //取消並排，改為直排
                     .step_img_wrap{
 
                     }
                 }
-                .next_step{
-                    display: block;
+                .next_step{  //步驟2跟步驟3外框樣式
+                    display: block;    //取消並排，改為直排
                 }
 
             }
-            .other_services{
-                height: 800px;
-                .other{
-                    display: block;
+            .other_services{    //其他服務區塊樣式
+                height: 800px;  //拉長，手機版
+                .other{  //其他服務外框樣式
+                    display: block;  //並排改為直排
                 }
             }
         }
@@ -335,144 +354,151 @@ header{
     } 
 }
 
-.file{
-    font-family: "微軟正黑體", "Segoe UI";
-    main{
-        .step{
+.file{  //檔案頁樣式
+    font-family: "微軟正黑體", "Segoe UI";  //字型樣式
+    main{  //檔案頁面主要內容樣式
+
+        .step{  //主要步驟樣式
             max-width: 1600px;  //最大寬度
             height: 900px;  //高度
-            .step_text{
+
+            .step_text{  //主要步驟文字樣式
                 font-size: 32px;  //字體大小
                 text-align: center;  //字體左右置中
                 margin:50px 0 20px;  //對外寬度(上 右 下 左   or  上下  左右  or  全部  三種方法)
                 font-weight: bolder;  //字體粗度
             }
-            .step_img_wrap{
-                width: 300px;
-                height: 350px;
-                display:block;
-                margin: 50px auto -50px;
-                .step_img{
-                    transform: translate(10%, 20%);
+            .step_img_wrap{  //主要步驟圖片外框樣式
+                width: 300px;  //寬度
+                height: 350px;  //高度
+                display:block;  //左右置中
+                margin: 50px auto -50px;  //左右置中
+
+                .step_img{  //主要步驟圖片樣式
+                    transform: translate(10%, 20%);  //向右移動10%，向下移動20%
                 }
-                .step_img_STL_file{
-                    width: 140px;
-                    height: auto;
-                    display:block;
-                    margin:auto;
+                .step_img_STL_file{  //有檔案之圖片樣式
+                    width: 140px;  //寬度
+                    height: auto;  //高度，隨寬度改變
+                    display:block;  //左右置中
+                    margin:auto;  //左右置中
                 }
-                .step_img_STL_file:hover{
-                    cursor: pointer;
+                .step_img_STL_file:hover{  //hover(滑鼠移上去後之效果)
+                    cursor: pointer;  //滑鼠樣式改為手指
                 }
-                .step_img_No_file{
-                    width: 140px;
-                    height: auto;
-                    display:block;
-                    margin:auto;
+                .step_img_No_file{  //無檔案之圖片樣式
+                    width: 140px;  //寬度
+                    height: auto;  //高度，隨寬度改變
+                    display:block; //左右置中
+                    margin:auto; //左右置中
                 }
-                .step_img_No_file:hover{
-                    cursor: pointer;
+                .step_img_No_file:hover{  //hover(滑鼠移上去後之效果)
+                    cursor: pointer;  //滑鼠樣式改為手指
                 }
-                .step_img_3D_printing{
-                    width: 230px;
-                    height: auto;
-                    display:block;
-                    margin:auto;
+                .step_img_3D_printing{  //3D列印圖片樣式
+                    width: 230px;  //寬度
+                    height: auto;  //高度，隨寬度改變
+                    display:block; //左右置中
+                    margin:auto; //左右置中
                 }
-                .step_img_Dispatch{
-                    width: 300px;
-                    height: auto;
-                    display:block;
-                    margin:auto;
+                .step_img_Dispatch{  //寄送圖片樣式
+                    width: 300px;  //寬度
+                    height: auto;  //高度，隨寬度改變
+                    display:block; //左右置中
+                    margin:auto; //左右置中
                 }
-                .img_text{
-                    text-align: center;
-                    transform: translateY(80%);
+                .img_text{  //圖片文字樣式
+                    text-align: center;  //左右置中
+                    transform: translateY(80%);  //向下移動80%
                 }
-                .img_text_right{
-                    text-align: center;
-                    transform: translateY(65%);
+                .img_text_right{  //圖片文字右邊兩項樣式
+                    text-align: center;  //左右置中
+                    transform: translateY(65%);  //向下移動65%
                 }
             }
-            .step_img_wrap_top{
-                background: rgb(223,230,237);
+            .step_img_wrap_top{  //上面兩樣增加背景樣式
+                background: rgb(223,230,237);  //背景顏色
             }
-            .file{
-                display: flex;
-                img{
+            .file{  //上二圖片外框樣式
+                display: flex;  //並排
+                img{  //上二圖片樣式
                     padding-right: 40px; //對內右邊寬度
                 }
             }
-            .next_step{
-                display: flex;
+            .next_step{  //下二圖片外框樣式
+                display: flex;  //並排
                 margin-top: 40px;  //對外上邊寬度
-                img{
+                img{  //下二圖片樣式
                     padding-right: 70px;  //對內又邊寬度
                 }
             }
         }
     }
-    @media screen and (max-width: 600px){
-        main{
-            .step{
-                height: 1600px;
-                .file{
-                    display: block;
-                    .step_img_wrap{
-                        margin-bottom: 20px;
+    @media screen and (max-width: 600px){  //當螢幕小於600px時，改為手機版樣式
+        main{  //檔案頁面主要內容樣式
+            .step{  //步驟區塊樣式
+                height: 1600px;  //高度拉長，手機版較長
+                .file{  //上二圖片外框樣式
+                    display: block;  //取消並排改為直排(從1排2個改為2排1個)
+                    .step_img_wrap{  //上二圖片外框樣式
+                        margin-bottom: 20px;  //向下寬度
                     }
                 }
-                .next_step{
-                    display: block;
+                .next_step{  //下二圖片外框樣式
+                    display: block;  //取消並排改為直排(從1排2個改為2排1個)
                 }
 
             }
-            .other_services{
-                height: 800px;
-                .other{
-                    display: block;
+            .other_services{  //其他服務區塊樣式
+                height: 800px;  //高度拉長，手機版
+                .other{  //其他服務圖片外框樣式
+                    display: block;  //取消並排改為直排(從1排2個改為2排1個)
                 }
             }
         }
     }
 }
-.nofile{
-    font-family: "微軟正黑體", "Segoe UI";
-    main{
-        .file_form{
-            background: rgb(223,230,237);
-            margin: 100px auto;
-            width: 46%;
-            padding: 40px;
-            font-weight: 800;
-            border: rgba(164, 176, 185, 0.795) 3px solid;
-            .nofile_img_wrap{
-                margin: 0 auto;
-                width: 60%;
-                text-align: center;
-                .nofile_img{
-                    width: 80px;
+.nofile{  //沒有檔案頁面樣式
+    font-family: "微軟正黑體", "Segoe UI";  //字型樣式
+    main{  //主要內容樣式
+
+        .file_form{  //沒有檔案之表單樣式
+            background: rgb(223,230,237);  //背景顏色
+            margin: 100px auto;  //向上寬度，左右置中
+            width: 46%;  //寬度
+            padding: 40px;  //對內寬度(內縮)
+            font-weight: 800;  //字體粗度
+            border: rgba(164, 176, 185, 0.795) 3px solid;  //邊框樣式(顏色, 粗細, 樣式)
+
+            .nofile_img_wrap{  //沒有檔案圖片外框樣式
+                margin: 0 auto;  //左右置中
+                width: 60%;  //寬度
+                text-align: center;  //文字左右置中
+
+                .nofile_img{  //沒有檔案圖片樣式
+                    width: 80px;  //寬度
                 }
-                h5{
-                    font-weight: 600;
+                h5{  //大文字樣式
+                    font-weight: 600;  //文字粗度
                 }
-                p{
-                    font-size: 10px;
+                p{  //小文字樣次
+                    font-size: 10px;  //文字大小
                 }
             }
 
-            .name{
+            .name{  //表單全名樣式(一排2個)
                 margin-right: 30px;
+                display: flex;
             }
-            .form-control{
-                margin-top: -5px;
-                margin-bottom: 10px;
+            .form-control{  //所有表單格子樣式
+                margin-top: -5px;  //對上寬度
+                margin-bottom: 10px;  //對下寬度
             }
         }
     }   
-    @media screen and (max-width: 600px){
-        .file_form{
-            min-width: 100%;
+    @media screen and (max-width: 600px){  //當螢幕小於600px時，改為手機樣式(以下)
+        .file_form{  //檔案表單樣式
+            min-width: 100%;  //增加寬度(從46%改為100%)，手機版UI
             .nofile_img_wrap{
 
             }
@@ -480,8 +506,8 @@ header{
     } 
 }
 //footer樣式
-footer{
-    font-family: "微軟正黑體", "Segoe UI";
+footer{  //最下方區塊樣式
+    font-family: "微軟正黑體", "Segoe UI";  //字型樣式
     max-width: 1600px;  //最大寬度
     height: 400px;  //高度
     background: rgb(223, 230, 237);  //背景樣式 顏色
@@ -489,14 +515,15 @@ footer{
     font-size: 22px;  //字體大小
     font-weight: 600;  //字體粗度
     text-align: center;  //字體左右置中
-    .logo_img{
-        .logo_img_FB{
-            width: 15px;
-            margin-right: 10px;
+
+    .logo_img{  //四種社群logo樣式
+        .logo_img_FB{  //FB logo樣式
+            width: 15px;  //寬度
+            margin-right: 10px;  //對右寬度
         }
-        .logo_img_IG, .logo_img_Twitter, .logo_img_Youtube{
-            width: 30px;
-            margin-right: 10px;
+        .logo_img_IG, .logo_img_Twitter, .logo_img_Youtube{  //其他三種logo望是
+            width: 30px;  //寬度
+            margin-right: 10px;  //對右寬度
         }
     }
 }

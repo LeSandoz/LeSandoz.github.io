@@ -77,7 +77,7 @@ header .header_list_bot li a:hover {
   text-decoration: none;
 }
 
-header .header_list_bot_1000 {
+header .header_list_bot_600 {
   display: none;
 }
 
@@ -113,7 +113,7 @@ header .menu {
   header .header_list_bot .menu:hover {
     cursor: pointer;
   }
-  header .header_list_bot_1000 {
+  header .header_list_bot_600 {
     z-index: 10;
     background: rgba(110, 110, 110, 0.658);
     width: 180px;
@@ -123,10 +123,10 @@ header .menu {
     top: 100%;
     font-size: 14px;
   }
-  header .header_list_bot_1000 a {
+  header .header_list_bot_600 a {
     color: white;
   }
-  header .header_list_bot_1000 a:hover {
+  header .header_list_bot_600 a:hover {
     color: #5adbbb;
     text-decoration: none;
   }
@@ -283,7 +283,7 @@ header .menu {
 
 .index main .other_services {
   max-width: 1600px;
-  height: 500px;
+  height: 600px;
 }
 
 .index main .other_services .other_text {
@@ -537,6 +537,9 @@ header .menu {
 
 .nofile main .file_form .name {
   margin-right: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .nofile main .file_form .form-control {
