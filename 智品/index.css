@@ -1,8 +1,10 @@
+@charset "UTF-8";
 header {
   max-width: 1600px;
   height: 120px;
   background: white;
   position: relative;
+  font-family: "微軟正黑體", "Segoe UI";
 }
 
 header .zhipin_icon_wrap {
@@ -131,6 +133,7 @@ header .menu {
 }
 
 .slider {
+  font-family: "微軟正黑體", "Segoe UI";
   max-width: 1600px;
   height: 600px;
   background: url(./img/slider2.png) center center;
@@ -166,6 +169,10 @@ header .menu {
           transform: scale(1.2);
   -webkit-transition: .5s;
   transition: .5s;
+}
+
+.index {
+  font-family: "微軟正黑體", "Segoe UI";
 }
 
 .index main .our_services {
@@ -344,6 +351,10 @@ header .menu {
   }
 }
 
+.item {
+  font-family: "微軟正黑體", "Segoe UI";
+}
+
 .item main {
   max-width: 1600px;
   height: 800px;
@@ -371,7 +382,149 @@ header .menu {
   color: #5adbbb;
 }
 
+.file {
+  font-family: "微軟正黑體", "Segoe UI";
+}
+
+.file main .step {
+  max-width: 1600px;
+  height: 900px;
+}
+
+.file main .step .step_text {
+  font-size: 32px;
+  text-align: center;
+  margin: 50px 0 20px;
+  font-weight: bolder;
+}
+
+.file main .step .step_img_wrap {
+  width: 300px;
+  height: 350px;
+  display: block;
+  margin: 50px auto -50px;
+}
+
+.file main .step .step_img_wrap .step_img {
+  -webkit-transform: translate(10%, 20%);
+          transform: translate(10%, 20%);
+}
+
+.file main .step .step_img_wrap .step_img_STL_file {
+  width: 140px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.file main .step .step_img_wrap .step_img_STL_file:hover {
+  cursor: pointer;
+}
+
+.file main .step .step_img_wrap .step_img_No_file {
+  width: 140px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.file main .step .step_img_wrap .step_img_No_file:hover {
+  cursor: pointer;
+}
+
+.file main .step .step_img_wrap .step_img_3D_printing {
+  width: 230px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.file main .step .step_img_wrap .step_img_Dispatch {
+  width: 300px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.file main .step .step_img_wrap .img_text {
+  text-align: center;
+  -webkit-transform: translateY(80%);
+          transform: translateY(80%);
+}
+
+.file main .step .step_img_wrap .img_text_right {
+  text-align: center;
+  -webkit-transform: translateY(65%);
+          transform: translateY(65%);
+}
+
+.file main .step .step_img_wrap_top {
+  background: #d8d8d8;
+}
+
+.file main .step .file {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.file main .step .file img {
+  padding-right: 40px;
+}
+
+.file main .step .next_step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+}
+
+.file main .step .next_step img {
+  padding-right: 70px;
+}
+
+.nofile {
+  font-family: "微軟正黑體", "Segoe UI";
+}
+
+.nofile main .file_form {
+  background: #dfe6ed;
+  margin: 100px auto;
+  width: 46%;
+  padding: 40px;
+  font-weight: 800;
+  border: rgba(164, 176, 185, 0.795) 3px solid;
+}
+
+.nofile main .file_form .nofile_img_wrap {
+  margin: 0 auto;
+  width: 60%;
+  text-align: center;
+}
+
+.nofile main .file_form .nofile_img_wrap .nofile_img {
+  width: 80px;
+}
+
+.nofile main .file_form .nofile_img_wrap h5 {
+  font-weight: 600;
+}
+
+.nofile main .file_form .nofile_img_wrap p {
+  font-size: 10px;
+}
+
+.nofile main .file_form .name {
+  margin-right: 30px;
+}
+
+.nofile main .file_form .form-control {
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
 footer {
+  font-family: "微軟正黑體", "Segoe UI";
   max-width: 1600px;
   height: 400px;
   background: #dfe6ed;

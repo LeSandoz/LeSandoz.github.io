@@ -1,6 +1,4 @@
-// $(".start_your_project").on("click", function(){
-//     window.location.href ="https://driveuploader.com/upload/P3bXC1HZlF/";
-// })
+
 $(".zh-tw").css("display", "none");
 
 $(".language1").on("click", function(){
@@ -19,5 +17,11 @@ $(document).on("click", ".clickOn", function(){
     $(".header_list_bot_1000").css("display", "none");
     $(".menu").removeClass("clickOn");
 });
+function uploadFile(){
+    window.open('https://driveuploader.com/upload/P3bXC1HZlF/');
+}
+function noFile(){
+    window.location.replace('./no_file.html');
+}
 
 

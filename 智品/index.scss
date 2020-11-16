@@ -5,7 +5,7 @@ header{
     height: 120px;  //高度
     background:rgb(255, 255, 255);  //背景 rgb:顏色
     position: relative; //位置 absolute按到relative位置移動
-
+    font-family: "微軟正黑體", "Segoe UI";
 
     //icon
     .zhipin_icon_wrap{
@@ -126,6 +126,7 @@ header{
     }
 }
 .slider{
+    font-family: "微軟正黑體", "Segoe UI";
     max-width: 1600px;  //最大寬度
     height: 600px;  //高度
     background: url(./img/slider2.png) center center; //背景樣式 url(圖片位置) center(左右置中) center(上下置中)
@@ -158,6 +159,7 @@ header{
 }
 //首頁樣式
 .index{
+    font-family: "微軟正黑體", "Segoe UI";
     main{
         //最上面大圖內容
         
@@ -310,6 +312,7 @@ header{
 }
 //商品頁樣式
 .item{
+    font-family: "微軟正黑體", "Segoe UI";
     main{
         max-width: 1600px;
         height: 800px;
@@ -332,9 +335,122 @@ header{
     } 
 }
 
+.file{
+    font-family: "微軟正黑體", "Segoe UI";
+    main{
+        .step{
+            max-width: 1600px;  //最大寬度
+            height: 900px;  //高度
+            .step_text{
+                font-size: 32px;  //字體大小
+                text-align: center;  //字體左右置中
+                margin:50px 0 20px;  //對外寬度(上 右 下 左   or  上下  左右  or  全部  三種方法)
+                font-weight: bolder;  //字體粗度
+            }
+            .step_img_wrap{
+                width: 300px;
+                height: 350px;
+                display:block;
+                margin: 50px auto -50px;
+                .step_img{
+                    transform: translate(10%, 20%);
+                }
+                .step_img_STL_file{
+                    width: 140px;
+                    height: auto;
+                    display:block;
+                    margin:auto;
+                }
+                .step_img_STL_file:hover{
+                    cursor: pointer;
+                }
+                .step_img_No_file{
+                    width: 140px;
+                    height: auto;
+                    display:block;
+                    margin:auto;
+                }
+                .step_img_No_file:hover{
+                    cursor: pointer;
+                }
+                .step_img_3D_printing{
+                    width: 230px;
+                    height: auto;
+                    display:block;
+                    margin:auto;
+                }
+                .step_img_Dispatch{
+                    width: 300px;
+                    height: auto;
+                    display:block;
+                    margin:auto;
+                }
+                .img_text{
+                    text-align: center;
+                    transform: translateY(80%);
+                }
+                .img_text_right{
+                    text-align: center;
+                    transform: translateY(65%);
+                }
+            }
+            .step_img_wrap_top{
+                background: rgb(216, 216, 216);
+            }
+            .file{
+                display: flex;
+                img{
+                    padding-right: 40px; //對內右邊寬度
+                }
+            }
+            .next_step{
+                display: flex;
+                margin-top: 40px;  //對外上邊寬度
+                img{
+                    padding-right: 70px;  //對內又邊寬度
+                }
+            }
+        }
+    }
+}
+.nofile{
+    font-family: "微軟正黑體", "Segoe UI";
+    main{
+        .file_form{
+            background: rgb(223,230,237);
+            margin: 100px auto;
+            width: 46%;
+            padding: 40px;
+            font-weight: 800;
+            border: rgba(164, 176, 185, 0.795) 3px solid;
+            .nofile_img_wrap{
+                margin: 0 auto;
+                width: 60%;
+                text-align: center;
+                .nofile_img{
+                    width: 80px;
+                }
+                h5{
+                    font-weight: 600;
+                }
+                p{
+                    font-size: 10px;
+                }
+            }
 
+            .name{
+                margin-right: 30px;
+            }
+            .form-control{
+                margin-top: -5px;
+                margin-bottom: 10px;
+            }
+        }
+    }    
+}
 //footer樣式
 footer{
+    font-family: "微軟正黑體", "Segoe UI";
     max-width: 1600px;  //最大寬度
     height: 400px;  //高度
     background: rgb(223, 230, 237);  //背景樣式 顏色
