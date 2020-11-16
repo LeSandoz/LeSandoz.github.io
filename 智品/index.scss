@@ -123,15 +123,17 @@ header{
     background-size: cover;
     position: relative; //位置 absolute按到relative位置移動
     .start_your_project{
-        width: 270px;  //寬度
+        width: 300px;  //寬度
+        height: 65px;
         text-align: center;  //文字左右置中
+        line-height: 35px;
         font-size: 20px;  //字體大小
         background: white; //背景樣式 顏色
         position: absolute; //位置 absolute按到relative位置移動
-        padding: 12px 26px; //內縮寬度
+        padding: 10px 20px; //內縮寬度
         font-weight: bolder;  //字體粗度
-        top: calc(50% - 30px); //位置 top: 距離relative最高點位置
-        left: calc(50% - 130px); //位置 right: 距離relative最右點位置
+        top: calc(50% - 36px); //位置 top: 距離relative最高點位置
+        left: calc(50% - 150px); //位置 right: 距離relative最右點位置
         a{
             color: black; //字體顏色
         }

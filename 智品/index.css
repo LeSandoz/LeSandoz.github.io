@@ -133,15 +133,17 @@ header .menu {
 }
 
 .slider .start_your_project {
-  width: 270px;
+  width: 300px;
+  height: 65px;
   text-align: center;
+  line-height: 35px;
   font-size: 20px;
   background: white;
   position: absolute;
-  padding: 12px 26px;
+  padding: 10px 20px;
   font-weight: bolder;
-  top: calc(50% - 30px);
-  left: calc(50% - 130px);
+  top: calc(50% - 36px);
+  left: calc(50% - 150px);
 }
 
 .slider .start_your_project a {
