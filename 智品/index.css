@@ -75,14 +75,64 @@ header .header_list_bot li a:hover {
   text-decoration: none;
 }
 
-.index main .slider {
+header .header_list_bot_1000 {
+  display: none;
+}
+
+header .menu {
+  width: 30px;
+  height: 30px;
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  header .en {
+    font-size: 10px;
+  }
+  header .logo_text {
+    display: none;
+  }
+  header .header_list_top {
+    display: none;
+  }
+  header .header_list_bot li {
+    display: none;
+  }
+  header .header_list_bot .menu {
+    display: block;
+    position: relative;
+  }
+  header .header_list_bot .menu:hover {
+    cursor: pointer;
+  }
+  header .header_list_bot_1000 {
+    z-index: 10;
+    background: rgba(110, 110, 110, 0.658);
+    width: 180px;
+    list-style: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    font-size: 14px;
+  }
+  header .header_list_bot_1000 a {
+    color: white;
+  }
+  header .header_list_bot_1000 a:hover {
+    color: #5adbbb;
+    text-decoration: none;
+  }
+}
+
+.slider {
   max-width: 1600px;
   height: 600px;
   background: url(./img/slider2.png) center center;
+  background-size: cover;
   position: relative;
 }
 
-.index main .slider .start_your_project {
+.slider .start_your_project {
   width: 270px;
   text-align: center;
   font-size: 20px;
@@ -94,15 +144,15 @@ header .header_list_bot li a:hover {
   left: calc(50% - 130px);
 }
 
-.index main .slider .start_your_project a {
+.slider .start_your_project a {
   color: black;
 }
 
-.index main .slider .start_your_project a:hover {
+.slider .start_your_project a:hover {
   text-decoration: none;
 }
 
-.index main .slider .start_your_project:hover {
+.slider .start_your_project:hover {
   cursor: pointer;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
@@ -147,7 +197,6 @@ header .header_list_bot li a:hover {
 .index main .step {
   max-width: 1600px;
   height: 900px;
-  position: relative;
 }
 
 .index main .step .step_text {
@@ -158,49 +207,48 @@ header .header_list_bot li a:hover {
 }
 
 .index main .step .step_img_wrap {
-  margin: 30px 50px 0 0;
   width: 400px;
   height: 350px;
-  position: relative;
+  display: block;
+  margin: 50px auto -50px;
+}
+
+.index main .step .step_img_wrap .step_img {
+  -webkit-transform: translateX(10%);
+          transform: translateX(10%);
 }
 
 .index main .step .step_img_wrap .step_img_STL_file, .index main .step .step_img_wrap .step_img_No_file {
   width: 140px;
   height: auto;
-  position: absolute;
-  top: 0%;
-  left: 37.5%;
+  display: block;
+  margin: auto;
 }
 
 .index main .step .step_img_wrap .step_img_3D_printing {
   width: 230px;
   height: auto;
-  position: absolute;
-  top: 10%;
-  left: 30%;
+  display: block;
+  margin: auto;
 }
 
 .index main .step .step_img_wrap .step_img_Dispatch {
   width: 300px;
   height: auto;
-  position: absolute;
-  top: 10%;
-  left: 18%;
+  display: block;
+  margin: auto;
 }
 
 .index main .step .step_img_wrap .img_text {
   text-align: center;
-  -webkit-transform: translateY(200%);
-          transform: translateY(200%);
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
 }
 
 .index main .step .file {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
-  top: 10%;
-  left: 10%;
 }
 
 .index main .step .file img {
@@ -211,9 +259,6 @@ header .header_list_bot li a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
-  top: 40%;
-  left: 10%;
   margin-top: 40px;
 }
 
@@ -223,8 +268,7 @@ header .header_list_bot li a:hover {
 
 .index main .other_services {
   max-width: 1600px;
-  height: 400px;
-  position: relative;
+  height: 500px;
 }
 
 .index main .other_services .other_text {
@@ -234,33 +278,62 @@ header .header_list_bot li a:hover {
 }
 
 .index main .other_services .other {
-  position: absolute;
-  top: 20%;
-  left: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 .index main .other_services .other .other_img_wrap {
-  position: relative;
   width: 400px;
   height: 350px;
-  margin-right: 50px;
+  display: block;
+  margin: 50px auto -50px;
 }
 
 .index main .other_services .other .other_img_wrap .other_img {
   width: 200px;
   height: auto;
-  position: absolute;
-  top: 10%;
-  left: 24%;
+  display: block;
+  margin: 50px auto -50px;
 }
 
 .index main .other_services .other .other_img_wrap .img_text {
   text-align: center;
   -webkit-transform: translateY(200%);
           transform: translateY(200%);
+}
+
+.index main .other_services .other .other_img_wrap .img_text_vacuum {
+  -webkit-transform: translateY(180%);
+          transform: translateY(180%);
+}
+
+@media screen and (max-width: 600px) {
+  .index main .our_services {
+    height: 1200px;
+  }
+  .index main .our_services .item_wrap {
+    display: block;
+  }
+  .index main .our_services .item_wrap .box {
+    width: 100%;
+    margin: 20px 5px 5px 5px;
+  }
+  .index main .step {
+    height: 1500px;
+  }
+  .index main .step .file {
+    display: block;
+  }
+  .index main .step .next_step {
+    display: block;
+  }
+  .index main .other_services {
+    height: 800px;
+  }
+  .index main .other_services .other {
+    display: block;
+  }
 }
 
 .item main {
