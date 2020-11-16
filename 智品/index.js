@@ -21,7 +21,7 @@ function uploadFile(){
     window.open('https://driveuploader.com/upload/P3bXC1HZlF/');
 }
 function noFile(){
-    window.location.replace('./no_file.html');
+    window.open('./no_file.html');
 }
 
 
