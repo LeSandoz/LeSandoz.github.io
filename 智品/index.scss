@@ -116,7 +116,7 @@ header{
         }
         .step{
             max-width: 1600px;  //最大寬度
-            height: 600px;  //高度
+            height: 900px;  //高度
             position: relative;   //位置 absolute按到relative位置移動
             .step_text{
                 font-size: 24px;  //字體大小
@@ -124,18 +124,55 @@ header{
                 margin:20px 0;  //對外寬度(上 右 下 左   or  上下  左右  or  全部  三種方法)
                 font-weight: bolder;  //字體粗度
             }
+            .step_img_wrap{
+                margin:30px 50px 0 0;
+                width: 400px;
+                height: 350px;
+                position: relative;
+                .step_img{
+
+                }
+                .step_img_STL_file, .step_img_No_file{
+                    width: 140px;
+                    height: auto;
+                    position: absolute;
+                    top: 0%;
+                    left: 37.5%;
+                }
+                .step_img_3D_printing{
+                    width: 230px;
+                    height: auto;
+                    position: absolute;
+                    top: 10%;
+                    left: 30%;
+                }
+                .step_img_Dispatch{
+                    width: 300px;
+                    height: auto;
+                    position: absolute;
+                    top: 10%;
+                    left: 18%;
+                }
+                .img_text{
+                    text-align: center;
+                    transform: translateY(200%);
+                }
+            }
+
             .file{
+                display: flex;
                 position: absolute;   //位置 absolute按到relative位置移動
                 top: 10%; //位置 top: 距離relative最高點位置
-                left: 20%; //位置 left: 距離relative最左點位置
+                left: 10%; //位置 left: 距離relative最左點位置
                 img{
                     padding-right: 40px; //對內右邊寬度
                 }
             }
             .next_step{
+                display: flex;
                 position: absolute;   //位置 absolute按到relative位置移動
                 top: 40%; //位置 top: 距離relative最高點位置
-                left: 20%; //位置 left: 距離relative最左點位置
+                left: 10%; //位置 left: 距離relative最左點位置
                 margin-top: 40px;  //對外上邊寬度
                 img{
                     padding-right: 70px;  //對內又邊寬度
@@ -154,9 +191,24 @@ header{
             .other{
                 position: absolute;  //位置 absolute按到relative位置移動
                 top: 20%; //位置 top: 距離relative最高點位置
-                left: 18%; //位置 left: 距離relative最左點位置
-                img{
-                    padding-right: 70px;  //對內又邊寬度
+                left: 10%; //位置 left: 距離relative最左點位置
+                display: flex;
+                .other_img_wrap{
+                    position: relative;
+                    width: 400px;
+                    height: 350px;
+                    margin-right: 50px;
+                    .other_img{
+                        width: 200px;
+                        height: auto;
+                        position: absolute;
+                        top: 10%;
+                        left: 24%;
+                    }
+                    .img_text{
+                        text-align: center;
+                        transform: translateY(200%);
+                    }
                 }
             }
         }

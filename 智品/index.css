@@ -132,7 +132,7 @@ header .header_list_bot li a:hover {
 
 .index main .step {
   max-width: 1600px;
-  height: 600px;
+  height: 900px;
   position: relative;
 }
 
@@ -143,10 +143,50 @@ header .header_list_bot li a:hover {
   font-weight: bolder;
 }
 
-.index main .step .file {
+.index main .step .step_img_wrap {
+  margin: 30px 50px 0 0;
+  width: 400px;
+  height: 350px;
+  position: relative;
+}
+
+.index main .step .step_img_wrap .step_img_STL_file, .index main .step .step_img_wrap .step_img_No_file {
+  width: 140px;
+  height: auto;
+  position: absolute;
+  top: 0%;
+  left: 37.5%;
+}
+
+.index main .step .step_img_wrap .step_img_3D_printing {
+  width: 230px;
+  height: auto;
   position: absolute;
   top: 10%;
-  left: 20%;
+  left: 30%;
+}
+
+.index main .step .step_img_wrap .step_img_Dispatch {
+  width: 300px;
+  height: auto;
+  position: absolute;
+  top: 10%;
+  left: 18%;
+}
+
+.index main .step .step_img_wrap .img_text {
+  text-align: center;
+  -webkit-transform: translateY(200%);
+          transform: translateY(200%);
+}
+
+.index main .step .file {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 10%;
+  left: 10%;
 }
 
 .index main .step .file img {
@@ -154,9 +194,12 @@ header .header_list_bot li a:hover {
 }
 
 .index main .step .next_step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
   top: 40%;
-  left: 20%;
+  left: 10%;
   margin-top: 40px;
 }
 
@@ -179,11 +222,31 @@ header .header_list_bot li a:hover {
 .index main .other_services .other {
   position: absolute;
   top: 20%;
-  left: 18%;
+  left: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.index main .other_services .other img {
-  padding-right: 70px;
+.index main .other_services .other .other_img_wrap {
+  position: relative;
+  width: 400px;
+  height: 350px;
+  margin-right: 50px;
+}
+
+.index main .other_services .other .other_img_wrap .other_img {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  top: 10%;
+  left: 24%;
+}
+
+.index main .other_services .other .other_img_wrap .img_text {
+  text-align: center;
+  -webkit-transform: translateY(200%);
+          transform: translateY(200%);
 }
 
 .item main {
