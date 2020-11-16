@@ -412,6 +412,29 @@ header{
             }
         }
     }
+    @media screen and (max-width: 600px){
+        main{
+            .step{
+                height: 1600px;
+                .file{
+                    display: block;
+                    .step_img_wrap{
+                        margin-bottom: 20px;
+                    }
+                }
+                .next_step{
+                    display: block;
+                }
+
+            }
+            .other_services{
+                height: 800px;
+                .other{
+                    display: block;
+                }
+            }
+        }
+    }
 }
 .nofile{
     font-family: "微軟正黑體", "Segoe UI";
@@ -446,7 +469,15 @@ header{
                 margin-bottom: 10px;
             }
         }
-    }    
+    }   
+    @media screen and (max-width: 600px){
+        .file_form{
+            min-width: 100%;
+            .nofile_img_wrap{
+
+            }
+        }
+    } 
 }
 //footer樣式
 footer{

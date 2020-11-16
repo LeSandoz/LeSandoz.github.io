@@ -483,6 +483,27 @@ header .menu {
   padding-right: 70px;
 }
 
+@media screen and (max-width: 600px) {
+  .file main .step {
+    height: 1600px;
+  }
+  .file main .step .file {
+    display: block;
+  }
+  .file main .step .file .step_img_wrap {
+    margin-bottom: 20px;
+  }
+  .file main .step .next_step {
+    display: block;
+  }
+  .file main .other_services {
+    height: 800px;
+  }
+  .file main .other_services .other {
+    display: block;
+  }
+}
+
 .nofile {
   font-family: "微軟正黑體", "Segoe UI";
 }
@@ -521,6 +542,12 @@ header .menu {
 .nofile main .file_form .form-control {
   margin-top: -5px;
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .nofile .file_form {
+    min-width: 100%;
+  }
 }
 
 footer {
