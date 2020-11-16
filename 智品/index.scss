@@ -8,10 +8,21 @@ header{
 
 
     //icon
-    .zhipin_icon{
-        padding: 10px;  //內縮寬度
-        width: 300px; //寬度
+    .zhipin_icon_wrap{
+        display: flex;
+        .zhipin_icon{
+            width:70px; //寬度
+            height: 70px;
+            margin: 10px;
+        }
+        .logo_text{
+            text-align: center;
+            line-height: 90px;
+            font-size: 20px;
+            font-weight: 500;
+        }
     }
+
 
 
     //主選單
@@ -242,11 +253,21 @@ header{
 //footer樣式
 footer{
     max-width: 1600px;  //最大寬度
-    height: 360px;  //高度
+    height: 400px;  //高度
     background: rgb(223, 230, 237);  //背景樣式 顏色
     color: white;  //字體顏色
     font-size: 22px;  //字體大小
     font-weight: 600;  //字體粗度
     text-align: center;  //字體左右置中
+    .logo_img{
+        .logo_img_FB{
+            width: 15px;
+            margin-right: 10px;
+        }
+        .logo_img_IG, .logo_img_Twitter, .logo_img_Youtube{
+            width: 30px;
+            margin-right: 10px;
+        }
+    }
 }
 

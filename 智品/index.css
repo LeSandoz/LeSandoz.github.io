@@ -5,9 +5,23 @@ header {
   position: relative;
 }
 
-header .zhipin_icon {
-  padding: 10px;
-  width: 300px;
+header .zhipin_icon_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .zhipin_icon_wrap .zhipin_icon {
+  width: 70px;
+  height: 70px;
+  margin: 10px;
+}
+
+header .zhipin_icon_wrap .logo_text {
+  text-align: center;
+  line-height: 90px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 header .header_list_top {
@@ -278,11 +292,21 @@ header .header_list_bot li a:hover {
 
 footer {
   max-width: 1600px;
-  height: 360px;
+  height: 400px;
   background: #dfe6ed;
   color: white;
   font-size: 22px;
   font-weight: 600;
   text-align: center;
+}
+
+footer .logo_img .logo_img_FB {
+  width: 15px;
+  margin-right: 10px;
+}
+
+footer .logo_img .logo_img_IG, footer .logo_img .logo_img_Twitter, footer .logo_img .logo_img_Youtube {
+  width: 30px;
+  margin-right: 10px;
 }
 /*# sourceMappingURL=index.css.map */
