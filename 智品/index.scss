@@ -78,9 +78,18 @@ header{
         .en{
             font-size: 10px;
         }
-        .logo_text{
-            display: none;
+        .zhipin_icon_wrap{
+            .zhipin_icon{
+                width: 100px;
+                height: auto;
+                display: block;
+                margin: auto;
+            }
+            .logo_text{
+                display: none;
+            }
         }
+
         .header_list_top{
             display: none;
         }

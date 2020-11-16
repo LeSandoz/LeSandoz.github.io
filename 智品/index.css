@@ -89,7 +89,13 @@ header .menu {
   header .en {
     font-size: 10px;
   }
-  header .logo_text {
+  header .zhipin_icon_wrap .zhipin_icon {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  header .zhipin_icon_wrap .logo_text {
     display: none;
   }
   header .header_list_top {
