@@ -11,26 +11,33 @@ header{//最上方區塊樣式
     .language{
         position: fixed;
         z-index: 20;
+        transition: .3s;
+        font-size: 20px;
+        font-weight: 600;
     }
     .language:hover{
         cursor: pointer;
-        background: coral;
+        // background: coral;
+        color: rgb(90, 219, 187)!important; //字體顏色    
     }
     //icon
     .zhipin_icon_wrap{//icon外框樣式
         display: flex;//讓物件並排
-
         .zhipin_icon{//icon本身樣式
-            width:85px; //寬度
-            height: 85px; //高度
-            margin: 10px; //對外寬度
+            width:80px; //寬度
+            height: 80px; //高度
+            margin: 10px 10px 10px 40px; //對外寬度
         }
-
+        
         .logo_text{//logo文字樣式
             text-align: center;  //左右置中
-            line-height: 105px;  //上下置中
+            line-height: 100px;  //上下置中
             font-size: 20px;  //字體大小
             font-weight: 500;  //字體粗度
+            color: black;
+        }
+        a:hover{
+            text-decoration: none;
         }
     }
 

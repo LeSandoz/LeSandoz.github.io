@@ -5,7 +5,7 @@ $(document).scroll(function(){
     var scroH = $(document).scrollTop();  //滾動高度
     var viewH = $(window).height();  //可見高度 
     var contentH = $(document).height();  //內容高度
-    console.log(scroH);
+    // console.log(scroH);
     if(scroH > 100 && scroH < 650){
         $(".language").css("color", "white");
     }else if(scroH < 100){
