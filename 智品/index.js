@@ -1,6 +1,20 @@
 
 $(".zh-tw").css("display", "none");
 
+$(document).scroll(function(){
+    var scroH = $(document).scrollTop();  //滾動高度
+    var viewH = $(window).height();  //可見高度 
+    var contentH = $(document).height();  //內容高度
+    console.log(scroH);
+    if(scroH > 100 && scroH < 650){
+        $(".language").css("color", "white");
+    }else if(scroH < 100){
+        $(".language").css("color", "black");
+    }else if(scroH > 650){
+        $(".language").css("color", "black");
+    }
+})
+
 $(".language1").on("click", function(){
     $(".zh-tw").css("display", "");
     $(".en").css("display", "none");

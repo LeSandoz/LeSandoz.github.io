@@ -1,26 +1,34 @@
 
 //header樣式
 header{//最上方區塊樣式
-
+    
     max-width: 1600px; //最大寬度
     height: 120px;  //高度
     background:rgb(255, 255, 255);  //背景 rgb:顏色
     position: relative; //位置 absolute按到relative位置移動
     font-family: "微軟正黑體", "Segoe UI"; //字型(優先選擇，替代方案)
 
+    .language{
+        position: fixed;
+        z-index: 20;
+    }
+    .language:hover{
+        cursor: pointer;
+        background: coral;
+    }
     //icon
     .zhipin_icon_wrap{//icon外框樣式
         display: flex;//讓物件並排
 
         .zhipin_icon{//icon本身樣式
-            width:70px; //寬度
-            height: 70px; //高度
+            width:85px; //寬度
+            height: 85px; //高度
             margin: 10px; //對外寬度
         }
 
         .logo_text{//logo文字樣式
             text-align: center;  //左右置中
-            line-height: 90px;  //上下置中
+            line-height: 105px;  //上下置中
             font-size: 20px;  //字體大小
             font-weight: 500;  //字體粗度
         }
