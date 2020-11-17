@@ -171,6 +171,48 @@ header .menu {
   transition: .5s;
 }
 
+.carousel .carousel-item {
+  height: 540px;
+}
+
+.carousel .carousel-item img {
+  min-height: 540px;
+  max-height: 1600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.carousel .start_your_project {
+  width: 300px;
+  height: 65px;
+  text-align: center;
+  line-height: 35px;
+  font-size: 20px;
+  background: white;
+  position: absolute;
+  padding: 10px 20px;
+  font-weight: bolder;
+  top: calc(63% - 36px);
+  left: calc(50% - 150px);
+  z-index: 10;
+}
+
+.carousel .start_your_project a {
+  color: black;
+}
+
+.carousel .start_your_project a:hover {
+  text-decoration: none;
+}
+
+.carousel .start_your_project:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
 .index {
   font-family: "微軟正黑體", "Segoe UI";
 }

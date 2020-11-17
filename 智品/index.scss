@@ -168,6 +168,43 @@ header{//最上方區塊樣式
         transition: .5s;  //動畫時間
     }
 }
+.carousel{
+    .carousel-item {
+        height: 540px;
+      }
+      
+    .carousel-item img {
+        min-height: 540px;
+        max-height: 1600px;
+        object-fit: cover;
+    }
+    .start_your_project{  //開始專案按鈕樣式
+        width: 300px;  //寬度
+        height: 65px;  //高度
+        text-align: center;  //文字左右置中
+        line-height: 35px;  //上下置中
+        font-size: 20px;  //字體大小
+        background: white; //背景樣式 顏色
+        position: absolute; //位置 absolute按到relative位置移動
+        padding: 10px 20px; //內縮寬度
+        font-weight: bolder;  //字體粗度
+        top: calc(63% - 36px); //位置 top: 距離relative最高點位置
+        left: calc(50% - 150px); //位置 right: 距離relative最右點位置
+        z-index: 10;
+        a{  //超連結樣式
+            color: black; //字體顏色
+        }
+        a:hover{  //hover: 滑鼠移上去後之效果
+            text-decoration: none;  //將預設底線拿掉
+        }
+    }
+    .start_your_project:hover{  //hover: 滑鼠移上去後之效果
+        cursor: pointer;  //滑鼠樣式 pointer: 手指頭
+        transform: scale(1.2); //有hover 移上去之後之效果  transform: 效果 scale: 縮放效果(倍數)
+        transition: .5s;  //動畫時間
+    }
+}
+
 //首頁樣式
 .index{
     font-family: "微軟正黑體", "Segoe UI";  //字型選擇
