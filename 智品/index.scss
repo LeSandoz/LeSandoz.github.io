@@ -212,7 +212,7 @@ header{//最上方區塊樣式
 
         .our_services{  //我們的服務區塊樣式
             max-width: 1600px;  //最大寬度
-            height: 400px;  //高度
+            height: 500px;  //高度
 
             .our_services_text{  //我們的服務文字樣式
                 font-size: 24px;  //字體大小
@@ -227,18 +227,44 @@ header{//最上方區塊樣式
 
                 .box{  //四項內容樣式
                     width: 25%;  //寬度1/4
-                    background: rgb(255,255,255);  //背景 顏色
-                    background: linear-gradient(52deg, rgba(255,255,255,1) 0%, rgb(252, 252, 252) 24%, rgb(211, 211, 211) 43%, rgba(255,255,255,1) 74%, rgba(224,224,224,1) 100%);  //背景 漸層
+                    // background: rgb(255,255,255);  //背景 顏色
+                    // background: linear-gradient(52deg, rgba(255,255,255,1) 0%, rgb(252, 252, 252) 24%, rgb(211, 211, 211) 43%, rgba(255,255,255,1) 74%, rgba(224,224,224,1) 100%);  //背景 漸層
                     height: 250px;  //高度
                     margin: 70px 5px 5px 5px;  //對外寬度
                     text-align: center;  //字體左右置中
                     line-height: 250px;  //字體上下置中(填入此區塊之高度)
+                    color: black;  //字體顏色
 
                     .box_text{  //內容文字樣式
-                        transform: translateY(100px);  //效果 translateY: 向Y軸正向移動
-                        font-size: 18px;  //字體大小
+                        transform: translateY(-100px);  //效果 translateY: 向Y軸正向移動
+                        font-size: 18px;  //字體大小  
+                    }
+                    img{  //內容圖片大小
+                        width: 100%;  //圖片大小
                     }
                 }
+                .box:hover{
+                    transition: .5s;  //動畫時間
+                    text-decoration: none;  //拿掉底線
+                    color:  rgb(90, 219, 187); //字體顏色;
+                    transform: scale(1.1);  //動畫 放大
+                }
+                // .arch_box{
+                //     background: url(./img/3D-printing-service-Logo.png) center center;
+                //     background-size: cover;
+                // }
+                // .design_box{
+                //     background: url(./img/Laser-cutting-service-Logo.png) center center;
+                //     background-size: cover;
+                // }
+                // .craft_box{
+                //     background: url(./img/3D-printing.png) center center;
+                //     background-size: cover;
+                // }
+                // .engineer_box{
+                //     background: url(./img/Laser-cutting.png) center center;
+                //     background-size: cover;
+                // }
             }
         }
         .step{  //步驟樣式
@@ -334,13 +360,16 @@ header{//最上方區塊樣式
     @media screen and (max-width: 600px){  //當螢幕寬度小於600px時，改為以下(手機版)樣式
         main{   //首頁主要內容(我們的服務/步驟/其他服務)
             .our_services{  //我們的服務區塊樣式
-                height: 1200px;  //改為1200px高度，因手機版會拉長
+                height: 2000px;  //改為1200px高度，因手機版會拉長
 
                 .item_wrap{    //(建築模型/公仔模型/機構模型/產品設計)上述四項外框樣式
                     display: block;  //取消並排，改為直行排列
                     .box{    //四項內容樣式
                         width: 100%;  //寬度
-                        margin: 20px 5px 5px 5px;  //對外寬度
+                        margin: 20px 5px -5px 5px;  //對外寬度
+                    }
+                    .box_text{
+                        margin-bottom: -100px;
                     }
                 }
             }
@@ -557,10 +586,35 @@ footer{  //最下方區塊樣式
         .logo_img_FB{  //FB logo樣式
             width: 15px;  //寬度
             margin-right: 10px;  //對右寬度
+            border-radius: 30%;
         }
         .logo_img_IG, .logo_img_Twitter, .logo_img_Youtube{  //其他三種logo望是
             width: 30px;  //寬度
             margin-right: 10px;  //對右寬度
+            border-radius: 30%;
         }
+    }
+    .logo_img .logo_img_FB:hover{
+        transition: .5s;
+        transform: scale(1.3);
+        background: rgb(26, 132, 202);
+    }
+    .logo_img .logo_img_IG:hover{
+        transition: .5s;
+        transform: scale(1.3);
+        background: linear-gradient(316deg, rgba(106, 65, 187, 0.9)0%, rgba(235, 77, 79, 0.8)57%);
+        background: -moz-linear-gradient(316deg, rgba(106, 65, 187, 0.9)0%, rgba(235, 77, 79, 0.8)57%);
+        background: -webkit-linear-gradient(316deg, rgba(106, 65, 187, 0.9)0%, rgba(235, 77, 79, 0.8)57%);
+        background: -o-linear-gradient(316deg, rgba(106, 65, 187, 0.9)0%, rgba(235, 77, 79, 0.8)57%);
+    }
+    .logo_img .logo_img_Twitter:hover{
+        transition: .5s;
+        transform: scale(1.3);
+        background: rgb(62, 178, 255);
+    }
+    .logo_img .logo_img_Youtube:hover{
+        transition: .5s;
+        transform: scale(1.3);
+        background: rgb(253, 37, 37);
     }
 }
