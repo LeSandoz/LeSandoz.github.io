@@ -152,7 +152,7 @@ header{//最上方區塊樣式
     font-family: "微軟正黑體", "Segoe UI";  //字型選擇
     max-width: 1600px;  //最大寬度
     height: 600px;  //高度
-    background: url(./img/slider2.png) center center; //背景樣式 url(圖片位置) center(左右置中) center(上下置中)
+    background: url(../img/slider2.png) center center; //背景樣式 url(圖片位置) center(左右置中) center(上下置中)
     background-size: cover;  //全版背景(延展)
     position: relative; //位置 absolute按到relative位置移動
 
@@ -431,6 +431,35 @@ header{//最上方區塊樣式
                 }
             }
         }
+        .icon{
+            width: 48px;
+            height: 48px;
+            display: inline-block;
+            -webkit-mask: url(../img/3D-printing-service-Logo.svg) no-repeat 50% 50%;
+            -webkit-mask-size: cover;
+            mask-size: cover;
+            background-color: black;
+        }
+        .shirt-back{
+            width: 500px;
+            height: 500px;
+            background: url(../img/blank_tshirt.jpg) center center;
+            background-size: cover;
+        }
+        .shirt{
+            width: 500px;
+            height: 500px;
+            transform: translateY(-500px);
+            display: inline-block;
+            -webkit-mask: url(../img/blank_shirt.svg) no-repeat 50% 50%;
+            -webkit-mask-size: cover;
+            mask-size: cover;
+            background-color: rgb(255,235,205);
+            z-index: 2;
+        }
+          
+          .icon-red { background-color: red; }
+          .icon-orange { background-color: orange; }
     } 
 }
 

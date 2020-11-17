@@ -31,6 +31,17 @@ $(document).on("click", ".clickOn", function(){
     $(".header_list_bot_600").css("display", "none");
     $(".menu").removeClass("clickOn");
 });
+
+$(document).on("change","#colorSelector", function(){
+    let color = $("#colorSelector").val();
+    $(".item .wrap .icon_new").css("background-color", color);
+    $(".item .wrap .shirt").css("background-color", color);
+    console.log(color);
+})
+
+
+
+
 function uploadFile(){
     window.open('https://driveuploader.com/upload/P3bXC1HZlF/');
 }

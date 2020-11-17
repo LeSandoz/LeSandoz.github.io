@@ -154,7 +154,7 @@ header .menu {
   font-family: "微軟正黑體", "Segoe UI";
   max-width: 1600px;
   height: 600px;
-  background: url(./img/slider2.png) center center;
+  background: url(../img/slider2.png) center center;
   background-size: cover;
   position: relative;
 }
@@ -455,6 +455,44 @@ header .menu {
 
 .item main .list li a:hover {
   color: #5adbbb;
+}
+
+.item main .icon {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  -webkit-mask: url(../img/3D-printing-service-Logo.svg) no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: black;
+}
+
+.item main .shirt-back {
+  width: 500px;
+  height: 500px;
+  background: url(../img/blank_tshirt.jpg) center center;
+  background-size: cover;
+}
+
+.item main .shirt {
+  width: 500px;
+  height: 500px;
+  -webkit-transform: translateY(-500px);
+          transform: translateY(-500px);
+  display: inline-block;
+  -webkit-mask: url(../img/blank_shirt.svg) no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: blanchedalmond;
+  z-index: 2;
+}
+
+.item main .icon-red {
+  background-color: red;
+}
+
+.item main .icon-orange {
+  background-color: orange;
 }
 
 .file {
