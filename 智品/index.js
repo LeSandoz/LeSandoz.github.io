@@ -37,5 +37,8 @@ function uploadFile(){
 function noFile(){
     window.open('./no_file.html');
 }
+function home(){
+    window.location.replace('./index.html');
+}
 
 

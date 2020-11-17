@@ -26,18 +26,17 @@ header{//最上方區塊樣式
         .zhipin_icon{//icon本身樣式
             width:80px; //寬度
             height: 80px; //高度
-            margin: 10px 10px 10px 40px; //對外寬度
+            margin: 20px 10px 10px 40px; //對外寬度
         }
         
         .logo_text{//logo文字樣式
             text-align: center;  //左右置中
-            line-height: 100px;  //上下置中
+            line-height: 115px;  //上下置中
             font-size: 20px;  //字體大小
             font-weight: 500;  //字體粗度
-            color: black;
         }
-        a:hover{
-            text-decoration: none;
+        .zhipin_icon:hover, .logo_text:hover{
+            cursor: pointer;
         }
     }
 
@@ -101,7 +100,7 @@ header{//最上方區塊樣式
             font-size: 10px;  //字體大小
         }
         .zhipin_icon_wrap{  //logo外框樣式
-
+            
             .zhipin_icon{  //logo樣式
                 width: 100px; //寬度
                 height: auto;  //高度(隨著寬度改變)

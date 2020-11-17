@@ -30,19 +30,18 @@ header .zhipin_icon_wrap {
 header .zhipin_icon_wrap .zhipin_icon {
   width: 80px;
   height: 80px;
-  margin: 10px 10px 10px 40px;
+  margin: 20px 10px 10px 40px;
 }
 
 header .zhipin_icon_wrap .logo_text {
   text-align: center;
-  line-height: 100px;
+  line-height: 115px;
   font-size: 20px;
   font-weight: 500;
-  color: black;
 }
 
-header .zhipin_icon_wrap a:hover {
-  text-decoration: none;
+header .zhipin_icon_wrap .zhipin_icon:hover, header .zhipin_icon_wrap .logo_text:hover {
+  cursor: pointer;
 }
 
 header .header_list_top {
