@@ -8,42 +8,68 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel=stylesheet type="text/css" href="index.css">
+    <link rel=stylesheet type="text/css" href="./css/index.css">
   </head>
   <body>
-      <div class="container">
-        <header>
-          <div class="language1 en">繁中</div>
-          <div class="language2 zh-tw">En</div>
-          <img class="zhipin_icon" src="./img/螢幕擷取畫面 2020-11-13 131945.png" alt="">
-          <ul class="header_list_top en">
-            <li><a href="https://lesandoz.github.io/%E6%99%BA%E5%93%81/index">LASER CUTTING</a></li>
-            <li><a href="https://lesandoz.github.io/%E6%99%BA%E5%93%81/index">VACUM FORMING</a></li>
-            <li><a href="https://lesandoz.github.io/%E6%99%BA%E5%93%81/index">SHARE SPACE</a></li>
-          </ul>
-          <ul class="header_list_top zh-tw">
-            <li><a href="https://lesandoz.github.io/%E6%99%BA%E5%93%81/index">雷射切割</a></li>
-            <li><a href="https://lesandoz.github.io/%E6%99%BA%E5%93%81/index">真空成形</a></li>
-            <li><a href="https://lesandoz.github.io/%E6%99%BA%E5%93%81/index">共享空間</a></li>
-          </ul>
-          <ul class="header_list_bot en">
-            <li><a href="https://lesandoz.github.io/%E6%99%BA%E5%93%81/index">HOME</a></li>
-            <li><a href="https://lesandoz.github.io/%E6%99%BA%E5%93%81/index">3D PRINTING SERVICES</a></li>
-            <li><a href="https://lesandoz.github.io/%E6%99%BA%E5%93%81/index">VIEW OUR WORK</a></li>
-            <li><a href="https://lesandoz.github.io/%E6%99%BA%E5%93%81/index">SHOP</a></li>
-            <li><a href="https://lesandoz.github.io/%E6%99%BA%E5%93%81/index">CONTACT</a></li>
-            <li><a href="https://lesandoz.github.io/%E6%99%BA%E5%93%81/index">+886 26819865</a></li>
-          </ul>
-          <ul class="header_list_bot zh-tw">
-            <li><a href="https://lesandoz.github.io/%E6%99%BA%E5%93%81/index">首頁</a></li>
-            <li><a href="https://lesandoz.github.io/%E6%99%BA%E5%93%81/index">3D列印服務</a></li>
-            <li><a href="https://lesandoz.github.io/%E6%99%BA%E5%93%81/index">作品</a></li>
-            <li><a href="https://lesandoz.github.io/%E6%99%BA%E5%93%81/index">商店</a></li>
-            <li><a href="https://lesandoz.github.io/%E6%99%BA%E5%93%81/index">聯絡我們</a></li>
-            <li><a href="https://lesandoz.github.io/%E6%99%BA%E5%93%81/index">+886 26819865</a></li>
-          </ul>
-        </header>
-      </div>
+
+      <!-- 最上方選單+logo(header)  -->
+      <header>
+        <!-- 在class有 en的 就是英文文字 有zh-tw的就是中文文字 可以切換 要更改中英文要看清楚是en還是zh-tw -->
+        <div class="language">
+          <div class="language1 en">繁體</div>
+          <div class="language2 zh-tw">English</div>
+        </div>
+        <!-- logo外框 -->
+        <div class="zhipin_icon_wrap">
+          <!-- logo圖片 src更改圖片位置 -->
+          <img class="zhipin_icon" src="./img/3D-printing-service-Logo.png" alt="" onclick="home()">
+          <!-- logo文字 &nbsp是空格 -->
+          <div class="logo_text" onclick="home()">&nbsp&nbsp&nbspZHIPIN 3D LAB</div>
+        </div>
+        <!-- 右上選單 -->
+        <!-- 右上選單英文版 -->
+        <ul class="header_list_top en">
+          <li><a href="./index.html">LASER CUTTING</a></li>
+          <li><a href="./index.html">VACUM FORMING</a></li>
+          <li><a href="./index.html">SHARE SPACE</a></li>
+        </ul>
+        <!-- 右上選單中文版 -->
+        <ul class="header_list_top zh-tw">
+          <li><a href="./index.html">雷射切割</a></li>
+          <li><a href="./index.html">真空成形</a></li>
+          <li><a href="./index.html">共享空間</a></li>
+        </ul>
+        <!-- 右下選單英文版 -->
+        <ul class="header_list_bot en">
+          <li><a href="./index.html">HOME</a></li>
+          <li><a href="./file.html">3D PRINTING SERVICES</a></li>
+          <li><a href="./index.html">VIEW OUR WORK</a></li>
+          <li><a href="./index.html">SHOP</a></li>
+          <li><a href="./index.html">CONTACT</a></li>
+          <li><a href="./index.html">+886 26819865</a></li>
+          <img class="menu" src="./img/menu.png" alt="">
+        </ul>
+        <!-- 右下選單中文版 -->
+        <ul class="header_list_bot zh-tw">
+          <li><a href="./index.html">首頁</a></li>
+          <li><a href="./index.html">3D列印服務</a></li>
+          <li><a href="./index.html">作品</a></li>
+          <li><a href="./index.html">商店</a></li>
+          <li><a href="./index.html">聯絡我們</a></li>
+          <li><a href="./index.html">+886 26819865</a></li>
+          <img class="menu" src="./img/menu.png" alt="">
+        </ul>
+        <!-- 右下選單手機英文版 -->
+        <ul class="header_list_bot_600 en">
+          <li><a href="./index.html">HOME</a></li>
+          <li><a href="./index.html">3D PRINTING SERVICES</a></li>
+          <li><a href="./index.html">VIEW OUR WORK</a></li>
+          <li><a href="./index.html">SHOP</a></li>
+          <li><a href="./index.html">CONTACT</a></li>
+          <li><a href="./index.html">+886 26819865</a></li>
+        </ul>
+      </header>
+
        
       <div class="container item">
         <main>
@@ -54,29 +80,38 @@
         </main>
       </div>
       
-      <div class="container">
-        <footer>
-          <div class="en">
-            <br><br><div>ZHIPIN 3D LAB</div><br>
-            <div>3F., No. 10, Sec. 2, Bao'an St., Shulin Dist.,</div>
-            <div>New Taipei City 238, Taiwan</div><br>
-            <div>02-26813986</div>
-          </div>
-          <div class="zh-tw">
-            <br><br><div>ZHIPIN 3D LAB</div><br>
-            <div>新北市樹林區保安街二段10號3樓</div>
-            <div>New Taipei City 238, Taiwan</div><br>
-            <div>02-26813986</div>
-          </div>
-
-        </footer>
-      </div>
+      <!-- 最下方文字區塊(footer) -->
+      <footer>
+        <!-- footer中英文字 -->
+        <div class="en">
+          <br><br><div>ZHIPIN 3D LAB</div><br>
+          <div>3F., No. 10, Sec. 2, Bao'an St., Shulin Dist.,</div>
+          <div>New Taipei City 238, Taiwan</div><br>
+          <div>02-26813986</div>
+        </div>
+        <div class="zh-tw">
+          <br><br><div>ZHIPIN 3D LAB</div><br>
+          <div>新北市樹林區保安街二段10號3樓</div>
+          <div>New Taipei City 238, Taiwan</div><br>
+          <div>02-26813986</div>
+        </div>
+        <br>
+        <!-- 四大社群logo+超連結 -->
+        <div class="logo_img">
+          <a href="https://www.instagram.com/zhipindesign/" target="_blank"><img class="logo_img_FB" src="./img/FB.png" alt="" ></a>
+          <a href="https://www.instagram.com/zhipindesign/" target="_blank"><img class="logo_img_IG" src="./img/IG.png" alt=""></a>
+          <a href="https://www.instagram.com/zhipindesign/" target="_blank"><img class="logo_img_Twitter" src="./img/Twitter.png" alt=""></a>
+          <a href="https://www.instagram.com/zhipindesign/" target="_blank"><img class="logo_img_Youtube" src="./img/Youtube.png" alt=""></a>
+        </div>
+      </footer>
+      <!-- Your Chat Plugin code -->
+      <!-- FB機器人 勿動 -->
         
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="./index.js"></script>
+    <script src="./js/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
