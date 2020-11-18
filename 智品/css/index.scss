@@ -2,7 +2,7 @@
 //header樣式
 header{//最上方區塊樣式
     
-    max-width: 1600px; //最大寬度
+    max-width: 100vw; //最大寬度
     height: 120px;  //高度
     background:rgb(255, 255, 255);  //背景 rgb:顏色
     position: relative; //位置 absolute按到relative位置移動
@@ -150,7 +150,7 @@ header{//最上方區塊樣式
 }
 .slider{  //首頁大圖樣式
     font-family: "微軟正黑體", "Segoe UI";  //字型選擇
-    max-width: 1600px;  //最大寬度
+    max-width: 100vw;  //最大寬度
     height: 600px;  //高度
     background: url(../img/slider2.png) center center; //背景樣式 url(圖片位置) center(左右置中) center(上下置中)
     background-size: cover;  //全版背景(延展)
@@ -225,7 +225,7 @@ header{//最上方區塊樣式
     main{   //首頁主要內容(我們的服務/步驟/其他服務)
 
         .our_services{  //我們的服務區塊樣式
-            max-width: 1600px;  //最大寬度
+            max-width: 100vw;  //最大寬度
             height: 500px;  //高度
 
             .our_services_text{  //我們的服務文字樣式
@@ -282,7 +282,7 @@ header{//最上方區塊樣式
             }
         }
         .step{  //步驟樣式
-            max-width: 1600px;  //最大寬度
+            max-width: 100vw;  //最大寬度
             height: 900px;  //高度
 
             .step_text{  //步驟文字樣式
@@ -338,7 +338,7 @@ header{//最上方區塊樣式
             }
         }
         .other_services{  //其他服務區塊樣式
-            max-width: 1600px;  //最大寬度
+            max-width: 100vw;  //最大寬度
             height: 600px;  //高度
 
             .other_text{  //其他服務文字樣式
@@ -413,7 +413,7 @@ header{//最上方區塊樣式
 .item{
     font-family: "微軟正黑體", "Segoe UI";
     main{
-        max-width: 1600px;
+        max-width: 100vw;
         height: 800px;
         margin-top: 40px;
         background: blanchedalmond;
@@ -468,7 +468,7 @@ header{//最上方區塊樣式
     main{  //檔案頁面主要內容樣式
 
         .step{  //主要步驟樣式
-            max-width: 1600px;  //最大寬度
+            max-width: 100vw;  //最大寬度
             height: 900px;  //高度
 
             .step_text{  //主要步驟文字樣式
@@ -617,7 +617,7 @@ header{//最上方區塊樣式
 //footer樣式
 footer{  //最下方區塊樣式
     font-family: "微軟正黑體", "Segoe UI";  //字型樣式
-    max-width: 1600px;  //最大寬度
+    max-width: 100vw;  //最大寬度
     height: 400px;  //高度
     background: rgb(223, 230, 237);  //背景樣式 顏色
     color: white;  //字體顏色

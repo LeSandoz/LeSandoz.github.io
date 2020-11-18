@@ -1,6 +1,6 @@
 @charset "UTF-8";
 header {
-  max-width: 1600px;
+  max-width: 100vw;
   height: 120px;
   background: white;
   position: relative;
@@ -152,7 +152,7 @@ header .menu {
 
 .slider {
   font-family: "微軟正黑體", "Segoe UI";
-  max-width: 1600px;
+  max-width: 100vw;
   height: 600px;
   background: url(../img/slider2.png) center center;
   background-size: cover;
@@ -236,7 +236,7 @@ header .menu {
 }
 
 .index main .our_services {
-  max-width: 1600px;
+  max-width: 100vw;
   height: 500px;
 }
 
@@ -282,7 +282,7 @@ header .menu {
 }
 
 .index main .step {
-  max-width: 1600px;
+  max-width: 100vw;
   height: 900px;
 }
 
@@ -354,7 +354,7 @@ header .menu {
 }
 
 .index main .other_services {
-  max-width: 1600px;
+  max-width: 100vw;
   height: 600px;
 }
 
@@ -431,7 +431,7 @@ header .menu {
 }
 
 .item main {
-  max-width: 1600px;
+  max-width: 100vw;
   height: 800px;
   margin-top: 40px;
   background: blanchedalmond;
@@ -500,7 +500,7 @@ header .menu {
 }
 
 .file main .step {
-  max-width: 1600px;
+  max-width: 100vw;
   height: 900px;
 }
 
@@ -668,7 +668,7 @@ header .menu {
 
 footer {
   font-family: "微軟正黑體", "Segoe UI";
-  max-width: 1600px;
+  max-width: 100vw;
   height: 400px;
   background: #dfe6ed;
   color: white;
