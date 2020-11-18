@@ -434,7 +434,6 @@ header .menu {
   max-width: 100vw;
   height: 800px;
   margin-top: 40px;
-  background: blanchedalmond;
 }
 
 .item main .list {
@@ -457,6 +456,17 @@ header .menu {
   color: #5adbbb;
 }
 
+.item main .drag_wrap {
+  width: 240px;
+  height: 600px;
+  padding: 0.5em;
+  border: black 1px solid;
+}
+
+.item main .drag_wrap #draggable {
+  z-index: 10;
+}
+
 .item main .icon {
   width: 48px;
   height: 48px;
@@ -465,26 +475,45 @@ header .menu {
   -webkit-mask-size: cover;
   mask-size: cover;
   background-color: black;
+  position: relative;
 }
 
-.item main .shirt-back {
+.item main .shirt-wrap {
+  width: 60%;
+  height: 600px;
+  border: 1px solid black;
+  background: wheat;
+  z-index: -2;
+}
+
+.item main .shirt-wrap .shirt-back {
   width: 500px;
   height: 500px;
   background: url(../img/blank_tshirt.jpg) center center;
   background-size: cover;
+  position: absolute;
+  left: 36%;
 }
 
-.item main .shirt {
+.item main .shirt-wrap .shirt {
   width: 500px;
   height: 500px;
-  -webkit-transform: translateY(-500px);
-          transform: translateY(-500px);
   display: inline-block;
   -webkit-mask: url(../img/blank_shirt.svg) no-repeat 50% 50%;
   -webkit-mask-size: cover;
   mask-size: cover;
-  background-color: blanchedalmond;
-  z-index: 2;
+  background-color: wheat;
+  position: absolute;
+  left: 36%;
+}
+
+.item main .shirt-wrap .shirt-bg {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  opacity: 50%;
+  position: absolute;
+  left: 36%;
 }
 
 .item main .icon-red {

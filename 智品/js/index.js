@@ -32,11 +32,13 @@ $(document).on("click", ".clickOn", function(){
     $(".menu").removeClass("clickOn");
 });
 
-$(document).on("change","#colorSelector", function(){
-    let color = $("#colorSelector").val();
+$(document).on("change","#colorSelectorIcon", function(){
+    let color = $("#colorSelectorIcon").val();
     $(".item .wrap .icon_new").css("background-color", color);
-    $(".item .wrap .shirt").css("background-color", color);
-    console.log(color);
+})
+$(document).on("change","#colorSelectorTshirt", function(){
+    let color = $("#colorSelectorTshirt").val();
+    $(".item .wrap .shirt-bg").css("background-color", color);
 })
 
 
@@ -51,6 +53,16 @@ function noFile(){
 function home(){
     window.location.replace('./index.html');
 }
+
+
+
+// $(function(){
+//     $( "#draggable").draggable();
+// });
+$( "#draggable").draggable({
+    // helper: "clone",
+    // revert: "invalid"
+});
 
 
 

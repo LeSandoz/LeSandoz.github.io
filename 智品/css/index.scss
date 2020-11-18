@@ -416,7 +416,6 @@ header{//最上方區塊樣式
         max-width: 100vw;
         height: 800px;
         margin-top: 40px;
-        background: blanchedalmond;
         .list{
             display: flex;
             list-style: none;
@@ -431,6 +430,15 @@ header{//最上方區塊樣式
                 }
             }
         }
+        .drag_wrap{
+            width: 240px; 
+            height: 600px; 
+            padding: 0.5em; 
+            border: black 1px solid;
+            #draggable{ 
+                z-index: 10;
+            }
+        }
         .icon{
             width: 48px;
             height: 48px;
@@ -439,24 +447,45 @@ header{//最上方區塊樣式
             -webkit-mask-size: cover;
             mask-size: cover;
             background-color: black;
+            position: relative;
         }
-        .shirt-back{
-            width: 500px;
-            height: 500px;
-            background: url(../img/blank_tshirt.jpg) center center;
-            background-size: cover;
+        .shirt-wrap{
+            width: 60%;
+            height:600px;
+            border: 1px solid black;
+            background: wheat;
+            z-index: -2;
+            .shirt-back{
+                width: 500px;
+                height: 500px;
+                background: url(../img/blank_tshirt.jpg) center center;
+                background-size: cover;
+                position: absolute;
+                left: 36%;
+            }
+            .shirt{
+                width: 500px;
+                height: 500px;
+                // transform: translateY(-1000px);
+                display: inline-block;
+                -webkit-mask: url(../img/blank_shirt.svg) no-repeat 50% 50%;
+                -webkit-mask-size: cover;
+                mask-size: cover;
+                background-color:wheat;
+                position: absolute;
+                left: 36%;
+            }
+            .shirt-bg{
+                width: 500px;
+                height: 500px;
+                background-color: white;
+                opacity: 50%;
+                position: absolute;
+                left: 36%;
+                // transform: translateY(-500px);
+            }
         }
-        .shirt{
-            width: 500px;
-            height: 500px;
-            transform: translateY(-500px);
-            display: inline-block;
-            -webkit-mask: url(../img/blank_shirt.svg) no-repeat 50% 50%;
-            -webkit-mask-size: cover;
-            mask-size: cover;
-            background-color: rgb(255,235,205);
-            z-index: 2;
-        }
+        
           
           .icon-red { background-color: red; }
           .icon-orange { background-color: orange; }
