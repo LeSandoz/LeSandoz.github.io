@@ -435,8 +435,10 @@ header{//最上方區塊樣式
             height: 600px; 
             padding: 0.5em; 
             border: black 1px solid;
-            #draggable{ 
+            position: relative;
+            .draggable{ 
                 z-index: 10;
+                position: absolute;
             }
         }
         .icon{

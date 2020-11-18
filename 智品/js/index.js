@@ -34,7 +34,7 @@ $(document).on("click", ".clickOn", function(){
 
 $(document).on("change","#colorSelectorIcon", function(){
     let color = $("#colorSelectorIcon").val();
-    $(".item .wrap .icon_new").css("background-color", color);
+    $(".item .wrap .draggable_new .icon_new").css("background-color", color);
 })
 $(document).on("change","#colorSelectorTshirt", function(){
     let color = $("#colorSelectorTshirt").val();
@@ -56,13 +56,13 @@ function home(){
 
 
 
-// $(function(){
-//     $( "#draggable").draggable();
-// });
-$( "#draggable").draggable({
-    // helper: "clone",
-    // revert: "invalid"
+$(function(){
+    $(".draggable").on("mousedown", function(){
+        $(this).clone().appendTo(".drag_wrap").addClass("draggable_new");
+        $(".draggable_new").draggable();
+    })
 });
+
 
 
 

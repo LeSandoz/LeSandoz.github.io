@@ -461,10 +461,12 @@ header .menu {
   height: 600px;
   padding: 0.5em;
   border: black 1px solid;
+  position: relative;
 }
 
-.item main .drag_wrap #draggable {
+.item main .drag_wrap .draggable {
   z-index: 10;
+  position: absolute;
 }
 
 .item main .icon {
