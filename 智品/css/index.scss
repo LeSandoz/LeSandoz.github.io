@@ -8,15 +8,15 @@ header{//最上方區塊樣式
     position: relative; //位置 absolute按到relative位置移動
     font-family: "微軟正黑體", "Segoe UI"; //字型(優先選擇，替代方案)
 
-    .language{
-        position: fixed;
-        z-index: 20;
-        transition: .3s;
-        font-size: 20px;
-        font-weight: 600;
+    .language{  //切換語言樣式
+        position: fixed;  //跟著螢幕滾動
+        z-index: 20;  //放在最上層 不會被遮擋 數字越高越上層
+        transition: .3s;  //變化時間
+        font-size: 20px;  //字體大小
+        font-weight: 600;  //字體粗度
     }
-    .language:hover{
-        cursor: pointer;
+    .language:hover{  //切換語言模式(滑鼠移上去後)
+        cursor: pointer;  //滑鼠變成手指
         // background: coral;
         color: rgb(90, 219, 187)!important; //字體顏色    
     }
@@ -32,11 +32,11 @@ header{//最上方區塊樣式
         .logo_text{//logo文字樣式
             text-align: center;  //左右置中
             line-height: 115px;  //上下置中
-            font-size: 20px;  //字體大小
-            font-weight: 500;  //字體粗度
+            font-size: 16px;  //字體大小
+            font-weight: 600;  //字體粗度
         }
-        .zhipin_icon:hover, .logo_text:hover{
-            cursor: pointer;
+        .zhipin_icon:hover, .logo_text:hover{  //滑鼠移上去後
+            cursor: pointer;  //滑鼠變成手指
         }
     }
 
@@ -53,15 +53,26 @@ header{//最上方區塊樣式
         right: 2%; //位置 right: 距離relative最右點位置
 
         li{
-            padding:  8px 16px;  //內縮寬度
+            padding:  8px 12px;  //內縮寬度
             a{
                 color: black;  //字體顏色
-                border: 1px solid black;  //邊框 px:粗細 solid: 實心 顏色
-                padding: 4px 10px;  //內縮寬度
+                padding: 4px 0px;  //內縮寬度
+                text-decoration: black underline;
+                font-weight: 500;
             }
             a:hover{ //hover: 滑鼠移上去後之效果
-                color: rgb(90, 219, 187); //字體顏色
-                text-decoration: none;  //將預設底線拿掉
+                color: #007BFF; //字體顏色
+                text-decoration: #007BFF underline;
+            }
+            p{
+                cursor: default;
+            }
+            .text_opacity{
+                opacity: 30%;
+            }
+            .text_opacity:hover{
+                opacity: 100%;
+                cursor: pointer;
             }
         }
     }
@@ -76,14 +87,25 @@ header{//最上方區塊樣式
         
         li{
             padding:  8px 16px;  //內縮寬度
-            a{  //超連結樣式
+
+            .tel, .contact{
                 color: black;  //字體顏色
                 font-weight: 600;  //字體粗度
             }
-
-            a:hover{ //hover: 滑鼠移上去後之效果
-                color: rgb(90, 219, 187);  //字體顏色
+            .tel:hover, .contact:hover{
                 text-decoration: none;  //將預設底線拿掉
+                cursor: default;
+            }
+            .bot{  //超連結樣式
+                color: black;  //字體顏色
+                font-weight: 600;  //字體粗度
+            }
+            .bot:hover{ //hover: 滑鼠移上去後之效果
+                color: #007BFF;  //字體顏色
+                text-decoration: none;  //將預設底線拿掉
+            }
+            .blue{
+                color: #007BFF;  //字體顏色
             }
         }
     }
@@ -182,31 +204,32 @@ header{//最上方區塊樣式
         transition: .5s;  //動畫時間
     }
 }
-.carousel{
-    .carousel-item {
-        height: 540px;
+.carousel{  //幻燈片樣式
+    .carousel-item {  //幻燈片外框樣式
+        height: 540px;  //高度
       }
       
-    .carousel-item img {
-        min-height: 540px;
-        max-height: 1600px;
+    .carousel-item img {  //幻燈片圖片樣式
+        min-height: 540px;  //最小高度
+        max-height: 1600px;  //最大高度
         object-fit: cover;
     }
     .start_your_project{  //開始專案按鈕樣式
-        width: 300px;  //寬度
-        height: 65px;  //高度
+        width: 240px;  //寬度
+        height: 50px;  //高度
         text-align: center;  //文字左右置中
-        line-height: 35px;  //上下置中
-        font-size: 20px;  //字體大小
-        background: white; //背景樣式 顏色
+        line-height: 50px;  //上下置中
+        font-size: 24px;  //字體大小
+        background: #0063c5; //背景樣式 顏色
+        border-radius: 30px;
         position: absolute; //位置 absolute按到relative位置移動
-        padding: 10px 20px; //內縮寬度
-        font-weight: bolder;  //字體粗度
-        top: calc(63% - 36px); //位置 top: 距離relative最高點位置
-        left: calc(50% - 150px); //位置 right: 距離relative最右點位置
+        padding: 0px -10px; //內縮寬度
+        font-weight: 600;  //字體粗度
+        top: calc(50% - 25px); //位置 top: 距離relative最高點位置
+        left: calc(50% - 100px); //位置 right: 距離relative最右點位置
         z-index: 10;
         a{  //超連結樣式
-            color: black; //字體顏色
+            color: white; //字體顏色
         }
         a:hover{  //hover: 滑鼠移上去後之效果
             text-decoration: none;  //將預設底線拿掉
@@ -214,8 +237,9 @@ header{//最上方區塊樣式
     }
     .start_your_project:hover{  //hover: 滑鼠移上去後之效果
         cursor: pointer;  //滑鼠樣式 pointer: 手指頭
-        transform: scale(1.2); //有hover 移上去之後之效果  transform: 效果 scale: 縮放效果(倍數)
+        // transform: scale(1.2); //有hover 移上去之後之效果  transform: 效果 scale: 縮放效果(倍數)
         transition: .5s;  //動畫時間
+        background: #0070e0; //背景樣式 顏色
     }
 }
 
@@ -230,9 +254,10 @@ header{//最上方區塊樣式
 
             .our_services_text{  //我們的服務文字樣式
                 font-size: 24px;  //字體大小
-                text-align: center;  //字體左右置中
+                text-align: left;  //字體左右置中
                 font-weight: bolder;  //字體粗度
                 margin-top: 50px;  //對外寬度
+                transform: translateX(5vw);
             }
 
             .item_wrap{  //(建築模型/公仔模型/機構模型/產品設計)上述四項外框樣式
@@ -283,13 +308,14 @@ header{//最上方區塊樣式
         }
         .step{  //步驟樣式
             max-width: 100vw;  //最大寬度
-            height: 900px;  //高度
+            height: 1000px;  //高度
 
             .step_text{  //步驟文字樣式
                 font-size: 24px;  //字體大小
-                text-align: center;  //字體左右置中
-                margin:20px 0;  //對外寬度(上 右 下 左   or  上下  左右  or  全部  三種方法)
+                text-align: left;  //字體左右置中
                 font-weight: bolder;  //字體粗度
+                margin: 30px 0 100px;  //對外寬度
+                transform: translateX(5vw);
             }
             .step_img_wrap{  //步驟圖片外框樣式
                 width: 400px;  //寬度
@@ -297,13 +323,15 @@ header{//最上方區塊樣式
                 display:block;  //左右置中
                 margin: 50px auto -50px;  //對外寬度(上 左右 下(左右用auto可讓物件置中))
                 .step_img{  //步驟圖片樣式
-                    transform: translateX(10%);  //向右移動10%
+
                 }
-                .step_img_STL_file, .step_img_No_file{  //有檔案之圖片樣式, 沒檔案之圖片樣式
-                    width: 140px;  //寬度
-                    height: auto;  //高度，隨寬度改變
-                    display:block;  //左右置中
-                    margin:auto;  //左右置中
+                .file_img{
+                    transform: translateX(6vw);
+                    .step_img_STL_file, .step_img_No_file{  //有檔案之圖片樣式, 沒檔案之圖片樣式
+                        width: 110px;  //寬度
+                        height: auto;  //高度，隨寬度改變
+                        padding: 5px;
+                    }
                 }
                 .step_img_3D_printing{  //3D列印之圖片樣式
                     width: 230px;  //寬度
@@ -317,9 +345,20 @@ header{//最上方區塊樣式
                     display:block;  //左右置中
                     margin:auto;  //左右置中
                 }
+                .step_img_450, .step_img_1200, .step_img_3000{
+                    width: 200px;  //寬度
+                    height: auto;  //高度，隨寬度改變
+                    display:block;  //左右置中
+                    margin:auto;  //左右置中
+                }
                 .img_text{  //文字圖片樣式
                     text-align: center;  //上下置中
-                    transform: translateY(50%);  //向下移動50%
+                    transform: translateY(40%);  //向下移動50%
+                }
+                svg:hover, polygon:hover path{
+                    // -webkit-filter: drop-shadow(0px 0px 0px #ff2600);
+                    fill: rgb(0, 153, 255);
+                    cursor: pointer;
                 }
             }
 
@@ -328,8 +367,19 @@ header{//最上方區塊樣式
                 img{  //圖片樣式
                     padding-right: 40px; //對內右邊寬度
                 }
+                .step_img_wrap2{
+                    .img_text{
+                        transform: translateY(70%);
+                    }
+                }
+                .step_img_wrap3{
+                    .img_text{
+                        transform: translateY(65%);
+                    }
+                }
+
             }
-            .next_step{  //步驟2跟步驟3外框樣式
+            .print{  //步驟2跟步驟3外框樣式
                 display: flex;  //並排
                 margin-top: 40px;  //對外上邊寬度
                 img{  //圖片樣式
@@ -343,8 +393,10 @@ header{//最上方區塊樣式
 
             .other_text{  //其他服務文字樣式
                 font-size: 24px;  //字體大小
-                text-align: center;  //字體左右置中
+                text-align: left;  //字體左右置中
                 font-weight: bolder;  //字體粗度
+                margin: 30px 0 100px;  //對外寬度
+                transform: translateX(5vw);
             }
             .other{  //其他服務外框樣式
                 display: flex;  //並排
@@ -362,10 +414,10 @@ header{//最上方區塊樣式
                     }
                     .img_text{  //圖片文字樣式
                         text-align: center;  //左右置中
-                        transform: translateY(200%);  //向下移動200%距離
+                        transform: translateY(120%);  //向下移動200%距離
                     }
                     .img_text_vacuum{  //真空圖片文字樣式
-                        transform: translateY(180%);  //向下移動180%
+                        transform: translateY(100%);  //向下移動180%
                     }
                 }
             }
@@ -388,14 +440,17 @@ header{//最上方區塊樣式
                 }
             }
             .step{    //步驟樣式
-                height: 1500px;  //改為1500px，手機版較長
+                height: 2250px;  //改為1500px，手機版較長
                 .file{   //有檔案跟無檔案之圖片外框樣式
                     display: block;  //取消並排，改為直排
                     .step_img_wrap{
 
                     }
+                    .file_img{
+                        transform: translateX(19vw);
+                    }
                 }
-                .next_step{  //步驟2跟步驟3外框樣式
+                .print{  //步驟2跟步驟3外框樣式
                     display: block;    //取消並排，改為直排
                 }
 
@@ -565,7 +620,7 @@ header{//最上方區塊樣式
                     padding-right: 40px; //對內右邊寬度
                 }
             }
-            .next_step{  //下二圖片外框樣式
+            .print{  //下二圖片外框樣式
                 display: flex;  //並排
                 margin-top: 40px;  //對外上邊寬度
                 img{  //下二圖片樣式
@@ -584,7 +639,7 @@ header{//最上方區塊樣式
                         margin-bottom: 20px;  //向下寬度
                     }
                 }
-                .next_step{  //下二圖片外框樣式
+                .print{  //下二圖片外框樣式
                     display: block;  //取消並排改為直排(從1排2個改為2排1個)
                 }
 
@@ -651,8 +706,8 @@ footer{  //最下方區塊樣式
     max-width: 100vw;  //最大寬度
     height: 400px;  //高度
     background: rgb(223, 230, 237);  //背景樣式 顏色
-    color: white;  //字體顏色
-    font-size: 22px;  //字體大小
+    color:#717474;  //字體顏色
+    font-size: 20px;  //字體大小
     font-weight: 600;  //字體粗度
     text-align: center;  //字體左右置中
 
@@ -662,33 +717,36 @@ footer{  //最下方區塊樣式
             margin-right: 10px;  //對右寬度
             border-radius: 30%;
         }
+        a{
+            text-decoration: none;
+        }
         .logo_img_IG, .logo_img_Twitter, .logo_img_Youtube{  //其他三種logo望是
             width: 30px;  //寬度
             margin-right: 10px;  //對右寬度
             border-radius: 30%;
         }
     }
-    .logo_img .logo_img_FB:hover{
-        transition: .5s;
-        transform: scale(1.3);
-        background: rgb(26, 132, 202);
-    }
-    .logo_img .logo_img_IG:hover{
-        transition: .5s;
-        transform: scale(1.3);
-        background: linear-gradient(316deg, rgba(106, 65, 187, 0.9)0%, rgba(235, 77, 79, 0.8)57%);
-        background: -moz-linear-gradient(316deg, rgba(106, 65, 187, 0.9)0%, rgba(235, 77, 79, 0.8)57%);
-        background: -webkit-linear-gradient(316deg, rgba(106, 65, 187, 0.9)0%, rgba(235, 77, 79, 0.8)57%);
-        background: -o-linear-gradient(316deg, rgba(106, 65, 187, 0.9)0%, rgba(235, 77, 79, 0.8)57%);
-    }
-    .logo_img .logo_img_Twitter:hover{
-        transition: .5s;
-        transform: scale(1.3);
-        background: rgb(62, 178, 255);
-    }
-    .logo_img .logo_img_Youtube:hover{
-        transition: .5s;
-        transform: scale(1.3);
-        background: rgb(253, 37, 37);
-    }
+    // .logo_img .logo_img_FB:hover path{  //FB logo移上去後樣式
+    //     transition: .5s;  //變化時間
+    //     transform: scale(1.3);  //放大
+    //     background: rgb(26, 132, 202);  //背景顏色
+    // }
+    // .logo_img .logo_img_IG:hover{  //IG logo移上去後樣式
+    //     transition: .5s;  //變化時間
+    //     transform: scale(1.3);  //放大
+    //     background: linear-gradient(316deg, rgba(106, 65, 187, 0.9)0%, rgba(235, 77, 79, 0.8)57%);  //背景顏色
+    //     background: -moz-linear-gradient(316deg, rgba(106, 65, 187, 0.9)0%, rgba(235, 77, 79, 0.8)57%);  //背景顏色
+    //     background: -webkit-linear-gradient(316deg, rgba(106, 65, 187, 0.9)0%, rgba(235, 77, 79, 0.8)57%);  //背景顏色
+    //     background: -o-linear-gradient(316deg, rgba(106, 65, 187, 0.9)0%, rgba(235, 77, 79, 0.8)57%);  //背景顏色
+    // }
+    // .logo_img .logo_img_Twitter:hover{  //Twitter logo移上去後樣式
+    //     transition: .5s;  //變化時間
+    //     transform: scale(1.3);  //放大
+    //     background: rgb(62, 178, 255);  //背景顏色
+    // }
+    // .logo_img .logo_img_Youtube:hover{  //Youtube logo移上去後樣式
+    //     transition: .5s;  //變化時間
+    //     transform: scale(1.3);  //放大
+    //     background: rgb(253, 37, 37);  //背景顏色
+    // }
 }

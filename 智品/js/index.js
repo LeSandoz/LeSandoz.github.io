@@ -42,7 +42,9 @@ $(document).on("change","#colorSelectorTshirt", function(){
 })
 
 
+$(document).on("click", ".bot", function(){
 
+})
 
 function uploadFile(){
     window.open('https://driveuploader.com/upload/P3bXC1HZlF/');

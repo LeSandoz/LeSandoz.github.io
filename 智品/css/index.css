@@ -36,8 +36,8 @@ header .zhipin_icon_wrap .zhipin_icon {
 header .zhipin_icon_wrap .logo_text {
   text-align: center;
   line-height: 115px;
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 header .zhipin_icon_wrap .zhipin_icon:hover, header .zhipin_icon_wrap .logo_text:hover {
@@ -56,18 +56,34 @@ header .header_list_top {
 }
 
 header .header_list_top li {
-  padding: 8px 16px;
+  padding: 8px 12px;
 }
 
 header .header_list_top li a {
   color: black;
-  border: 1px solid black;
-  padding: 4px 10px;
+  padding: 4px 0px;
+  -webkit-text-decoration: black underline;
+          text-decoration: black underline;
+  font-weight: 500;
 }
 
 header .header_list_top li a:hover {
-  color: #5adbbb;
-  text-decoration: none;
+  color: #007BFF;
+  -webkit-text-decoration: #007BFF underline;
+          text-decoration: #007BFF underline;
+}
+
+header .header_list_top li p {
+  cursor: default;
+}
+
+header .header_list_top li .text_opacity {
+  opacity: 30%;
+}
+
+header .header_list_top li .text_opacity:hover {
+  opacity: 100%;
+  cursor: pointer;
 }
 
 header .header_list_bot {
@@ -85,14 +101,28 @@ header .header_list_bot li {
   padding: 8px 16px;
 }
 
-header .header_list_bot li a {
+header .header_list_bot li .tel, header .header_list_bot li .contact {
   color: black;
   font-weight: 600;
 }
 
-header .header_list_bot li a:hover {
-  color: #5adbbb;
+header .header_list_bot li .tel:hover, header .header_list_bot li .contact:hover {
   text-decoration: none;
+  cursor: default;
+}
+
+header .header_list_bot li .bot {
+  color: black;
+  font-weight: 600;
+}
+
+header .header_list_bot li .bot:hover {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+header .header_list_bot li .blue {
+  color: #007BFF;
 }
 
 header .header_list_bot_600 {
@@ -201,22 +231,23 @@ header .menu {
 }
 
 .carousel .start_your_project {
-  width: 300px;
-  height: 65px;
+  width: 240px;
+  height: 50px;
   text-align: center;
-  line-height: 35px;
-  font-size: 20px;
-  background: white;
+  line-height: 50px;
+  font-size: 24px;
+  background: #0063c5;
+  border-radius: 30px;
   position: absolute;
-  padding: 10px 20px;
-  font-weight: bolder;
-  top: calc(63% - 36px);
-  left: calc(50% - 150px);
+  padding: 0px -10px;
+  font-weight: 600;
+  top: calc(50% - 25px);
+  left: calc(50% - 100px);
   z-index: 10;
 }
 
 .carousel .start_your_project a {
-  color: black;
+  color: white;
 }
 
 .carousel .start_your_project a:hover {
@@ -225,10 +256,9 @@ header .menu {
 
 .carousel .start_your_project:hover {
   cursor: pointer;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
   -webkit-transition: .5s;
   transition: .5s;
+  background: #0070e0;
 }
 
 .index {
@@ -242,9 +272,11 @@ header .menu {
 
 .index main .our_services .our_services_text {
   font-size: 24px;
-  text-align: center;
+  text-align: left;
   font-weight: bolder;
   margin-top: 50px;
+  -webkit-transform: translateX(5vw);
+          transform: translateX(5vw);
 }
 
 .index main .our_services .item_wrap {
@@ -283,14 +315,16 @@ header .menu {
 
 .index main .step {
   max-width: 100vw;
-  height: 900px;
+  height: 1000px;
 }
 
 .index main .step .step_text {
   font-size: 24px;
-  text-align: center;
-  margin: 20px 0;
+  text-align: left;
   font-weight: bolder;
+  margin: 30px 0 100px;
+  -webkit-transform: translateX(5vw);
+          transform: translateX(5vw);
 }
 
 .index main .step .step_img_wrap {
@@ -300,16 +334,15 @@ header .menu {
   margin: 50px auto -50px;
 }
 
-.index main .step .step_img_wrap .step_img {
-  -webkit-transform: translateX(10%);
-          transform: translateX(10%);
+.index main .step .step_img_wrap .file_img {
+  -webkit-transform: translateX(6vw);
+          transform: translateX(6vw);
 }
 
-.index main .step .step_img_wrap .step_img_STL_file, .index main .step .step_img_wrap .step_img_No_file {
-  width: 140px;
+.index main .step .step_img_wrap .file_img .step_img_STL_file, .index main .step .step_img_wrap .file_img .step_img_No_file {
+  width: 110px;
   height: auto;
-  display: block;
-  margin: auto;
+  padding: 5px;
 }
 
 .index main .step .step_img_wrap .step_img_3D_printing {
@@ -326,10 +359,22 @@ header .menu {
   margin: auto;
 }
 
+.index main .step .step_img_wrap .step_img_450, .index main .step .step_img_wrap .step_img_1200, .index main .step .step_img_wrap .step_img_3000 {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
 .index main .step .step_img_wrap .img_text {
   text-align: center;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
+  -webkit-transform: translateY(40%);
+          transform: translateY(40%);
+}
+
+.index main .step .step_img_wrap svg:hover, .index main .step .step_img_wrap polygon:hover path {
+  fill: #0099ff;
+  cursor: pointer;
 }
 
 .index main .step .file {
@@ -342,14 +387,24 @@ header .menu {
   padding-right: 40px;
 }
 
-.index main .step .next_step {
+.index main .step .file .step_img_wrap2 .img_text {
+  -webkit-transform: translateY(70%);
+          transform: translateY(70%);
+}
+
+.index main .step .file .step_img_wrap3 .img_text {
+  -webkit-transform: translateY(65%);
+          transform: translateY(65%);
+}
+
+.index main .step .print {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 40px;
 }
 
-.index main .step .next_step img {
+.index main .step .print img {
   padding-right: 70px;
 }
 
@@ -360,8 +415,11 @@ header .menu {
 
 .index main .other_services .other_text {
   font-size: 24px;
-  text-align: center;
+  text-align: left;
   font-weight: bolder;
+  margin: 30px 0 100px;
+  -webkit-transform: translateX(5vw);
+          transform: translateX(5vw);
 }
 
 .index main .other_services .other {
@@ -386,13 +444,13 @@ header .menu {
 
 .index main .other_services .other .other_img_wrap .img_text {
   text-align: center;
-  -webkit-transform: translateY(200%);
-          transform: translateY(200%);
+  -webkit-transform: translateY(120%);
+          transform: translateY(120%);
 }
 
 .index main .other_services .other .other_img_wrap .img_text_vacuum {
-  -webkit-transform: translateY(180%);
-          transform: translateY(180%);
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 @media screen and (max-width: 600px) {
@@ -410,12 +468,16 @@ header .menu {
     margin-bottom: -100px;
   }
   .index main .step {
-    height: 1500px;
+    height: 2250px;
   }
   .index main .step .file {
     display: block;
   }
-  .index main .step .next_step {
+  .index main .step .file .file_img {
+    -webkit-transform: translateX(19vw);
+            transform: translateX(19vw);
+  }
+  .index main .step .print {
     display: block;
   }
   .index main .other_services {
@@ -613,14 +675,14 @@ header .menu {
   padding-right: 40px;
 }
 
-.file main .step .next_step {
+.file main .step .print {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 40px;
 }
 
-.file main .step .next_step img {
+.file main .step .print img {
   padding-right: 70px;
 }
 
@@ -634,7 +696,7 @@ header .menu {
   .file main .step .file .step_img_wrap {
     margin-bottom: 20px;
   }
-  .file main .step .next_step {
+  .file main .step .print {
     display: block;
   }
   .file main .other_services {
@@ -699,8 +761,8 @@ footer {
   max-width: 100vw;
   height: 400px;
   background: #dfe6ed;
-  color: white;
-  font-size: 22px;
+  color: #717474;
+  font-size: 20px;
   font-weight: 600;
   text-align: center;
 }
@@ -711,42 +773,13 @@ footer .logo_img .logo_img_FB {
   border-radius: 30%;
 }
 
+footer .logo_img a {
+  text-decoration: none;
+}
+
 footer .logo_img .logo_img_IG, footer .logo_img .logo_img_Twitter, footer .logo_img .logo_img_Youtube {
   width: 30px;
   margin-right: 10px;
   border-radius: 30%;
-}
-
-footer .logo_img .logo_img_FB:hover {
-  -webkit-transition: .5s;
-  transition: .5s;
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
-  background: #1a84ca;
-}
-
-footer .logo_img .logo_img_IG:hover {
-  -webkit-transition: .5s;
-  transition: .5s;
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
-  background: linear-gradient(316deg, rgba(106, 65, 187, 0.9) 0%, rgba(235, 77, 79, 0.8) 57%);
-  background: -o-linear-gradient(316deg, rgba(106, 65, 187, 0.9) 0%, rgba(235, 77, 79, 0.8) 57%);
-}
-
-footer .logo_img .logo_img_Twitter:hover {
-  -webkit-transition: .5s;
-  transition: .5s;
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
-  background: #3eb2ff;
-}
-
-footer .logo_img .logo_img_Youtube:hover {
-  -webkit-transition: .5s;
-  transition: .5s;
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
-  background: #fd2525;
 }
 /*# sourceMappingURL=index.css.map */
