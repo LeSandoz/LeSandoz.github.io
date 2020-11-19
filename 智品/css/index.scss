@@ -434,7 +434,7 @@ header{//最上方區塊樣式
             width: 240px; 
             height: 600px; 
             padding: 0.5em; 
-            border: black 1px solid;
+            // border: black 1px solid;
             position: relative;
             .draggable{ 
                 z-index: 10;
@@ -454,8 +454,8 @@ header{//最上方區塊樣式
         .shirt-wrap{
             width: 60%;
             height:600px;
-            border: 1px solid black;
-            background: wheat;
+            // border: 1px solid black;
+            // background: wheat;
             z-index: -2;
             .shirt-back{
                 width: 500px;
@@ -463,7 +463,7 @@ header{//最上方區塊樣式
                 background: url(../img/blank_tshirt.jpg) center center;
                 background-size: cover;
                 position: absolute;
-                left: 36%;
+                left: 40%;
             }
             .shirt{
                 width: 500px;
@@ -473,9 +473,9 @@ header{//最上方區塊樣式
                 -webkit-mask: url(../img/blank_shirt.svg) no-repeat 50% 50%;
                 -webkit-mask-size: cover;
                 mask-size: cover;
-                background-color:wheat;
+                background-color:white;
                 position: absolute;
-                left: 36%;
+                left: 40%;
             }
             .shirt-bg{
                 width: 500px;
@@ -483,7 +483,7 @@ header{//最上方區塊樣式
                 background-color: white;
                 opacity: 50%;
                 position: absolute;
-                left: 36%;
+                left: 40%;
                 // transform: translateY(-500px);
             }
         }

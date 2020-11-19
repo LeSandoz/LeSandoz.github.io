@@ -61,7 +61,31 @@ $(function(){
         $(this).clone().appendTo(".drag_wrap").addClass("draggable_new");
         $(".draggable_new").draggable();
     })
+    // $( "#droppable" ).droppable({
+    //     activeClass: "ui-state-hover",
+    //     hoverClass: "ui-state-active",
+    //     drop: function( event, ui ) {
+    //       $( this )
+    //         .addClass( "ui-state-highlight" )
+    //         .find( "> p" )
+    //           .html( "Dropped!" );
+    //       return false;
+    //     }
+    // });
 });
+
+
+// $(function(){     
+//     print();  
+// });  
+// function print(){     
+//     html2canvas( $(".shirt-wrap") ,{            
+//         onrendered: function(canvas){  
+//             $('#down_button').attr( 'href' , canvas.toDataURL() ) ;  
+//             $('#down_button').attr( 'download' , 'myjobdeer.png' ) ;  
+//         }  
+//     });  
+// }
 
 
 

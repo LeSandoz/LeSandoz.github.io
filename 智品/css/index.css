@@ -460,7 +460,6 @@ header .menu {
   width: 240px;
   height: 600px;
   padding: 0.5em;
-  border: black 1px solid;
   position: relative;
 }
 
@@ -483,8 +482,6 @@ header .menu {
 .item main .shirt-wrap {
   width: 60%;
   height: 600px;
-  border: 1px solid black;
-  background: wheat;
   z-index: -2;
 }
 
@@ -494,7 +491,7 @@ header .menu {
   background: url(../img/blank_tshirt.jpg) center center;
   background-size: cover;
   position: absolute;
-  left: 36%;
+  left: 40%;
 }
 
 .item main .shirt-wrap .shirt {
@@ -504,9 +501,9 @@ header .menu {
   -webkit-mask: url(../img/blank_shirt.svg) no-repeat 50% 50%;
   -webkit-mask-size: cover;
   mask-size: cover;
-  background-color: wheat;
+  background-color: white;
   position: absolute;
-  left: 36%;
+  left: 40%;
 }
 
 .item main .shirt-wrap .shirt-bg {
@@ -515,7 +512,7 @@ header .menu {
   background-color: white;
   opacity: 50%;
   position: absolute;
-  left: 36%;
+  left: 40%;
 }
 
 .item main .icon-red {
