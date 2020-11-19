@@ -9,13 +9,13 @@ function send() {
     let phone = document.querySelector('#phone').value;
     let projectName = document.querySelector('#projectName').value;
     let projectDescription = document.querySelector('#projectDescription').value;
-    console.log(datetime);
-    console.log(lastName);
-    console.log(firstName);
-    console.log(email);
-    console.log(phone);
-    console.log(projectName);
-    console.log(projectDescription);
+    // console.log(datetime);
+    // console.log(lastName);
+    // console.log(firstName);
+    // console.log(email);
+    // console.log(phone);
+    // console.log(projectName);
+    // console.log(projectDescription);
         // alert("已新增")
         $.ajax({
             url: "https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbxEvc31hr02NnMuMDpgHeCQRIy-gOe0VaiXrKxBlqs1ACnflH6o/exec",
