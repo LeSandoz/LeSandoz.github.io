@@ -714,12 +714,10 @@ header .menu {
 }
 
 .nofile main .file_form {
-  background: #dfe6ed;
   margin: 100px auto;
   width: 46%;
   padding: 40px;
   font-weight: 800;
-  border: rgba(164, 176, 185, 0.795) 3px solid;
 }
 
 .nofile main .file_form .nofile_img_wrap {
@@ -730,6 +728,7 @@ header .menu {
 
 .nofile main .file_form .nofile_img_wrap .nofile_img {
   width: 80px;
+  margin-bottom: 20px;
 }
 
 .nofile main .file_form .nofile_img_wrap h5 {
@@ -737,19 +736,23 @@ header .menu {
 }
 
 .nofile main .file_form .nofile_img_wrap p {
-  font-size: 10px;
+  font-size: 14px;
 }
 
-.nofile main .file_form .name {
-  margin-right: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.nofile main .file_form .lname {
+  margin-right: 40px;
+  width: 60%;
 }
 
 .nofile main .file_form .form-control {
   margin-top: -5px;
   margin-bottom: 10px;
+}
+
+.nofile main .file_form .submit {
+  border: 2px solid #007BFF;
+  border-radius: 20px;
+  color: #007BFF;
 }
 
 @media screen and (max-width: 600px) {
@@ -767,6 +770,11 @@ footer {
   font-size: 20px;
   font-weight: 600;
   text-align: center;
+}
+
+footer .s-icon {
+  -webkit-transform: translateY(-0.5vh) scale(0.9);
+          transform: translateY(-0.5vh) scale(0.9);
 }
 
 footer .logo_img .logo_img_FB {

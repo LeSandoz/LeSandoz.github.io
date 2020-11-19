@@ -667,12 +667,12 @@ header{//最上方區塊樣式
     main{  //主要內容樣式
 
         .file_form{  //沒有檔案之表單樣式
-            background: rgb(223,230,237);  //背景顏色
+            // background: rgb(223,230,237);  //背景顏色
             margin: 100px auto;  //向上寬度，左右置中
             width: 46%;  //寬度
             padding: 40px;  //對內寬度(內縮)
             font-weight: 800;  //字體粗度
-            border: rgba(164, 176, 185, 0.795) 3px solid;  //邊框樣式(顏色, 粗細, 樣式)
+            // border: rgba(164, 176, 185, 0.795) 3px solid;  //邊框樣式(顏色, 粗細, 樣式)
 
             .nofile_img_wrap{  //沒有檔案圖片外框樣式
                 margin: 0 auto;  //左右置中
@@ -681,22 +681,28 @@ header{//最上方區塊樣式
 
                 .nofile_img{  //沒有檔案圖片樣式
                     width: 80px;  //寬度
+                    margin-bottom: 20px;
                 }
                 h5{  //大文字樣式
                     font-weight: 600;  //文字粗度
                 }
                 p{  //小文字樣次
-                    font-size: 10px;  //文字大小
+                    font-size: 14px;  //文字大小
                 }
             }
 
-            .name{  //表單全名樣式(一排2個)
-                margin-right: 30px;
-                display: flex;
+            .lname{  //表單全名樣式(一排2個)
+                margin-right: 40px;
+                width: 60%;
             }
             .form-control{  //所有表單格子樣式
                 margin-top: -5px;  //對上寬度
                 margin-bottom: 10px;  //對下寬度
+            }
+            .submit{
+                border: 2px solid #007BFF;
+                border-radius: 20px;
+                color: #007BFF;
             }
         }
     }   
@@ -719,7 +725,9 @@ footer{  //最下方區塊樣式
     font-size: 20px;  //字體大小
     font-weight: 600;  //字體粗度
     text-align: center;  //字體左右置中
-
+    .s-icon{
+        transform: translateY(-0.5vh) scale(0.9);
+    }
     .logo_img{  //四種社群logo樣式
         .logo_img_FB{  //FB logo樣式
             width: 15px;  //寬度
