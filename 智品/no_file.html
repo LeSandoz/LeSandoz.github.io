@@ -77,7 +77,7 @@
     </header>
     <div class="nofile">
       <main>
-          <div class="form-group file_form">
+          <div  class="form-group file_form">
               <div class="nofile_img_wrap">
                   <img class="nofile_img" src="./img/No-file.svg" alt="">
                   <!-- <h5 class="en"><br>NO FILE</h5>
@@ -88,22 +88,22 @@
               <label class="en" for="">Full Name*</label>
               <label class="zh-tw" for="">全名*</label>
               <div class="d-flex">
-                  <input type="text" name="" id="" class="form-control lname" placeholder="Last name">
-                  <input type="text" name="" id="" class="form-control fname" placeholder="First name">
+                  <input type="text" name="lastName" id="lastName" class="form-control lname" placeholder="Last name">
+                  <input type="text" name="firstName" id="firstName" class="form-control fname" placeholder="First name">
               </div>
               <label class="en" for="">Email*</label>
               <label class="zh-tw" for="">電子郵件*</label>
-              <input type="text" name="" id="" class="form-control" placeholder="">
+              <input type="text" name="email" id="email" class="form-control" placeholder="">
               <label class="en" for="">Phone Number*</label>
               <label class="zh-tw" for="">聯絡電話*</label>
-              <input type="text" name="" id="" class="form-control" placeholder="">
+              <input type="text" name="phone" id="phone" class="form-control" placeholder="">
               <label class="en" for="">Project Name*</label>
               <label class="zh-tw" for="">專案名稱*</label>
-              <input type="text" name="" id="" class="form-control" placeholder="">
+              <input type="text" name="projectName" id="projectName" class="form-control" placeholder="">
               <label class="en" for="">Project Description*</label>
               <label class="zh-tw" for="">專案描述*</label>
-              <textarea class="form-control" name="" id="" rows="8"></textarea><br>
-              <button type="submit" class="btn submit float-right">Submit</button><br>
+              <textarea class="form-control" name="projectDescription" id="projectDescription" rows="8"></textarea><br>
+              <button type="submit" class="btn submit float-right" id="send">Submit</button><br>
           </div>
       </main>
     </div>
@@ -186,10 +186,13 @@
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="./js/index.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/file.js"></script>
     <!-- Load Facebook SDK for JavaScript -->
     <div id="fb-root"></div>
     <script>
