@@ -1,4 +1,4 @@
-let sendButton = document.querySelector('button');
+let sendButton = document.querySelector('#send');
 let today = new Date();
 let datetime = today.getFullYear()+ "/" + (today.getMonth()+1) + "/" + today.getDate() + " " + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 const cors = 'https://cors-anywhere.herokuapp.com/'; // use cors-anywhere to fetch api data
@@ -19,7 +19,8 @@ function send() {
     // console.log(projectDescription);
         // alert("已新增")
         $.ajax({
-            url: "https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbxEvc31hr02NnMuMDpgHeCQRIy-gOe0VaiXrKxBlqs1ACnflH6o/exec",
+            url: "https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbwXF-7loB34qgvJlwWwA2DIdNJbtab6hNUrAj_2b08d-fC938E/exec",
+            // url: "https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbxEvc31hr02NnMuMDpgHeCQRIy-gOe0VaiXrKxBlqs1ACnflH6o/exec",
             data: {
                 "time": datetime,
                 "lastName": lastName,

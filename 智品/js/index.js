@@ -89,6 +89,16 @@ $(function(){
 //     });  
 // }
 
+$(".stl").addClass("d-none");
+$(document).on("click", ".imgText", function(){
+    $(".img").addClass("d-none");
+    $(".stl").removeClass("d-none");
+})
+$(document).on("click", ".stiFileText", function(){
+    $(".stl").addClass("d-none");
+    $(".img").removeClass("d-none");
+})
+
 
 
 

@@ -697,15 +697,18 @@ header{//最上方區塊樣式
                     text-align: center;
                     margin-left: 2vw;
                     transform: translateY(10vh);
-                    .uploadYourImgText{
+                    .uploadYourImgText, .uploadYourFileText{
                         color: white;
                         background: #007BFF;
                         padding: 8px 24px;
                         border-radius: 24px;
                         min-width: 50%;
                     }
-                    .stiFileText{
-
+                    .stiFileText, .imgText{
+                        color: #007BFF;
+                    }
+                    .stiFileText:hover, .imgText:hover{
+                        cursor: pointer;
                     }
                 }
 
