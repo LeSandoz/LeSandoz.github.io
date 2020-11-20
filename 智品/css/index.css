@@ -596,11 +596,9 @@ header .menu {
 
 .file main .step .step_text {
   font-size: 24px;
-  text-align: left;
+  text-align: center;
   font-weight: bolder;
-  margin: 30px 0 100px;
-  -webkit-transform: translateX(5vw);
-          transform: translateX(5vw);
+  margin: 100px 0 100px;
 }
 
 .file main .step .step_img_wrap {
@@ -721,22 +719,43 @@ header .menu {
 }
 
 .nofile main .file_form .nofile_img_wrap {
-  margin: 0 auto;
-  width: 60%;
+  margin: 0 auto 8vh;
+  width: 100%;
+  height: 30vh;
   text-align: center;
 }
 
-.nofile main .file_form .nofile_img_wrap .nofile_img {
+.nofile main .file_form .nofile_img_wrap .no_file_uploadImg {
+  width: 50%;
+}
+
+.nofile main .file_form .nofile_img_wrap .no_file_uploadImg .nofile_img {
   width: 80px;
   margin-bottom: 20px;
 }
 
-.nofile main .file_form .nofile_img_wrap h5 {
+.nofile main .file_form .nofile_img_wrap .no_file_uploadImg h5 {
   font-weight: 600;
 }
 
-.nofile main .file_form .nofile_img_wrap p {
+.nofile main .file_form .nofile_img_wrap .no_file_uploadImg p {
   font-size: 14px;
+}
+
+.nofile main .file_form .nofile_img_wrap .image {
+  min-width: 50%;
+  text-align: center;
+  margin-left: 2vw;
+  -webkit-transform: translateY(10vh);
+          transform: translateY(10vh);
+}
+
+.nofile main .file_form .nofile_img_wrap .image .uploadYourImgText {
+  color: white;
+  background: #007BFF;
+  padding: 8px 24px;
+  border-radius: 24px;
+  min-width: 50%;
 }
 
 .nofile main .file_form .lname {

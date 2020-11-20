@@ -559,10 +559,10 @@ header{//最上方區塊樣式
 
             .step_text{  //步驟文字樣式
                 font-size: 24px;  //字體大小
-                text-align: left;  //字體左右置中
+                text-align: center;  //字體左右置中
                 font-weight: bolder;  //字體粗度
-                margin: 30px 0 100px;  //對外寬度
-                transform: translateX(5vw);
+                margin: 100px 0 100px;  //對外寬度
+                // transform: translateX(5vw);
             }
             .step_img_wrap{  //步驟圖片外框樣式
                 width: 400px;  //寬度
@@ -675,20 +675,40 @@ header{//最上方區塊樣式
             // border: rgba(164, 176, 185, 0.795) 3px solid;  //邊框樣式(顏色, 粗細, 樣式)
 
             .nofile_img_wrap{  //沒有檔案圖片外框樣式
-                margin: 0 auto;  //左右置中
-                width: 60%;  //寬度
+                margin: 0 auto 8vh;  //左右置中
+                width: 100%;  //寬度
+                height: 30vh;
                 text-align: center;  //文字左右置中
+                .no_file_uploadImg{
+                    width: 50%;
+                    .nofile_img{  //沒有檔案圖片樣式
+                        width: 80px;  //寬度
+                        margin-bottom: 20px;
+                    }
+                    h5{  //大文字樣式
+                        font-weight: 600;  //文字粗度
+                    }
+                    p{  //小文字樣次
+                        font-size: 14px;  //文字大小
+                    }
+                }
+                .image{
+                    min-width: 50%;
+                    text-align: center;
+                    margin-left: 2vw;
+                    transform: translateY(10vh);
+                    .uploadYourImgText{
+                        color: white;
+                        background: #007BFF;
+                        padding: 8px 24px;
+                        border-radius: 24px;
+                        min-width: 50%;
+                    }
+                    .stiFileText{
 
-                .nofile_img{  //沒有檔案圖片樣式
-                    width: 80px;  //寬度
-                    margin-bottom: 20px;
+                    }
                 }
-                h5{  //大文字樣式
-                    font-weight: 600;  //文字粗度
-                }
-                p{  //小文字樣次
-                    font-size: 14px;  //文字大小
-                }
+
             }
 
             .lname{  //表單全名樣式(一排2個)

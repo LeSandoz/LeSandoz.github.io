@@ -8,6 +8,7 @@ function send() {
     let email = document.querySelector('#email').value;
     let phone = document.querySelector('#phone').value;
     let projectName = document.querySelector('#projectName').value;
+    // let projectImg = document.querySelector('#projectImg').value;
     let projectDescription = document.querySelector('#projectDescription').value;
     // console.log(datetime);
     // console.log(lastName);
@@ -26,6 +27,7 @@ function send() {
                 "email": email,
                 "phone": phone,
                 "projectName": projectName,
+                // "projectImg": projectImg,
                 "projectDescription": projectDescription
             },
             success: function(response) {
