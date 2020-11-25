@@ -2,7 +2,7 @@ var color = ['都可','紅','橙','黃','綠','藍','靛','紫','黑','白','灰
 var shape = ['都可','圓形','固體','方形','六角形','五角形','不規則','三角形','圓柱','液體','長條型'];
 var locations = ['都可','廚房','廁所','辦公室','房間','客廳','陽台','健身房','室外','教室','球場'];
 var fullname = ['何彥穎','王嘉禾','劉怡婷','方建哲','蔡亞筑','呂學承','蔡承璋','黃宣燁','曾文瑀','陳子秝'];
-var i = 0;
+var i = '';
 
     $(document).on("click", ".button", function(){
         // for(let i = 0; i < 10; i++){
@@ -72,12 +72,11 @@ var i = 0;
         document.querySelector("#box").innerHTML =
         `   
         `;
-        document.querySelector(".list").innerHTML +=
-        `
-        `;
+        i = 0;
         // $(".color").text('???');
         // $(".shape").text('???');
         // $(".locations").text('???');
         // $(".fullname").text('???');
+        // console.log(i)
     })
 
