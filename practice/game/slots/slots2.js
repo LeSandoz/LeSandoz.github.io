@@ -15,7 +15,7 @@ var fullname = ['何彥穎','王嘉禾','劉怡婷','方建哲','蔡亞筑','呂
             // console.log(id3);
             // console.log(id4);
             // console.log((fullname.length - 1));
-            console.log(fullname);
+            // console.log(fullname);
             if(fullname.length == 0){
                 alert("已抽完")
             }else{
