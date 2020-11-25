@@ -1,4 +1,4 @@
-var color = ['都可','紅','橙','黃','綠','藍','靛','紫','黑','白','灰'];
+var color = ['隨便','紅','橙','黃','綠','藍','靛','紫','黑','白','灰'];
 var shape = ['都可','圓形','固體','方形','六角形','五角形','不規則','三角形','柱','液體','角錐'];
 var locations = ['都可','廚房','廁所','辦公室','房間','客廳','陽台','健身房','室外','教室','球場'];
 var fullname = ['何彥穎','王嘉禾','劉怡婷','方建哲','蔡亞筑','呂學承','蔡承璋','黃宣燁','曾文瑀','陳子秝'];
@@ -49,36 +49,36 @@ var i = '';
                     colorHtml = `<td width="12%" style="background: white;">${color[id1]}</td>`;               
                 }else if(color[id1] == "灰"){
                     colorHtml = `<td width="12%" style="background: gray; color: white">${color[id1]}</td>`;               
-                }else if(color[id1] == "都可"){
+                }else if(color[id1] == "隨便"){
                     colorHtml = `<td width="12%">${color[id1]}</td>`;               
                 }
 
                 if(shape[id2] == "五角形"){
-                    shapeHtml = `<td width="12%" style="background: url(./images/5.png); background-size: contain; background-repeat: no-repeat; text-align: center">${shape[id2]}</td>`
+                    shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/5.png">${shape[id2]}</td>`
                 }else if(shape[id2] == "方形"){
-                    shapeHtml = `<td width="12%" style="background: url(./images/4.jpg); background-size: contain; background-repeat: no-repeat; text-align: center">${shape[id2]}</td>`
-                }else if(shape[id2] == "六角形"){
-                    shapeHtml = `<td width="12%" style="background: url(./images/6.png); background-size: contain; background-repeat: no-repeat; text-align: center">${shape[id2]}</td>`
+                    shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/4.jpg">${shape[id2]}</td>`
                 }else if(shape[id2] == "圓形"){
-                    shapeHtml = `<td width="12%" style="background: url(./images/0.jpg); background-size: contain; background-repeat: no-repeat; text-align: center">${shape[id2]}</td>`
+                    shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/0.jpg">${shape[id2]}</td>`
+                }else if(shape[id2] == "六角形"){
+                    shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/6.png">${shape[id2]}</td>`
                 }else if(shape[id2] == "固體"){
-                    shapeHtml = `<td width="12%" style="background: url(./images/solid.png); background-size: contain; background-repeat: no-repeat; text-align: center">${shape[id2]}</td>`
+                    shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/solid.png">${shape[id2]}</td>`
                 }else if(shape[id2] == "不規則"){
-                    shapeHtml = `<td width="12%" style="background: url(./images/slime.png); background-size: contain; background-repeat: no-repeat; text-align: center">${shape[id2]}</td>`
+                    shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/slime.png">${shape[id2]}</td>`
                 }else if(shape[id2] == "角錐"){
-                    shapeHtml = `<td width="12%" style="background: url(./images/pyramid.png); background-size: contain; background-repeat: no-repeat; text-align: center">${shape[id2]}</td>`
+                    shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/pyramid.png">${shape[id2]}</td>`
                 }else if(shape[id2] == "液體"){
-                    shapeHtml = `<td width="12%" style="background: url(./images/liquad.png); background-size: contain; background-repeat: no-repeat; text-align: center">${shape[id2]}</td>`
+                    shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/liquad.png">${shape[id2]}</td>`
                 }else if(shape[id2] == "柱"){
-                    shapeHtml = `<td width="12%" style="background: url(./images/fire.jpg); background-size: contain; background-repeat: no-repeat; text-align: center">${shape[id2]}</td>`
+                    shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/fire.jpg">${shape[id2]}</td>`
                 }else if(shape[id2] == "三角形"){
-                    shapeHtml = `<td width="12%" style="background: url(./images/3.png); background-size: contain; background-repeat: no-repeat; text-align: center">${shape[id2]}</td>`
+                    shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/3.png">${shape[id2]}</td>`
                 }else{
-                    shapeHtml=`<td width="12%">${shape[id2]}</td>`
+                    shapeHtml=`<td width="19%">${shape[id2]}</td>`
                 }
                 document.querySelector("#box").innerHTML +=
                 `   <tr>
-                        <td width="12%">${i}</td>
+                        <td width="5%">${i}</td>
                         <td width="12%">${fullname[id4]}</td>
                         ${colorHtml}
                         ${shapeHtml}
