@@ -3,7 +3,7 @@ var shape = ['圓形','固體','方形','六角形','五角形','不規則','三
 var locations = ['廚房','廁所','辦公室','房間','客廳','陽台','運動','室外'];
 var fullname = ['何彥穎','王嘉禾','劉怡婷','方建哲','蔡亞筑','呂學承','蔡承璋','黃宣燁','曾文瑀','陳子秝'];
     $(document).on("click", ".button", function(){
-        for(let i = 0; i < 10; i++){
+        // for(let i = 0; i < 10; i++){
             var id1 = Math.ceil(Math.random()*(color.length - 1));
             var id2 = Math.ceil(Math.random()*(shape.length - 1));
             var id3 = Math.ceil(Math.random()*(locations.length - 1));
@@ -37,7 +37,7 @@ var fullname = ['何彥穎','王嘉禾','劉怡婷','方建哲','蔡亞筑','呂
             `   ${fullname}
             `;
 
-        }
+        // }
         
     })
 
