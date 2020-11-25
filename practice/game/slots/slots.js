@@ -19,11 +19,13 @@ $('.slot').jSlots({
 
 $(document).on("click", "#playNormal", function(){
     let name = $("#name").val();
-    let color = $(".color").text();
-    let shape = $(".shape").text();
-    let location = $(".location").text();
+    let color = $(".color").find("li").text();
+    let shape = $(".shape").find("li").text();
+    let location = $(".location").find("li").text();
     console.log(name);
     console.log(color);
     console.log(shape);
     console.log(location);
 })
+
+
