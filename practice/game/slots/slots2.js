@@ -19,20 +19,24 @@ var fullname = ['何彥穎','王嘉禾','劉怡婷','方建哲','蔡亞筑','呂
             if(fullname.length == 0){
                 alert("已抽完")
             }else{
-                $(".color").text(color[id1]);
-                $(".shape").text(shape[id2]);
-                $(".locations").text(locations[id3]);
-                $(".fullname").text(fullname[id4]);
+                // $(".color").text(color[id1]);
+                // $(".shape").text(shape[id2]);
+                // $(".locations").text(locations[id3]);
+                // $(".fullname").text(fullname[id4]);
                 // console.log(fullname[id4]);
                 // $("#name option[value=" + name + "]").remove();
                 document.querySelector("#box").innerHTML +=
                 `   <tr>
-                        <td>${fullname[id4]}</td>
-                        <td>${color[id1]}</td>
-                        <td>${shape[id2]}</td>
-                        <td>${locations[id3]}</td>
+                        <td width="15%">${fullname[id4]}</td>
+                        <td width="15%">${color[id1]}</td>
+                        <td width="15%">${shape[id2]}</td>
+                        <td width="15%">${locations[id3]}</td>
+                        <td width="40%">${fullname[id4]} 要準備的是用在 ${locations[id3]}的 ${color[id1]}色 ${shape[id2]}東西</td>
                     </tr>
                 `;
+                // document.querySelector(".list").innerHTML +=
+                // `${fullname[id4]} 要準備的是用在 ${locations[id3]}的 ${color[id1]}色 ${shape[id2]}東西<br>
+                // `;
                 fullname.splice($.inArray(fullname[id4],fullname),1);
     
                 // console.log(fullname.length);
@@ -49,6 +53,7 @@ var fullname = ['何彥穎','王嘉禾','劉怡婷','方建哲','蔡亞筑','呂
                 document.querySelector(".fulllocationbox").innerHTML =
                 `地點:   ${locations}
                 `;
+
             }
            
 
@@ -59,14 +64,17 @@ var fullname = ['何彥穎','王嘉禾','劉怡婷','方建哲','蔡亞筑','呂
     $(document).on("click", ".reset", function(){
         fullname = ['何彥穎','王嘉禾','劉怡婷','方建哲','蔡亞筑','呂學承','蔡承璋','黃宣燁','曾文瑀','陳子秝'];
         document.querySelector(".fullnamebox").innerHTML =
-        `   ${fullname}
+        `人選:    ${fullname}
         `;
         document.querySelector("#box").innerHTML =
         `   
         `;
-        $(".color").text('???');
-        $(".shape").text('???');
-        $(".locations").text('???');
-        $(".fullname").text('???');
+        document.querySelector(".list").innerHTML +=
+        `
+        `;
+        // $(".color").text('???');
+        // $(".shape").text('???');
+        // $(".locations").text('???');
+        // $(".fullname").text('???');
     })
 

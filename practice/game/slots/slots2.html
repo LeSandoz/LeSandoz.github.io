@@ -15,6 +15,9 @@
           line-height: 40px;
           margin: 0 auto;
       }
+      .table{
+          /* width: 60%; */
+      }
   </style>
   <body class="container">
       <div class="wrap d-flex float-right">
@@ -31,27 +34,32 @@
             <option value="蔡承璋">蔡承璋</option>
             <option value="陳子秝">陳子秝</option>
         </select>要準備的是 -->
-        <div class="fullname">???</div>要準備的是
-        <div class="color">???</div>色
-        <div class="shape">???</div>用在
-        <div class="locations">???</div>的東西
+        <!-- <div class="fullname">???</div>要準備的是用在
+        <div class="locations">???</div>的 
+        <div class="color">???</div>色 
+        <div class="shape">???</div>東西 -->
         <button type="button" class="btn btn-primary button">Gogo</button></div>
-        <div class="fullnamebox">人選: 何彥穎,王嘉禾,劉怡婷,方建哲,蔡亞筑,呂學承, 蔡承璋, 黃宣燁,曾文瑀,陳子秝</div>
+        <div class="fullnamebox">人選: 何彥穎,王嘉禾,劉怡婷,方建哲,蔡亞筑,呂學承,蔡承璋,黃宣燁,曾文瑀,陳子秝</div>
         <div class="fullcolorbox">顏色: 都可,紅,橙,黃,綠,藍,靛,紫,黑,白,灰</div>
         <div class="fullshapebox">形狀: 都可,圓形,固體,方形,六角形,五角形,不規則,三角形,圓柱,液體,長條型</div>
         <div class="fulllocationbox">地點: 都可,廚房,廁所,辦公室,房間,客廳,陽台,健身房,室外,教室,球場</div>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>名字</th>
-                    <th>顏色</th>
-                    <th>形狀</th>
-                    <th>地點</th>
-                </tr>
-            </thead>
-            <tbody id="box">
-            </tbody>
-        </table>
+        <div class="d-flex">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th width="15%">名字</th>
+                        <th width="15%">顏色</th>
+                        <th width="15%">形狀</th>
+                        <th width="15%">地點</th>
+                        <th width="40%">總結</th>
+                    </tr>
+                </thead>
+                <tbody id="box">
+                </tbody>
+            </table>
+            <!-- <div class="list"></div> -->
+        </div>
+
         <button type="button" class="btn btn-primary reset float-right">reset</button></div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
