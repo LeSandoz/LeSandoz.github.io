@@ -11,9 +11,10 @@ var i = '';
             var id3 = Math.round(Math.random()*(locations.length - 1));
             var id4 = Math.round(Math.random()*(fullname.length - 1));
             var colorHtml = '';
+            var shapeHtml = '';
             i++;
             // var name = $("#name").val();
-            // console.log(id1);
+            console.log(color[id1]);
             // console.log(id2);
             // console.log(id3);
             // console.log(id4);
@@ -29,32 +30,54 @@ var i = '';
                 // console.log(fullname[id4]);
                 // $("#name option[value=" + name + "]").remove();
                 if(color[id1] == "藍"){
-                    colorHtml = `<td width="12%" style="color: skyblue;">${color[id1]}</td>`;
+                    colorHtml = `<td width="12%" style="background: skyblue; color: white">${color[id1]}</td>`;
                 }else if(color[id1] == "紅"){
-                    colorHtml = `<td width="12%" style="color: red;">${color[id1]}</td>`;               
+                    colorHtml = `<td width="12%" style="background: red; color: white">${color[id1]}</td>`;               
                 }else if(color[id1] == "橙"){
-                    colorHtml = `<td width="12%" style="color: orange;">${color[id1]}</td>`;               
+                    colorHtml = `<td width="12%" style="background: orange; color: white">${color[id1]}</td>`;               
                 }else if(color[id1] == "黃"){
-                    colorHtml = `<td width="12%" style="color: yellow;">${color[id1]}</td>`;               
+                    colorHtml = `<td width="12%" style="background: yellow;">${color[id1]}</td>`;               
                 }else if(color[id1] == "綠"){
-                    colorHtml = `<td width="12%" style="color: green;">${color[id1]}</td>`;               
+                    colorHtml = `<td width="12%" style="background: green; color: white">${color[id1]}</td>`;               
                 }else if(color[id1] == "靛"){
-                    colorHtml = `<td width="12%" style="color: blue;">${color[id1]}</td>`;               
+                    colorHtml = `<td width="12%" style="background: blue; color: white">${color[id1]}</td>`;               
                 }else if(color[id1] == "紫"){
-                    colorHtml = `<td width="12%" style="color: purple;">${color[id1]}</td>`;               
+                    colorHtml = `<td width="12%" style="background: purple; color: white">${color[id1]}</td>`;               
                 }else if(color[id1] == "黑"){
-                    colorHtml = `<td width="12%" style="color: black;">${color[id1]}</td>`;               
+                    colorHtml = `<td width="12%" style="background: black; color: white">${color[id1]}</td>`;               
                 }else if(color[id1] == "白"){
-                    colorHtml = `<td width="12%" style="color: white; background: black;">${color[id1]}</td>`;               
+                    colorHtml = `<td width="12%" style="background: white;">${color[id1]}</td>`;               
                 }else if(color[id1] == "灰"){
-                    colorHtml = `<td width="12%" style="color: gray;">${color[id1]}</td>`;               
+                    colorHtml = `<td width="12%" style="background: gray; color: white">${color[id1]}</td>`;               
+                }else if(color[id1] == "都可"){
+                    colorHtml = `<td width="12%">${color[id1]}</td>`;               
+                }
+
+                if(shape[id2] == "五角形"){
+                    shapeHtml = `<td width="12%" style="background: url(./images/5.png); background-size: contain; background-repeat: no-repeat; text-align: center">${shape[id2]}</td>`
+                }else if(shape[id2] == "方形"){
+                    shapeHtml = `<td width="12%" style="background: url(./images/4.jpg); background-size: contain; background-repeat: no-repeat; text-align: center">${shape[id2]}</td>`
+                }else if(shape[id2] == "六角形"){
+                    shapeHtml = `<td width="12%" style="background: url(./images/6.png); background-size: contain; background-repeat: no-repeat; text-align: center">${shape[id2]}</td>`
+                }else if(shape[id2] == "方形"){
+                    shapeHtml = `<td width="12%" style="background: url(./images/4.jpg); background-size: contain; background-repeat: no-repeat; text-align: center">${shape[id2]}</td>`
+                }else if(shape[id2] == "方形"){
+                    shapeHtml = `<td width="12%" style="background: url(./images/4.jpg); background-size: contain; background-repeat: no-repeat; text-align: center">${shape[id2]}</td>`
+                }else if(shape[id2] == "方形"){
+                    shapeHtml = `<td width="12%" style="background: url(./images/4.jpg); background-size: contain; background-repeat: no-repeat; text-align: center">${shape[id2]}</td>`
+                }else if(shape[id2] == "方形"){
+                    shapeHtml = `<td width="12%" style="background: url(./images/4.jpg); background-size: contain; background-repeat: no-repeat; text-align: center">${shape[id2]}</td>`
+                }else if(shape[id2] == "方形"){
+                    shapeHtml = `<td width="12%" style="background: url(./images/4.jpg); background-size: contain; background-repeat: no-repeat; text-align: center">${shape[id2]}</td>`
+                }else{
+                    shapeHtml=`<td width="12%">${shape[id2]}</td>`
                 }
                 document.querySelector("#box").innerHTML +=
                 `   <tr>
                         <td width="12%">${i}</td>
                         <td width="12%">${fullname[id4]}</td>
                         ${colorHtml}
-                        <td width="12%">${shape[id2]}</td>
+                        ${shapeHtml}
                         <td width="12%">${locations[id3]}</td>
                         <td width="40%">${fullname[id4]} 要準備的是用在 ${locations[id3]}的 ${color[id1]}色 ${shape[id2]}東西</td>
                     </tr>
