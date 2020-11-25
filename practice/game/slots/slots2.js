@@ -1,5 +1,5 @@
 var color = ['隨便','紅','橙','黃','綠','藍','靛','紫','黑','白','灰'];
-var shape = ['都可','圓形','固體','方形','六角形','五角形','不規則','三角形','柱','液體','角錐'];
+var shape = ['氣體','圓形','固體','方形','六角形','五角形','不規則','三角形','柱','液體','角錐'];
 var locations = ['都可','廚房','廁所','辦公室','房間','客廳','陽台','健身房','室外','教室','球場'];
 var fullname = ['何彥穎','王嘉禾','劉怡婷','方建哲','蔡亞筑','呂學承','蔡承璋','黃宣燁','曾文瑀','陳子秝'];
 var i = '';
@@ -74,7 +74,7 @@ var i = '';
                 }else if(shape[id2] == "三角形"){
                     shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/3.png">${shape[id2]}</td>`
                 }else{
-                    shapeHtml=`<td width="19%">${shape[id2]}</td>`
+                    shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/air.jpg">${shape[id2]}</td>`
                 }
                 document.querySelector("#box").innerHTML +=
                 `   <tr>
