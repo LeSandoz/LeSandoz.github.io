@@ -60,7 +60,7 @@ var i = '';
                 }else if(shape[id2] == "球形"){
                     shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/0.jpg">${shape[id2]}</td>`
                 }else if(shape[id2] == "硬"){
-                    shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/ooxx.jpg">${shape[id2]}</td>`
+                    shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/hard.jpg">${shape[id2]}</td>`
                 }else if(shape[id2] == "固體"){
                     shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/solid.png">${shape[id2]}</td>`
                 }else if(shape[id2] == "不規則"){
@@ -74,7 +74,7 @@ var i = '';
                 }else if(shape[id2] == "光滑"){
                     shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/smooth.jpg">${shape[id2]}</td>`
                 }else if(shape[id2] == "坑坑疤疤"){
-                    shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/hard.jpg">${shape[id2]}</td>`
+                    shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/ooxx.jpg">${shape[id2]}</td>`
                 }else{
                     shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/air.jpg">${shape[id2]}</td>`
                 }
