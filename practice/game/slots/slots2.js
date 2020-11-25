@@ -38,7 +38,16 @@ var fullname = ['何彥穎','王嘉禾','劉怡婷','方建哲','蔡亞筑','呂
                 // console.log(fullname.length);
     
                 document.querySelector(".fullnamebox").innerHTML =
-                `   ${fullname}
+                `人選:    ${fullname}
+                `;
+                document.querySelector(".fullcolorbox").innerHTML =
+                `顏色:    ${color}
+                `;
+                document.querySelector(".fullshapebox").innerHTML =
+                `形狀:    ${shape}
+                `;
+                document.querySelector(".fulllocationbox").innerHTML =
+                `地點:   ${locations}
                 `;
             }
            
