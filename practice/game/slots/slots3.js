@@ -71,6 +71,12 @@ var i = '';
 
             if(fullname.length == 0){
                 alert("已抽完")
+            }else if(color.length == 0){
+                alert("請輸入顏色")
+            }else if(shape.length == 0){
+                alert("請輸入形狀")
+            }else if(locations.length == 0){
+                alert("請輸入地點")
             }else{
 
 
