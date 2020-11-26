@@ -41,7 +41,7 @@ var i = '';
         }else{
             shape.push(shapeText);
             document.querySelector(".fullshapebox").innerHTML =
-            `人選:    ${shape}
+            `形狀:    ${shape}
             `;
             $("#shapeText").val('');
         }
@@ -53,11 +53,63 @@ var i = '';
         }else{
             locations.push(locationText);
             document.querySelector(".fulllocationbox").innerHTML =
-            `人選:    ${locations}
+            `地點:    ${locations}
             `;
             $("#locationText").val('');
         }
     })
+    
+    $(document).on("click", ".del1", function(){
+        var nameText = $("#nameText").val();
+        if(nameText == ''){
+            alert("請輸入要移除的名字")
+        }else{
+            fullname.splice($.inArray(nameText,fullname),1);
+            document.querySelector(".fullnamebox").innerHTML =
+            `人選:    ${fullname}
+            `;
+            $("#nameText").val('');
+        }
+    })
+    $(document).on("click", ".del2", function(){
+        var colorText = $("#colorText").val();
+        if(colorText == ''){
+            alert("請輸入要移除的顏色")
+        }else{
+            color.splice($.inArray(colorText,color),1);
+            document.querySelector(".fullcolorbox").innerHTML =
+            `顏色:    ${color}
+            `;
+            $("#colorText").val('');
+        }
+    })
+    $(document).on("click", ".del3", function(){
+        var shapeText = $("#shapeText").val();
+        if(shapeText == ''){
+            alert("請輸入要移除的形狀")
+        }else{
+            shape.splice($.inArray(shapeText,shape),1);
+            document.querySelector(".fullshapebox").innerHTML =
+            `形狀:    ${shape}
+            `;
+            $("#shapeText").val('');
+            console.log(shape)
+        }
+    })
+    $(document).on("click", ".del4", function(){
+        var locationText = $("#locationText").val();
+        if(locationText == ''){
+            alert("請輸入要移除的地點")
+        }else{
+            locations.splice($.inArray(locationText,locations),1);
+            document.querySelector(".fulllocationbox").innerHTML =
+            `地點:    ${locations}
+            `;
+            $("#locationText").val('');
+            console.log(locations)
+        }
+    })
+   
     $(document).on("click", ".button", function(){
         // for(let i = 0; i < 10; i++){
             var id1 = Math.round(Math.random()*(color.length - 1));
