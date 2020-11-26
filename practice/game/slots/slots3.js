@@ -143,6 +143,7 @@ var i = '';
                 `;
                 document.querySelector("#main2").innerHTML +=
                 `   <tr>
+                        <td width="7%">${i}</td>
                         <td width="44%">${fullname[id4]} 要準備的是用在 ${locations[id3]}的 ${color[id1]}色 ${shape[id2]}狀東西</td>
                     </tr>
                 `;
