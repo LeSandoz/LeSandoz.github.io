@@ -16,6 +16,9 @@ var i = '';
         }else{
             fullname.push(nameText);
             fullname2.push(nameText);
+            console.log(nameText);
+            console.log(fullname);
+            console.log(fullname2);
             document.querySelector(".fullnamebox").innerHTML =
             `人選:    ${fullname}
             `;
@@ -65,6 +68,7 @@ var i = '';
             alert("請輸入要移除的名字")
         }else{
             fullname.splice($.inArray(nameText,fullname),1);
+            fullname2.splice($.inArray(nameText,fullname2),1);
             document.querySelector(".fullnamebox").innerHTML =
             `人選:    ${fullname}
             `;
@@ -118,7 +122,6 @@ var i = '';
             var id4 = Math.round(Math.random()*(fullname.length - 1));
             var colorHtml = '';
             var shapeHtml = '';
-            i++;
 
 
             if(fullname.length == 0){
@@ -131,6 +134,7 @@ var i = '';
                 alert("請輸入地點")
             }else{
 
+                i++;
 
                 document.querySelector("#main").innerHTML +=
                 `   <tr>
@@ -171,9 +175,14 @@ var i = '';
     })
 
     $(document).on("click", ".reset", function(){
-        fullname = fullname2;
+        console.log(fullname);
+        for(let j = 0; j < fullname2.length; j++){
+            fullname.push(fullname2[j]);
+        }
+        console.log(fullname);
+        console.log(fullname2);
         document.querySelector(".fullnamebox").innerHTML =
-        `人選:    ${fullname2}
+        `人選:    ${fullname}
         `;
         document.querySelector("#main").innerHTML =
         `   
