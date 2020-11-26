@@ -1,6 +1,6 @@
 var color = ['隨便','紅','橙','黃','綠','藍','靛','紫','黑','白','灰'];
-var shape = ['氣體','圓形','固體','方形','六角形','五角形','不規則','三角形','柱','液體','角錐'];
-var locations = ['都可','廚房','廁所','辦公室','房間','客廳','陽台','健身房','室外','教室','球場'];
+var shape = ['氣體','球形','固體','方形','硬','軟','不規則','光滑','柱','液體','角錐','坑坑疤疤'];
+var locations = ['都可','廚房','廁所','辦公室','房間','客廳','陽台','健身房','室外','球場'];
 var fullname = ['何彥穎','王嘉禾','劉怡婷','方建哲','蔡亞筑','呂學承','蔡承璋','黃宣燁','曾文瑀','陳子秝'];
 var i = '';
 
@@ -53,14 +53,14 @@ var i = '';
                     colorHtml = `<td width="10%">${color[id1]}</td>`;               
                 }
 
-                if(shape[id2] == "五角形"){
-                    shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/5.png">${shape[id2]}</td>`
+                if(shape[id2] == "軟"){
+                    shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/soft.png">${shape[id2]}</td>`
                 }else if(shape[id2] == "方形"){
                     shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/4.jpg">${shape[id2]}</td>`
-                }else if(shape[id2] == "圓形"){
+                }else if(shape[id2] == "球形"){
                     shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/0.jpg">${shape[id2]}</td>`
-                }else if(shape[id2] == "六角形"){
-                    shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/6.png">${shape[id2]}</td>`
+                }else if(shape[id2] == "硬"){
+                    shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/hard.jpg">${shape[id2]}</td>`
                 }else if(shape[id2] == "固體"){
                     shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/solid.png">${shape[id2]}</td>`
                 }else if(shape[id2] == "不規則"){
@@ -71,8 +71,10 @@ var i = '';
                     shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/liquad.png">${shape[id2]}</td>`
                 }else if(shape[id2] == "柱"){
                     shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/fire.jpg">${shape[id2]}</td>`
-                }else if(shape[id2] == "三角形"){
-                    shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/3.png">${shape[id2]}</td>`
+                }else if(shape[id2] == "光滑"){
+                    shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/smooth.jpg">${shape[id2]}</td>`
+                }else if(shape[id2] == "坑坑疤疤"){
+                    shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/ooxx.jpg">${shape[id2]}</td>`
                 }else{
                     shapeHtml = `<td width="19%" style="text-align: center"><img src="./images/air.jpg">${shape[id2]}</td>`
                 }
