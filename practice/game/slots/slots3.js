@@ -178,6 +178,9 @@ var i = '';
         document.querySelector("#main").innerHTML =
         `   
         `;
+        document.querySelector("#main2").innerHTML =
+        `   
+        `;
         i = 0;
         // $(".color").text('???');
         // $(".shape").text('???');
