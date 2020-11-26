@@ -81,6 +81,10 @@ var i = '';
                         <td width="10%">${color[id1]}</td>
                         <td width="10%">${shape[id2]}</td>
                         <td width="10%">${locations[id3]}</td>
+                    </tr>
+                `;
+                document.querySelector("#main2").innerHTML +=
+                `   <tr>
                         <td width="44%">${fullname[id4]} 要準備的是用在 ${locations[id3]}的 ${color[id1]}色 ${shape[id2]}狀東西</td>
                     </tr>
                 `;
@@ -123,3 +127,19 @@ var i = '';
         // console.log(i)
     })
 
+    $(document).on("click", ".change1", function(){
+        $("#mainTitle").addClass("d-none");
+        $("#main").addClass("d-none");
+        $("#main2").removeClass("d-none");
+        $("#main2Title").removeClass("d-none");
+        $(".change1").addClass("change2");
+        $(".change1").removeClass("change1");
+    })
+    $(document).on("click", ".change2", function(){
+        $("#main2Title").addClass("d-none");
+        $("#main2").addClass("d-none");
+        $("#main").removeClass("d-none");
+        $("#mainTitle").removeClass("d-none");
+        $(".change2").addClass("change1");
+        $(".change2").removeClass("change2");
+    })
