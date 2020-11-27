@@ -1,372 +1,1025 @@
 
 <!DOCTYPE html>
-<html dir="ltr" lang="zh-tw">
-
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="author" content="SemiColonWeb" />
-    <!-- Stylesheets
-	============================================= -->
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Roboto:300,400,500,700" rel="stylesheet" type="text/css" />
-    <!-- <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
-    <link rel="stylesheet" href="css/onepage.css" type="text/css" />
-    <link rel="stylesheet" href="css/font-icon.css" type="text/css" />
-    <link rel="stylesheet" href="css/dark.css" type="text/css" />
-    <link rel="stylesheet" href="css/et-line.css" type="text/css" />
-    <link rel="stylesheet" href="css/animate.css" type="text/css" />
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
-    <link rel="stylesheet" href="css/responsive.css" type="text/css" />
-    <link rel="stylesheet" href="css/custom.css" type="text/css" /> -->
-
-    <link rel="stylesheet" href="http://raw.githack.com/LeSandoz/LeSandoz.github.io/master/practice/game/arabin/css/bootstrap.css" type="text/css" />
-    <link rel="stylesheet" href="http://raw.githack.com/LeSandoz/LeSandoz.github.io/master/practice/game/arabin/css/style.css" type="text/css" />
-    <link rel="stylesheet" href="http://raw.githack.com/LeSandoz/LeSandoz.github.io/master/practice/game/arabin/css/onepage.css" type="text/css" />
-    <link rel="stylesheet" href="http://raw.githack.com/LeSandoz/LeSandoz.github.io/master/practice/game/arabin/css/font-icon.css" type="text/css" />
-    <link rel="stylesheet" href="http://raw.githack.com/LeSandoz/LeSandoz.github.io/master/practice/game/arabin/css/dark.css" type="text/css" />
-    <link rel="stylesheet" href="http://raw.githack.com/LeSandoz/LeSandoz.github.io/master/practice/game/arabin/css/et-line.css" type="text/css" />
-    <link rel="stylesheet" href="http://raw.githack.com/LeSandoz/LeSandoz.github.io/master/practice/game/arabin/css/animate.css" type="text/css" />
-    <link rel="stylesheet" href="http://raw.githack.com/LeSandoz/LeSandoz.github.io/master/practice/game/arabin/css/magnific-popup.css" type="text/css" />
-    <link rel="stylesheet" href="http://raw.githack.com/LeSandoz/LeSandoz.github.io/master/practice/game/arabin/css/responsive.css" type="text/css" />
-    <link rel="stylesheet" href="http://raw.githack.com/LeSandoz/LeSandoz.github.io/master/practice/game/arabin/css/custom.css" type="text/css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137489468-4"></script>
+<html lang="zh-tw" style="height:100%;">
+  <head>
+      <script>
+        dataLayer = [];
+      </script>
+    
+      <!-- Cyberbiz Google Tag Manager -->
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','cyb','GTM-TXD9LVJ');</script>
+      <!-- End Cyberbiz Google Tag Manager -->
+    
+      <script>
+        function getUserFromCookie(){
+          if(localStorage.customer && localStorage.customer != '{"notLogin":true}'){
+            return JSON.parse(localStorage.customer).id;
+          }else{
+            return "";
+          }
+        }
+        cyb = [{
+          'shop': "15085-唐芯生技ThomsonMost",
+          'shop_plan': "enterprise",
+          'userId': getUserFromCookie()
+        }];
+      </script>
+    
+      <!-- Cyberbiz Google Tag Manager -->
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','cyb','GTM-P7528MQ');</script>
+      <!-- End Cyberbiz Google Tag Manager -->
+    
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168379446-1"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
+  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-137489468-4');
+  gtag('config', 'UA-168379446-1');
+    </script>
+    <!-- Facebook Pixel Code -->
+    <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '341327377098091');
+  fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=341327377098091&ev=PageView&noscript=1"
+    /></noscript>
+<!-- End Facebook Pixel Code -->
+
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
+<div id="fanpage_sidebar">
+<img class="fb_vertical" src="" />
+<div class="fanpage_sidebar_main">
+<iframe allowtransparency="true" frame scrolling="no" src=""></iframe>
+</div>
+</div>
+<script>
+(function($) {
+var fanpage = "https://www.facebook.com/thomsonmost", // FB 粉絲頁網址
+width = 240, // 粉絲頁外掛寬度
+height = 215, // 粉絲頁外掛高度
+top = "20%", // 距離上方的百分比
+img = "https://4.bp.blogspot.com/-l3vkf4NEG4U/VtmJUciss-I/AAAAAAAANb0/nYRZBfojpA0/w66/fb-vertical.png", // Facebook 圖案
+imgWidth = 33, // 預設圖案寬度
+imgHeight = 105, // 預設圖案高度
+showFace = "true", // 是否顯示朋友頭像
+smallHeader = "false", // 是否顯示小標題,
+hideCover = "false", // 是否隱藏封面圖,
+showPost = "false", // 是否顯示最新貼文
+language = "zh_TW"; // 語系
+ 
+var _0x90f9=["\x72\x20\x65\x3D\x22\x2F\x2F\x63\x2E\x39\x2E\x64\x2F\x44\x2E\x35\x2F\x48\x2F\x6A\x2E\x73\x3F\x37\x3D\x22\x2B\x47\x2B\x22\x26\x31\x3D\x22\x2B\x31\x2B\x22\x26\x32\x3D\x22\x2B\x32\x2B\x22\x26\x4D\x3D\x22\x2B\x31\x37\x2B\x22\x26\x31\x38\x3D\x22\x2B\x31\x62\x2B\x22\x26\x31\x64\x3D\x22\x2B\x31\x65\x2B\x22\x26\x31\x66\x3D\x22\x2B\x6F\x2B\x22\x26\x70\x3D\x22\x2B\x71\x2C\x62\x3D\x22\x3C\x61\x20\x74\x3D\x27\u7DCA\u8CBC\u87A2\u5E55\u908A\u7DE3\u7684\u6D6E\u52D5\x75\u7C89\u7D72\u5718\u5916\u639B\x5C\x6E\u7A0B\u5F0F\u8A2D\u8A08\uFF1A\x76\x20\x77\x27\x20\x78\x3D\x27\x79\x27\x20\x7A\x3D\x27\x41\x2D\x32\x3A\x42\x3B\x20\x43\x2D\x36\x3A\x2D\x45\x3B\x20\x46\x2D\x33\x3A\x20\x6D\x3B\x20\x66\x2D\x49\x3A\x20\x4A\x3B\x20\x4B\x3A\x20\x23\x4C\x3B\x20\x67\x2D\x4E\x3A\x20\x4F\x2C\x20\x50\x2C\x20\x51\x2D\x52\x3B\x20\x67\x2D\x53\x3A\x20\x54\x3B\x20\x66\x2D\x55\x3A\x33\x3B\x20\x56\x3A\x57\x3B\x27\x20\x37\x3D\x27\x58\x3A\x2F\x2F\x63\x2E\x59\x2E\x64\x2F\x5A\x2F\x31\x30\x2F\x39\x2D\x6A\x2D\x31\x31\x2D\x31\x32\x2D\x31\x33\x2E\x31\x34\x27\x3E\u24E6\x20\x31\x35\x20\x31\x36\x3C\x2F\x61\x3E\x22\x3B\x24\x28\x22\x23\x68\x22\x29\x2E\x69\x28\x7B\x31\x39\x3A\x22\x31\x61\x22\x2C\x31\x3A\x31\x2B\x22\x34\x22\x2C\x33\x3A\x22\x2D\x22\x2B\x31\x2B\x22\x34\x22\x2C\x36\x3A\x36\x7D\x29\x2E\x31\x63\x28\x6B\x28\x29\x7B\x24\x28\x6C\x29\x2E\x38\x28\x7B\x33\x3A\x30\x7D\x29\x7D\x2C\x6B\x28\x29\x7B\x24\x28\x6C\x29\x2E\x38\x28\x7B\x33\x3A\x22\x2D\x22\x2B\x31\x2B\x22\x34\x22\x7D\x29\x7D\x29\x3B\x24\x28\x22\x23\x68\x20\x31\x67\x22\x29\x2E\x31\x68\x28\x22\x31\x69\x22\x2C\x65\x29\x2E\x69\x28\x7B\x31\x3A\x31\x2B\x22\x34\x22\x2C\x32\x3A\x32\x2B\x22\x34\x22\x7D\x29\x2E\x31\x6A\x28\x62\x29\x3B","\x7C","\x73\x70\x6C\x69\x74","\x7C\x77\x69\x64\x74\x68\x7C\x68\x65\x69\x67\x68\x74\x7C\x72\x69\x67\x68\x74\x7C\x70\x78\x7C\x7C\x74\x6F\x70\x7C\x68\x72\x65\x66\x7C\x61\x6E\x69\x6D\x61\x74\x65\x7C\x66\x61\x63\x65\x62\x6F\x6F\x6B\x7C\x7C\x69\x6E\x66\x6F\x7C\x77\x77\x77\x7C\x63\x6F\x6D\x7C\x69\x66\x72\x61\x6D\x65\x53\x72\x63\x7C\x74\x65\x78\x74\x7C\x66\x6F\x6E\x74\x7C\x66\x61\x6E\x70\x61\x67\x65\x5F\x73\x69\x64\x65\x62\x61\x72\x7C\x63\x73\x73\x7C\x70\x61\x67\x65\x7C\x66\x75\x6E\x63\x74\x69\x6F\x6E\x7C\x74\x68\x69\x73\x7C\x31\x30\x70\x78\x7C\x7C\x73\x68\x6F\x77\x50\x6F\x73\x74\x7C\x6C\x6F\x63\x61\x6C\x65\x7C\x6C\x61\x6E\x67\x75\x61\x67\x65\x7C\x76\x61\x72\x7C\x70\x68\x70\x7C\x74\x69\x74\x6C\x65\x7C\x46\x42\x7C\x57\x46\x55\x7C\x42\x4C\x4F\x47\x7C\x74\x61\x72\x67\x65\x74\x7C\x5F\x62\x6C\x61\x6E\x6B\x7C\x73\x74\x79\x6C\x65\x7C\x6C\x69\x6E\x65\x7C\x32\x34\x70\x78\x7C\x6D\x61\x72\x67\x69\x6E\x7C\x76\x32\x7C\x34\x70\x78\x7C\x70\x61\x64\x64\x69\x6E\x67\x7C\x66\x61\x6E\x70\x61\x67\x65\x7C\x70\x6C\x75\x67\x69\x6E\x73\x7C\x64\x65\x63\x6F\x72\x61\x74\x69\x6F\x6E\x7C\x6E\x6F\x6E\x65\x7C\x63\x6F\x6C\x6F\x72\x7C\x63\x63\x63\x7C\x73\x68\x6F\x77\x5F\x66\x61\x63\x65\x70\x69\x6C\x65\x7C\x66\x61\x6D\x69\x6C\x79\x7C\x68\x65\x6C\x76\x65\x74\x69\x63\x61\x7C\x61\x72\x69\x61\x6C\x7C\x73\x61\x6E\x73\x7C\x73\x65\x72\x69\x66\x7C\x73\x69\x7A\x65\x7C\x31\x31\x70\x78\x7C\x61\x6C\x69\x67\x6E\x7C\x64\x69\x73\x70\x6C\x61\x79\x7C\x62\x6C\x6F\x63\x6B\x7C\x68\x74\x74\x70\x7C\x77\x66\x75\x62\x6C\x6F\x67\x7C\x32\x30\x31\x36\x7C\x30\x33\x7C\x70\x6C\x75\x67\x69\x6E\x7C\x66\x6C\x6F\x61\x74\x69\x6E\x67\x7C\x73\x69\x64\x65\x62\x61\x72\x7C\x68\x74\x6D\x6C\x7C\x46\x61\x63\x65\x62\x6F\x6F\x6B\x7C\x46\x61\x6E\x70\x61\x67\x65\x7C\x73\x68\x6F\x77\x46\x61\x63\x65\x7C\x73\x6D\x61\x6C\x6C\x5F\x68\x65\x61\x64\x65\x72\x7C\x70\x6F\x73\x69\x74\x69\x6F\x6E\x7C\x66\x69\x78\x65\x64\x7C\x73\x6D\x61\x6C\x6C\x48\x65\x61\x64\x65\x72\x7C\x68\x6F\x76\x65\x72\x7C\x68\x69\x64\x65\x5F\x63\x6F\x76\x65\x72\x7C\x68\x69\x64\x65\x43\x6F\x76\x65\x72\x7C\x73\x68\x6F\x77\x5F\x70\x6F\x73\x74\x73\x7C\x69\x66\x72\x61\x6D\x65\x7C\x61\x74\x74\x72\x7C\x73\x72\x63\x7C\x61\x66\x74\x65\x72","","\x66\x72\x6F\x6D\x43\x68\x61\x72\x43\x6F\x64\x65","\x72\x65\x70\x6C\x61\x63\x65","\x5C\x77\x2B","\x5C\x62","\x67"];eval(function(_0x27dcx1,_0x27dcx2,_0x27dcx3,_0x27dcx4,_0x27dcx5,_0x27dcx6){_0x27dcx5=function(_0x27dcx3){return (_0x27dcx3<_0x27dcx2?_0x90f9[4]:_0x27dcx5(parseInt(_0x27dcx3/_0x27dcx2)))+((_0x27dcx3=_0x27dcx3%_0x27dcx2)>35?String[_0x90f9[5]](_0x27dcx3+29):_0x27dcx3.toString(36))};if(!_0x90f9[4][_0x90f9[6]](/^/,String)){while(_0x27dcx3--){_0x27dcx6[_0x27dcx5(_0x27dcx3)]=_0x27dcx4[_0x27dcx3]||_0x27dcx5(_0x27dcx3)};_0x27dcx4=[function(_0x27dcx5){return _0x27dcx6[_0x27dcx5]}];_0x27dcx5=function(){return _0x90f9[7]};_0x27dcx3=1};while(_0x27dcx3--){if(_0x27dcx4[_0x27dcx3]){_0x27dcx1=_0x27dcx1[_0x90f9[6]]( new RegExp(_0x90f9[8]+_0x27dcx5(_0x27dcx3)+_0x90f9[8],_0x90f9[9]),_0x27dcx4[_0x27dcx3])}};return _0x27dcx1}(_0x90f9[0],62,82,_0x90f9[3][_0x90f9[2]](_0x90f9[1]),0,{}));$(".fb_vertical").attr("src",img).css({top:(height+24-imgHeight)/2+"px",left:"-"+imgWidth+"px",width:imgWidth+"px"});
+})(jQuery);
 </script>
-    <!-- Document Title
-	============================================= -->
-    <title>Arabinoseintro</title>
-</head>
 <style>
-    /* animate.css */
-    /* bootstrap.css */
-    /* custom.css */
-    /* dark.css */
-    /* et-line.css */
-    /* font-icon.css */
-    /* magnific-popup.css */
-    /* onepage.css */
-    /* responsive.css */
-    /* bootstrap.css */
-
+#fanpage_sidebar {
+z-index: 999;
+position: fixed;
+}
+.fb_vertical {
+position: absolute;
+}
+.fanpage_sidebar_main {
+background-color: #f6f7f8;
+}
+#fanpage_sidebar iframe {
+border: none;
+overflow: hidden;
+}
 </style>
-<body class="stretched side-push-panel">
-    <div class="body-overlay"></div>
-   
-    <!-- Document Wrapper
-	============================================= -->
-    <div id="wrapper" class="clearfix">
-        <!-- Header
-		============================================= -->
-        <header id="header" class="full-header transparent-header dark static-sticky" data-sticky-class="not-dark" data-sticky-offset="full" data-sticky-offset-negative="100">
-            <div id="header-wrap">
-                <div class="container clearfix">
-                    <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
-                    <!-- Logo
-					============================================= -->
-                    <div id="logo">
-                        <a href="index.html" class="standard-logo" data-dark-logo="https://github.com/LeSandoz/LeSandoz.github.io/blob/master/practice/game/arabin/images/2019/canvasone-dark.png?raw=true"><img src="https://github.com/LeSandoz/LeSandoz.github.io/blob/master/practice/game/arabin/images/2019/canvasone.png?raw=true" alt="Arabinoseintro"></a>
-                        <a href="index.html" class="retina-logo" data-dark-logo="https://github.com/LeSandoz/LeSandoz.github.io/blob/master/practice/game/arabin/images/2019/canvasone-dark@2x.png?raw=true"><img src="https://github.com/LeSandoz/LeSandoz.github.io/blob/master/practice/game/arabin/images/2019/canvasone@2x.png?raw=true" alt="Arabinoseintro"></a>
-                    </div><!-- #logo end -->
-                    <!-- Primary Navigation
-					============================================= -->
-                    <nav id="primary-menu">
-                        <ul class="one-page-menu" data-easing="easeInOutExpo" data-speed="1250" data-offset="65">
-                            <li><a href="#" data-href="#wrapper">
-                                    <div>首頁</div>
-                                </a></li>
-                            <li><a href="#" data-href="#section-works">
-                                    <div>L-阿拉伯糖</div>
-                                </a></li>
-                            <li><a href="#" data-href="#section-works02">
-                                    <div>膳食纖維</div>
-                                </a></li>
-                        </ul>
-                    </nav><!-- #primary-menu end -->
-                </div>
-            </div>
-        </header><!-- #header end -->
-        <!-- Slider
-		============================================= -->
-        <section id="slider" class="slider-element slider-parallax full-screen force-full-screen">
-            <div class="slider-parallax-inner">
-                <div class="full-screen force-full-screen row center dark section nopadding nomargin noborder ohidden">
-                    <div class="col-6 nopadding full-screen force-full-screen dark" style="background-image: url('https://github.com/LeSandoz/LeSandoz.github.io/blob/master/practice/game/arabin/images/2019/1.jpg?raw=true'); background-size: cover;">
-                        <div class="vertical-middle" style="z-index: 2;">
-                            <div class="d-none d-md-block"><a id="play-hero-video" href="https://github.com/LeSandoz/LeSandoz.github.io/blob/master/practice/game/arabin/images/2019/L0.webm?raw=true" class="big-video-button bottommargin" data-lightbox="iframe"><i class="icon-line-play"></i></a></div>
-                            <div class="emphasis-title divcenter" style="max-width: 450px;">
-                                <h1 class="t700 font-body ls1 font" style="font-size: 38px;">L-阿拉伯糖</h1>
-                            </div>
-                            <div class="clear"></div>
-                            <a href="#" class="button button-border button-light button-circle" data-scrollto="#section-works" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">了解更多</a>
-                        </div>
-                        <div class="video-wrap" style="z-index: 1;">
-                            <div class="video-overlay" style="background-color: rgba(0,0,0,0.5);"></div>
-                        </div>
-                    </div>
-                    <div class="col-6 nopadding full-screen force-full-screen dark" style="background-image: url('https://github.com/LeSandoz/LeSandoz.github.io/blob/master/practice/game/arabin/images/2019/2.jpg?raw=true'); background-size: cover;">
-                        <div class="vertical-middle" style="z-index: 2;">
-                            <div class="d-none d-md-block"><a id="play-hero-video" class="big-video-button bottommargin" data-lightbox="iframe"><i class="icon-line-play"></i></a></div>
-                            <div class="emphasis-title divcenter" style="max-width: 450px;">
-                                <h1 class="t700 font-body ls1 font" style="font-size: 38px;">膳食纖維</h1>
-                            </div>
-                            <div class="clear"></div>
-                            <a href="#" class="button button-border button-light button-circle" data-scrollto="#section-works02" data-easing="easeInOutExpo" data-speed="1250" data-offset="100">了解更多</a>
-                        </div>
-                        <div class="video-wrap" style="z-index: 1;">
-                            <div class="video-overlay" style="background-color: rgba(0,0,0,0.5);"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section><!-- #slider end -->
-        <!-- Content
-		============================================= -->
-        <section id="content">
-            <div class="content-wrap nopadding">
-                <div id="section-works" class="page-section notoppadding">
-                    <div class="section nomargin section_bg01 m80">
-                        <div class="container clearfix">
-                            <div class="row justify-content-md-center">
-                                <div class="col-md-12">
-                                    <div class="fancy-title title-dotted-border title-center">
-                                        <h1 class="tith1" style="color: #21a4b7">L-阿拉伯糖</h1>
-                                    </div>
-                                </div>
-                                <div class="col-md-9 center">
-                                    <h2 class="divcenter bottommargin font-body" style="max-width: 700px; font-size: 36px;">全民健康用糖：吃糖沒負擔</h2>
-                                </div>
-                            </div>
-                            <div class="row justify-content-md-center">
-                                <div class="col-md-5">
-                                    <video poster="https://github.com/LeSandoz/LeSandoz.github.io/blob/master/practice/game/arabin/images/2019/L0.jpg?raw=true" preload="auto" controls style="display: block; width: 100%;">
-                                        <source src='https://github.com/LeSandoz/LeSandoz.github.io/blob/master/practice/game/arabin/images/2019/l01.mp4?raw=true' type='video/webm' />
-                                        <source src='https://github.com/LeSandoz/LeSandoz.github.io/blob/master/practice/game/arabin/images/2019/l01.mp4?raw=true' type='video/mp4' />
-                                    </video>
-                                </div>
-                                <div class="col-md-7 txetbox">L-阿拉伯糖的英文名稱為L-Arabinose，最早是從阿拉伯糖樹分泌的膠體中發現的，因此命名為阿拉伯糖，L是代表左旋結構，屬於天然食品而非化學糖，是從玉米、小麥、蘋果、紅蘿蔔….等作物中萃取的。具有類似蔗糖的天然甜味，甜度只有蔗糖的50%~60%，可取代部分蔗糖，L-阿拉伯糖特性為水溶性、耐酸、耐熱。</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section parallax dark dark01 nomargin noborder" style="padding: 150px 0 100px; background-image: url('https://github.com/LeSandoz/LeSandoz.github.io/blob/master/practice/game/arabin/images/2019/parallax/5.jpg?raw=true');" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -300px;">
-                        <div class="container center clearfix ">
-                            <div class="row justify-content-md-center ">
-                                <div class="col-lg-8 text-center">
-                                    <div class="emphasis-title">
-                                        <h2 class="divcenter bottommargin font-body" style="max-width: 700px; font-size: 36px;">L-阿拉伯糖的核心價值</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--   <div class="col_one_fourth mb70 ">
-                            <div class="feature-box feature-box001 feature-box01 fbox-center fbox-bg fbox-light fbox-effect fbox-effect001 ">
-                                <div class="fbox-icon">
-                                    <a href="#"><i class="i-alt">1</i></a>
-                                </div>
-                                <h3>L-阿拉伯糖的<br>核心價值</h3>
-                            </div>
-                        </div> -->
-                            <div class="col_one_third mb70">
-                                <div class="feature-box feature-box002 feature-box01 fbox-center fbox-bg fbox-light fbox-effect fbox-effect002">
-                                    <div class="fbox-icon">
-                                        <a href="#"><i class="i-alt">1</i></a>
-                                    </div>
-                                    <h3>幫助維持消化道機能</h3>
-                                </div>
-                            </div>
-                            <div class="col_one_third mb70">
-                                <div class="feature-box feature-box003 feature-box01 fbox-center fbox-bg fbox-light fbox-effect fbox-effect003">
-                                    <div class="fbox-icon">
-                                        <a href="#"><i class="i-alt">2</i></a>
-                                    </div>
-                                    <h3>調節生理機能,<br>改變細菌叢生態</h3>
-                                </div>
-                            </div>
-                            <div class="col_one_third mb70 col_last">
-                                <div class="feature-box feature-box004 feature-box01 fbox-center fbox-bg fbox-light fbox-effect fbox-effect004">
-                                    <div class="fbox-icon">
-                                        <a href="#"><i class="i-alt">3</i></a>
-                                    </div>
-                                    <h3>調節體質,<br>促進新陳代謝</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                   <div class="section  gen-section02 mb-0">
-                    <div class="mt-5  ">
-                        <div class="container center clearfix ">
-                            <div class="row justify-content-md-center ">
-                                <div class="col-lg-8 text-center sectionbox">
-                                    <div class="emphasis-title">
-                                        <h1 style="font-size: 3.5em">５種認證標章　12項專利肯定</h1>
-                                        <p class="lead topmargin-sm">美國食品藥物監督管理局FDA列入食品添加劑目錄</p>
-                                     
-                                    </div>
-                                </div>
-                                <div class="clear"></div>
-       
-                            </div>
-                            <div class="row justify-content-md-center mb-5 ">
-  
-                                <div class="col-md-6 col-lg-4 mb-5">
-                                    <div class="card">
-                                        <a href="https://github.com/LeSandoz/LeSandoz.github.io/blob/master/practice/game/arabin/images/2019/20200710c.jpg?raw=true" data-lightbox="image">
-                                            <img class="card-img-top" src="https://github.com/LeSandoz/LeSandoz.github.io/blob/master/practice/game/arabin/images/2019/20200710cc.jpg?raw=true" alt="">
-                                        </a>
-                                        <div class="card-body card-body001">
-                                            <h4 class="mb-1">美國FDA認證</h4>
-                                            <p style="visibility: hidden;" class="card-text">無毒、無脂肪、無咖啡因、無酒精、無食臘、無色素、無添加</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4 mb-5">
-                                    <div class="card">
-                                        <a href="https://github.com/LeSandoz/LeSandoz.github.io/blob/master/practice/game/arabin/images/2019/20200710b.jpg?raw=true" data-lightbox="image">
-                                            <img class="card-img-top" src="https://github.com/LeSandoz/LeSandoz.github.io/blob/master/practice/game/arabin/images/2019/20200710bb.jpg?raw=true" alt="">
-                                        </a>
-                                        <div class="card-body card-body001">
-                                            <h4 class="mb-1">KOSHER猶太認證</h4>
-                                            <p class="card-text">無毒、無脂肪、無咖啡因、無酒精、無食臘、無色素、無添加</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4 mb-5">
-                                    <div class="card">
-                                        <a href="https://github.com/LeSandoz/LeSandoz.github.io/blob/master/practice/game/arabin/images/2019/20200710a.jpg?raw=true" data-lightbox="image">
-                                            <img class="card-img-top" src="https://github.com/LeSandoz/LeSandoz.github.io/blob/master/practice/game/arabin/images/2019/20200710aa.jpg?raw=true" alt="">
-                                        </a>
-                                        <div class="card-body card-body001">
-                                            <h4 class="mb-1">HALAL清真認證</h4>
-                                            <p class="card-text">食品從成分、製作、加工、處理、運輸、倉儲和販售，都要符合伊斯蘭教的教義</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4 mb-5">
-                                    <div class="card">
-                                        <a href="https://github.com/LeSandoz/LeSandoz.github.io/blob/master/practice/game/arabin/images/2019/Mark04.jpg?raw=true" data-lightbox="image">
-                                            <img class="card-img-top" src="https://github.com/LeSandoz/LeSandoz.github.io/blob/master/practice/game/arabin/images/2019/Mark04s.jpg?raw=true" alt="">
-                                        </a>
-                                        <div class="card-body card-body001">
-                                            <h4 class="mb-1">專利圖</h4>
-                                            <p class="card-text">產品嚴格把關</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4 mb-5">
-                                    <div class="card">
-                                        <a href="https://github.com/LeSandoz/LeSandoz.github.io/blob/master/practice/game/arabin/images/2019/Mark06.jpg?raw=true" data-lightbox="image">
-                                            <img class="card-img-top" src="https://github.com/LeSandoz/LeSandoz.github.io/blob/master/practice/game/arabin/images/2019/Mark06s.jpg?raw=true" alt="">
-                                        </a>
-                                        <div class="card-body card-body001">
-                                            <h4 class="mb-1">原料國際認證 品質安心、無負擔</h4>
-                                            <p class="card-text">產品嚴格把關</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4 mb-5">
-                                    <div class="card">
-                                         <a href="https://github.com/LeSandoz/LeSandoz.github.io/blob/master/practice/game/arabin/images/2019/Mark05.jpg?raw=true" data-lightbox="image">
-                                        <img class="card-img-top" src="https://github.com/LeSandoz/LeSandoz.github.io/blob/master/practice/game/arabin/images/2019/Mark05s.jpg?raw=true" alt="">
-                                        </a>
-                                        <div class="card-body card-body001">
-                                            <h4 class="mb-1">全國公證檢測報告</h4>
-                                            <p class="card-text">認證檢驗合格，無重金屬、無大腸桿菌、無生菌數、無黴菌、無食品添加劑</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="section-works02" class="page-section notoppadding pb0">
-                    <div class="section nomargin section_bg01 mb70">
-                        <div class="container clearfix">
-                            <div class="row justify-content-md-center">
-                                <div class="col-md-12">
-                                    <div class="fancy-title title-dotted-border title-center">
-                                        <h1 class="tith1" style="color: #85b032">膳食纖維</h1>
-                                    </div>
-                                </div>
-                                <div class="col-md-9 center">
-                                    <h2 class="divcenter bottommargin font-body" style="max-width: 700px; font-size: 36px;">全人體生活必需品　90%普遍攝取不足</h2>
-                                </div>
-                            </div>
-                            <div class="row justify-content-md-center">
-                                <div class="col-md-5">
-                                    <img src="https://github.com/LeSandoz/LeSandoz.github.io/blob/master/practice/game/arabin/images/2019/3.jpg?raw=true" alt="">
-                                </div>
-                                <div class="col-md-7 txetbox">膳食纖維只存在於有細胞壁的植物，水溶性纖維包括果膠、樹膠、植物膠、寡醣等，主要存在如豆子、水果、木耳、洋菇等等。非水溶性纖維有纖維素、半纖維素、木質素，存在於植物表皮植和未加工的麩質、全麥、根莖類、果皮、穀物、豆類等食物中。一般成年人每日膳食纖維，建議攝取量是25～35公克，也可以用每天需求熱量，每1,000大卡需要14克的膳食纖維計算；至於2～18歲的孩童，建議攝取量會以年齡加5公克，也就是說如果是5歲的小朋友，建議纖維攝取量則為10公克。</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section parallax dark dark01 nomargin noborder" style="padding: 150px 0 100px; background-image: url('https://github.com/LeSandoz/LeSandoz.github.io/blob/master/practice/game/arabin/images/2019/parallax/6.jpg?raw=true');" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -300px;">
-                        <div class="container center clearfix ">
-                            <div class="row justify-content-md-center ">
-                                <div class="col-lg-8 text-center">
-                                    <div class="emphasis-title">
-                                        <h2 class="divcenter bottommargin font-body" style="max-width: 700px; font-size: 36px;">攝取膳食纖維 健康益處大提升</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col_one_third mb70 ">
-                                <div class="feature-box feature-box001 feature-box01 fbox-center fbox-bg fbox-light fbox-effect fbox-effect001 ">
-                                    <div class="fbox-icon">
-                                        <a href="#"><i class="i-alt">1</i></a>
-                                    </div>
-                                    <h3>促進腸道健康</h3>
-                                </div>
-                            </div>
-                            <div class="col_one_third mb70">
-                                <div class="feature-box feature-box002 feature-box01 fbox-center fbox-bg fbox-light fbox-effect fbox-effect002">
-                                    <div class="fbox-icon">
-                                        <a href="#"><i class="i-alt">2</i></a>
-                                    </div>
-                                    <h3>腸道益生菌來源</h3>
-                                </div>
-                            </div>
-                            <div class="col_one_third col_last mb70">
-                                <div class="feature-box feature-box003 feature-box01 fbox-center fbox-bg fbox-light fbox-effect fbox-effect003">
-                                    <div class="fbox-icon">
-                                        <a href="#"><i class="i-alt">3</i></a>
-                                    </div>
-                                    <h3>幫助消化及新陳代謝</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section><!-- #content end -->
-        <!-- Footer
-		============================================= -->
-        <footer id="footer" class="dark noborder">
-            <div id="copyrights">
-                <div class="container center clearfix">
-                    Copyrights©2019 All Rights Reserved by Arabinoseintro
-                </div>
-            </div>
-        </footer><!-- #footer end -->
-    </div><!-- #wrapper end -->
-    <!-- Go To Top
-	============================================= -->
-    <div id="gotoTop" class="icon-angle-up"></div>
-    <!-- External JavaScripts
-	============================================= -->
-    <!-- <script src="js/jquery.js"></script>
-    <script src="js/plugins.js"></script> -->
-    <script src="http://raw.githack.com/LeSandoz/LeSandoz.github.io/master/practice/game/arabin/js/jquery.js"></script>
-    <script src="http://raw.githack.com/LeSandoz/LeSandoz.github.io/master/practice/game/arabin/js/plugins.js"></script>
 
-    <!-- Footer Scripts
-	============================================= -->
-    <!-- <script src="js/functions.js"></script> -->
-    <script src="http://raw.githack.com/LeSandoz/LeSandoz.github.io/master/practice/game/arabin/js/functions.js"></script>
-</body>
+    <meta name="google-site-verification" content="qWKXowg1Rj1HCkRI-FGULTTux0WwQRDlEc3W0fpuNWo" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:site_name" content="唐芯生技ThomsonMost" />
+
+    <!-- og tag -->
+    
+
+    <!-- og image -->
+    
+      <meta property="og:image" content="https://cdn.cybassets.com/s/files/15085/theme/48890/assets/img/og_image.jpg?1603331363" />
+    
+
+    <title>
+      
+        qr | 唐芯生技ThomsonMost
+      
+    </title>
+
+    <link rel="shortcut icon" href="//cdn.cybassets.com/s/files/15085/theme/48890/assets/img/favicon.png?1606442579" type="image/x-icon" />
+
+    <!-- for vendor -->
+    <link href='//cdn.cybassets.com/s/files/15085/theme/48890/assets/css/beta_theme/vendor.css?1595700983' rel='stylesheet' type='text/css' media='all' />
+
+    <!-- for navbar -->
+    <link href='//cdn.cybassets.com/s/files/15085/theme/48890/assets/css/beta_theme/navbar.css?1595700983' rel='stylesheet' type='text/css' media='all' />
+    <link href='//cdn.cybassets.com/s/files/15085/theme/48890/assets/css/navbar.css?1596704405' rel='stylesheet' type='text/css' media='all' />
+    <link href='//cdn.cybassets.com/s/files/15085/theme/48890/assets/css/beta_theme/sidebar.css?1595700983' rel='stylesheet' type='text/css' media='all' />
+
+    <!-- theme assets -->
+    <link href='//cdn.cybassets.com/s/files/15085/theme/48890/assets/css/beta_theme/main.css?1595700983' rel='stylesheet' type='text/css' media='all' />
+
+    <!-- for vendor -->
+    <script src='//cdn.cybassets.com/s/files/15085/theme/48890/assets/js/vendor.js?1595700983' type='text/javascript'></script>
+
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="UnVMtNZB6UFVmx/7Yfbfgq3V0W1SPJ41MQXOiFW8sdfRDItd6dpv7ABVNoaoiiTWeqcCqwt7U0OhsvDkB1CkaA==" />
+<link rel="alternate" href="https://www.thomsonmost.com/pages/qr" hreflang="x-default" />
+<link href="//cdn.cybassets.com/assets/quark/1.0.0/quark-56631c27bd86f91fbfa632331cd8c1846e9f930b0e4ee27972cfba4636f7052e.css" rel="stylesheet" type="text/css" media="all" />
+<script> var google_con_event_labels = [];</script>
+
+
+  <meta name="title" content="qr">
+<meta name="description" content="qr">
+<meta name="keywords" content="qr">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-37EQ9GTLSB"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-37EQ9GTLSB', {"groups":"cyberbiz","custom_map":{"dimension1":"shop_id","dimension2":"customer_id"},"shop_id":15085});
+            gtag('config', 'UA-64017614-1', {"groups":"cyberbiz","custom_map":{"dimension1":"shop_id","dimension2":"customer_id"},"shop_id":15085});
+      </script>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-168379446-1', 'auto');
+        ga('require', 'displayfeatures');
+        ga('require', 'ec');
+        ga('send', 'pageview');
+
+        ga('create', 'UA-141522363-5', 'auto', {'name': 'cyberbiz'});
+        ga('cyberbiz.set', 'dimension1', '15085');
+        ga('cyberbiz.require', 'displayfeatures');
+        ga('cyberbiz.require', 'ec');
+        ga('cyberbiz.send', 'pageview');
+        var google_analytics_id = 'UA-168379446-1';
+        var enable_ga_ee = true;
+      </script>
+    
+      <script>
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+      fbq('init', '208706357171106', {}, {'agent':'plcyberbiz'});
+      fbq('track', "PageView");
+      var facebook_pixel_id = '208706357171106';</script>
+      <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=208706357171106&ev=PageView&noscript=1"
+      /></noscript>
+    
+      <script>
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+      fbq('init', '1823987974506057', {}, {'agent':'plcyberbiz'});
+      fbq('track', "PageView");
+      var facebook_pixel_id = '1823987974506057';</script>
+      <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1823987974506057&ev=PageView&noscript=1"
+      /></noscript>
+    </head>
+
+  <body style="display: flex; flex-direction: column;">
+      <noscript><iframe
+      src="//www.googletagmanager.com/ns.html?id=GTM-TXD9LVJ"
+      height="0"
+      width="0"
+      style="display:none;visibility:hidden">
+      </iframe></noscript>
+    
+      <noscript><iframe
+      src="//www.googletagmanager.com/ns.html?id=GTM-P7528MQ"
+      height="0"
+      width="0"
+      style="display:none;visibility:hidden">
+      </iframe></noscript>
+    
+    <!-- Navigation -->
+<script type="text/javascript">
+  $(document).ready(function() {
+      WebFont.load({
+        google: {
+          families: [ 'Noto+Sans+TC:100,300,400,500,700,900&display=swap:chinese-traditional' ]
+        }
+      });
+  });
+</script>
+
+<span class="drawer drawer--left">
+  <header id="header">
+    <div class="container">
+      <div class="hidden-md relative computer_nav">
+        <!-- logo start -->
+        <nav class="logo">
+          
+            <a href="/">
+              <img src="//cdn.cybassets.com/s/files/15085/theme/48890/assets/img/navbar_logo.png?1596699196" height="50" width="auto" alt="logo">
+            </a>
+          
+        </nav>
+        <!-- logo end -->
+        <!-- main-nav start -->
+          <nav class="main-nav">
+  <ul class="link_shelf_top">
+    
+      
+        <li>
+          <a href="/">
+            <span class="text">首頁</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="/pages/qa">
+            <span class="text">什麽是阿拉伯糖？</span>
+          </a>
+        </li>
+      
+    
+      
+        
+          <!-- 顯示三維 -->
+          <li class="dropdown">
+            
+              <a href="javascript:void(0)" data-toggle="dropdown">
+                <span class="text">促銷專區</span>
+              </a>
+            
+            <div class="dropdown-menu" role="menu" aria-labelledby="">
+              <ul class="link_shelf_second">
+                
+                  
+                    <li class="relative">
+                      <a href="/collections/l-arabinose_sales">
+                        <span class="text">左旋阿拉伯糖</span>
+                      </a>
+                    </li>
+                  
+                
+                  
+                    <li class="relative">
+                      <a href="/collections/sales">
+                        <span class="text">健康砂糖</span>
+                      </a>
+                    </li>
+                  
+                
+              </ul>
+            </div>
+          </li>
+        
+      <!-- linklist end -->
+      
+    
+      
+        
+          <!-- 顯示三維 -->
+          <li class="dropdown">
+            
+              <a href="javascript:void(0)" data-toggle="dropdown">
+                <span class="text">商品列表</span>
+              </a>
+            
+            <div class="dropdown-menu" role="menu" aria-labelledby="">
+              <ul class="link_shelf_second">
+                
+                  
+                    <li class="relative">
+                      <a href="/collections/all">
+                        <span class="text">所有商品</span>
+                      </a>
+                    </li>
+                  
+                
+                  
+                    <li class="relative">
+                      <a href="/collections/taiyan">
+                        <span class="text">*台鹽生技TAIYEN</span>
+                      </a>
+                    </li>
+                  
+                
+                  
+                    <li class="relative">
+                      <a href="javascript:void(0)">
+                        <span class="text">*唐芯生技ThomsonMost</span>
+                      </a>
+                      <ul class="link_shelf_third">
+                        
+                          <li>
+                            <a href="/collections/tm">
+                              <span class="text">唐芯生技ThomsonMost</span>
+                            </a>
+                          </li>
+                        
+                          <li>
+                            <a href="/collections/arabinose">
+                              <span class="text">【左旋阿拉伯糖】</span>
+                            </a>
+                          </li>
+                        
+                          <li>
+                            <a href="/collections/tm_sugar">
+                              <span class="text">【益家砂糖】</span>
+                            </a>
+                          </li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+              </ul>
+            </div>
+          </li>
+        
+      <!-- linklist end -->
+      
+    
+      
+        <li>
+          <a href="/pages/members">
+            <span class="text">舊會員找回密碼</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="/contact">
+            <span class="text">客服中心</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="/pages/about-us">
+            <span class="text">關於我們</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="/blogs/news">
+            <span class="text">新聞中心</span>
+          </a>
+        </li>
+      
+    
+  </ul>
+</nav>
+        <!-- main-nav end -->
+        <!-- tool-nav start -->
+          <nav class="tool-nav">
+  <ul class="link_shelf_top">
+    <!-- member -->
+    
+      <li class="customer_account">
+        <div class="dropdown static">
+          <a href="javascript:void(0)" data-toggle="dropdown">
+            <svg class="member-svg" xmlns="http://www.w3.org/2000/svg" height="26" width="20.8" viewBox="0 0 40 50">
+              <path d="M26.133,22.686c3.417-2.192,5.692-6.016,5.692-10.368C31.825,5.526,26.299,0,19.507,0S7.188,5.526,7.188,12.318c0,4.352,2.275,8.176,5.692,10.368C5.381,25.098,0,31.457,0,38.926v1.627C0,44.659,3.716,48,8.283,48h22.448c4.567,0,8.283-3.341,8.283-7.447v-1.627C39.014,31.457,33.632,25.098,26.133,22.686z M10.188,12.318  C10.188,7.18,14.368,3,19.507,3s9.319,4.18,9.319,9.318c0,5.139-4.181,9.319-9.319,9.319S10.188,17.457,10.188,12.318zM36.014,40.553c0,2.452-2.37,4.447-5.283,4.447H8.283C5.37,45,3,43.005,3,40.553v-1.627c0-7.879,7.405-14.289,16.506-14.289c9.102,0,16.507,6.41,16.507,14.289L36.014,40.553L36.014,40.553z"/>
+            </svg>
+            <span class="text"></span>
+          </a>
+          <div class="dropdown-menu" role="menu">
+            <ul id="customer-logined-menu" style="display: none">
+              <li class="button">
+                <a href="/account/logout" class="btn-logout">會員登出</a>
+              </li>
+              <li class="button">
+                <a href="/account/index" class="btn-orders">訂單查詢</a>
+              </li>
+            </ul>
+            <ul id="customer-not-login-menu">
+              <li class="button">
+                <a href="/account/login" class="btn-login">會員登入</a>
+              </li>
+              <li class="button">
+                <a href="/account/signup" class="btn-signin">註冊新會員</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    
+    <!-- for money symbol -->
+    <div id="money-symbol" data-money-symbol="NT${{amount_no_decimals}}" hidden></div>
+    <!-- cart -->
+    
+      <li class="cart">
+        <!--電腦版的購物車選單-->
+        <div class="dropdown static">
+          <a href="javascript:void(0)" data-toggle="dropdown" class="shopcart">
+            <svg class="cart-svg" xmlns="http://www.w3.org/2000/svg" height="26" width="32" viewBox="0 0 60 50">
+              <path d="M53.651,6.955c-0.285-0.343-0.708-0.542-1.154-0.542H13.471L12.3,1.173
+                C12.147,0.487,11.539,0,10.836,0H1.5C0.671,0,0,0.671,0,1.5S0.672,3,1.5,3h8.134l6.593,29.503c0.153,0.686,0.762,1.173,1.464,1.173
+                h27.882c0.828,0,1.5-0.672,1.5-1.5s-0.672-1.5-1.5-1.5h-26.68l-0.336-1.503l30.61-1.59c0.691-0.036,1.269-0.541,1.396-1.222
+                l3.408-18.172C54.054,7.75,53.937,7.298,53.651,6.955z M47.832,24.648l-29.938,1.554l-3.752-16.79h36.547L47.832,24.648z"/>
+              <path d="M27.829,19.456h9.873c0.828,0,1.5-0.671,1.5-1.5s-0.672-1.5-1.5-1.5h-9.873
+                c-0.829,0-1.5,0.671-1.5,1.5S27,19.456,27.829,19.456z"/>
+              <path d="M22.174,36.563c-3.153,0-5.718,2.565-5.718,5.718S19.021,48,22.174,48s5.719-2.565,5.719-5.719
+                C27.893,39.129,25.328,36.563,22.174,36.563z M22.174,45c-1.499,0-2.718-1.22-2.718-2.719s1.219-2.718,2.718-2.718
+                s2.719,1.219,2.719,2.718S23.673,45,22.174,45z"/>
+              <path d="M44.456,36.563c-3.153,0-5.719,2.565-5.719,5.718S41.302,48,44.456,48s5.719-2.565,5.719-5.719
+                C50.175,39.129,47.609,36.563,44.456,36.563z M44.456,45c-1.499,0-2.719-1.22-2.719-2.719s1.22-2.718,2.719-2.718
+                s2.719,1.219,2.719,2.718S45.955,45,44.456,45z"/>
+            </svg>
+            <span class="global-cart-count" style="display: none;">0</span>
+            <span class="global-cart-loading"></span>
+          </a>
+          <div class="dropdown-menu" role="menu">
+            <div class="cart_list global-cart-item-list custom-scrollbar">
+            </div>
+            <div class="button">
+              <a class="btn-checkout" href="/cart">立即結帳</a>
+            </div>
+          </div>
+        </div>
+      </li>
+    
+    <!-- search -->
+    
+      <li class="search">
+        <div class="dropdown static">
+          <a href="javascript:void(0)" data-toggle="dropdown">
+            <svg class="saerch-svg" xmlns="http://www.w3.org/2000/svg" height="26" width="26" viewBox="0 0 50 50">
+              <path d="M49.932,45.439l-9.987-9.987c-0.075-0.075-0.168-0.113-0.253-0.168
+              c2.773-3.688,4.419-8.269,4.419-13.229C44.111,9.894,34.217,0,22.056,0C9.894,0,0,9.894,0,22.055C0,34.217,9.894,44.11,22.055,44.11c6.15,0,11.718-2.533,15.722-6.607c0.019,0.021,0.026,0.049,0.046,0.07l9.987,9.987c0.294,0.294,0.678,0.44,1.062,0.44s0.768-0.146,1.061-0.439C50.518,46.975,50.518,46.025,49.932,45.439z M22.056,41.11c-10.507,0-19.055-8.548-19.055-19.055C3,11.548,11.549,3,22.056,3s19.055,8.548,19.055,19.055C41.111,32.562,32.563,41.11,22.056,41.11z"/>
+            </svg>
+          </a>
+          <div class="dropdown-menu" role="menu">
+            <div class="search-area">
+              <form action="/search" class="form-inline">
+                <div class="form-area">
+                  <input class="form-control" type="search" placeholder="請輸入產品名" aria-label="Search" name="q" value="">
+                  <button class="btn-search" type="submit">搜尋</button>
+                </div>
+              </form>
+              <a href="javascript:void(0)" class="close-dropdown"><i class="fa fas fa-times"></i></a>
+            </div>
+          </div>
+        </div>
+      </li>
+    
+  </ul>
+</nav>
+
+        <!-- tool-nav end -->
+      </div>
+      <div class="visible-md relative">
+        <!-- mobile-nav start -->
+        <nav class="mobile-nav">
+          <ul>
+            <li class="sidebar-menu-icon drawer-toggle">
+              <svg class="menu-svg" xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 0 50 50">
+                <path d="M51.529,3H1.5C0.672,3,0,2.329,0,1.5S0.672,0,1.5,0h50.029c0.828,0,1.5,0.671,1.5,1.5
+                  S52.357,3,51.529,3z"/>
+                <path d="M51.529,24.023H1.5c-0.828,0-1.5-0.672-1.5-1.5s0.672-1.5,1.5-1.5h50.029
+                  c0.828,0,1.5,0.672,1.5,1.5S52.357,24.023,51.529,24.023z"/>
+                <path d="M29.101,45.046H1.5c-0.828,0-1.5-0.672-1.5-1.5s0.672-1.5,1.5-1.5h27.601
+                  c0.828,0,1.5,0.672,1.5,1.5S29.929,45.046,29.101,45.046z"/>
+              </svg>
+            </li>
+            
+              <li class="logo">
+                  <a href="/" class="img-flex d-flex justify-content-start">
+                    <img src="//cdn.cybassets.com/s/files/15085/theme/48890/assets/img/navbar_logo.png?1596699196" height="50" width="auto" alt="logo">
+                  </a>
+              </li>
+            
+            
+              <li class="member">
+                <a id="customer-phone-nav-icon" href="/account/login">
+                  <svg class="member-svg" xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 0 40 50">
+                    <path d="M26.133,22.686c3.417-2.192,5.692-6.016,5.692-10.368C31.825,5.526,26.299,0,19.507,0S7.188,5.526,7.188,12.318c0,4.352,2.275,8.176,5.692,10.368C5.381,25.098,0,31.457,0,38.926v1.627C0,44.659,3.716,48,8.283,48h22.448c4.567,0,8.283-3.341,8.283-7.447v-1.627C39.014,31.457,33.632,25.098,26.133,22.686z M10.188,12.318  C10.188,7.18,14.368,3,19.507,3s9.319,4.18,9.319,9.318c0,5.139-4.181,9.319-9.319,9.319S10.188,17.457,10.188,12.318zM36.014,40.553c0,2.452-2.37,4.447-5.283,4.447H8.283C5.37,45,3,43.005,3,40.553v-1.627c0-7.879,7.405-14.289,16.506-14.289c9.102,0,16.507,6.41,16.507,14.289L36.014,40.553L36.014,40.553z"/>
+                  </svg>
+                </a>
+              </li>
+            
+            
+              <li class="cart">
+                <a href="/cart">
+                  <svg class="cart-svg" xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 0 60 50">
+                    <path d="M53.651,6.955c-0.285-0.343-0.708-0.542-1.154-0.542H13.471L12.3,1.173
+                      C12.147,0.487,11.539,0,10.836,0H1.5C0.671,0,0,0.671,0,1.5S0.672,3,1.5,3h8.134l6.593,29.503c0.153,0.686,0.762,1.173,1.464,1.173
+                      h27.882c0.828,0,1.5-0.672,1.5-1.5s-0.672-1.5-1.5-1.5h-26.68l-0.336-1.503l30.61-1.59c0.691-0.036,1.269-0.541,1.396-1.222
+                      l3.408-18.172C54.054,7.75,53.937,7.298,53.651,6.955z M47.832,24.648l-29.938,1.554l-3.752-16.79h36.547L47.832,24.648z"/>
+                    <path d="M27.829,19.456h9.873c0.828,0,1.5-0.671,1.5-1.5s-0.672-1.5-1.5-1.5h-9.873
+                      c-0.829,0-1.5,0.671-1.5,1.5S27,19.456,27.829,19.456z"/>
+                    <path d="M22.174,36.563c-3.153,0-5.718,2.565-5.718,5.718S19.021,48,22.174,48s5.719-2.565,5.719-5.719
+                      C27.893,39.129,25.328,36.563,22.174,36.563z M22.174,45c-1.499,0-2.718-1.22-2.718-2.719s1.219-2.718,2.718-2.718
+                      s2.719,1.219,2.719,2.718S23.673,45,22.174,45z"/>
+                    <path d="M44.456,36.563c-3.153,0-5.719,2.565-5.719,5.718S41.302,48,44.456,48s5.719-2.565,5.719-5.719
+                      C50.175,39.129,47.609,36.563,44.456,36.563z M44.456,45c-1.499,0-2.719-1.22-2.719-2.719s1.22-2.718,2.719-2.718
+                      s2.719,1.219,2.719,2.718S45.955,45,44.456,45z"/>
+                  </svg>
+                  <span class="number global-cart-count" style="display: none;">0</span>
+                </a>
+              </li>
+            
+            
+              <li class="search">
+                <div class="dropdown static">
+                  <a href="javascript:void(0)" data-toggle="dropdown">
+                    <svg class="saerch-svg" xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 0 50 50">
+                      <path d="M49.932,45.439l-9.987-9.987c-0.075-0.075-0.168-0.113-0.253-0.168
+                      c2.773-3.688,4.419-8.269,4.419-13.229C44.111,9.894,34.217,0,22.056,0C9.894,0,0,9.894,0,22.055C0,34.217,9.894,44.11,22.055,44.11c6.15,0,11.718-2.533,15.722-6.607c0.019,0.021,0.026,0.049,0.046,0.07l9.987,9.987c0.294,0.294,0.678,0.44,1.062,0.44s0.768-0.146,1.061-0.439C50.518,46.975,50.518,46.025,49.932,45.439z M22.056,41.11c-10.507,0-19.055-8.548-19.055-19.055C3,11.548,11.549,3,22.056,3s19.055,8.548,19.055,19.055C41.111,32.562,32.563,41.11,22.056,41.11z"/>
+                    </svg>
+                  </a>
+                  <div class="dropdown-menu" role="menu">
+                    <div class="search-area">
+                      <form action="/search" class="form-inline">
+                        <div class="form-area">
+                          <input class="form-control" type="search" placeholder="請輸入產品名" aria-label="Search" name="q" value="">
+                          <button class="btn-search" type="submit">搜尋</button>
+                        </div>
+                      </form>
+                      <a href="javascript:void(0)" class="close-dropdown"><i class="fa fas fa-times"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            
+          </ul>
+        </nav>
+        <!-- mobile-nav end -->
+      </div>
+    </div>
+  </header>
+  <!-- Sidebar -->
+  <nav class="drawer-nav">
+    <div class="drawer-menu">
+      <ul id="index_sidebar_shelf_top" class="sidebar">
+  
+    <li class="logo">
+      <a href="/">
+        <img src="//cdn.cybassets.com/s/files/15085/theme/48890/assets/img/slider_logo.png?1596699173" height="50" width="auto" alt="logo">
+      </a>
+      <button class="drawer-toggle"></button>
+    </li>
+  
+  
+    
+      
+      
+        <li><a href="/">首頁</a></li>
+      
+    
+      
+      
+        <li><a href="/pages/qa">什麽是阿拉伯糖？</a></li>
+      
+    
+      
+      
+        <li>
+          <button class="linklist bt-toggle  collapsed " data-toggle="collapse" data-target=".collapse_index_sidebar_3" aria-expanded=" false ">
+            促銷專區
+          </button>
+          <ul id="index_sidebar_shelf_second_3" class="collapse_index_sidebar_3 collapse shelf_second ">
+            
+              
+              
+                <li><a href="/collections/l-arabinose_sales">左旋阿拉伯糖</a></li>
+              
+            
+              
+              
+                <li><a href="/collections/sales">健康砂糖</a></li>
+              
+            
+          </ul>
+        </li>
+      
+    
+      
+      
+        <li>
+          <button class="linklist bt-toggle  collapsed " data-toggle="collapse" data-target=".collapse_index_sidebar_4" aria-expanded=" false ">
+            商品列表
+          </button>
+          <ul id="index_sidebar_shelf_second_4" class="collapse_index_sidebar_4 collapse shelf_second ">
+            
+              
+              
+                <li><a href="/collections/all">所有商品</a></li>
+              
+            
+              
+              
+                <li><a href="/collections/taiyan">*台鹽生技TAIYEN</a></li>
+              
+            
+              
+              
+                <li>
+                  <button class="linklist bt-toggle  collapsed " data-toggle="collapse" data-target=".collapse_index_sidebar_4_3" aria-expanded=" false ">
+                    *唐芯生技ThomsonMost
+                  </button>
+                  <ul class="collapse_index_sidebar_4_3 collapse shelf_third">
+                    
+                      <li><a href="/collections/tm">唐芯生技ThomsonMost</a></li>
+                    
+                      <li><a href="/collections/arabinose">【左旋阿拉伯糖】</a></li>
+                    
+                      <li><a href="/collections/tm_sugar">【益家砂糖】</a></li>
+                    
+                  </ul>
+                </li>
+              
+            
+          </ul>
+        </li>
+      
+    
+      
+      
+        <li><a href="/pages/members">舊會員找回密碼</a></li>
+      
+    
+      
+      
+        <li><a href="/contact">客服中心</a></li>
+      
+    
+      
+      
+        <li><a href="/pages/about-us">關於我們</a></li>
+      
+    
+      
+      
+        <li><a href="/blogs/news">新聞中心</a></li>
+      
+    
+  
+  
+    <li>
+      <div class="customer-logined-menu" style="display: none">
+        <a href="/account/logout" class="btn-logout">
+          <span>會員登出</span>
+          <i class="fas fa-sign-out-alt"></i>
+        </a>
+      </div>
+      
+        <div class="customer-not-login-menu">
+          <a href="/account/login" class="btn-login">
+            <span>登入/註冊</span>
+            <i class="fas fa-sign-in-alt"></i>
+          </a>
+        </div>
+      
+    </li>
+  
+</ul>
+
+<script>
+  $(document).ready(function(){
+    // 側邊選單
+    if ($('.drawer').length){
+      $('.drawer').drawer();
+      $('.bt-toggle').click(function(){
+        setTimeout(function(){
+          $('.drawer').drawer('refresh')
+        },500)
+      })
+    }
+  });
+</script>
+
+    </div>
+  </nav>
+</span>
+<link href='//cdn.cybassets.com/s/files/15085/theme/48890/assets/css/beta_theme/navbar.css?1595700983' rel='stylesheet' type='text/css' media='all' />
+<link href='//cdn.cybassets.com/s/files/15085/theme/48890/assets/css/navbar.css?1596704405' rel='stylesheet' type='text/css' media='all' />
+
+    <!-- template -->
+    <div id="template" style="flex:1 0 auto;">
+      
+
+
+<div id="site_path">
+  <div class="container">
+    
+    <!-- 主題版型麵包屑 -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+          
+            <li
+              class="breadcrumb-item
+              
+              "
+              itemprop="itemListElement"
+              itemscope itemtype="http://schema.org/ListItem">
+              <!-- home -->
+              
+                <a href="/" itemprop="item">
+                  <i class="fas fa-home"></i>
+                  <span style="display: none;" itemprop="name">首頁</span>
+                </a>
+              <!-- account -->
+              
+              <meta itemprop="position" content="1"/>
+            </li>
+          
+            <li
+              class="breadcrumb-item
+              
+               active "
+              itemprop="itemListElement"
+              itemscope itemtype="http://schema.org/ListItem">
+              <!-- home -->
+              
+                <a href="/pages/qr" itemprop="item">
+                  <span itemprop="name">qr</span>
+                </a>
+              <!-- product's collections -->
+              
+              <meta itemprop="position" content="2"/>
+            </li>
+          
+        </ol>
+      </nav>
+    
+  </div>
+</div>
+
+
+<div id="page">
+  <!-- page content start -->
+  <div class="container">
+    <div id="ckeditor" class="page_content">
+      <span class="ckeditor">
+        
+      </span>
+    </div>
+  </div>
+  <!-- page content end -->
+</div>
+    </div>
+
+    
+    <!-- Footer -->
+    <footer id="footer">
+  <div class="footer_content">
+    <div class="container">
+      <div class="footer_flex">
+        <div class="item contact">
+          <hr>
+          <h5>關於我們</h5>
+          <ul>
+            
+              <li>
+                <svg class="phone-svg" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 30.635 30.771">
+                  <path d="M25.789,18.343c-0.669-0.696-1.475-1.068-2.33-1.068c-0.848,0-1.661,0.365-2.357,1.062l-2.178,2.171c-0.179-0.097-0.358-0.186-0.531-0.276c-0.248-0.124-0.483-0.241-0.683-0.366c-2.04-1.296-3.895-2.985-5.673-5.17c-0.862-1.089-1.441-2.006-1.861-2.936c0.565-0.517,1.089-1.055,1.599-1.572c0.193-0.193,0.386-0.393,0.579-0.586c1.447-1.447,1.447-3.322,0-4.77L10.472,2.95c-0.213-0.214-0.434-0.434-0.641-0.655C9.417,1.868,8.983,1.427,8.535,1.013C7.866,0.351,7.066,0,6.226,0C5.384,0,4.571,0.351,3.882,1.013L3.868,1.027L1.524,3.391C0.642,4.274,0.139,5.349,0.028,6.597c-0.165,2.013,0.427,3.888,0.883,5.115c1.116,3.012,2.785,5.804,5.273,8.796c3.019,3.605,6.652,6.452,10.802,8.458c1.585,0.751,3.702,1.641,6.066,1.792c0.145,0.007,0.297,0.014,0.435,0.014c1.592,0,2.93-0.572,3.977-1.71c0.007-0.014,0.021-0.021,0.028-0.034c0.358-0.434,0.772-0.827,1.206-1.248c0.296-0.283,0.599-0.579,0.896-0.889c0.683-0.71,1.041-1.537,1.041-2.385c0-0.855-0.365-1.675-1.061-2.365L25.789,18.343z"/>
+                </svg>
+                <span>02-8521-7223</span>
+              </li>
+            
+            
+            
+              <li>
+                <svg class="mail-svg" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 33.66 23.566">
+                  <path d="M2.661,1.393l12.124,9.605c0.548,0.43,1.31,0.625,2.042,0.591c0.737,0.035,1.492-0.154,2.047-0.591
+                    l12.124-9.605C31.967,0.625,31.749,0,30.515,0H3.145C1.912,0,1.693,0.625,2.661,1.393L2.661,1.393z M2.661,1.393"/>
+                  <path d="M31.873,3.924L18.62,13.983c-0.495,0.372-1.145,0.554-1.787,0.548c-0.649,0.006-1.299-0.177-1.794-0.548L1.788,3.924C0.802,3.179,0,3.581,0,4.814v16.503c0,1.234,1.009,2.249,2.241,2.249h29.177c1.233,0,2.241-1.015,2.241-2.249V4.814C33.66,3.581,32.858,3.179,31.873,3.924L31.873,3.924z M31.873,3.924"/>
+                </svg>
+                <a href="mailto:service@nuara-biotech.com"> service@nuara-biotech.com</a>
+              </li>
+            
+            
+              <li>
+                <svg class="address-svg" style="height: 24px;" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                <span>新北市新莊區新北大道三段5號8樓之8</span>
+              </li>
+            
+            
+              <li>
+                <svg class="clock-svg" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 33.66 33.661">
+                  <path d="M16.83,0C7.535,0,0,7.535,0,16.83c0,9.294,7.535,16.831,16.83,16.831c9.295,0,16.83-7.536,16.83-16.831C33.66,7.535,26.125,0,16.83,0L16.83,0z M17.992,18.888c-0.001,0.044-0.007,0.089-0.013,0.133c-0.004,0.033-0.007,0.067-0.014,0.1c-0.008,0.034-0.02,0.067-0.031,0.101c-0.013,0.041-0.026,0.082-0.043,0.121c-0.003,0.007-0.004,0.014-0.007,0.02c-0.025,0.054-0.055,0.105-0.087,0.153c-0.002,0.003-0.004,0.006-0.007,0.009c-0.037,0.054-0.079,0.103-0.123,0.149c-0.012,0.013-0.025,0.024-0.037,0.036c-0.039,0.037-0.079,0.071-0.123,0.101c-0.014,0.01-0.026,0.02-0.041,0.029c-0.055,0.037-0.113,0.068-0.174,0.095c-0.013,0.006-0.027,0.009-0.04,0.015c-0.051,0.02-0.103,0.036-0.157,0.048c-0.019,0.005-0.038,0.009-0.058,0.012c-0.069,0.013-0.139,0.021-0.209,0.021c-0.014,0-0.029-0.004-0.043-0.005c-0.067-0.002-0.134-0.008-0.199-0.021c-0.02-0.004-0.04-0.013-0.06-0.019c-0.06-0.017-0.118-0.034-0.174-0.059c-0.007-0.003-0.013-0.004-0.02-0.007L9.88,16.876c-0.581-0.274-0.831-0.968-0.557-1.549c0.274-0.581,0.968-0.83,1.549-0.556l4.793,2.26V6.985c0-0.643,0.521-1.164,1.164-1.164c0.643,0,1.164,0.521,1.164,1.164v11.882C17.994,18.874,17.992,18.881,17.992,18.888L17.992,18.888z M17.992,18.888"/>
+                </svg>
+                <span>09:00-17:00</span>
+              </li>
+            
+          </ul>
+        </div>
+        <div class="item linklists">
+          
+        </div>
+        <div class="item linklists">
+          
+        </div>
+        
+          <div class="item fb_fanpage">
+            <div class="fb_fans_page_area">
+              <div class="fb-page" data-href="https://www.facebook.com/thomsonmost" data-width="500" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                <blockquote cite="https://www.facebook.com/thomsonmost" class="fb-xfbml-parse-ignore">
+                  <a href="https://www.facebook.com/thomsonmost">Facebook 粉絲專頁</a>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="footer_footer">
+    <div class="container">
+      <hr>
+      <div class="footer_flex">
+        <div class="copyright">
+          <span>Copyright ©</span>
+          <a href="/">唐芯生技ThomsonMost</a>
+          <span>All Rights Reserved. Designed by</span>
+          <a href="https://www.cyberbiz.co/" target="_blank" title="Designed by Cyberbiz"> Cyberbiz</a>.
+        </div>
+        <div class="social_media">
+          <ul>
+            
+              <li>
+                <a href="https://www.facebook.com/thomsonmost/">
+                  <svg class="facebook-svg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50.5 50.5">
+                    <path class="svg-background" d="M50.5,32.662c0,9.855-7.983,17.838-17.838,17.838H17.838C7.982,50.5,0,42.517,0,32.662V17.838C0,7.982,7.982,0,17.838,0h14.824C42.517,0,50.5,7.982,50.5,17.838V32.662z M50.5,32.662"/>
+                    <path class="svg-border" d="M32.516,50.5H17.984C8.068,50.5,0,42.432,0,32.515v-14.53C0,8.068,8.068,0,17.984,0h14.531C42.433,0,50.5,8.068,50.5,17.985v14.53C50.5,42.432,42.433,50.5,32.516,50.5z M17.984,1C8.619,1,1,8.619,1,17.985v14.53C1,41.881,8.619,49.5,17.984,49.5h14.531c9.365,0,16.984-7.619,16.984-16.985v-14.53C49.5,8.619,41.881,1,32.516,1H17.984z"/>
+                    <path class="svg-text" d="M26.474,19.68v-2.311c0-1.126,0.751-1.388,1.278-1.388c0.526,0,3.242,0,3.242,0v-4.953l-4.465-0.019c-4.957,0-6.083,3.694-6.083,6.059v2.613H17.58v3.492v2.288h2.891c0,6.551,0,14.452,0,14.452h5.78c0,0,0-7.98,0-14.452h4.29l0.208-2.27l0.319-3.51H26.474z"/>
+                  </svg>
+                </a>
+              </li>
+            
+            
+            
+            
+              <li>
+                <a href="https://www.youtube.com/channel/UC6TjfANlmqA4m0f_wOq_GUQ">
+                  <svg class="youtube-svg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50.5 50.5">
+                    <path class="svg-background" d="M50.5,32.662c0,9.855-7.983,17.838-17.838,17.838H17.838C7.982,50.5,0,42.517,0,32.662V17.838C0,7.982,7.982,0,17.838,0h14.824C42.517,0,50.5,7.982,50.5,17.838V32.662z M50.5,32.662"/>
+                    <path class="svg-border" d="M32.516,50.5H17.984C8.068,50.5,0,42.432,0,32.515v-14.53C0,8.068,8.068,0,17.984,0h14.531C42.433,0,50.5,8.068,50.5,17.985v14.53C50.5,42.432,42.433,50.5,32.516,50.5z M17.984,1C8.619,1,1,8.619,1,17.985v14.53C1,41.881,8.619,49.5,17.984,49.5h14.531c9.365,0,16.984-7.619,16.984-16.985v-14.53C49.5,8.619,41.881,1,32.516,1H17.984z"/>
+                    <path class="svg-text" d="M39.411,19.224c0,0-0.282-2.078-1.147-2.992c-1.1-1.199-2.331-1.206-2.894-1.276c-4.047-0.303-10.113-0.303-10.113-0.303h-0.013c0,0-6.069,0-10.112,0.305c-0.565,0.068-1.795,0.076-2.897,1.275c-0.865,0.914-1.147,2.993-1.147,2.993s-0.29,2.438-0.29,4.877v0.294v1.991c0,2.441,0.29,4.879,0.29,4.879s0.282,2.077,1.147,2.991c1.101,1.201,2.547,1.162,3.188,1.287c2.313,0.231,9.826,0.304,9.826,0.304s6.072-0.011,10.12-0.314c0.563-0.071,1.795-0.076,2.894-1.277c0.866-0.914,1.147-2.991,1.147-2.991s0.291-2.438,0.291-4.879v-1.864v-0.421C39.701,21.662,39.411,19.224,39.411,19.224z M30.073,24.942l-7.806,4.218l-0.002-6.493l0-1.974l3.521,1.916L30.073,24.942z"/>
+                  </svg>
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // fb plugins
+  window.fbAsyncInit = function() {
+    FB.init({
+    appId : '309249280284342',
+    xfbml : true,
+    version : 'v7.0',
+    });
+  };
+  (function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  // for scupio
+  if (document.querySelector("meta[name=\"scupio_mid\"]")) {
+    mid = document.querySelector("meta[name=\"scupio_mid\"]").content;
+  } else {
+    mid = "";
+  }
+  if (!window.is_scupio_sent && mid) {
+    window._bwtm = window._bwtm || []
+    window._bwtm.push({
+      "mid": mid,
+      "uid": ""
+    });
+  }
+</script>
+
+
+
+    <!-- Fast-Events -->
+    
+
+<script src='//cdn.cybassets.com/s/files/15085/theme/48890/assets/js/fast_events.js?1595700983' type='text/javascript'></script>
+<link href='//cdn.cybassets.com/s/files/15085/theme/48890/assets/css/beta_theme/fast_events.css?1595700983' rel='stylesheet' type='text/css' media='all' />
+
+
+    <!-- gototop -->
+    <div id="gototop">
+      <a href="javascript:void(0)">
+        <i class="fas fa-arrow-up"></i>
+      </a>
+    </div>
+    <!-- ajaxloading -->
+    <div id="ajaxloading">
+      <div class="ajaxbody">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="73.4" height="73.4" viewBox="0 0 73.4 73.4">
+          <circle class="circle" fill="none" stroke="#898989" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="36.7" cy="36.7" r="35.2"/>
+          <polyline class="success_path" fill="none" stroke="#898989" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="23.7,36.8 32.4,45.4 49.7,28 "/>
+          <path class="success_icon" fill="#898989" d="M32.5,46.9c-0.4,0-0.8-0.2-1.1-0.4l-8.6-8.6c-0.6-0.6-0.6-1.5,0-2.1s1.5-0.6,2.1,0l7.5,7.5L48.6,27c0.6-0.6,1.5-0.6,2.1,0s0.6,1.5,0,2.1L33.5,46.5C33.2,46.7,32.9,46.9,32.5,46.9L32.5,46.9z"/>
+          <line class="fail_path" fill="none" stroke="#898989" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="26.6" y1="26.6" x2="46.8" y2="46.8"/>
+          <line class="fail_path" fill="none" stroke="#898989" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="46.8" y1="26.6" x2="26.6" y2="46.8"/>
+          <path class="fail_icon" fill="#898989" d="M38.7,36.7l9.1-9.1c0.6-0.6,0.6-1.5,0-2.1s-1.5-0.6-2.1,0l-9.1,9.1l-9.1-9.1c-0.6-0.6-1.5-0.6-2.1,0s-0.6,1.5,0,2.1l9.1,9.1l-9.1,9.1c-0.6,0.6-0.6,1.5,0,2.1c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4l9.1-9.1l9.1,9.1c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4c0.6-0.6,0.6-1.5,0-2.1L38.7,36.7z"/>
+        </svg>
+        <div class="success_msg title">已加入購物車</div>
+        <div class="fail_msg title">網路異常，請重新整理</div>
+      </div>
+    </div>
+  <div class='fb-customerchat' page_id='1548374775417040' response_time='' logged_in_greeting='您好~請問有什麽可以幫到您？' logged_out_greeting='您好~請問有什麽可以幫到您？' locale='zh_TW' theme_color='#44bec7'></div>
+<script src="//cdn.cybassets.com/assets/referral-code-trace-88abc26b1ed61bff4a14edc149883d55620ef06487e3a43a48e6fbddc5e7d940.js"></script></body>
+
+  <script>
+  function getMoneyFormat(price) {
+    // for tags, to escape  use: {{ this }}
+    currency = "NT${{amount_no_decimals}}".replace('{{amount}}', '');
+    currency = currency.replace('{{amount_no_decimals}}', '');
+
+    switch (currency) {
+      case "&#165; 円":
+        var arr = currency.split(" ");
+        return arr[0] + price + " " + arr[1];
+        break;
+
+      case "₫":
+        return price + currency;
+        break;
+
+      default:
+        return currency + " " + price;
+        break;
+    }
+  }
+
+  function getDiscountPriceName() {
+    return 'true' === 'true' ? '' : '優惠售價';
+  }
+
+  function getDiscountPriceSuggestionName() {
+    return 'false' === 'true' ? '' : '建議售價';
+  }
+
+  var liquidHelper = {
+    isFirstVariantSelected:  false ,
+    isImageColorsUsed:  false ,
+    isEmptyClickable:  true ,
+    hasAddBuyProduct: '' !== "" ? true : false,
+    hasVariantDiscountCollection: 'false' ? true : false,
+  }
+</script>
+
+  <script src='//cdn.cybassets.com/s/files/15085/theme/48890/assets/js/sub_vendor.js?1595700983' type='text/javascript'></script>
+  <script src='//cdn.cybassets.com/s/files/15085/theme/48890/assets/js/theme_helper.js?1595700983' type='text/javascript'></script>
+
+  <!-- for Google Analytics Enhanced Ecommerce -->
+  <script src='//cdn.cybassets.com/assets/theme/globalAnalysis-5a2411ed3cc292a3c4d71eebfcdd8cd74d59ba2f38773e7f0e817a109e7b9ac3.js' type='text/javascript'></script>
+
+  <!-- theme assets -->
+  <script src='//cdn.cybassets.com/s/files/15085/theme/48890/assets/js/main.js?1595700983' type='text/javascript'></script>
+  <script src='//cdn.cybassets.com/s/files/15085/theme/48890/assets/js/theme.js?1595700983' type='text/javascript'></script>
+
+  <!-- theme customized main css -->
+  <link href='//cdn.cybassets.com/s/files/15085/theme/48890/assets/css/theme_main.css?1595700983' rel='stylesheet' type='text/css' media='all' />
+
+  <!-- for cache -->
+  <script src='//cdn.cybassets.com/s/files/15085/theme/48890/assets/js/cacheable.js?1595700983' type='text/javascript'></script>
 
 </html>
