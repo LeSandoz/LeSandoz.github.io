@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./table.css">
+  </head>
+  <body>
+    <div class="container">
+        <div class="d-flex row">
+            <select class="form-control col-sm-5">
+                <option selected="">檢驗項目(全部)</option>
+                <option>農藥殘留</option>
+                <option>動物用藥殘留</option>
+                <option>食品添加物</option>
+                <option>食品衛生標準</option>
+                <option>食品致病菌</option>
+            </select>
+            <div class="col-sm-3">
+                <input type="text" value="" class="form-control txtvalue" placeholder="檢體名稱關鍵字" style="padding: .375rem 0.50rem;">
+            </div>
+            <div class="col-sm-2">
+                <span class="check-single-rwd">
+                    <input type="checkbox" id="wait02" class="checkbox" name="wait02" value="wait02" checked="checked"><label for="wait02" class="check_text">合格</label>
+                </span>
+                <span class="check-single-rwd">
+                    <input type="checkbox" id="already02" class="checkbox" name="already02" value="already02" checked="checked"><label for="already02" class="check_text">不合格</label>
+                </span>
+            </div>
+            <div class="col-sm">
+                <input type="button" value="資料篩選" class="btn btn-primary">
+            </div>
+        </div>
+        <table class="table1">
+            <thead class="text-center">
+                <tr>
+                    <th>
+                        編號
+                    </th>
+                    <th>
+                        稽查日期
+                    </th>
+                    <th>
+                        行政區
+                    </th>
+                    <th>
+                        檢驗項目
+                    </th>
+                    <th>
+                        <span>檢體分類</span>
+                        <span><i class="fas fa-caret-down"></i></span>
+                    </th>
+                    <th>
+                        檢體名稱
+                    </th>
+                    <th>
+                        查核結果
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <div class="" style="width: 100%;">
+            <div class="page">
+                <span>顯示</span>
+                <select class='row_number'>
+                    <option selected="">10</option>
+                    <option>30</option>
+                    <option>50</option>
+                    <option>100</option>
+                    <option>200</option>
+                    <option>300</option>
+                </select>
+                <span>共</span> 
+                <span class='total'></span> 
+                <span>筆 ｜ </span>
+                <select class="now_page">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+                <span>之</span> 
+                <span class='pages'></span> 
+                <span>頁</span>
+            </div>
+            <div class="float-right">
+                <a name="" id="start" class="btn btn-primary" href="#" role="button">1</a>
+                <a name="" id="last" class="btn btn-primary" href="#" role="button">2</a>
+                第 ? 頁
+                <a name="" id="next" class="btn btn-primary" href="#" role="button">3</a>
+                <a name="" id="end" class="btn btn-primary" href="#" role="button">4</a>
+            </div>
+        </div>
+        
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="//code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./table.js"></script>
+  </body>
+</html>

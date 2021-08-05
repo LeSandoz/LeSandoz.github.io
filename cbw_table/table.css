@@ -1,0 +1,79 @@
+.table1 {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  width: 100%;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.table1 thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+.table1 th, .table1 td {
+  padding: 12px 15px;
+}
+
+.table1 tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.table1 tbody tr .active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+.table1 tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.table1 tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.table2 {
+  width: 800px;
+  border-collapse: collapse;
+  background: linear-gradient(45deg, #49a09d, #5f2c82);
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.table2 th, .table2 td {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.table2 th {
+  text-align: left;
+}
+
+.table2 thead th {
+  background-color: #55608f;
+}
+
+.table2 tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.table2 tbody td {
+  position: relative;
+}
+
+.table2 tbody td:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+/*# sourceMappingURL=table.css.map */
