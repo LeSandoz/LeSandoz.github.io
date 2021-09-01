@@ -1,0 +1,40 @@
+@charset "UTF-8";
+body {
+  font-family: "�L�n������";
+  font-weight: 800;
+  margin: 0px auto;
+  text-align: right;
+  background: url("images/food-bg.jfif"), linear-gradient(274deg, rgba(173, 255, 236, 0.63069) 0%, rgba(232, 255, 134, 0.493435) 48%, rgba(238, 56, 99, 0.723127) 100%);
+  background-size: cover;
+}
+
+body h1 {
+  margin: 20px 0;
+}
+
+body input, body button {
+  margin: 5px 0;
+}
+
+body .border-red {
+  border: 2px red solid;
+  background: pink;
+}
+
+.breakfastBox, .lunchBox, .dinnerBox, .snackBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 600px) {
+  .breakfastBox, .lunchBox, .dinnerBox, .snackBox {
+    display: block;
+    text-align: left;
+  }
+  body {
+    background-image: url("https://cdn3.vectorstock.com/i/1000x1000/67/27/banana-fruit-tropical-food-wallpaper-vector-14286727.jpg");
+    background-attachment: fixed;
+  }
+}
+/*# sourceMappingURL=badminton_add.css.map */

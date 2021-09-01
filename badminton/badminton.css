@@ -1,0 +1,17 @@
+.container {
+  height: 80vh;
+  border: 1px red solid;
+}
+
+.container .leftBox {
+  background: indianred;
+  width: 30%;
+  height: 80vh;
+}
+
+.container .rightBox {
+  background: #f19451;
+  width: 70%;
+  height: 80vh;
+}
+/*# sourceMappingURL=badminton.css.map */

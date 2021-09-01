@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Food Add</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="badminton_add.css">
+  </head>
+  <body>
+      <div class="container">
+          <h1 class="text-center">請填入資料</h1>
+          <h4><a class="text-right" href="https://lesandoz.github.io/food-daily_plus/food-daily">統計資料</a></h4>
+        <form class="form-group input-container" action="https://lesandoz.github.io/food-daily_plus/food-daily">
+            <select class="form-control " name="" id="name">
+              <option value="">--請選擇--</option>
+              <option value="阿何">阿何</option>
+              <option value="阿婷">阿婷</option>
+            </select>
+            <input type="date" class="form-control  text-right" name="" id="date" placeholder="請輸入日期">
+            <input type="text" class="form-control  text-right" name="" id="weight" placeholder="請輸入早晨體重">
+            <input type="text" class="form-control  text-right" name="" id="fat" placeholder="請輸入體脂">
+            <!-- <input type="text" class="form-control  text-right" name="" id="breakfast" placeholder="請輸入早餐內容"> -->
+            <div class="breakfast-container">
+              <div class="breakfastBox">
+                <div>早餐：</div>
+                <div><input type="checkbox" name="breakfast[]" value="水煮蛋：75"> <label>水煮蛋：75</label></div>&nbsp&nbsp&nbsp
+                <div><input type="checkbox" name="breakfast[]" value="麥片(份)：113.7"> <label>麥片(份)：113.7</label></div>&nbsp&nbsp&nbsp
+                <div><input type="checkbox" name="breakfast[]" value="香蕉：100"> <label>香蕉：100</label></div>&nbsp&nbsp&nbsp
+                <div><input type="checkbox" name="breakfast[]" value="拿鐵：160"> <label>拿鐵：160</label></div>&nbsp&nbsp&nbsp
+                <div><input type="checkbox" name="breakfast[]" value="豆漿(瓶)：117.75"> <label>豆漿(瓶)：117.75</label></div>&nbsp&nbsp&nbsp
+                <div><input type="checkbox" name="breakfast[]" value="優格(份)：162.5"> <label>優格(份)：162.5</label></div>&nbsp&nbsp&nbsp
+              </div>
+              <div class="d-flex">
+                <input type="text" class="form-control mr-2 text-left" name="breakfastText[]" placeholder="請輸入早餐內容">
+                <input type="text" class="form-control  text-left" name="breakfastCal[]" placeholder="請輸入早餐熱量">
+                <button type="button" class="btn btn-info add">+</button>
+              </div>
+            </div>
+            <div class="lunch-container">
+              <div class="lunchBox">
+                <div>午餐：</div>
+                <div><input type="checkbox" name="lunch[]" value="便當：600"> <label>便當：600</label></div>&nbsp&nbsp&nbsp
+                <div><input type="checkbox" name="lunch[]" value="雞胸：140"> <label>雞胸：140</label></div>&nbsp&nbsp&nbsp
+                <div><input type="checkbox" name="lunch[]" value="洋蔥：30"> <label>洋蔥：30</label></div>&nbsp&nbsp&nbsp
+                <div><input type="checkbox" name="lunch[]" value="甜椒：40"> <label>甜椒：40</label></div>&nbsp&nbsp&nbsp
+                <div><input type="checkbox" name="lunch[]" value="花椰菜：40"> <label>花椰菜：40</label></div>&nbsp&nbsp&nbsp
+                <div><input type="checkbox" name="lunch[]" value="玉米筍：40"> <label>玉米筍：40</label></div>&nbsp&nbsp&nbsp
+                <div><input type="checkbox" name="lunch[]" value="薯泥：180"> <label>薯泥：180</label></div>&nbsp&nbsp&nbsp
+                <div><input type="checkbox" name="lunch[]" value="三明治：260"> <label>三明治：260</label></div>&nbsp&nbsp&nbsp
+              </div>
+              <div class="d-flex">
+                <input type="text" class="form-control mr-2 text-left" name="lunchText[]" placeholder="請輸入午餐內容">
+                <input type="text" class="form-control  text-left" name="lunchCal[]" placeholder="請輸入午餐熱量">
+                <button type="button" class="btn btn-info add">+</button>
+              </div>
+            </div>
+            <div class="dinner-container">
+              <div class="dinnerBox">
+                <div>晚餐：</div>
+                <div><input type="checkbox" name="dinner[]" value="便當：600"> <label>便當：600</label></div>&nbsp&nbsp&nbsp
+                <div><input type="checkbox" name="dinner[]" value="便當：700"> <label>便當：700</label></div>&nbsp&nbsp&nbsp
+                <div><input type="checkbox" name="dinner[]" value="便當：800"> <label>便當：800</label></div>&nbsp&nbsp&nbsp
+                <div><input type="checkbox" name="dinner[]" value="便當：900"> <label>便當：900</label></div>&nbsp&nbsp&nbsp
+                <div><input type="checkbox" name="dinner[]" value="便當：1000"> <label>便當：1000</label></div>&nbsp&nbsp&nbsp
+              </div>
+              <div class="d-flex">
+                <input type="text" class="form-control mr-2 text-left" name="dinnerText[]" placeholder="請輸入晚餐內容">
+                <input type="text" class="form-control  text-left" name="dinnerCal[]" placeholder="請輸入晚餐熱量">
+                <button type="button" class="btn btn-info add">+</button>
+              </div>
+            </div>
+           <div class="snack-container">
+            <div class="snackBox">
+              <div>點心宵夜：</div>
+              <div><input type="checkbox" name="snack[]" value="珍奶：400"> <label>珍奶：400</label></div>&nbsp&nbsp&nbsp
+              <div><input type="checkbox" name="snack[]" value="泡麵：600"> <label>泡麵：600</label></div>&nbsp&nbsp&nbsp
+              <div><input type="checkbox" name="snack[]" value="鮪魚罐頭：200"> <label>鮪魚罐頭：200</label></div>&nbsp&nbsp&nbsp
+              <div><input type="checkbox" name="snack[]" value="蘇打餅：100"> <label>蘇打餅：100</label></div>&nbsp&nbsp&nbsp
+            </div>
+            <div class="d-flex">
+              <input type="text" class="form-control mr-2 text-left" name="snackText[]" placeholder="請輸入消夜內容">
+              <input type="text" class="form-control  text-left" name="snackCal[]" placeholder="請輸入消夜熱量">
+              <button type="button" class="btn btn-info add">+</button>
+            </div>
+           </div>
+            <input type="text" class="form-control  text-right" name="" id="water" placeholder="請輸入飲水量">
+            <input type="text" class="form-control  text-right" name="" id="fit" placeholder="請輸入運動內容">
+            <input type="time" class="form-control  text-right" name="" id="sleep" placeholder="請輸入睡覺時間">
+            <button type="button" class="btn btn-info" id="send">送出</button>
+        </form>
+      </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="badminton_add.js"></script>
+  </body>
+</html>
