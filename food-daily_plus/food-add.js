@@ -4,7 +4,7 @@ let datetime = today.getFullYear()+ "/" + (today.getMonth()+1) + "/" + today.get
 // console.log($('input:text[name="breakfastText[]"]')[0].value)
 function send() {
 
-
+    let id = '96';
     let name = document.querySelector('#name').value;
     let date = document.querySelector('#date').value;
     let weight = document.querySelector('#weight').value;
@@ -111,6 +111,7 @@ function send() {
         $.ajax({
             url: "https://script.google.com/macros/s/AKfycbx7aV1yqwC-iho3TjiDDdIklkeigOnXgQnYRIcQrMq_dd2OqeSS/exec",
             data: {
+                "id": id,
                 "time": datetime,
                 "name": name,
                 "date": date,

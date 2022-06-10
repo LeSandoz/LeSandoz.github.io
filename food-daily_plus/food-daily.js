@@ -186,7 +186,9 @@ console.log($(window).width())
             $("#cardLiu").addClass("d-none")
             $("#cardHo").addClass("d-none")
         }
-
+    $("#Ho").on("click", function(){
+        console.log()
+    })    
 
 
     })

@@ -1,6 +1,6 @@
 function clickC(){
     $("#C").attr('autoplay','autoplay')
-    $("#C").attr('src',"notes/C.mp3")
+    $("#C").attr('src',"./notes/C.mp3")
 }
 function clickD(){
     $("#D").attr('autoplay','autoplay')

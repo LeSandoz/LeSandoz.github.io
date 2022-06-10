@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    body {
+      position: relative;
+      /* 重疊圖片 */
+    }
+
+    .gray_box {
+      background: gray;
+      min-width: 1200px;
+      min-height: 8000px;
+      position: absolute;
+      /* 重疊圖片 */
+      z-index: 2;
+      /* 層級 */
+      opacity: 50%;
+      /* 透明度 */
+      display: none;
+      /* none讓東西消失 block出現 */
+    }
+
+    #a01_08 {
+      position: relative;
+    }
+
+    #a01_08_new {
+      z-index: 3;
+      display: none;
+      position: absolute;
+      top: 6000px;
+      left: 250px;
+    }
+  </style>
+
+  <body class="container">
+    <div class="gray_box"></div>
+    <!-- 記得加box 跟class -->
+    <p>&nbsp;</p>
+
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe
+        allowfullscreen=""
+        class="embed-responsive-item"
+        frameborder="0"
+        src="//www.youtube.com/embed/d4ht7mqpTFw"
+      ></iframe>
+    </div>
+
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tbody>
+        <tr>
+          <td>
+            <img
+              alt=""
+              src="https://cdn.cyberbiz.tw/s/files/15085/theme/48890/assets/a01_01.jpg"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              alt=""
+              src="https://cdn.cyberbiz.tw/s/files/15085/theme/48890/assets/a01_05.jpg"
+            />
+          </td>
+        </tr>
+        <tr>
+          <!-- 把超連結拿掉 -->
+          <td>
+            <img
+              alt=""
+              id="a01_08"
+              src="https://cdn.cyberbiz.tw/s/files/15085/theme/48890/assets/a01_08.jpg"
+            />
+            <img
+              id="a01_08_new"
+              alt=""
+              src="./螢幕擷取畫面 2020-09-19 203759.png"
+            />
+            <!-- 新增要跑出來的圖片讓他display none -->
+            <!-- 從style新增 -->
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              href="https://cdn.cyberbiz.tw/s/files/15085/theme/48890/assets/TW_SGS.pdf"
+              target="_blank"
+              ><img
+                alt=""
+                src="https://cdn.cyberbiz.tw/s/files/15085/theme/48890/assets/a01_09.jpg"
+            /></a>
+          </td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              <br />
+              新品上市，現正熱銷中，趕快下單購買吧，買的多，優惠更多哦！
+            </p>
+
+            <p>
+              現在下單購買，只要<strong>滿9盒</strong>不但享折扣還<strong
+                >送&nbsp;台鹽生技&nbsp;益家好糖/益家味寶
+                各一罐(市價250/罐)</strong
+              >哦！累計無上限，買的越多送得越多！
+            </p>
+
+            <p>
+              本產品原料生產採用 生物法分解
+              專利，非傳統酸解法，確保原料的安全與品質無憂
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // id #
+      // class .
+
+      $("#a01_08").on("click", function () {
+        console.log("123");
+        $(".gray_box").css("display", "block");
+        $("#a01_08_new").css("display", "block");
+      });
+      //對 id為a01_08做點擊效果
+      //點擊後class為 gray_box 的css改變
+      //點擊後id為 a01_08_new 的css改變
+      $(".gray_box").on("click", function () {
+        $(".gray_box").css("display", "none");
+        $("#a01_08_new").css("display", "none");
+      });
+    </script>
+  </body>
+</html>
