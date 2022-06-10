@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="b.min.css">
+  <title>How哥產生器</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="Description" CONTENT="How哥產生器">
+
+
+  <meta property="og:title" content="How哥產生器"/>
+  <meta property="og:description" content="今年業配就靠這隻了!"/>
+  <meta property="og:url" content="http://howger.orange.tw/"/>
+  <meta property="og:image" content="http://howger.orange.tw/logo.png"/>
+  <meta property="fb:admins" content="100000144259984"/>
+  <meta property="og:type" content="website"/>
+
+  <meta name="twitter:card" content="summary" />
+  <meta name='twitter:title' content='How哥產生器'/>
+  <meta name="twitter:description" content="今年業配就靠這隻了!" />
+  <meta name="twitter:image" content="http://howger.orange.tw/logo_s.png"/>
+  <meta name="twitter:url" content="http://howger.orange.tw/" />
+
+  <style>
+    body {
+      font-family: "Josefin Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+      background-color: white;
+      font-weight: 200;
+      letter-spacing: 1px;
+    }
+
+    input {
+      background-color: #444;
+      color: white;
+    }
+  </style>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>  
+    function send(t, translate) {
+
+        var words = $("#msg").val()
+        var speed = $("#speed").val()
+
+        var orig = $(t).val()
+        $(t).attr("disabled", "1")
+        $(t).val("等待中!")
+        // console.log(translate)
+        console.log(encodeURIComponent(words))
+        exit;
+        if (words.length > 0) {
+          console.log(words);  
+          console.log(speed);
+          if (translate)
+            var url = '?mode=convert&translate=1&keys=' + encodeURIComponent(words) + "&s=" + speed
+          else 
+            var url = '?mode=convert&keys=' + encodeURIComponent(words) + "&s=" + speed
+
+          $.get(url, function(data){
+              if (data.error) {
+                  $("#info").text(data.error)
+                  $("#info").attr('class', 'alert alert-danger')
+
+                  $(t).prop("disabled", false)
+                  $(t).val(orig)
+              } else {
+                  location.href = data.msg
+              }
+          })
+        }
+      
+    }
+
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1 align="center" id="title" style="font-size: 640%;"> Howger Generator </h1>
+        <br>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <form action='/' method='GET'>
+            <textarea id="msg" name="keys" class="form-control" id="exampleFormControlTextarea1" placeholder="ㄍㄨㄣˋ, ㄔㄣˊ, ㄗ, ㄏㄠˋ, ㄌㄧ, ㄅㄟˇ, ㄑㄧ, ㄛ
+ or 
+棍，陳孜昊哩北七喔" rows="8"></textarea>
+            <input type="hidden" name="mode" value="convert">
+            <br>
+            <input class="btn btn-dark" type="button" value="送中文!" onclick="send(this, true)">
+            <input class="btn btn-dark" type="button" value="送注音!" onclick="send(this)">
+            &nbsp;
+             <label>語速</label>
+             <select id='speed' class="">
+               <option value="1.2" selected>正常</option>
+               <option value="1.5">微快</option>
+               <option value="1.8">很快</option>
+               <option value="2">超快</option>
+             </select>
+          </form>
+        </div>
+      </div>        
+    </div>
+
+
+    <div class="row">
+<!--         <br>
+                <i><b>當前負荷: </b> <font color=red><b>0.3%</b> <small>(卡畫面或沒有畫面稍等再試一次，流量太大請共體時艱QQ)</small></font> </i>
+        <i><b>當前負荷: </b> <font color=red><b>0.3%</b></font> <small>(06/03 23:27 修復效能問題! 不會再負荷量太大了!)</small> </i>
+        <br><br> -->
+
+
+        <div class=" col">  
+          <div id='info'></div>
+        </div>
+
+        <hr>
+        <b> 最受歡迎點閱影片 </b>
+        <ol>
+          <li><i><a href="?mode=share&id=5ed71b2d33b9e" target="_blank">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+</a></i></li><li><i><a href="?mode=share&id=5ed6219da5ce4&s=1.5" target="_blank">喔喔喔 出現了 是三倍券
+</a></i></li><li><i><a href="?mode=share&id=5ed607c763048" target="_blank">阿我就怕被罵阿
+</a></i></li><li><i><a href="?mode=share&id=5ed77eee9ac1f" target="_blank">ㄐㄩ ㄐㄩ ㄧㄥˋ ㄧㄥˋ ㄉㄜ
+</a></i></li><li><i><a href="?mode=share&id=5ed67f75ec4a3" target="_blank">ㄅㄅ
+</a></i></li><li><i><a href="?mode=share&id=5ed8b01c8a75e&s=1.5" target="_blank">星 爆 氣 流 斬
+</a></i></li><li><i><a href="?mode=share&id=5ed6275ebdeb7" target="_blank">我愛皓哥，皓哥囝波萬
+</a></i></li><li><i><a href="?mode=share&id=5ed669e088863&s=1.5" target="_blank">哈囉大家好我是啾啾鞋
+</a></i></li><li><i><a href="?mode=share&id=5ed77f2cd04ec" target="_blank">ㄌㄜˋ ㄙㄜˋ ㄏㄠˋ ㄑㄧㄢˋ ㄒㄩ
+</a></i></li><li><i><a href="?mode=share&id=5ed8b0ebe461c&s=1.5" target="_blank">霹靂卡霹哩拉拉波波力納倍倍魯多
+</a></i></li><li><i><a href="?mode=share&id=5ed7d02176abf" target="_blank">初音是軟體 ㄏ ㄏ ㄏ
+</a></i></li><li><i><a href="?mode=share&id=5ed7813c4d68d" target="_blank">樓下萊卡我他媽字剛
+</a></i></li><li><i><a href="?mode=share&id=5ed7c907a851e" target="_blank">超爽的，撿到一百塊咧
+</a></i></li><li><i><a href="?mode=share&id=5ed743b406b02" target="_blank">我愛藍亦明，我要跟阿福離婚
+</a></i></li><li><i><a href="?mode=share&id=5ed8589dcf713&s=1.5" target="_blank">臣亮言先帝創業未半而中道崩殂今天下三分益州疲弊此誠危急存亡之秋也
+</a></i></li><li><i><a href="?mode=share&id=5ed67938768cb" target="_blank">惡魔貓男你今晚的惡夢
+</a></i></li><li><i><a href="?mode=share&id=5ed60fe31c7aa" target="_blank">再啦幹
+</a></i></li><li><i><a href="?mode=share&id=5ed9fafc0cfc7&s=1.5" target="_blank">祝福韓國瑜畢業快樂
+</a></i></li><li><i><a href="?mode=share&id=5ed70dffa0340" target="_blank">ㄧㄥˋ ㄙㄞ ㄉㄜ˙  ㄗㄢˋ ㄗㄢˋ
+</a></i></li><li><i><a href="?mode=share&id=5ed66b99e9d56" target="_blank">哩北七喔</a></i></li>        </ol>
+
+        <br>
+        <hr>
+        <i><b>(中文)使用方法: </b> 輸入中文，點下「送中文」! 例如: 「我愛皓哥，皓哥囝波萬」 </i>
+        <br>
+        <i><b>(注音)使用方法: </b> 輸入注音，點下「送注音」! 例如: 「ㄨㄛˇ, ㄞˋ, ㄏㄠˋ, ㄍㄜ, ㄏㄠˋ, ㄍㄜ, ㄋㄢ, ㄅㄛ, ㄨㄢˋ」 </i>
+        <br>
+        <i><b>(注音)支援成句: </b> 「J個是」、 「ㄅㄅ」</i>
+        <br>
+        <i><b>聲明: </b> 自爽用玩具，有 BUG 可以來<a href="https://www.facebook.com/Orange.8361/posts/3561170430564397" target="_blank">臉書留言</a>詢問，分享請附上原出處! </i>
+        <br>
+        <i><b>聲明: </b> 我不是程式設計師，我不對我的 Code 負責XD </i>
+        <br>
+        <i><b>作者: </b> <a href="https://fb.com/orange.8361" target="_blank">Orange Tsai</a></i>
+        <br>
+        <i><b>來源: </b> <a href="https://www.youtube.com/watch?v=sNcvgpUqrwE" target="_blank">HowFun / 超萬用祝福影片</a>，<a href="https://www.facebook.com/howfunofficial/">How Fun 如何爽</a> 版權所有，非經同意請勿使用於商業用途</i>
+        <br>
+        <br>
+    </div>
+
+
+    <div class="row">
+      <br><br>
+      <div class="col">
+        <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fhowger.orange.tw%2F&layout=button_count&size=large&appId=2208846149401786&width=81&height=28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-13047966-6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-13047966-6');
+  </script>
+
+</body>
+</html>
+

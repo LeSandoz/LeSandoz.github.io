@@ -1,0 +1,44 @@
+body{
+    font-family: "·L³n¥¿¶ÂÅé";
+    font-weight: 800;
+    margin: 0px auto;
+    text-align: right;
+    
+    background: url("images/food-bg.jfif"), linear-gradient(274deg, rgba(173,255,236,0.6306897759103641) 0%, rgba(232,255,134,0.49343487394957986) 48%, rgba(238,56,99,0.7231267507002801) 100%);
+    // background: url("https://image.freepik.com/free-photo/abstract-paper-is-colorful-background-creative-design-pastel-wallpaper_6529-1319.jpg"), linear-gradient(274deg, rgba(173,255,236,0.6306897759103641) 0%, rgba(232,255,134,0.49343487394957986) 48%, rgba(238,56,99,0.7231267507002801) 100%);
+    // background: url("https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-full-light-watercolor-background-colorblueliterarywatercolorpigmentbackground-image_84591.jpg"), linear-gradient(274deg, rgba(173,255,236,0.6306897759103641) 0%, rgba(232,255,134,0.49343487394957986) 48%, rgba(238,56,99,0.7231267507002801) 100%);
+    // background: rgb(173,255,236);
+    // background: linear-gradient(274deg, rgba(173,255,236,0.6306897759103641) 0%, rgba(232,255,134,0.49343487394957986) 48%, rgba(238,56,99,0.7231267507002801) 100%);
+    background-size: cover;
+    // background-attachment:fixed;
+
+    h1{
+        margin: 20px 0;
+    }
+    input, button{
+        margin: 5px 0;
+    }
+    // .add{
+    //     position: absolute;
+    //     right: 80px;
+    //     transform: translateY(12%);
+    // }
+    .border-red{
+        border: 2px red solid;
+        background: pink;
+    }
+
+}
+.breakfastBox, .lunchBox, .dinnerBox, .snackBox{
+    display: flex;
+}
+@media screen and (max-width: 600px){
+    .breakfastBox, .lunchBox, .dinnerBox, .snackBox{
+        display: block;
+        text-align: left;
+    }
+    body{
+        background-image: url('https://cdn3.vectorstock.com/i/1000x1000/67/27/banana-fruit-tropical-food-wallpaper-vector-14286727.jpg');
+        background-attachment:fixed;
+    }
+}

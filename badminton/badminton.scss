@@ -1,0 +1,14 @@
+.container{
+    height: 80vh;
+    border: 1px red solid;
+    .leftBox{
+        background: indianred;
+        width: 30%;
+        height: 80vh;
+    }
+    .rightBox{
+        background: rgb(241, 148, 81);
+        width: 70%;
+        height: 80vh;
+    }
+}

@@ -107,7 +107,7 @@ function send() {
         $("#date").addClass("border-red")
     }else{
         alert("已新增")
-        window.setTimeout(" window.location.href = 'https://lesandoz.nctu.me/food-daily_plus/food-daily'", 1000)
+        window.setTimeout(" window.location.href = 'https://lesandoz.github.io/food-daily_plus/food-daily'", 1000)
         $.ajax({
             url: "https://script.google.com/macros/s/AKfycbx7aV1yqwC-iho3TjiDDdIklkeigOnXgQnYRIcQrMq_dd2OqeSS/exec",
             data: {

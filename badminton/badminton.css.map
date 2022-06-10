@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAA;EACN,MAAM,EAAE,IAAI;EACZ,MAAM,EAAE,aAAa;CAWxB;;AAbD,AAGI,UAHM,CAGN,QAAQ,CAAA;EACJ,UAAU,EAAE,SAAS;EACrB,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,IAAI;CACf;;AAPL,AAQI,UARM,CAQN,SAAS,CAAA;EACL,UAAU,EAAE,OAAiB;EAC7B,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,IAAI;CACf",
+    "sources": [
+        "badminton.scss"
+    ],
+    "names": [],
+    "file": "badminton.css"
+}
