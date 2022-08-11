@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAA;EACN,OAAO,EAAE,IAAI;CAahB;;AAdD,AAEI,UAFM,CAEN,KAAK,CAAA;EACD,SAAS,EAAE,UAAU;EACrB,MAAM,EAAE,eAAe;EACvB,QAAQ,EAAE,QAAQ;CAErB;;AAPL,AAQI,UARM,CAQN,KAAK,CAAA;EACD,SAAS,EAAE,UAAU;EACrB,MAAM,EAAE,eAAe;EACvB,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,IAAI;CAChB",
+    "sources": [
+        "kami.scss"
+    ],
+    "names": [],
+    "file": "kami.css"
+}

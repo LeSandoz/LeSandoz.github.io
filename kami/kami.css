@@ -1,0 +1,21 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .img1 {
+  -webkit-transform: scale(50%);
+          transform: scale(50%);
+  border: 1px black solid;
+  position: relative;
+}
+
+.container .img2 {
+  -webkit-transform: scale(50%);
+          transform: scale(50%);
+  border: 1px black solid;
+  position: absolute;
+  display: none;
+}
+/*# sourceMappingURL=kami.css.map */

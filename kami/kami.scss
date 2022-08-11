@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    .img1{
+        transform: scale(50%);
+        border: 1px black solid;
+        position: relative;
+        // z-index: -1;
+    }
+    .img2{
+        transform: scale(50%);
+        border: 1px black solid;
+        position: absolute;
+        display: none;
+    }
+}
+
