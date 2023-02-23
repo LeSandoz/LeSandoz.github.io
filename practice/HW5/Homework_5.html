@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+        .textBox{
+            height: 500px;
+            width: 50vw;
+            border: 1px solid black;
+            text-align: center;
+        }
+        .textHighlight{
+            height: 50px;
+            width: 50vw;
+            /* border: 1px solid black; */
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #inputBtn{
+            transform: translate(-15px);
+        }
+        #preBtn{
+            height: 50px;
+            margin-top: 15vw;
+            margin-right: 10px;
+        }
+        #nextBtn{
+            height: 50px;
+            margin-top: 15vw;
+            margin-left: 10px;
+        }
+    </style>
+  </head>
+  <body>
+      <div class="container">
+        <div class="form-group">
+          <label for=""></label>
+          <input type="text" class="form-control" name="" id="inputText" aria-describedby="helpId" placeholder="">
+          <small id="helpId" class="form-text text-muted">Please Enter a word</small>
+          <button type="button" class="btn btn-primary" id="inputBtn">Click me</button>
+          <div class="contentWrap row justify-content-start">
+            <button type="button" class="btn btn-primary" id="preBtn">Previous</button>
+            <div class="textBoxWrap">
+                <div class="textHighlight" id="textHighlight"></div>
+                <div class="textBox" id="textBox"></div>
+            </div>
+            <button type="button" class="btn btn-primary" id="nextBtn">Next</button>
+          </div>
+        </div>
+      </div>
+      <script>
+        let inputText = document.getElementById("inputText");
+        let inputBtn = document.getElementById("inputBtn");
+        let textBox = document.getElementById("textBox");
+        let textHighlight = document.getElementById("textHighlight");
+        let preBtn = document.getElementById("preBtn");
+        let nextBtn = document.getElementById("nextBtn");
+        let wordList = [];
+
+        inputBtn.onclick = function(){
+            wordList.push(inputText.value);
+
+            let listLength = wordList.length - 1;
+            let listEnd = wordList[listLength];
+
+            // console.log(listLength);
+            // console.log(wordList[listLength]);
+            // console.log(wordList);
+
+            textHighlight.innerHTML = wordList[listLength];
+            textBox.innerHTML = wordList.sort() + "<br>";
+        }
+
+
+
+
+        preBtn.onclick = function(){
+            let newLength = '';
+
+            // console.log(textHighlight.innerHTML);
+            // console.log(wordList.indexOf(textHighlight.innerHTML));
+
+            if((wordList.indexOf(textHighlight.innerHTML)) == 0){
+                newLength = 0;
+                textHighlight.innerHTML = textHighlight.innerHTML;
+            }else{
+                newLength = wordList.indexOf(textHighlight.innerHTML);
+                textHighlight.innerHTML = wordList[newLength - 1];
+            }
+            // console.log(newLength);
+
+            // textHighlight.innerHTML = wordList[newLength - 1];
+
+
+
+        }
+
+        nextBtn.onclick = function(){
+
+            let newLength = '';
+
+            // console.log(textHighlight.innerHTML);
+            // console.log(wordList.indexOf(textHighlight.innerHTML));
+
+            if((wordList.indexOf(textHighlight.innerHTML)) == (wordList.length)){
+                newLength = wordList.length;
+                textHighlight.innerHTML = textHighlight.innerHTML;
+                // console.log(wordList.indexOf(textHighlight.innerHTML));
+                // console.log(newLength);
+                // console.log(wordList.length);
+            }else{
+                newLength = wordList.indexOf(textHighlight.innerHTML);
+                textHighlight.innerHTML = wordList[newLength + 1];
+                // console.log(wordList.indexOf(textHighlight.innerHTML));
+                // console.log(newLength);
+                // console.log(wordList.length);
+
+            }
+   
+
+
+        }
+      </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
