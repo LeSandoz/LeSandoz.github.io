@@ -113,18 +113,20 @@
             // console.log(textHighlight.innerHTML);
             // console.log(wordList.indexOf(textHighlight.innerHTML));
 
-            if((wordList.indexOf(textHighlight.innerHTML)) == (wordList.length)){
-                newLength = wordList.length;
+            if((wordList.indexOf(textHighlight.innerHTML)) == (wordList.length - 1)){
+                newLength = wordList.length - 1;
                 textHighlight.innerHTML = textHighlight.innerHTML;
-                // console.log(wordList.indexOf(textHighlight.innerHTML));
-                // console.log(newLength);
-                // console.log(wordList.length);
+                console.log("==");
+                console.log(wordList.indexOf(textHighlight.innerHTML));
+                console.log(newLength);
+                console.log(wordList.length);
             }else{
                 newLength = wordList.indexOf(textHighlight.innerHTML);
                 textHighlight.innerHTML = wordList[newLength + 1];
-                // console.log(wordList.indexOf(textHighlight.innerHTML));
-                // console.log(newLength);
-                // console.log(wordList.length);
+                console.log("!=");
+                console.log(wordList.indexOf(textHighlight.innerHTML));
+                console.log(newLength);
+                console.log(wordList.length);
 
             }
    
