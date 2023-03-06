@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Car Move Website</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <style>
+    .container{
+        height: 100vh;
+        background-color: antiquewhite;
+        /* border: 1px solid black; */
+    }
+    #title{
+        display: flex;
+        justify-content: center; 
+        /* margin-top: 1vh; */
+    }
+    .btnW100{
+        width: 100px;
+        height: 50px;
+        border-radius: 20%;
+    }
+    .btnNone{
+        background-color: white;
+        border: none;
+    }
+    .boxWrap{
+        height: 80vh;
+        transform: translate(0, 10vh);
+    }
+    .userInputWrap{
+        transform: translate(0, 26vh);
+    }
+    .svgWrap{
+        transform: translate(150px ,26vh);
+    }
+    
+    #upBtn{
+        transform: translate(103px, -3px);
+    }
+    #box1{
+        /* background-color: antiquewhite; */
+        align-items: center;
+    }
+    #box2{
+        /* background-color: aquamarine; */
+        display: grid;
+        align-items: center;
+        grid-template-columns: 30% 10% 20% 20% 20%;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+    }
+    .buttonWrap{
+        transform: translate(100px, 30vh);
+    }
+    #honda{
+        width: 150px;
+        height: 150px;
+        fill: rgba(255, 255, 255, 0.445);
+    }
+  </style>
+  <body>
+    <div id="wrap1" class="container">
+        <div id="">
+            <h3 id="title">Use Button and Keyboard.</h3>
+        </div>
+        <div class="d-flex boxWrap">
+            <div id="box2" class="col-sm">
+                <div class="userInputWrap">
+                    <!-- <img id="honda" src="https://static.thenounproject.com/png/914913-200.png" alt=""> -->
+                    Choose color: <input type="color" name="" id="carColor" placeholder="Enter your car color: ">
+                    <input type="text" name="" id="carWeight" placeholder="Enter your car weight: ">
+                    <input type="text" name="" id="moveUnit" placeholder="Enter your move units: ">
+                    <button id="carSubmit" type="button" class="btn btn-primary btnW100">Submit</button>
+                </div>
+                <div class="svgWrap">
+                    <svg id="honda" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 39.055 39.054" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                        <g>
+                            <path id="fillColor" d="M38.831 14.26a1.005 1.005 0 0 0-.775-.369h-3.801c-.938-2.474-2.16-4.898-3.549-5.813-4.805-3.161-17.55-3.161-22.355 0-1.39.916-2.607 3.343-3.55 5.813H1a.997.997 0 0 0-.775.369.995.995 0 0 0-.204.834l.563 2.728a1 1 0 0 0 .979.797h1.126c-1.087 1.254-1.614 2.833-1.621 4.413-.007 1.952.734 3.716 2.089 4.964.015.013.03.022.044.035v3.817c0 .827.672 1.5 1.5 1.5h3.506c.828 0 1.5-.673 1.5-1.5v-1.534h19.641v1.534c0 .827.672 1.5 1.5 1.5h3.506c.826 0 1.5-.673 1.5-1.5v-3.742c1.438-1.317 2.125-3.129 2.134-4.938.006-1.634-.545-3.271-1.696-4.551h1.201a.996.996 0 0 0 .979-.798l.564-2.727a1.008 1.008 0 0 0-.205-.832zM9.998 10.583c3.83-2.521 15.229-2.521 19.057 0 .744.488 1.701 2.461 2.578 4.877H7.422c.875-2.415 1.832-4.387 2.576-4.877zM5.512 23.408a2.95 2.95 0 1 1 5.901.001 2.95 2.95 0 0 1-5.901-.001zm25.119 2.951a2.951 2.951 0 1 1 0-5.903 2.951 2.951 0 0 1 0 5.903z" fill="#000000" data-original="#000000" class=""></path>
+                        </g>
+                    </svg>
+                </div>
+
+            </div>
+            <div id="box1" class="col-sm">
+                <div class="buttonWrap">
+                    <button id="upBtn" type="button" class="btn btn-primary btnW100">up</button>
+                    <br>
+                    <button id="leftBtn" type="button" class="btn btn-primary btnW100">left</button>
+                    <button id="downBtn" type="button" class="btn btn-primary btnW100">down</button>
+                    <button id="rightBtn" type="button" class="btn btn-primary btnW100">right</button>
+                    <button id="resetBtn" type="button" class="btn btn-primary btnW100">reset</button>
+                </div>
+            </div>
+        </div>
+        <div id="textBoxWrap">
+            <h4 id="textBox">Change text here!</h4>
+        </div>
+    </div>
+
+
+    </body>
+    <script>
+    var textBox = document.getElementById("textBox");
+
+    var carColor = document.getElementById("carColor");
+    var carWeight = document.getElementById("carWeight");
+    var moveUnit = document.getElementById("moveUnit");
+    var carSubmit = document.getElementById("carSubmit");
+
+    var upBtn = document.getElementById("upBtn");
+    var downBtn = document.getElementById("downBtn");
+    var rightBtn = document.getElementById("rightBtn");
+    var leftBtn = document.getElementById("leftBtn");
+    var resetBtn = document.getElementById("resetBtn");
+
+    class Car{
+        constructor(brand, weight, color){
+            this.brand = brand;
+            this.weight = weight;
+            this.color = color;
+            this.x = 0;
+            this.y = 0;
+        }
+
+        forward(units){
+            // console.log(document.getElementById("fillColor"))
+            // console.log(this.color);
+            this.y += units;
+            // console.log(`Brand:  ${this.brand}, Color: ${this.color}, Weight: ${this.weight}. \n${this.brand} moved forward by ${units} units. \nNew location: (${this.x}, ${this.y}).`);
+            textBox.innerHTML = `Color:`;
+            textBox.innerHTML += `                    <svg id="honda" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="128" height="128" x="0" y="0" viewBox="0 0 39.055 39.054" style="enable-background:new 0 0 128 128; transform: scale(0.4);" xml:space="preserve" class="">
+                        <g>
+                            <path id="fillColor" d="M38.831 14.26a1.005 1.005 0 0 0-.775-.369h-3.801c-.938-2.474-2.16-4.898-3.549-5.813-4.805-3.161-17.55-3.161-22.355 0-1.39.916-2.607 3.343-3.55 5.813H1a.997.997 0 0 0-.775.369.995.995 0 0 0-.204.834l.563 2.728a1 1 0 0 0 .979.797h1.126c-1.087 1.254-1.614 2.833-1.621 4.413-.007 1.952.734 3.716 2.089 4.964.015.013.03.022.044.035v3.817c0 .827.672 1.5 1.5 1.5h3.506c.828 0 1.5-.673 1.5-1.5v-1.534h19.641v1.534c0 .827.672 1.5 1.5 1.5h3.506c.826 0 1.5-.673 1.5-1.5v-3.742c1.438-1.317 2.125-3.129 2.134-4.938.006-1.634-.545-3.271-1.696-4.551h1.201a.996.996 0 0 0 .979-.798l.564-2.727a1.008 1.008 0 0 0-.205-.832zM9.998 10.583c3.83-2.521 15.229-2.521 19.057 0 .744.488 1.701 2.461 2.578 4.877H7.422c.875-2.415 1.832-4.387 2.576-4.877zM5.512 23.408a2.95 2.95 0 1 1 5.901.001 2.95 2.95 0 0 1-5.901-.001zm25.119 2.951a2.951 2.951 0 1 1 0-5.903 2.951 2.951 0 0 1 0 5.903z" fill="${this.color}" data-original="#000000" class=""></path>
+                        </g>
+                    </svg>`;
+            textBox.innerHTML += `Weight: ${this.weight}. \nYour car moved forward by ${units} units. \nNew location: (${this.x}, ${this.y}).`;
+        }
+
+        backward(units){
+            this.y -= units;
+            // console.log(`Brand:  ${this.brand}, Color: ${this.color}, Weight: ${this.weight}. \n${this.brand} moved backward by ${units} units. \nNew location: (${this.x}, ${this.y}).`);
+            textBox.innerHTML = `Color:`;
+            textBox.innerHTML += `                    <svg id="honda" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="128" height="128" x="0" y="0" viewBox="0 0 39.055 39.054" style="enable-background:new 0 0 128 128; transform: scale(0.4);" xml:space="preserve" class="">
+                        <g>
+                            <path id="fillColor" d="M38.831 14.26a1.005 1.005 0 0 0-.775-.369h-3.801c-.938-2.474-2.16-4.898-3.549-5.813-4.805-3.161-17.55-3.161-22.355 0-1.39.916-2.607 3.343-3.55 5.813H1a.997.997 0 0 0-.775.369.995.995 0 0 0-.204.834l.563 2.728a1 1 0 0 0 .979.797h1.126c-1.087 1.254-1.614 2.833-1.621 4.413-.007 1.952.734 3.716 2.089 4.964.015.013.03.022.044.035v3.817c0 .827.672 1.5 1.5 1.5h3.506c.828 0 1.5-.673 1.5-1.5v-1.534h19.641v1.534c0 .827.672 1.5 1.5 1.5h3.506c.826 0 1.5-.673 1.5-1.5v-3.742c1.438-1.317 2.125-3.129 2.134-4.938.006-1.634-.545-3.271-1.696-4.551h1.201a.996.996 0 0 0 .979-.798l.564-2.727a1.008 1.008 0 0 0-.205-.832zM9.998 10.583c3.83-2.521 15.229-2.521 19.057 0 .744.488 1.701 2.461 2.578 4.877H7.422c.875-2.415 1.832-4.387 2.576-4.877zM5.512 23.408a2.95 2.95 0 1 1 5.901.001 2.95 2.95 0 0 1-5.901-.001zm25.119 2.951a2.951 2.951 0 1 1 0-5.903 2.951 2.951 0 0 1 0 5.903z" fill="${this.color}" data-original="#000000" class=""></path>
+                        </g>
+                    </svg>`;
+            textBox.innerHTML += `Weight: ${this.weight}. \nYour car moved forward by ${units} units. \nNew location: (${this.x}, ${this.y}).`;
+        }
+
+        left(units){
+            this.x -= units;
+            // console.log(`Brand:  ${this.brand}, Color: ${this.color}, Weight: ${this.weight}. \n${this.brand} moved left by ${units} units. \nNew location: (${this.x}, ${this.y}).`);
+            textBox.innerHTML = `Color:`;
+            textBox.innerHTML += `                    <svg id="honda" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="128" height="128" x="0" y="0" viewBox="0 0 39.055 39.054" style="enable-background:new 0 0 128 128; transform: scale(0.4);" xml:space="preserve" class="">
+                        <g>
+                            <path id="fillColor" d="M38.831 14.26a1.005 1.005 0 0 0-.775-.369h-3.801c-.938-2.474-2.16-4.898-3.549-5.813-4.805-3.161-17.55-3.161-22.355 0-1.39.916-2.607 3.343-3.55 5.813H1a.997.997 0 0 0-.775.369.995.995 0 0 0-.204.834l.563 2.728a1 1 0 0 0 .979.797h1.126c-1.087 1.254-1.614 2.833-1.621 4.413-.007 1.952.734 3.716 2.089 4.964.015.013.03.022.044.035v3.817c0 .827.672 1.5 1.5 1.5h3.506c.828 0 1.5-.673 1.5-1.5v-1.534h19.641v1.534c0 .827.672 1.5 1.5 1.5h3.506c.826 0 1.5-.673 1.5-1.5v-3.742c1.438-1.317 2.125-3.129 2.134-4.938.006-1.634-.545-3.271-1.696-4.551h1.201a.996.996 0 0 0 .979-.798l.564-2.727a1.008 1.008 0 0 0-.205-.832zM9.998 10.583c3.83-2.521 15.229-2.521 19.057 0 .744.488 1.701 2.461 2.578 4.877H7.422c.875-2.415 1.832-4.387 2.576-4.877zM5.512 23.408a2.95 2.95 0 1 1 5.901.001 2.95 2.95 0 0 1-5.901-.001zm25.119 2.951a2.951 2.951 0 1 1 0-5.903 2.951 2.951 0 0 1 0 5.903z" fill="${this.color}" data-original="#000000" class=""></path>
+                        </g>
+                    </svg>`;
+            textBox.innerHTML += `Weight: ${this.weight}. \nYour car moved forward by ${units} units. \nNew location: (${this.x}, ${this.y}).`;
+        }
+
+        right(units){
+            this.x += units;
+            // console.log(`Brand:  ${this.brand}, Color: ${this.color}, Weight: ${this.weight}. \n${this.brand} moved right by ${units} units. \nNew location: (${this.x}, ${this.y}).`);
+            textBox.innerHTML = `Color:`;
+            textBox.innerHTML += `                    <svg id="honda" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="128" height="128" x="0" y="0" viewBox="0 0 39.055 39.054" style="enable-background:new 0 0 128 128; transform: scale(0.4);" xml:space="preserve" class="">
+                        <g>
+                            <path id="fillColor" d="M38.831 14.26a1.005 1.005 0 0 0-.775-.369h-3.801c-.938-2.474-2.16-4.898-3.549-5.813-4.805-3.161-17.55-3.161-22.355 0-1.39.916-2.607 3.343-3.55 5.813H1a.997.997 0 0 0-.775.369.995.995 0 0 0-.204.834l.563 2.728a1 1 0 0 0 .979.797h1.126c-1.087 1.254-1.614 2.833-1.621 4.413-.007 1.952.734 3.716 2.089 4.964.015.013.03.022.044.035v3.817c0 .827.672 1.5 1.5 1.5h3.506c.828 0 1.5-.673 1.5-1.5v-1.534h19.641v1.534c0 .827.672 1.5 1.5 1.5h3.506c.826 0 1.5-.673 1.5-1.5v-3.742c1.438-1.317 2.125-3.129 2.134-4.938.006-1.634-.545-3.271-1.696-4.551h1.201a.996.996 0 0 0 .979-.798l.564-2.727a1.008 1.008 0 0 0-.205-.832zM9.998 10.583c3.83-2.521 15.229-2.521 19.057 0 .744.488 1.701 2.461 2.578 4.877H7.422c.875-2.415 1.832-4.387 2.576-4.877zM5.512 23.408a2.95 2.95 0 1 1 5.901.001 2.95 2.95 0 0 1-5.901-.001zm25.119 2.951a2.951 2.951 0 1 1 0-5.903 2.951 2.951 0 0 1 0 5.903z" fill="${this.color}" data-original="#000000" class=""></path>
+                        </g>
+                    </svg>`;
+            textBox.innerHTML += `Weight: ${this.weight}. \nYour car moved forward by ${units} units. \nNew location: (${this.x}, ${this.y}).`;
+        }
+
+        reset(units){
+            this.x = 0;
+            this.y = 0;
+            // console.log(`Brand:  ${this.brand}, Color: ${this.color}, Weight: ${this.weight}. \n${this.brand} moved right by ${units} units. \nNew location: (${this.x}, ${this.y}).`);
+            textBox.innerHTML = `Weight: ${this.weight}. \nYour car should be reset. \nNew location: (${this.x}, ${this.y}).`;
+        }
+    }
+    let yourCar = new Car("Your car", 0, "");
+
+    // yourCar.forward(10);
+    // yourCar.left(5);
+    // yourCar.backward(12);
+    // yourCar.right(7);
+
+
+    upBtn.onclick = function(){
+        // textBox.innerHTML = "move up 1";
+        // console.log(moveUnit.value);
+        yourCar.forward(parseInt(moveUnit.value));
+    }
+
+    downBtn.onclick = function(){
+        // textBox.innerHTML = "move down 1";
+        yourCar.backward(parseInt(moveUnit.value));
+    }
+
+    rightBtn.onclick = function(){
+        // textBox.innerHTML = "move right 1";
+        yourCar.right(parseInt(moveUnit.value));
+    }
+
+    leftBtn.onclick = function(){
+        // textBox.innerHTML = "move left 1";
+        yourCar.left(parseInt(moveUnit.value));
+    }
+    resetBtn.onclick = function(){
+        // textBox.innerHTML = "move left 1";
+        yourCar.reset();
+    }
+
+    carSubmit.onclick = function(){
+        textBox.innerHTML = "Submit success!";
+        // textBox.innerHTML = `Weight: ${carWeight.value}. \nNew location: (${this.x}, ${this.y}).`;
+        // alert("Submit success.");
+        document.getElementById("fillColor").setAttribute("fill", carColor.value); 
+        yourCar.weight = carWeight.value;
+        yourCar.color = carColor.value;
+
+        // console.log(carColor.value);
+        // console.log(carWeight.value);
+        // console.log(moveUnit.value);
+    }
+
+
+    document.addEventListener('keydown', function(event) {
+        switch (event.keyCode) {
+            case 37: //left
+                leftBtn.onclick();
+                break;
+            case 38: //forward
+                upBtn.onclick();
+                break;
+            case 39: //right
+                rightBtn.onclick();
+                break;
+            case 40: //backward
+                downBtn.onclick();
+                break;
+            case 13: //enter
+                carSubmit.onclick();
+                break;
+  }
+});
+
+    </script>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
