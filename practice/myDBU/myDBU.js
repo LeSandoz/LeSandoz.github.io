@@ -3,6 +3,6 @@ let context = document.getElementById("context");
 
 darkModeBtn.onclick = function(){
     context.classList.toggle("darkMode");
-    alert("dark mode");
+    // alert("dark mode");
 }
 
