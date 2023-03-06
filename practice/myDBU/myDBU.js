@@ -5,3 +5,4 @@ darkModeBtn.onclick = function(){
     context.classList.toggle("darkMode");
     alert("dark mode");
 }
+
