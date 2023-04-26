@@ -1,0 +1,198 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+
+/* Maze */
+.maze-container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .maze {
+    width: 50vw;
+    height: 65.5vh;
+    /* margin-right: 10%; */
+    transform: translate(-10%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .cell_container{
+    background: url(../../assets/images/backbround/Temple.gif);
+    background-size: cover;
+    background-position: center;
+    width: 35vw;
+    
+  }
+  
+  .maze .row {
+    display: flex;
+  }
+  
+  .maze .cell {
+    width: 5vw;
+    height: 10vh;
+    border: 1px solid black;
+  }
+  
+  .maze .cell.wall {
+    background-color: gray;
+  }
+  
+  .maze .cell.path {
+    background-color: rgba(255, 255, 255, 0);
+    transform: translate(0.6vw);
+  }
+  
+/* Maze */
+
+
+/* Player */
+  .player {
+    position: absolute;
+    width: 5vw;
+    height: 10vh;
+    /* background-image: url('../../assets/images/RPG-Character-Down.gif'); */
+    background-size: cover;
+    z-index: 1;
+  }
+
+/* Player */
+
+/* Item */
+  .item {
+    position: absolute;
+    width: 5vw;
+    height: 10vh;
+    /* background-image: url('../../assets/images/RPG-Character-Down.gif'); */
+    background-size: cover;
+  }
+
+/* Item */
+
+/* Inventory Item */
+  .inv_li{
+    cursor: pointer;
+  }
+  .inv_item {
+    /* position: absolute; */
+    transform: translate(115px 50px);
+    width: 40px;
+    height: 40px;
+    /* background-image: url('../../assets/images/RPG-Character-Down.gif'); */
+    background-size: cover;
+  }
+
+/* Inventory Item */
+
+/* Control */
+.controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .controls-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn-up, .btn-down {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #333;
+    margin-bottom: 10px;
+  }
+  
+  .btn-left, .btn-right {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #333;
+    margin-left: 10px;
+  }
+  
+  .fa {
+    font-size: 24px;
+  }
+  
+/* Control */
+
+/* Player Status */
+.player-status {
+  position: absolute;
+  top: 5.2vh;
+  right: 23vw;
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 300px;
+}
+
+.player-status div {
+  margin-bottom: 5px;
+}
+
+.player_Img{
+  width: 5vw;
+  height: 10vh;
+}
+/* Player Status */
+
+/* Inventory */
+.inventory {
+  position: absolute;
+  top: 40vh;
+  right: 23vw;
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 300px;
+}
+
+.inventory div {
+  margin-bottom: 5px;
+}
+/* Inventory */
+
+/* Monster-Info */
+#monster-info {
+  width: 8.5vw;
+  height: 33vh;
+  position: absolute;
+  top: 5.2vh;
+  left: 18.5vw;
+  z-index: 999;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+/* Monster-Info */
+
+/* Btn */
+.goHome, .resetGame, .pause, .changeBg{
+  transform: translate(2vw, 5vh);
+}
+/* Btn */

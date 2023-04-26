@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mb-5">Maze</h1>
+      <!-- Add maze map here -->
+      <div class="maze container">
+        <div class="cell_container">
+          <div class="row" *ngFor="let row of mazeMap; let i = index">
+            <div class="cell" *ngFor="let cell of row; let j = index" [ngClass]="{ 'wall': cell === 1, 'path': cell === 0 }">
+              <img *ngIf="i === player.row && j === player.col" [src]="player.image" alt="player" class="player">
+              <img *ngIf="items[0].row === i && items[0].col === j" src="./assets/images/items/wooden-sword.png" class="item">
+              <img *ngIf="items[1].row === i && items[1].col === j" src="./assets/images/items/iron-sword.png" class="item">
+              <img *ngIf="items[2].row === i && items[2].col === j" src="./assets/images/items/golden-sword.png" class="item">
+              <img *ngIf="items[3].row === i && items[3].col === j" src="./assets/images/items/wooden-shield.png" class="item">
+              <img *ngIf="items[4].row === i && items[4].col === j" src="./assets/images/items/iron-shield.png" class="item">
+              <img *ngIf="items[5].row === i && items[5].col === j" src="./assets/images/items/golden-shield.png" class="item">
+              <img *ngIf="items[6].row === i && items[6].col === j" src="./assets/images/items/red-potion-S.png" class="item">
+              <img *ngIf="items[7].row === i && items[7].col === j" src="./assets/images/items/red-potion-L.png" class="item">
+              <img *ngIf="items[8].row === i && items[8].col === j" src="./assets/images/items/blue-potion-S.png" class="item">
+              <img *ngIf="items[9].row === i && items[9].col === j" src="./assets/images/items/blue-potion-L.png" class="item">
+
+              <img *ngIf="monsters[0].row === i && monsters[0].col === j" src="./assets/images/monster/slime.png" class="item">
+              <img *ngIf="monsters[1].row === i && monsters[1].col === j" src="./assets/images/monster/grey-wolf.png" class="item">
+              <img *ngIf="monsters[2].row === i && monsters[2].col === j" src="./assets/images/monster/giant-bear.png" class="item">
+              <img *ngIf="monsters[3].row === i && monsters[3].col === j" src="./assets/images/monster/fire-dragon.png" class="item">
+              <img *ngIf="monsters[4].row === i && monsters[4].col === j" src="./assets/images/monster/demon.png" class="item">
+            </div>
+          </div>
+        </div>
+          
+      </div>
+      <div id="monster-info">
+        <h2>Monster Info</h2>
+        <img src="./assets/images/monster/blank.png" style="width: 6vw; height: 12vh; text-align:center; transform: translate(10px, 0);">
+        <p>Name: </p>
+        <p>Level: </p>
+        <p>Health: </p>
+        <p>Attack: </p>
+        <p>Defense: </p>
+        <!--怪物信息将显示在这里-->
+      </div>
+       <!-- Player Status -->
+      <div class="player-status">
+        <h2>Player Status</h2>
+        <img src="./assets/images/RPG-Character-Down.gif" alt="" class="player_Img">
+        <div class="player-name">Name: {{player.name}}</div>
+        <div class="player-level">Level: {{player.level}}</div>
+        <div class="player-experience">Experience: {{player.experience}} / {{player.maxExperience}}</div>
+        <div class="player-health">Health: {{player.health}} / {{player.maxHealth}}</div>
+        <div class="player-mana">Mana: {{player.mana}} / {{player.maxMana}}</div>
+        <div class="player-attack">Attack: {{player.attack}}</div>
+        <div class="player-defense">Defense: {{player.defense}}</div>
+      </div>
+
+        <!-- Inventory -->
+        <div class="inventory">
+          <h2>Inventory</h2>
+          <ul>
+            <li *ngFor="let item of player.inventory; let i = index;" class="inv_li">
+              <img [src]="item.image" alt="{{ item.name }}" class="inv_item" (click)="useItem(item, i)">
+              <span>{{ item.name }}</span>
+            </li>           
+          </ul>
+        </div>
+        
+        
+        <!-- <div class="controls">
+          <div class="btn-group-vertical">
+            <button class="btn btn-outline-primary btn-up" (click)="moveUp()"><i class="fa fa-arrow-up"></i></button>
+            <div class="btn-group">
+              <button class="btn btn-outline-primary btn-left" (click)="moveLeft()"><i class="fa fa-arrow-left"></i></button>
+              <button class="btn btn-outline-primary btn-down" (click)="moveDown()"><i class="fa fa-arrow-down"></i></button>
+              <button class="btn btn-outline-primary btn-right" (click)="moveRight()"><i class="fa fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </div> -->
+        
+          
+    <button (click)="goHome()" class="goHome btn btn-primary">Home</button>
+    <button (click)="resetGame()" class="resetGame btn btn-danger">Reset Game</button>
+    <button (click)="pause()" class="pause btn btn-danger">Pause Music</button>
+    <button (click)="changeBackground()" class="changeBg btn btn-danger">Change Background</button>
+    <!-- <button (click)="generateMonster()">Generate Monster</button> -->
+
+    </div>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
