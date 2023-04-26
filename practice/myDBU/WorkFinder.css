@@ -1,0 +1,15 @@
+body header nav .logo {
+  width: 15vw;
+}
+
+body header .headBar {
+  width: 100.8vw;
+  height: 3vh;
+  background: #007bff;
+}
+
+body header .imgBox img {
+  -webkit-transform: scale();
+          transform: scale();
+}
+/*# sourceMappingURL=WorkFinder.css.map */

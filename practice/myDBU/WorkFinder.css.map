@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAGY,IAHR,CACA,MAAM,CACF,GAAG,CACC,KAAK,CAAA;EACD,KAAK,EAAE,IAAI;CACd;;AALb,AAOQ,IAPJ,CACA,MAAM,CAMF,QAAQ,CAAA;EACJ,KAAK,EAAE,OAAO;EACd,MAAM,EAAE,GAAG;EACX,UAAU,EAAE,OAAO;CACtB;;AAXT,AAaY,IAbR,CACA,MAAM,CAWF,OAAO,CACH,GAAG,CAAA;EACC,SAAS,EAAE,OAAO;CACrB",
+    "sources": [
+        "WorkFinder.scss"
+    ],
+    "names": [],
+    "file": "WorkFinder.css"
+}
