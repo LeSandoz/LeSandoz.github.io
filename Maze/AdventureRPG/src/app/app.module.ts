@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MazeComponent } from './maze/maze.component';
 import { GameService } from './services/game.service';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -18,8 +19,10 @@ import { GameService } from './services/game.service';
     AppRoutingModule
   ],
   providers: [
-    GameService // 在此添加 GameService 的提供程序
+    GameService, // 在此添加 GameService 的提供程序
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }
