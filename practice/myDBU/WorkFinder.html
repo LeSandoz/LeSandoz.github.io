@@ -12,54 +12,141 @@
   </head>
   <body>
       <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-            <img src="https://www.dbu.edu/_images/logos/it-logo2.png" alt="" class="logo">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+        <nav class="navbar navbar-expand-lg" style="background-color: FFD1AF;">
+          <div class="d-flex w-0 order-0">
+            <a class="navbar-brand mr-1 text-secondary logo" href="#"><img src="./img/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+                <span class="navbar-toggler-icon"></span>
             </button>
-          
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-              </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-              </form>
+        </div>
+          <div class="container">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar10">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="navbar-collapse collapse" id="navbar10">
+                  <ul class="navbar-nav nav-fill w-100">
+
+                      <li class="nav-item">
+                          <a class="nav-link" id="navTitle1" href="./JobSearch.html">Find Job</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" id="navTitle2" href="./myApplication.html">My Applications</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" id="navTitle3" href="./myProfile.html">My Profile</a>
+                      </li>
+                  </ul>
+                  <ul class="navbar-nav nav-fill w-100 user">
+                    <li class="nav-item">
+                      <a class="nav-link text-secondary" href="#"><img src="./img/user.png" alt=""></a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </nav>
+        <div class="headBar title row">
+          <h1>Find your next <span>Job</span> here</h1>
+          <form class="d-flex">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
             </div>
-        </nav>
-        <div class="headBar row"></div>
-        <div class="imgBox container">
-            <img src="https://www.dbu.edu/_images/banners/information-technology.jpg" alt="">
+            <button type="submit" class="btn" id="submit">Submit</button>
+          </form>
         </div>
       </header>
-      <nav class="content boxContainer container">
-        <h1>DBU WorkFinder</h1>
-        <h3>Find Your Perfect Match</h3>
-        <hr>
+      <nav class="content boxContainer d-flex">
+        <div class="departments">
+          <div class="d-flex deH1Wrap">
+            <h1>Departments</h1>
+            <img src="./img/departments.png" alt="">
+          </div>
+          <div class="chk">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue">
+                Information Technology
+              </label>
+            </div>
+          </div>
+          <div class="chk">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue">
+                International Student Services
+              </label>
+            </div>
+          </div>
+          <div class="chk">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue">
+                University Communications
+              </label>
+            </div>
+          </div>
+          <div class="chk">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue">
+                Office of General Counsel
+              </label>
+            </div>
+          </div>
+          <div class="chk">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue">
+                Office of the Chancellor
+              </label>
+            </div>
+          </div>
+          <div class="chk">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue">
+                Post Office
+              </label>
+            </div>
+          </div>
+          <div class="chk">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue">
+                Dining
+              </label>
+            </div>
+          </div>
+          <div class="chk">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue">
+                Other
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="suggestions">
+          <h1>Suggestions:</h1>
+          <div class="sgContent">
+            <h3>Information Technology</h3>
+            <h2>Support Center</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio.
+            </p>
+          </div>
+          <div class="sgContent">
+            <h3>Information Technology</h3>
+            <h2>CRM Team</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio.
+            </p>
+          </div>
+          </div>
+        </div>
+
       </nav>
       <footer>
-
+        <img src="./img/robot.png" alt="">
       </footer>
       
     <!-- Optional JavaScript -->
@@ -67,5 +154,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./WorkFinder.js"></script>
   </body>
 </html>

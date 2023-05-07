@@ -1,3 +1,10 @@
+body {
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url(./img/profile-bg.png);
+}
+
 body .bg-orange {
   background-color: #ff7f23;
 }
@@ -50,7 +57,6 @@ body header nav .logo {
 body header .headBar {
   width: 100vw;
   height: 20vh;
-  background: #ededed;
 }
 
 body header .headBar h1 {
@@ -82,81 +88,60 @@ body header .imgBox img {
 
 body .content {
   background-size: cover;
-  background-image: url(./img/content-bg.png);
   height: 70vh;
+  margin-left: 10vw;
 }
 
-body .content .departments {
-  -webkit-transform: translate(15vw, 5vh);
-          transform: translate(15vw, 5vh);
+body .content .profile {
+  width: 15vw;
   height: 50vh;
-  width: 20vw;
-  background-color: rgba(255, 208, 175, 0.26);
+  margin-right: 10vw;
 }
 
-body .content .departments h1 {
-  -webkit-transform: translate(0, -5vh) scale(1);
-          transform: translate(0, -5vh) scale(1);
+body .content .profile .imgWrap {
+  height: 25vh;
+  width: 10vw;
+  margin-left: 2.5vw;
+  margin-top: 3vh;
 }
 
-body .content .departments img {
-  -webkit-transform: translate(5vw, -5vh) scale(1.5);
-          transform: translate(5vw, -5vh) scale(1.5);
-}
-
-body .content .departments .chk {
-  -webkit-transform: translate(2vw);
-          transform: translate(2vw);
-  margin-bottom: 1vh;
-}
-
-body .content .departments .chk label {
-  -webkit-transform: translate(0, -3vh);
-          transform: translate(0, -3vh);
-  text-decoration: underline;
+body .content .profile button {
+  width: 6vw;
+  height: 5vh;
+  border-radius: 30px;
+  margin-left: 4.5vw;
+  margin-top: 5vh;
+  background-color: rgba(255, 127, 35, 0.33);
+  color: #d69a9a;
+  font-weight: bold;
   font-size: 24px;
+  border: none;
 }
 
-body .content .departments .chk label input {
-  -webkit-transform: translate(-0.7vw, 0.5vh);
-          transform: translate(-0.7vw, 0.5vh);
-}
-
-body .content .departments .chk label input[type=checkbox] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  border: 2px solid #ff7f23;
-  border-radius: 4px;
-}
-
-body .content .departments .chk label input[type=checkbox]:checked {
-  background-color: #ff7f23;
-  border-color: #ff7f23;
-}
-
-body .content .suggestions {
-  -webkit-transform: translate(25vw, 5vh);
-          transform: translate(25vw, 5vh);
+body .content .detail {
+  width: 45vw;
   height: 50vh;
-  width: 40vw;
 }
 
-body .content .suggestions h1 {
-  color: #ff7f23;
-  -webkit-transform: translate(0, -5vh) scale(1);
-          transform: translate(0, -5vh) scale(1);
+body .content .detail h3 {
+  margin: 3vh 0vw 3vh 3vw;
 }
 
-body .content .suggestions .sgContent {
-  background-color: rgba(255, 255, 255, 0.85);
-  height: 20vh;
-  width: 40vw;
-  padding: 40px;
-  margin-bottom: 2vh;
-  border-radius: 15px;
+body .content .detail .titletWrap {
+  margin-right: 6vw;
+}
+
+body .content .detail .textWrap button {
+  width: 6vw;
+  height: 5vh;
+  border-radius: 30px;
+  margin-left: 3vw;
+  margin-top: 1vh;
+  background-color: rgba(255, 127, 35, 0.33);
+  color: #d69a9a;
+  font-weight: bold;
+  font-size: 24px;
+  border: none;
 }
 
 body footer {
@@ -172,4 +157,4 @@ body footer img {
           transform: scale(2);
   cursor: pointer;
 }
-/*# sourceMappingURL=WorkFinder.css.map */
+/*# sourceMappingURL=myProfile.css.map */

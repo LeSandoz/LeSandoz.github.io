@@ -1,8 +1,8 @@
 body{
-    // background-position: bottom;
-    // background-size: cover;
-    // background-attachment: fixed;
-    // background-image: url(./img/FindJob-bg.png);
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url(./img/profile-bg.png);
     .bg-orange{
         background-color: rgb(255, 127, 35);
     }
@@ -49,7 +49,7 @@ body{
         .headBar{
             width: 100vw;
             height: 20vh;
-            background: rgb(237, 237, 237);
+            // background: rgb(237, 237, 237);
             h1{
                 line-height: 20vh;
                 transform: scale(1.8) translate(15vw);
@@ -74,69 +74,66 @@ body{
         }
     }
     .content{
-        // background-position: bottom;
         background-size: cover;
-        // background-attachment: fixed;
-        background-image: url(./img/content-bg.png);
-        // background-position: 0vw;
         height: 70vh;
-        .departments{
-            transform: translate(15vw, 5vh);
+        margin-left: 10vw;
+        .profile{
+            width: 15vw;
             height: 50vh;
             // border: 1px solid black;
-            width: 20vw;
-            background-color: rgba(255, 208, 175, 0.26);
-            h1{
-                transform: translate(0, -5vh) scale(1);
-            }
-            img{
-                transform: translate(5vw, -5vh) scale(1.5);
-            }
-            .chk{
-                transform: translate(2vw);
-                margin-bottom: 1vh;
-                label{
-                    transform: translate(0, -3vh);
-                    text-decoration:underline;
-                    font-size: 24px;
+            margin-right: 10vw;
+            .imgWrap{
+                height: 25vh;
+                width: 10vw;
+                margin-left: 2.5vw;
+                margin-top: 3vh;
+                // border: 1px solid black;
 
-                    input{
-                        transform: translate(-0.7vw, 0.5vh);
-                    }
-                    input[type=checkbox]{
-                        -webkit-appearance: none;
-                        -moz-appearance: none;
-                        appearance: none;
-                        width: 20px;
-                        height: 20px;
-                        border: 2px solid rgb(255, 127, 35);
-                        border-radius: 4px;
-                    }
-                    input[type=checkbox]:checked{
-                        background-color: rgb(255, 127, 35);
-                        border-color: rgb(255, 127, 35);
-                    }
+                img{
+
+                }
+            }
+            button{
+                width: 6vw;
+                height: 5vh;
+                border-radius: 30px;
+                margin-left: 4.5vw;
+                margin-top: 5vh;
+                background-color: rgba(255, 127, 35, 0.33);
+                color: rgb(214, 154, 154);
+                font-weight: bold;
+                font-size: 24px;
+                border: none;
+            }
+        }
+        .detail{
+            width: 45vw;
+            height: 50vh;
+            // border: 1px solid black;
+            h3{
+                margin: 3vh 0vw 3vh 3vw;
+            }
+
+            .titletWrap{
+                margin-right: 6vw;
+            }
+
+            .textWrap{
+                button{
+                    width: 6vw;
+                    height: 5vh;
+                    border-radius: 30px;
+                    margin-left: 3vw;
+                    margin-top: 1vh;
+                    background-color: rgba(255, 127, 35, 0.33);
+                    color: rgb(214, 154, 154);
+                    font-weight: bold;
+                    font-size: 24px;
+                    border: none;
                 }
             }
         }
-        .suggestions{
-            transform: translate(25vw, 5vh);
-            height: 50vh;
-            // border: 1px solid black;
-            width: 40vw;
-            h1{
-                color: rgb(255, 127, 35);
-                transform: translate(0, -5vh) scale(1);
-            }
-            .sgContent{
-                background-color: rgba(255, 255, 255, 0.85);
-                height: 20vh;
-                width: 40vw;
-                padding: 40px;
-                margin-bottom: 2vh;
-                border-radius: 15px;
-            }
-        }
+
     }
     footer{
         transform: translate(0, -10vh);

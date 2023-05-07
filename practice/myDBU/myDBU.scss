@@ -4,7 +4,7 @@
     height: 100vh;
     
     .header{
-        height: 20vh;
+        height: 25vh;
         // width: 100vw;
         // background-color: antiquewhite;
         background-size: cover;
@@ -14,22 +14,73 @@
     }
 
     .context{
-        height: 75vh;
+        height: 70vh;
         // width: 100vw;
-        // background-color: rgb(245, 245, 245);
+        background-color: rgb(230, 230, 230);
 
         .boxContainer{
-            height: 24vh;
-            width: 85vw;
-            background-color: darkkhaki;
-            transform: translate(8vw);
+            height: 26vh;
+            width: 95vw;
+            // background-color: darkkhaki;
+            transform: translate(2.5vw, -10vh);
             .boxWrap{
-                background-color: aquamarine;
-                height: 20vh;
-                width: 15vw;
-                margin: 2vh 7vw 2vh 7vw;
-                .box{
+                // background-color: aquamarine;
 
+                .box{
+                    height: 20vh;
+                    width: 18vw;
+                    margin: 2vh 2.5vw 0vh 3vw;
+                    background-size: cover;
+
+                    img{
+                        height: 24vh;
+                        width: 18vw;
+                        border-radius: 10px;
+                        cursor: pointer;
+                    }
+                }
+                .WorkFinder{
+                    
+                }
+            }
+        }
+        .boxContainer1{
+            .boxWrap{
+                .box1{
+                    // background-image: url(./img/Blackboard.png);
+                }
+                .box2{
+                    // background-image: url(./img/Blackboard.png);
+                }
+                .box3{
+                    // background-image: url(./img/Blackboard.png);
+                }
+
+            }
+        }
+        .boxContainer2{
+            .boxWrap{
+                .box1{
+                    // background-image: url(./img/Blackboard.png);
+                }
+                .box2{
+                    // background-image: url(./img/Blackboard.png);
+                }
+                .box3{
+                    // background-image: url(./img/Blackboard.png);
+                }
+            }
+        }
+        .boxContainer3{
+            .boxWrap{
+                .box1{
+                    // background-image: url(./img/Blackboard.png);
+                }
+                .box2{
+                    // background-image: url(./img/Blackboard.png);
+                }
+                .box3{
+                    // background-image: url(./img/Blackboard.png); 
                 }
             }
         }

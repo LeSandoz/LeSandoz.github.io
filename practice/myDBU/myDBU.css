@@ -3,7 +3,7 @@
 }
 
 .wrap .header {
-  height: 20vh;
+  height: 25vh;
   background-size: cover;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.54)), to(rgba(0, 0, 0, 0))), url(https://wwwdbueducdn.azureedge.net/_images/homepage/redesign/are-you-ready/campus-entry/large.webp);
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.54) 0%, rgba(0, 0, 0, 0)), url(https://wwwdbueducdn.azureedge.net/_images/homepage/redesign/are-you-ready/campus-entry/large.webp);
@@ -12,22 +12,29 @@
 }
 
 .wrap .context {
-  height: 75vh;
+  height: 70vh;
+  background-color: #e6e6e6;
 }
 
 .wrap .context .boxContainer {
-  height: 24vh;
-  width: 85vw;
-  background-color: darkkhaki;
-  -webkit-transform: translate(8vw);
-          transform: translate(8vw);
+  height: 26vh;
+  width: 95vw;
+  -webkit-transform: translate(2.5vw, -10vh);
+          transform: translate(2.5vw, -10vh);
 }
 
-.wrap .context .boxContainer .boxWrap {
-  background-color: aquamarine;
+.wrap .context .boxContainer .boxWrap .box {
   height: 20vh;
-  width: 15vw;
-  margin: 2vh 7vw 2vh 7vw;
+  width: 18vw;
+  margin: 2vh 2.5vw 0vh 3vw;
+  background-size: cover;
+}
+
+.wrap .context .boxContainer .boxWrap .box img {
+  height: 24vh;
+  width: 18vw;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .wrap .footer {
