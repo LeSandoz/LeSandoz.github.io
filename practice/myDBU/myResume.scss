@@ -52,7 +52,7 @@ body{
             // background: rgb(237, 237, 237);
             h1{
                 line-height: 20vh;
-                transform: scale(1.8) translate(15vw);
+                transform: scale(1.8) translate(13.2vw);
                 span{
                     color: rgb(255, 127, 35);
                 }
@@ -77,62 +77,60 @@ body{
         background-size: cover;
         height: 70vh;
         margin-left: 10vw;
-        .profile{
-            width: 15vw;
+
+        .upload-container{
+            border: 1px black dashed;
             height: 50vh;
-            // border: 1px solid black;
-            margin-right: 10vw;
-            .imgWrap{
-                height: 25vh;
-                width: 10vw;
-                margin-left: 2.5vw;
-                margin-top: 3vh;
-                // border: 1px solid black;
-
-                img{
-
-                }
-            }
-            button{
-                width: 6vw;
-                height: 5vh;
-                border-radius: 30px;
-                margin-left: 4.5vw;
-                margin-top: 5vh;
-                background-color: rgba(255, 127, 35, 0.33);
-                color: rgb(214, 154, 154);
-                font-weight: bold;
-                font-size: 24px;
-                border: none;
-            }
-        }
-        .detail{
             width: 45vw;
-            height: 50vh;
-            // border: 1px solid black;
+            transform: translate(10vw);
+            text-align: center;
+            padding-top: 5vh;
+          
+            img{
+              margin-bottom: 5vh;
+              transform: scale(1.2);
+            }
+          
             h3{
-                margin: 3vh 0vw 3vh 3vw;
+              font-weight: 600;
+              margin-bottom: 5vh;
+          
+              span{
+                text-decoration: underline;
+              }
             }
-
-            .titletWrap{
-                margin-right: 6vw;
+          
+            h5{
+              color: rgb(103, 103, 103);
             }
-
-            .textWrap{
-                button{
-                    width: 6vw;
-                    height: 5vh;
-                    border-radius: 30px;
-                    margin-left: 3vw;
-                    margin-top: 1vh;
-                    background-color: rgba(255, 127, 35, 0.33);
-                    color: rgb(214, 154, 154);
-                    font-weight: bold;
-                    font-size: 24px;
-                    border: none;
-                }
+          
+            #file-input{
+              display: none;
+            }
+          
+            .preview-container{
+              display: flex;
+              flex-wrap: wrap;
+              margin-top: 5vh;
+          
+              img{
+                max-width: 200px;
+                margin: 0 1rem 1rem 0;
+              }
             }
         }
+        button{
+            width: 6vw;
+            height: 5vh;
+            border-radius: 30px;
+            background-color: rgba(255, 127, 35, 0.33);
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-size: 24px;
+            border: none;
+            transform: translate(28vw, 3vh);
+        }
+          
 
     }
     footer{

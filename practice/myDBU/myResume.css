@@ -61,8 +61,8 @@ body header .headBar {
 
 body header .headBar h1 {
   line-height: 20vh;
-  -webkit-transform: scale(1.8) translate(15vw);
-          transform: scale(1.8) translate(15vw);
+  -webkit-transform: scale(1.8) translate(13.2vw);
+          transform: scale(1.8) translate(13.2vw);
 }
 
 body header .headBar h1 span {
@@ -92,56 +92,64 @@ body .content {
   margin-left: 10vw;
 }
 
-body .content .profile {
-  width: 15vw;
+body .content .upload-container {
+  border: 1px black dashed;
   height: 50vh;
-  margin-right: 10vw;
-}
-
-body .content .profile .imgWrap {
-  height: 25vh;
-  width: 10vw;
-  margin-left: 2.5vw;
-  margin-top: 3vh;
-}
-
-body .content .profile button {
-  width: 6vw;
-  height: 5vh;
-  border-radius: 30px;
-  margin-left: 4.5vw;
-  margin-top: 5vh;
-  background-color: rgba(255, 127, 35, 0.33);
-  color: #d69a9a;
-  font-weight: bold;
-  font-size: 24px;
-  border: none;
-}
-
-body .content .detail {
   width: 45vw;
-  height: 50vh;
+  -webkit-transform: translate(10vw);
+          transform: translate(10vw);
+  text-align: center;
+  padding-top: 5vh;
 }
 
-body .content .detail h3 {
-  margin: 3vh 0vw 3vh 3vw;
+body .content .upload-container img {
+  margin-bottom: 5vh;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
-body .content .detail .titletWrap {
-  margin-right: 6vw;
+body .content .upload-container h3 {
+  font-weight: 600;
+  margin-bottom: 5vh;
 }
 
-body .content .detail .textWrap button {
+body .content .upload-container h3 span {
+  text-decoration: underline;
+}
+
+body .content .upload-container h5 {
+  color: #676767;
+}
+
+body .content .upload-container #file-input {
+  display: none;
+}
+
+body .content .upload-container .preview-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 5vh;
+}
+
+body .content .upload-container .preview-container img {
+  max-width: 200px;
+  margin: 0 1rem 1rem 0;
+}
+
+body .content button {
   width: 6vw;
   height: 5vh;
   border-radius: 30px;
-  margin-left: 3vw;
-  margin-top: 1vh;
   background-color: rgba(255, 127, 35, 0.33);
-  color: #d69a9a;
+  color: white;
   font-weight: bold;
   font-size: 24px;
   border: none;
+  -webkit-transform: translate(28vw, 3vh);
+          transform: translate(28vw, 3vh);
 }
 
 body footer {
@@ -157,4 +165,4 @@ body footer img {
           transform: scale(2);
   cursor: pointer;
 }
-/*# sourceMappingURL=myPesume.css.map */
+/*# sourceMappingURL=myResume.css.map */

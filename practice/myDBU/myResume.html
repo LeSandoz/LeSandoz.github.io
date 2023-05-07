@@ -33,7 +33,7 @@
                           <a class="nav-link" id="navTitle2" href="./myApplication.html">My Applications</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" id="navTitle3" href="#">My Profile</a>
+                          <a class="nav-link" id="navTitle3" href="./myProfile.html">My Profile</a>
                       </li>
                   </ul>
                   <ul class="navbar-nav nav-fill w-100 user">
@@ -48,11 +48,15 @@
           <h1>My <span>Resume</span></h1>
         </div>
       </header>
-      <nav class="content boxContainer d-flex">
+      <nav class="content boxContainer">
         <div class="upload-container">
-            <label for="upload" class="upload-label">Drag and drop files here or click to upload</label>
-            <input type="file" id="upload" class="upload-input" multiple>
-          </div>
+            <img src="./img/upload-icon.png" alt="">
+            <h3>Drag & drop files or <span class="font-orange pointer">Browse</span></h3>
+            <input type="file" id="file-input" multiple>
+            <h5>Supported format: JPEG, PNG, PDF, PSD, AI, Word, Power Point</h5>
+            <div class="preview-container"></div>
+        </div>          
+        <button type="button" class="btn btn-primary pointer upload" id="upload">Upload</button>
                   
       </nav>
       <footer>
