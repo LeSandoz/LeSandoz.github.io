@@ -105,8 +105,8 @@ body .content .departments img {
 }
 
 body .content .departments .chk {
-  -webkit-transform: translate(2vw);
-          transform: translate(2vw);
+  -webkit-transform: translate(2vw, -2vw);
+          transform: translate(2vw, -2vw);
   margin-bottom: 1vh;
 }
 
@@ -114,7 +114,7 @@ body .content .departments .chk label {
   -webkit-transform: translate(0, -3vh);
           transform: translate(0, -3vh);
   text-decoration: underline;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 body .content .departments .chk label input {
@@ -157,6 +157,11 @@ body .content .suggestions .sgContent {
   padding: 40px;
   margin-bottom: 2vh;
   border-radius: 15px;
+}
+
+body .content .suggestions .sgContent h3, body .content .suggestions .sgContent h2, body .content .suggestions .sgContent p {
+  -webkit-transform: translate(0, -2vh);
+          transform: translate(0, -2vh);
 }
 
 body footer {
