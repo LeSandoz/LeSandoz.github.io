@@ -1,0 +1,68 @@
+/* userList.css */
+
+/* 基本 Body 樣式 (如果沒有共用 CSS 的話) */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Microsoft JhengHei', 'PingFang TC';
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* 容器樣式 (可以調整 max-width 讓表格更寬) */
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 90%; /* 使用百分比或更大的像素值 */
+    max-width: 1200px; /* 讓表格有更多空間 */
+    margin: 40px auto;
+    box-sizing: border-box; 
+}
+
+/* 標題樣式 */
+.container h1 {
+    text-align: center;
+    color: #0078d4;
+    margin-bottom: 30px;
+}
+
+/* 表格樣式 */
+#employeeTable {
+    width: 100%;
+    border-collapse: collapse; /* 讓邊框合併 */
+    margin-top: 20px;
+}
+
+#employeeTable th, 
+#employeeTable td {
+    border: 1px solid #ddd; /* 加上格子線 */
+    padding: 12px 15px; /* 增加一點左右 padding */
+    text-align: left;
+    vertical-align: middle; /* 垂直置中 */
+}
+
+#employeeTable th {
+    background-color: #0078d4; /* 表頭背景色 */
+    color: white; /* 表頭文字顏色 */
+    font-weight: 600;
+}
+
+#employeeTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* 讓奇偶行顏色不同 */
+}
+
+#employeeTable tbody tr:hover {
+    background-color: #e9e9e9; /* 滑鼠移上去時變色 */
+}
+
+/* 讓系統權限欄位置中顯示 */
+#employeeTable td:nth-child(5),
+#employeeTable td:nth-child(6),
+#employeeTable td:nth-child(7),
+#employeeTable td:nth-child(8) {
+    text-align: center;
+    font-weight: bold;
+}

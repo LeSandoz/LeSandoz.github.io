@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增員工帳號</title>
+    <link rel="stylesheet" href="/CSS/addUser.css">
+    <link rel="stylesheet" href="/CSS/navbar.css"> </head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <div class="container">
+        <h1>新增員工帳號</h1>
+        <form id="addAccountForm">
+            <div class="form-group">
+                <label for="employeeId">員工 ID:</label>
+                <input type="text" id="employeeId" name="employeeId" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">姓氏:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="firstName">名字:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="department">部門:</label>
+                <input type="text" id="department" name="department" required>
+            </div>
+
+            <div class="form-group">
+                <label>需要開通的系統 (可複選):</label>
+                <div class="checkbox-group">
+                    <div>
+                        <input type="checkbox" id="systemEmail" name="systems" value="Email">
+                        <label for="systemEmail">ServiceMe</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="systemErp" name="systems" value="ERP">
+                        <label for="systemErp">myService</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="systemCrm" name="systems" value="CRM">
+                        <label for="systemCrm">LMS</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="systemVpn" name="systems" value="VPN">
+                        <label for="systemVpn">SAP</label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" id="submitButton">新增帳號</button>
+        </form>
+    </div>
+
+    <script src="/JS/addUser.js"></script>
+    <script src="/JS/navbar.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+/* addUser.css */
+
+/* 確保 html 和 body 乾淨，沒有多餘邊界 */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Microsoft JhengHei', 'PingFang TC';
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    /* 移除 display: flex 及相關置中設定，恢復正常文件流 */
+    /* 移除 padding: 20px; */
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px; /* 設定最大寬度 */
+    /* ** 關鍵：加上 margin: 40px auto; 讓表單區塊自己置中 ** */
+    margin: 40px auto; 
+}
+
+h1 {
+    text-align: center;
+    color: #0078d4; /* 微軟藍 */
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input[type="text"],
+select {
+    width: calc(100% - 22px); /* 減去 padding 和 border */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.checkbox-group div {
+    margin-bottom: 10px;
+}
+
+/* 讓 checkbox 旁邊的文字對齊 */
+.checkbox-group input[type="checkbox"] {
+    margin-right: 8px;
+    vertical-align: middle; /* 垂直置中 */
+}
+
+.checkbox-group label {
+    display: inline; /* 讓 label 跟 checkbox 在同一行 */
+    font-weight: normal;
+}
+
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #0078d4;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* 增加一點上方距離 */
+}
+
+button:hover {
+    background-color: #005a9e;
+}
