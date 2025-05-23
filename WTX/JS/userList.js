@@ -60,7 +60,7 @@ function loadNavbar() {
 
 // ** 載入員工資料的函式 **
 function loadUsers() {
-    fetch('/json/allUser.json')
+    fetch('../json/allUser.json')
         .then(response => {
             if (!response.ok) throw new Error("無法載入 allUser.json");
             return response.json();
