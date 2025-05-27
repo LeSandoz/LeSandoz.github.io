@@ -3,39 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>員工列表查詢</title>
+    <title>Termination List</title>
     <link rel="stylesheet" href="../CSS/navbar.css">
-    <link rel="stylesheet" href="../CSS/userList.css">
-</head>
+    <link rel="stylesheet" href="../CSS/terminationList.css"> </head>
 <body>
 
     <div id="navbar-placeholder"></div>
 
-    <div class="container" id="employeeDisplayArea">
-        <h1>員工列表</h1>
-        <table id="employeeTable">
-            <thead>
+    <div class="container" id="terminationDisplayArea">
+        <h1>Termination List</h1> <table id="terminationTable"> <thead>
                 <tr>
                     <th>員工 ID</th>
                     <th>姓氏</th>
                     <th>名字</th>
                     <th>部門</th>
-                    <th>ServiceMe</th>
-                    <th>myService</th>
-                    <th>LMS</th>
-                    <th>SAP</th>
-                    <th>操作</th> </tr>
+                </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td colspan="9" style="text-align: center;">正在載入資料...</td>
-                </tr>
+                    <td colspan="4" style="text-align: center;">正在載入資料...</td> </tr>
             </tbody>
         </table>
         <div id="paginationControls" class="pagination"></div>
     </div>
 
     <script src="../JS/navbar.js"></script>
-    <script src="../JS/userList.js"></script>
+    <script src="../JS/terminationList.js"></script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 [
   {
     "id": "T2504017",
+    "pre_id": null,
     "lastName": "Ho",
     "firstName": "Murphy",
     "department": "CU0I10",
@@ -18,6 +19,7 @@
   },
   {
     "id": "T2503024",
+    "pre_id": null,
     "lastName": "Cao",
     "firstName": "Sheena",
     "department": "CU0I10",
@@ -35,6 +37,7 @@
   },
   {
     "id": "W003",
+    "pre_id": null,
     "lastName": "王",
     "firstName": "大明",
     "department": "IT",
@@ -52,6 +55,7 @@
   },
   {
     "id": "W004",
+    "pre_id": null,
     "lastName": "李",
     "firstName": "小華",
     "department": "HR",
@@ -69,6 +73,7 @@
   },
   {
     "id": "W005",
+    "pre_id": null,
     "lastName": "張",
     "firstName": "強",
     "department": "Sales",
@@ -86,6 +91,7 @@
   },
   {
     "id": "W006",
+    "pre_id": null,
     "lastName": "劉",
     "firstName": "美麗",
     "department": "IT",
@@ -103,6 +109,7 @@
   },
   {
     "id": "W007",
+    "pre_id": null,
     "lastName": "趙",
     "firstName": "六",
     "department": "Finance",
@@ -120,6 +127,7 @@
   },
   {
     "id": "W008",
+    "pre_id": "T008",
     "lastName": "孫",
     "firstName": "七",
     "department": "RD",
@@ -137,6 +145,7 @@
   },
   {
     "id": "W009",
+    "pre_id": "T009",
     "lastName": "周",
     "firstName": "八",
     "department": "HR",
@@ -154,6 +163,7 @@
   },
   {
     "id": "W010",
+    "pre_id": "T010",
     "lastName": "吳",
     "firstName": "九",
     "department": "IT",
@@ -171,6 +181,7 @@
   },
   {
     "id": "W011",
+    "pre_id": null,
     "lastName": "鄭",
     "firstName": "十",
     "department": "Sales",
@@ -188,6 +199,7 @@
   },
   {
     "id": "W012",
+    "pre_id": null,
     "lastName": "馮",
     "firstName": "十一",
     "department": "RD",
@@ -201,10 +213,11 @@
     "Update_User": "T2503024",
     "Delete_Datetime": null,
     "Delete_User": null,
-    "isDelete": false
+    "isDelete": true
   },
   {
     "id": "W013",
+    "pre_id": null,
     "lastName": "陳",
     "firstName": "十二",
     "department": "Finance",
@@ -218,10 +231,11 @@
     "Update_User": "T2503024",
     "Delete_Datetime": null,
     "Delete_User": null,
-    "isDelete": false
+    "isDelete": true
   },
   {
     "id": "W014",
+    "pre_id": null,
     "lastName": "褚",
     "firstName": "十三",
     "department": "IT",
@@ -239,6 +253,7 @@
   },
   {
     "id": "W015",
+    "pre_id": "T015",
     "lastName": "衛",
     "firstName": "十四",
     "department": "HR",
@@ -252,10 +267,11 @@
     "Update_User": "T2503024",
     "Delete_Datetime": null,
     "Delete_User": null,
-    "isDelete": false
+    "isDelete": true
   },
   {
     "id": "W016",
+    "pre_id": null,
     "lastName": "蔣",
     "firstName": "十五",
     "department": "Sales",
@@ -273,6 +289,7 @@
   },
   {
     "id": "W017",
+    "pre_id": "T017",
     "lastName": "沈",
     "firstName": "十六",
     "department": "RD",
@@ -290,6 +307,7 @@
   },
   {
     "id": "W018",
+    "pre_id": null,
     "lastName": "韓",
     "firstName": "十七",
     "department": "IT",
@@ -303,10 +321,11 @@
     "Update_User": "T2503024",
     "Delete_Datetime": null,
     "Delete_User": null,
-    "isDelete": false
+    "isDelete": true
   },
   {
     "id": "W019",
+    "pre_id": null,
     "lastName": "楊",
     "firstName": "十八",
     "department": "Finance",
@@ -324,6 +343,7 @@
   },
   {
     "id": "W020",
+    "pre_id": null,
     "lastName": "朱",
     "firstName": "十九",
     "department": "HR",

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>更新員工帳號</title> <link rel="stylesheet" href="../CSS/addUser.css"> <link rel="stylesheet" href="../CSS/navbar.css">
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <div class="container">
+        <h1>更新員工帳號</h1> <form id="editAccountForm"> <div class="form-group">
+                <label for="employeeId">員工 ID (不可修改):</label>
+                <input type="text" id="employeeId" name="employeeId" required readonly style="background-color: #eee;">
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">姓氏:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="firstName">名字:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="department">部門:</label>
+                <input type="text" id="department" name="department" required>
+            </div>
+
+            <div class="form-group">
+                <label>系統權限 (可複選):</label>
+                <div class="checkbox-group">
+                    <div>
+                        <input type="checkbox" id="systemServiceMe" name="systems" value="ServiceMe">
+                        <label for="systemServiceMe">ServiceMe</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="systemMyService" name="systems" value="myService">
+                        <label for="systemMyService">myService</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="systemLMS" name="systems" value="LMS">
+                        <label for="systemLMS">LMS</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="systemSAP" name="systems" value="SAP">
+                        <label for="systemSAP">SAP</label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" id="updateButton">更新帳號</button>
+        </form>
+    </div>
+
+    <script src="../JS/navbar.js"></script>
+    <script src="../JS/editUser.js"></script>
+</body>
+</html>
