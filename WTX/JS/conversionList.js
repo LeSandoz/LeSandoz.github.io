@@ -2,7 +2,7 @@
 
 let allConvertedEmployees = []; // 儲存所有轉換過的員工資料
 let currentPage = 1; // 目前頁數
-const itemsPerPage = 10; // 每頁顯示筆數
+const itemsPerPage = 10; // ** 每頁顯示筆數 = 10 **
 
 // ** 顯示 Conversion 員工資料到表格 **
 function displayConvertedEmployees(dataToDisplay) {
@@ -24,15 +24,16 @@ function displayConvertedEmployees(dataToDisplay) {
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>${employee.id || ''}</td>
-            <td>${employee.pre_id || ''}</td> <td>${employee.lastName || ''}</td>
+            <td>${employee.pre_id || ''}</td>
+            <td>${employee.lastName || ''}</td>
             <td>${employee.firstName || ''}</td>
             <td>${employee.department || ''}</td>
-        `; // ** 沒有操作按鈕 **
+        `;
         tableBody.appendChild(row);
     });
 }
 
-// ** 渲染分頁控制項 (與 userList.js 類似) **
+// ** 渲染分頁控制項 **
 function renderPagination() {
     const paginationContainer = document.getElementById('paginationControls');
     if (!paginationContainer) return;
@@ -40,7 +41,7 @@ function renderPagination() {
     paginationContainer.innerHTML = '';
     const totalPages = Math.ceil(allConvertedEmployees.length / itemsPerPage);
 
-    if (totalPages <= 1) return;
+    if (totalPages <= 1) return; // 如果只有一頁或沒有資料，就不顯示分頁
 
     function createButton(text, pageNum, isDisabled = false, isActive = false, isEllipsis = false) {
         const button = document.createElement('button');
@@ -116,8 +117,8 @@ function updateTableForPage() {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
     const paginatedData = allConvertedEmployees.slice(startIndex, endIndex);
-    displayConvertedEmployees(paginatedData);
-    renderPagination();
+    displayConvertedEmployees(paginatedData); // 顯示該頁資料
+    renderPagination(); // ** 重新渲染分頁控制項 **
 }
 
 // ** 載入 Navbar 函式 **
@@ -129,8 +130,7 @@ function loadNavbar() {
         })
         .then(data => {
             document.getElementById('navbar-placeholder').innerHTML = data;
-            // ** 設定 Navbar 的 Active 狀態 **
-            const link = document.getElementById('nav-conv'); // ** 對應 ID **
+            const link = document.getElementById('nav-conv');
             if(link) {
                 link.classList.add('active');
             }
@@ -146,19 +146,12 @@ function loadUsers() {
             return response.json();
         })
         .then(data => {
-            // ** 過濾: pre_id 存在 且 isDelete 為 false **
             allConvertedEmployees = data.filter(employee => employee.pre_id && !employee.isDelete); //
             console.log("成功載入 Conversion 員工資料:", allConvertedEmployees.length, "筆");
             currentPage = 1;
-            updateTableForPage();
+            updateTableForPage(); // ** 呼叫更新，會顯示第一頁並產生分頁 **
         })
-        .catch(error => {
-            console.error('載入員工資料時發生錯誤:', error);
-            const tableBody = document.querySelector("#conversionTable tbody");
-            if (tableBody) {
-                 tableBody.innerHTML = `<tr><td colspan="5" style="text-align: center; color: red;">載入資料失敗！</td></tr>`;
-            }
-        });
+        .catch(error => { /* ... */ });
 }
 
 // ** DOM 載入完成後執行 **

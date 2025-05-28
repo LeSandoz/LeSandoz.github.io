@@ -4,7 +4,7 @@ let allTerminatedEmployees = []; // 儲存所有終止的員工資料
 let currentPage = 1; // 目前頁數
 const itemsPerPage = 10; // 每頁顯示筆數
 
-// ** 顯示 Termination 員工資料到表格 **
+// ** 修改：顯示 Termination 員工資料到表格 (加上按鈕) **
 function displayTerminatedEmployees(dataToDisplay) {
     const tableBody = document.querySelector("#terminationTable tbody");
 
@@ -16,7 +16,7 @@ function displayTerminatedEmployees(dataToDisplay) {
     tableBody.innerHTML = ''; // 清空表格
 
     if (!dataToDisplay || dataToDisplay.length === 0) {
-        tableBody.innerHTML = `<tr><td colspan="4" style="text-align: center;">找不到任何 Termination 員工資料。</td></tr>`;
+        tableBody.innerHTML = `<tr><td colspan="5" style="text-align: center;">找不到任何 Termination 員工資料。</td></tr>`; // Colspan 改 5
         return;
     }
 
@@ -27,12 +27,65 @@ function displayTerminatedEmployees(dataToDisplay) {
             <td>${employee.lastName || ''}</td>
             <td>${employee.firstName || ''}</td>
             <td>${employee.department || ''}</td>
-        `; // ** 沒有操作按鈕 **
+            <td>
+                <button class="recover-button" data-id="${employee.id}">Recover</button> </td>
+        `;
         tableBody.appendChild(row);
     });
+
+    // ** 新增：呼叫按鈕監聽器 **
+    addRecoverButtonListeners();
 }
 
-// ** 渲染分頁控制項 (與 userList.js 類似) **
+// ** 新增：為 Recover 按鈕加上事件監聽器 **
+function addRecoverButtonListeners() {
+    const tableBody = document.querySelector("#terminationTable tbody");
+    if (tableBody) {
+        // ** 移除舊的監聽器，避免重複綁定 **
+        const newTableBody = tableBody.cloneNode(true);
+        tableBody.parentNode.replaceChild(newTableBody, tableBody);
+
+        newTableBody.addEventListener('click', function(event) {
+            const target = event.target;
+
+            // 處理 Recover 按鈕
+            if (target && target.classList.contains('recover-button')) {
+                const employeeId = target.getAttribute('data-id');
+                const employee = allTerminatedEmployees.find(emp => emp.id === employeeId);
+
+                let confirmMessage = `確定是否 recover 這筆員工 (${employeeId})?`;
+                if (employee) {
+                    confirmMessage = `確定是否 recover ${employee.lastName || ''} ${employee.firstName || ''} (${employeeId})?`;
+                }
+
+                // ** 使用 confirm 來顯示確認對話框 **
+                const isConfirmed = confirm(confirmMessage);
+
+                if (isConfirmed) {
+                    console.log(`Confirmed recovery for ID: ${employeeId}`);
+                    alert(`使用者 ${employeeId} 已確認恢復！(實際恢復功能尚未實作)`);
+                    // ** 這裡可以加上實際呼叫後端 API 恢復資料的程式碼 **
+                    // recoverEmployee(employeeId);
+                } else {
+                    console.log(`Recovery cancelled for ID: ${employeeId}`);
+                }
+            }
+        });
+    }
+}
+
+// ** (可選) 實際恢復的函式範例 (目前不會執行) **
+// function recoverEmployee(id) {
+//     // 1. 從 allTerminatedEmployees 移除 或 從 allUser.json 更新 isDelete
+//     allTerminatedEmployees = allTerminatedEmployees.filter(emp => emp.id !== id);
+//     // 2. 重新渲染
+//     updateTableForPage();
+//     console.log(`Employee ${id} recovered locally.`);
+//     // 3. 呼叫後端 API
+// }
+
+
+// ** 渲染分頁控制項 (保留不變) **
 function renderPagination() {
     const paginationContainer = document.getElementById('paginationControls');
     if (!paginationContainer) return;
@@ -103,7 +156,8 @@ function renderPagination() {
     paginationContainer.appendChild(createButton('最後一頁', totalPages, currentPage === totalPages));
 }
 
-// ** 跳轉頁面函式 **
+
+// ** 跳轉頁面函式 (保留不變) **
 function goToPage(pageNumber) {
     const totalPages = Math.ceil(allTerminatedEmployees.length / itemsPerPage);
     if (pageNumber < 1 || pageNumber > totalPages) return;
@@ -111,7 +165,7 @@ function goToPage(pageNumber) {
     updateTableForPage();
 }
 
-// ** 更新表格內容函式 **
+// ** 更新表格內容函式 (保留不變) **
 function updateTableForPage() {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
@@ -120,7 +174,7 @@ function updateTableForPage() {
     renderPagination();
 }
 
-// ** 載入 Navbar 函式 **
+// ** 載入 Navbar 函式 (保留不變) **
 function loadNavbar() {
     fetch('navbar.html')
         .then(response => {
@@ -129,8 +183,7 @@ function loadNavbar() {
         })
         .then(data => {
             document.getElementById('navbar-placeholder').innerHTML = data;
-            // ** 設定 Navbar 的 Active 狀態 **
-            const link = document.getElementById('nav-term'); // ** 對應 ID **
+            const link = document.getElementById('nav-term');
             if(link) {
                 link.classList.add('active');
             }
@@ -138,7 +191,7 @@ function loadNavbar() {
         .catch(error => console.error('載入 Navbar 時發生錯誤:', error));
 }
 
-// ** 載入員工資料並過濾 **
+// ** 載入員工資料並過濾 (保留不變) **
 function loadUsers() {
     fetch('../json/allUser.json') //
         .then(response => {
@@ -146,7 +199,6 @@ function loadUsers() {
             return response.json();
         })
         .then(data => {
-            // ** 過濾: isDelete 為 true **
             allTerminatedEmployees = data.filter(employee => employee.isDelete); //
             console.log("成功載入 Termination 員工資料:", allTerminatedEmployees.length, "筆");
             currentPage = 1;
@@ -156,12 +208,12 @@ function loadUsers() {
             console.error('載入員工資料時發生錯誤:', error);
             const tableBody = document.querySelector("#terminationTable tbody");
             if (tableBody) {
-                 tableBody.innerHTML = `<tr><td colspan="4" style="text-align: center; color: red;">載入資料失敗！</td></tr>`;
+                 tableBody.innerHTML = `<tr><td colspan="5" style="text-align: center; color: red;">載入資料失敗！</td></tr>`; // Colspan 改 5
             }
         });
 }
 
-// ** DOM 載入完成後執行 **
+// ** DOM 載入完成後執行 (保留不變) **
 document.addEventListener("DOMContentLoaded", function() {
     loadNavbar();
     loadUsers();
