@@ -1,0 +1,26 @@
+[
+  {
+    "System_ID": 1,
+    "System_Code": "SME",
+    "System_Name": "ServiceMe",
+    "Description": null
+  },
+  {
+    "System_ID": 2,
+    "System_Code": "mySvs",
+    "System_Name": "myService",
+    "Description": null
+  },
+  {
+    "System_ID": 3,
+    "System_Code": "LMS",
+    "System_Name": "LMS",
+    "Description": null
+  },
+  {
+    "System_ID": 4,
+    "System_Code": "SAP",
+    "System_Name": "SAP 系統",
+    "Description": null
+  }
+]

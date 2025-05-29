@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查看員工詳細資料</title>
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/addUser.css"> <style>
+        /* 簡單的唯讀樣式 */
+        .readonly-field {
+            background-color: #f8f9fa; /* 更淺的背景色表示唯讀 */
+            border: 1px solid #ced4da;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 10px; /* 與 input 間距類似 */
+            word-wrap: break-word; /* 確保長內容能換行 */
+        }
+        .checkbox-group-view div { /* 調整 checkbox 顯示區域的間距 */
+            margin-bottom: 8px;
+        }
+        .checkbox-group-view .system-name {
+             margin-left: 8px;
+        }
+        .no-systems {
+            color: #6c757d;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <div class="container">
+        <h1>員工詳細資料</h1>
+        <div id="userDetailsForm"> <div class="form-group">
+                <label for="employeeId">員工 ID:</label>
+                <div id="employeeId" class="readonly-field">載入中...</div>
+            </div>
+
+            <div class="form-group">
+                <label for="preEmployeeId">員工前帳號:</label>
+                <div id="preEmployeeId" class="readonly-field">載入中...</div>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">姓氏:</label>
+                <div id="lastName" class="readonly-field">載入中...</div>
+            </div>
+
+            <div class="form-group">
+                <label for="firstName">名字:</label>
+                <div id="firstName" class="readonly-field">載入中...</div>
+            </div>
+
+            <div class="form-group">
+                <label for="department">部門:</label>
+                <div id="department" class="readonly-field">載入中...</div>
+            </div>
+
+            <div class="form-group">
+                <label>系統權限:</label>
+                <div id="systemsPermissions" class="checkbox-group-view">
+                    <div class="no-systems">載入中...</div>
+                    </div>
+            </div>
+
+            <div class="form-group">
+                <label for="createDatetime">建立時間:</label>
+                <div id="createDatetime" class="readonly-field">載入中...</div>
+            </div>
+            <div class="form-group">
+                <label for="createUser">建立人:</label>
+                <div id="createUser" class="readonly-field">載入中...</div>
+            </div>
+
+            <div class="form-group">
+                <label for="updateDatetime">最後更新時間:</label>
+                <div id="updateDatetime" class="readonly-field">載入中...</div>
+            </div>
+            <div class="form-group">
+                <label for="updateUser">最後更新人:</label>
+                <div id="updateUser" class="readonly-field">載入中...</div>
+            </div>
+
+            <button type="button" onclick="window.history.back()" style="background-color: #6c757d; margin-top: 20px;">返回列表</button>
+        </div>
+    </div>
+
+    <script src="../JS/navbar.js"></script>
+    <script src="../JS/viewUser.js"></script> </body>
+</html>

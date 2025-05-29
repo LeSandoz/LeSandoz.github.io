@@ -6,6 +6,9 @@
     <title>員工列表查詢</title>
     <link rel="stylesheet" href="../CSS/navbar.css">
     <link rel="stylesheet" href="../CSS/userList.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+    <style>
+    </style>
 </head>
 <body>
 
@@ -13,25 +16,59 @@
 
     <div class="container" id="employeeDisplayArea">
         <h1>員工列表</h1>
-        <table id="employeeTable">
-            <thead>
-                <tr>
-                    <th>員工 ID</th>
-                    <th>姓氏</th>
-                    <th>名字</th>
-                    <th>部門</th>
-                    <th>ServiceMe</th>
-                    <th>myService</th>
-                    <th>LMS</th>
-                    <th>SAP</th>
-                    <th>操作</th> </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td colspan="9" style="text-align: center;">正在載入資料...</td>
-                </tr>
-            </tbody>
-        </table>
+
+        <div class="search-filter-container">
+            <div class="filter-group full-width-mobile">
+                <label for="keywordSearchInput">關鍵字搜尋:</label>
+                <input type="text" id="keywordSearchInput" placeholder="員工ID, 姓名...">
+            </div>
+            <div class="filter-group">
+                <label for="systemFilterSelect">篩選系統權限:</label>
+                <select id="systemFilterSelect">
+                    <option value="">所有系統</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="statusFilterSelect">篩選帳號狀態:</label>
+                <select id="statusFilterSelect">
+                    <option value="">所有狀態</option>
+                    <option value="active">啟動帳號</option>
+                    <option value="deleted">刪除帳號</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="departmentFilterSelect">篩選部門:</label>
+                <select id="departmentFilterSelect">
+                    <option value="">所有部門</option>
+                </select>
+            </div>
+            <div class="filter-group button-group">
+                <button type="button" id="applySearchButton">搜尋</button>
+                <button type="button" id="clearFiltersButton">清除篩選</button>
+            </div>
+        </div>
+        <div class="table-responsive-wrapper">
+            <table id="employeeTable">
+                <thead>
+                    <tr>
+                        <th>員工 ID</th>
+                        <th>姓氏</th>
+                        <th>名字</th>
+                        <th>部門</th>
+                        <th>ServiceMe</th>
+                        <th>myService</th>
+                        <th>LMS</th>
+                        <th>SAP</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="9" style="text-align: center;">正在載入資料...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <div id="paginationControls" class="pagination"></div>
     </div>
 

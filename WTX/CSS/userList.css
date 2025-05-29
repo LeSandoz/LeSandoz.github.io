@@ -10,18 +10,19 @@ body {
     padding: 0;
 }
 
-/* 容器樣式 (依照你的要求，此處不變) */
+/* 容器樣式 */
 .container {
     background-color: #fff;
-    padding: 30px;
+    padding: 30px; /* <-- 注意這裡的 padding */
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 1200px;
     margin: 40px auto;
     box-sizing: border-box;
+    /* --- 新增/確認：確保 container 可以限制內部元素的溢出 (雖然主要靠 wrapper) --- */
+    /* overflow: hidden;  <-- 這個可以先不加，看看下面的調整是否足夠 */
 }
-
 /* 標題樣式 */
 .container h1 {
     text-align: center;
@@ -29,12 +30,20 @@ body {
     margin-bottom: 30px;
 }
 
-/* 表格樣式 */
+/* --- 新增：表格響應式外包裝 --- */
+.table-responsive-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 #employeeTable {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
-    table-layout: fixed; /* 保持 fixed 以控制寬度 */
+    table-layout: fixed;
+    min-width: 800px; /* 桌面版9欄時的最小寬度，可調整 */
 }
 
 #employeeTable th,
@@ -60,57 +69,74 @@ body {
     background-color: #e9e9e9;
 }
 
-/* ** 新增：設定各欄寬度 ** */
+/* --- 桌面版 (9欄) 各欄寬度設定 --- */
 #employeeTable th:nth-child(1), #employeeTable td:nth-child(1) { width: 12%; } /* 員工 ID */
-#employeeTable th:nth-child(2), #employeeTable td:nth-child(2) { width: 8%; }  /* 姓氏 */
-#employeeTable th:nth-child(3), #employeeTable td:nth-child(3) { width: 9%; }  /* 名字 */
+#employeeTable th:nth-child(2), #employeeTable td:nth-child(2) { width: 8%;  }  /* 姓氏 */
+#employeeTable th:nth-child(3), #employeeTable td:nth-child(3) { width: 9%;  }  /* 名字 */
 #employeeTable th:nth-child(4), #employeeTable td:nth-child(4) { width: 10%; } /* 部門 */
-#employeeTable th:nth-child(5), #employeeTable td:nth-child(5) { width: 9%; }  /* ServiceMe */
-#employeeTable th:nth-child(6), #employeeTable td:nth-child(6) { width: 9%; }  /* myService */
-#employeeTable th:nth-child(7), #employeeTable td:nth-child(7) { width: 8%; }  /* LMS */
-#employeeTable th:nth-child(8), #employeeTable td:nth-child(8) { width: 8%; }  /* SAP */
-#employeeTable th:nth-child(9), #employeeTable td:nth-child(9) { width: 17%; } /* ** 操作 (加寬) ** */
+#employeeTable th:nth-child(5), #employeeTable td:nth-child(5) { width: 9%;  }  /* ServiceMe */
+#employeeTable th:nth-child(6), #employeeTable td:nth-child(6) { width: 9%;  }  /* myService */
+#employeeTable th:nth-child(7), #employeeTable td:nth-child(7) { width: 8%;  }  /* LMS */
+#employeeTable th:nth-child(8), #employeeTable td:nth-child(8) { width: 8%;  }  /* SAP */
+#employeeTable th:nth-child(9), #employeeTable td:nth-child(9) { width: 17%; } /* 操作 */
 
-/* 讓系統權限欄位置中顯示 */
-#employeeTable td:nth-child(5),
-#employeeTable td:nth-child(6),
-#employeeTable td:nth-child(7),
-#employeeTable td:nth-child(8) {
+/* 桌面版：讓系統權限欄位置中顯示 */
+#employeeTable td:nth-child(5), /* ServiceMe */
+#employeeTable td:nth-child(6), /* myService */
+#employeeTable td:nth-child(7), /* LMS */
+#employeeTable td:nth-child(8)  /* SAP */ {
     text-align: center;
     font-weight: bold;
 }
 
-/* 操作欄位(第9欄)置中 - JS 裡的 flex 會處理置中，這裡保留 text-align 也可以 */
+/* 桌面版：操作欄位(第9欄)置中 */
 #employeeTable td:nth-child(9) {
     text-align: center;
 }
 
-/* 更新按鈕樣式 (稍微縮小) */
+/* 按鈕圖示和文字的初始設定 */
+.button-icon {
+    display: none; /* 桌面版預設隱藏圖示 */
+    /* 如果你的圖示是字體圖示，可能需要設定字體大小 */
+    /* font-size: 1.1em; */
+    /* vertical-align: middle; */ /* 幫助垂直對齊 */
+}
+
+.button-text {
+    display: inline; /* 桌面版預設顯示文字 */
+    vertical-align: middle;
+}
+
+/* 更新按鈕樣式 */
 .update-button {
     background-color: #4CAF50; /* 綠色 */
     color: white;
-    padding: 5px 10px; /* ** 縮小 padding ** */
+    padding: 5px 10px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 0.85em; /* ** 縮小字體 ** */
+    font-size: 0.85em;
     transition: background-color 0.3s ease;
+    margin: 2px;
+    line-height: 1.2; /* 如果圖示和文字同時顯示，有助於對齊 */
 }
 
 .update-button:hover {
     background-color: #45a049;
 }
 
-/* 刪除按鈕樣式 (稍微縮小) */
+/* 刪除按鈕樣式 */
 .delete-button {
     background-color: #f44336; /* 紅色 */
     color: white;
-    padding: 5px 10px; /* ** 縮小 padding ** */
+    padding: 5px 10px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 0.85em; /* ** 縮小字體 ** */
+    font-size: 0.85em;
     transition: background-color 0.3s ease;
+    margin: 2px;
+    line-height: 1.2;
 }
 
 .delete-button:hover {
@@ -121,13 +147,17 @@ body {
 .pagination {
     margin-top: 25px;
     text-align: center;
+    /* --- 新增：讓按鈕在小螢幕可以換行 --- */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .pagination button,
-.pagination span {
+.pagination span { /* span 是給 ... 用的，不過你的 JS 好像沒用到 span */
     display: inline-block;
-    padding: 8px 16px;
-    margin: 0 4px;
+    padding: 8px 12px; /* 稍微減少左右 padding */
+    margin: 5px 4px;   /* 增加上下 margin，讓換行時不會太擠 */
     border: 1px solid #ddd;
     color: #0078d4;
     background-color: #fff;
@@ -135,6 +165,7 @@ body {
     cursor: pointer;
     border-radius: 4px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 0.9em; /* 稍微縮小字體 */
 }
 
 .pagination button:hover:not(:disabled) {
@@ -159,4 +190,260 @@ body {
     background-color: transparent;
     cursor: default;
     padding: 8px 5px;
+}
+
+/* --- RWD Media Query (手機版調整) --- */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .container h1 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+        /* --- 手機版按鈕圖示/文字切換 --- */
+    .button-text {
+        display: none; /* 手機版隱藏文字 */
+    }
+    .button-icon {
+        display: inline; /* 手機版顯示圖示 */
+        font-size: 1.1em; /* 可以調整圖示大小 */
+    }
+
+    /* 調整只有圖示時按鈕的 padding */
+    .update-button,
+    .delete-button {
+        padding: 6px 8px; /* 微調只有圖示時的 padding */
+        min-width: 36px; /* 確保有足夠的點擊區域 */
+        text-align: center;
+    }
+
+    /* 手機版表格調整 */
+    #employeeTable {
+        min-width: 0; /* 在手機上，如果我們隱藏欄位且內容不合併，可能不需要強制最小寬度 */
+                      /* 或者，如果合併後的內容還是很寬，可以設一個較小的值，例如 500px */
+    }
+
+    /* 1. 隱藏「名字」欄 (第3欄) */
+    #employeeTable th:nth-child(3), /* 名字 th */
+    #employeeTable td:nth-child(3)  /* 名字 td */ {
+        display: none !important;
+    }
+
+    /* 2. 隱藏「SAP」欄 (第8欄) */
+    #employeeTable th:nth-child(8), /* SAP th */
+    #employeeTable td:nth-child(8)  /* SAP td */ {
+        display: none !important;
+    }
+
+    /* 3. 調整剩餘可見欄位的寬度 (現在手機上顯示 7 欄，但視覺上是 6 欄 + 操作) */
+    /* ID, 姓氏(將合併名), 部門, ServiceMe, myService, LMS, 操作 */
+    #employeeTable th:nth-child(1), #employeeTable td:nth-child(1) { width: 20%; } /* 員工 ID */
+    #employeeTable th:nth-child(2), #employeeTable td:nth-child(2) { width: 25%; } /* 姓氏 (將合併名字) */
+    /* 名字欄已隱藏 */
+    #employeeTable th:nth-child(4), #employeeTable td:nth-child(4) { width: 20%; } /* 部門 */
+    #employeeTable th:nth-child(5), #employeeTable td:nth-child(5) { width: 10%; } /* ServiceMe */
+    #employeeTable th:nth-child(6), #employeeTable td:nth-child(6) { width: 10%; } /* myService */
+    #employeeTable th:nth-child(7), #employeeTable td:nth-child(7) { width: 10%; } /* LMS */
+    /* SAP 欄已隱藏 */
+    #employeeTable th:nth-child(9), #employeeTable td:nth-child(9) { width: 25%; } /* 操作 */
+
+
+    /* 調整手機版系統權限欄位置中 (現在是第5,6,7欄 ->視覺上是第4,5,6個可見資料欄) */
+    #employeeTable td:nth-child(5), /* ServiceMe */
+    #employeeTable td:nth-child(6), /* myService */
+    #employeeTable td:nth-child(7)  /* LMS */ {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    /* 調整手機版操作欄位(第9欄 -> 視覺上是第7個可見資料欄)置中 */
+    #employeeTable td:nth-child(9) {
+        text-align: center;
+    }
+    
+    #employeeTable th, #employeeTable td {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+
+    .update-button,
+    .delete-button {
+        width: calc(50% - 4px); /* 如果一行放兩個按鈕，可以這樣設定 */
+        /* display: block; */ /* 如果要垂直堆疊，可以設為 block 並調整 width:auto */
+        /* margin-bottom: 5px; */ /* 垂直堆疊時的間距 */
+    }
+
+
+    /* 分頁按鈕 */
+    .pagination button {
+        padding: 6px 10px; /* 手機上分頁按鈕小一點 */
+        font-size: 0.85em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* ... 其他手機版樣式 ... */
+
+    /* --- 方案一：隱藏部分欄位 --- */
+    #employeeTable th:nth-child(4), /* 部門 */
+    #employeeTable td:nth-child(4),
+    #employeeTable th:nth-child(5), /* ServiceMe */
+    #employeeTable td:nth-child(5),
+    #employeeTable th:nth-child(6), /* myService */
+    #employeeTable td:nth-child(6),
+    #employeeTable th:nth-child(7), /* LMS */
+    #employeeTable td:nth-child(7),
+    #employeeTable th:nth-child(8)  /* SAP */
+    #employeeTable td:nth-child(8) {
+        display: none; /* 直接隱藏這些欄位 */
+    }
+
+    /* 調整保留欄位的寬度，讓它們填滿空間 */
+    /* 注意：因為 table-layout: fixed; 原始百分比仍然有影響，
+       所以這裡的寬度調整可能需要實驗一下，或者移除 table-layout: fixed 
+       然後讓它們自然分配，但移除 fixed 可能會讓欄寬不一致。
+       另一種方式是保持 fixed，然後大幅增加保留欄位的百分比。
+    */
+    #employeeTable th:nth-child(1), /* 員工 ID */
+    #employeeTable td:nth-child(1) { 
+        width: 30%; /* 增加寬度 */
+    } 
+    #employeeTable th:nth-child(2), /* 姓氏 */
+    #employeeTable td:nth-child(2) { 
+        width: 25%; /* 增加寬度 (假設姓+名合併顯示，或調整) */
+    }  
+    #employeeTable th:nth-child(3), /* 名字 */
+    #employeeTable td:nth-child(3) { 
+        display: none; /* 假設把名字合併到姓氏欄位顯示，或者保留並調整寬度 */
+    } 
+    #employeeTable th:nth-child(9), /* 操作 */
+    #employeeTable td:nth-child(9) { 
+        width: 45%; /* 增加寬度 */
+    }
+
+    /* 如果選擇合併姓名欄，需要 JS 輔助在顯示時合併 */
+}
+
+        /* ... (search-filter-container 的樣式保持或微調) ... */
+        .search-filter-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 25px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+            align-items: flex-start; /* 改為 flex-start，因為 checkbox group 高度不一 */
+        }
+        .search-filter-container > .filter-group {
+            display: flex;
+            flex-direction: column;
+            min-width: 200px;
+            flex: 1 1 200px;
+        }
+        .search-filter-container label.group-label { /* 用於 checkbox 群組的總標籤 */
+            font-weight: 600;
+            margin-bottom: 8px; /* 增加與下方 checkbox 的間距 */
+            font-size: 0.9em;
+            color: #495057;
+            display: block; /* 確保獨佔一行 */
+        }
+        .search-filter-container input[type="text"],
+        .search-filter-container select { /* statusFilterSelect 還是 select */
+            padding: 10px 12px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 1em;
+            box-sizing: border-box;
+            width: 100%;
+            height: 42px;
+        }
+
+        /* 新增：Checkbox 群組樣式 */
+        .checkbox-filter-group {
+            max-height: 120px; /* 給定最大高度，超出則捲動 */
+            overflow-y: auto;
+            border: 1px solid #ced4da;
+            padding: 8px 12px;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+        .checkbox-filter-group div { /* 每個 checkbox + label 的容器 */
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .checkbox-filter-group input[type="checkbox"] {
+            margin-right: 8px;
+            width: auto; /* checkbox 恢復預設寬度 */
+            height: auto; /* checkbox 恢復預設高度 */
+        }
+        .checkbox-filter-group label { /* checkbox 旁邊的 label */
+            font-weight: normal;
+            font-size: 0.95em;
+            margin-bottom: 0; /* 移除預設的 margin-bottom */
+            color: #333;
+        }
+
+
+        .search-filter-container .button-group {
+            display: flex;
+            gap: 10px;
+            align-items: flex-end;
+            flex-basis: 100%;
+            justify-content: flex-start;
+            margin-top: 10px; /* 給按鈕組一點上方空間 */
+        }
+
+/* 按鈕群組樣式調整 */
+.search-filter-container .filter-group.button-group {
+    flex-grow: 0;   /* 按鈕群組不參與空間擴展 */
+    flex-shrink: 0; /* 按鈕群組不收縮 (或允許輕微收縮) */
+    flex-basis: auto; /* 寬度由內容決定 */
+    flex-direction: row; /* 讓按鈕水平排列 */
+    gap: 10px; /* 按鈕之間的間距 */
+    /* align-items: flex-end; 已經在父層 .search-filter-container 設定 */
+}
+
+.search-filter-container button {
+    padding: 10px 18px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease-in-out;
+    height: 42px; /* 與輸入框/選擇器高度一致 */
+    white-space: nowrap; /* 防止按鈕文字換行 */
+}
+button#applySearchButton {
+     background-color: #007bff;
+}
+button#applySearchButton:hover {
+    background-color: #0056b3;
+}
+button#clearFiltersButton {
+    background-color: #6c757d;
+}
+button#clearFiltersButton:hover {
+    background-color: #5a6268;
+}
+
+@media screen and (max-width: 480px) {
+    /* ... (其他 480px 樣式) ... */
+
+    .button-icon {
+        font-size: 1em; /* 在非常小的螢幕上，圖示可以再小一點 */
+    }
+    .update-button,
+    .delete-button {
+        padding: 5px 7px;
+        min-width: 32px;
+    }
 }

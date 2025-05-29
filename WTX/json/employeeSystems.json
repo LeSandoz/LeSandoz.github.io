@@ -1,0 +1,632 @@
+[
+  {
+    "Employee_FK": 1,
+    "System_FK": 1,
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": "Murphy Ho -> ServiceMe"
+  },
+  {
+    "Employee_FK": 1,
+    "System_FK": 2,
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": "Murphy Ho -> myService"
+  },
+  {
+    "Employee_FK": 1,
+    "System_FK": 3,
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 2,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": "Murphy Ho -> LMS"
+  },
+  {
+    "Employee_FK": 2,
+    "System_FK": 1,
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": "Sheena Cao -> SAP"
+  },
+    {
+    "Employee_FK": 2,
+    "System_FK": 2,
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": "Sheena Cao -> SAP"
+  },
+    {
+    "Employee_FK": 2,
+    "System_FK": 3,
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": "Sheena Cao -> SAP"
+  },
+  {
+    "Employee_FK": 2,
+    "System_FK": 2,
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 3,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": "Sheena Cao -> myService"
+  },
+  {
+    "Employee_FK": 3,
+    "System_FK": 3,
+    "Grant_Datetime": "5/13/2025 9:15",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": "王大明 -> LMS (IT 部門基本權限)"
+  },
+  {
+    "Employee_FK": 3,
+    "System_FK": 4,
+    "Grant_Datetime": "5/13/2025 9:15",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": "王大明 -> SAP"
+  },
+  {
+    "Employee_FK": 4,
+    "System_FK": 3,
+    "Grant_Datetime": "5/27/2025 10:35",
+    "Grant_Emp_FK": 2,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": "David Lin -> LMS"
+  },
+  {
+    "Employee_FK": 5,
+    "System_FK": 2,
+    "Grant_Datetime": "5/27/2025 10:36",
+    "Grant_Emp_FK": 2,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": "Emily Chen -> myService"
+  },
+  {
+    "Employee_FK": 5,
+    "System_FK": 4,
+    "Grant_Datetime": "5/27/2025 10:36",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": "Emily Chen -> SAP"
+  },
+  {
+    "Employee_FK": 6,
+    "System_FK": 1,
+    "Grant_Datetime": "5/27/2025 10:37",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": "Kevin Huang -> ServiceMe"
+  },
+  {
+    "Employee_FK": 6,
+    "System_FK": 2,
+    "Grant_Datetime": "5/27/2025 10:37",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": "Kevin Huang -> myService"
+  },
+  {
+    "Employee_FK": 6,
+    "System_FK": 3,
+    "Grant_Datetime": "5/27/2025 10:37",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": "Kevin Huang -> LMS"
+  },
+  {
+    "Employee_FK": 6,
+    "System_FK": 4,
+    "Grant_Datetime": "5/27/2025 10:37",
+    "Grant_Emp_FK": 2,
+    "Is_Active": 0,
+    "Revoke_Datetime": "5/29/2025 10:32",
+    "Revoke_Emp_FK": 1,
+    "Note": "Kevin Huang remove SAP"
+  },
+  {
+    "Employee_FK": 7,
+    "System_FK": 1,
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 7,
+    "System_FK": 2,
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 7,
+    "System_FK": 3,
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 2,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 8,
+    "System_FK": 1,
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 8,
+    "System_FK": 1, 
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 3,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 9,
+    "System_FK": 1,
+    "Grant_Datetime": "5/13/2025 9:15",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 10,
+    "System_FK": 1,
+    "Grant_Datetime": "5/13/2025 9:15",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 0,
+    "Revoke_Datetime": "5/29/2025 10:32",
+    "Revoke_Emp_FK": 1,
+    "Note": "Bridie Zuniga remove SME"
+  },
+  {
+    "Employee_FK": 10,
+    "System_FK": 1, 
+    "Grant_Datetime": "5/27/2025 10:35",
+    "Grant_Emp_FK": 2,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 11,
+    "System_FK": 1,
+    "Grant_Datetime": "5/27/2025 10:36",
+    "Grant_Emp_FK": 2,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 11,
+    "System_FK": 2,
+    "Grant_Datetime": "5/27/2025 10:36",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 12,
+    "System_FK": 1,
+    "Grant_Datetime": "5/27/2025 10:37",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 0,
+    "Revoke_Datetime": "5/29/2025 10:32",
+    "Revoke_Emp_FK": 1,
+    "Note": "Benedict Stewart remove SME"
+  },
+  {
+    "Employee_FK": 13,
+    "System_FK": 1,
+    "Grant_Datetime": "5/27/2025 10:37",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 13,
+    "System_FK": 2,
+    "Grant_Datetime": "5/27/2025 10:37",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 14,
+    "System_FK": 1,
+    "Grant_Datetime": "5/27/2025 10:37",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 15,
+    "System_FK": 1,
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 2,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 15,
+    "System_FK": 1, 
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 3,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 16,
+    "System_FK": 1,
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 17,
+    "System_FK": 1,
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 0,
+    "Revoke_Datetime": "5/29/2025 10:32",
+    "Revoke_Emp_FK": 1,
+    "Note": "Alice Joyce remove SME"
+  },
+  {
+    "Employee_FK": 17,
+    "System_FK": 2,
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 18,
+    "System_FK": 1,
+    "Grant_Datetime": "5/13/2025 9:15",
+    "Grant_Emp_FK": 2,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 19,
+    "System_FK": 1,
+    "Grant_Datetime": "5/13/2025 9:15",
+    "Grant_Emp_FK": 2,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 20,
+    "System_FK": 1,
+    "Grant_Datetime": "5/27/2025 10:35",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 0,
+    "Revoke_Datetime": "5/29/2025 10:32",
+    "Revoke_Emp_FK": 1,
+    "Note": "Marcus Fletcher remove SME"
+  },
+  {
+    "Employee_FK": 20,
+    "System_FK": 2,
+    "Grant_Datetime": "5/27/2025 10:35",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 21,
+    "System_FK": 1,
+    "Grant_Datetime": "5/27/2025 10:36",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 22,
+    "System_FK": 1,
+    "Grant_Datetime": "5/27/2025 10:37",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 22,
+    "System_FK": 2,
+    "Grant_Datetime": "5/27/2025 10:37",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 22,
+    "System_FK": 3,
+    "Grant_Datetime": "5/27/2025 10:37",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 23,
+    "System_FK": 1,
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 3,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 24,
+    "System_FK": 1,
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 0,
+    "Revoke_Datetime": "5/29/2025 10:32",
+    "Revoke_Emp_FK": 1,
+    "Note": "Lee Greer remove SME"
+  },
+  {
+    "Employee_FK": 24,
+    "System_FK": 2,
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 25,
+    "System_FK": 1,
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 26,
+    "System_FK": 1,
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 2,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 26,
+    "System_FK": 2,
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 0,
+    "Revoke_Datetime": "5/29/2025 10:32",
+    "Revoke_Emp_FK": 1,
+    "Note": "Jorja Morse remove SAP"
+  },
+  {
+    "Employee_FK": 27,
+    "System_FK": 1,
+    "Grant_Datetime": "5/13/2025 9:15",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 28,
+    "System_FK": 1,
+    "Grant_Datetime": "5/27/2025 10:35",
+    "Grant_Emp_FK": 2,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 28,
+    "System_FK": 2,
+    "Grant_Datetime": "5/27/2025 10:35",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 29,
+    "System_FK": 1,
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 30,
+    "System_FK": 1,
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 3,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 31,
+    "System_FK": 1,
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 2,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 31,
+    "System_FK": 2,
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 0,
+    "Revoke_Datetime": "5/29/2025 10:32",
+    "Revoke_Emp_FK": 1,
+    "Note": "Kevin Huang remove SAP" 
+  },
+  {
+    "Employee_FK": 32,
+    "System_FK": 1,
+    "Grant_Datetime": "5/13/2025 9:15",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 33,
+    "System_FK": 1,
+    "Grant_Datetime": "5/13/2025 9:15",
+    "Grant_Emp_FK": 2,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 33,
+    "System_FK": 2,
+    "Grant_Datetime": "5/12/2025 11:52",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 34,
+    "System_FK": 1,
+    "Grant_Datetime": "5/13/2025 9:15",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 35,
+    "System_FK": 1,
+    "Grant_Datetime": "5/27/2025 10:35",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 36,
+    "System_FK": 1,
+    "Grant_Datetime": "5/27/2025 10:36",
+    "Grant_Emp_FK": 1,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  },
+  {
+    "Employee_FK": 36,
+    "System_FK": 2,
+    "Grant_Datetime": "5/27/2025 10:36",
+    "Grant_Emp_FK": 2,
+    "Is_Active": 1,
+    "Revoke_Datetime": null,
+    "Revoke_Emp_FK": null,
+    "Note": null
+  }
+]

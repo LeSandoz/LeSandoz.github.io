@@ -1,0 +1,278 @@
+/* responsive.css */
+/* 響應式設計樣式 - 建議在主要 CSS 檔案之後載入 */
+
+/* ------------------------------------ */
+/* 通用 RWD 調整 (例如 768px 以下)     */
+/* ------------------------------------ */
+@media screen and (max-width: 1024px) { /* 或者一個你認為需要開始換行的斷點 */
+    .search-filter-container {
+        flex-wrap: wrap; /* 在較小螢幕上允許換行 */
+    }
+    /* 在換行後，可以讓 filter-group 有最小寬度，例如一行放兩個 */
+    .search-filter-container > .filter-group {
+        min-width: calc(33.33% - 12px); /* 嘗試一行放三個，根據 gap 調整 */
+        flex-basis: calc(33.33% - 12px);
+    }
+     .search-filter-container > .filter-group.full-width-mobile {
+        min-width: calc(50% - 8px); /* 關鍵字搜尋可能需要更寬 */
+        flex-basis: calc(50% - 8px);
+    }
+    .search-filter-container .filter-group.button-group {
+        min-width: calc(50% - 8px); /* 按鈕組也可能需要更多空間或獨佔一行 */
+        flex-basis: calc(50% - 8px);
+        justify-content: flex-start; /* 或者 flex-end */
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    /* --- Navbar RWD 調整 --- */
+
+
+    .navbar ul#nav-menu { /* Navbar 選單列表 */
+        display: none !important; /* 手機版：預設隱藏文字選單 */
+        flex-direction: column !important; /* 改為垂直排列 */
+        width: 100% !important; /* 或設定一個固定寬度如 200px */
+        background-color: #444 !important; /* 下拉選單的背景色 */
+        position: absolute !important;
+        top: 100% !important; /* 相對 .nav-container 的底部開始 (假設 .nav-container 有 min-height) */
+                               /* 如果 Navbar 高度固定，例如 60px，可以直接寫 top: 60px; */
+        left: 0; /* 如果希望從左邊展開 */
+        /* right: 0; */ /* 如果希望從右邊展開 */
+        box-shadow: 0 2px 2px rgba(0,0,0,0.1) !important;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+        border-radius: 0 0 4px 4px !important;
+        z-index: 999 !important; /* 確保在其他內容之上 */
+    }
+
+    .navbar ul#nav-menu.active { /* JS 控制加上 .active class 來顯示選單 */
+        display: flex !important;
+    }
+
+    .navbar #nav-menu li a { /* Navbar 選單項目 */
+        text-align: left !important;
+        padding: 12px 20px !important;
+        border-bottom: 1px solid #555 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    .navbar #nav-menu li:last-child a {
+        border-bottom: none !important;
+    }
+
+    .navbar .menu-toggle { /* Navbar 漢堡選單按鈕 */
+        display: block !important; /* 手機版：顯示漢堡選單按鈕 */
+    }
+    /* --- Navbar RWD 調整結束 --- */
+
+
+    /* --- 通用容器調整 --- */
+    .container {
+        width: 95% !important;
+        padding: 15px !important;
+        margin: 20px auto !important;
+    }
+    .container h1 {
+        font-size: 1.5rem !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* --- 通用表格響應式外包裝 --- */
+    .table-responsive-wrapper {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        margin-bottom: 20px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* --- 通用表格基礎調整 (手機版) --- */
+    table {
+        min-width: 0 !important;
+    }
+    table th,
+    table td {
+        padding: 8px 10px !important;
+        font-size: 0.9rem !important;
+    }
+
+    /* --- 通用按鈕文字轉圖示 (手機版) --- */
+    .button-text {
+        display: none !important;
+    }
+    .button-icon {
+        display: inline !important;
+        font-size: 1.1em !important;
+    }
+    button.update-button,
+    button.delete-button,
+    button.recover-button {
+        padding: 6px 8px !important;
+        min-width: 36px !important;
+        text-align: center !important;
+    }
+
+
+    /* --- userList.html (#employeeTable) 特定調整 --- */
+    #employeeTable {
+        min-width: 550px !important;
+    }
+    #employeeTable th:nth-child(3), /* 名字 th */
+    #employeeTable td:nth-child(3), /* 名字 td */
+    #employeeTable th:nth-child(8), /* SAP th */
+    #employeeTable td:nth-child(8)  /* SAP td */ {
+        display: none !important;
+    }
+    #employeeTable th:nth-child(1), #employeeTable td:nth-child(1) { width: 20% !important; }
+    #employeeTable th:nth-child(2), #employeeTable td:nth-child(2) { width: 25% !important; }
+    #employeeTable th:nth-child(4), #employeeTable td:nth-child(4) { width: 20% !important; }
+    #employeeTable th:nth-child(5), #employeeTable td:nth-child(5) { width: 10% !important; }
+    #employeeTable th:nth-child(6), #employeeTable td:nth-child(6) { width: 10% !important; }
+    #employeeTable th:nth-child(7), #employeeTable td:nth-child(7) { width: 10% !important; }
+    #employeeTable th:nth-child(9), #employeeTable td:nth-child(9) { width: 25% !important; }
+    #employeeTable td:nth-child(5),
+    #employeeTable td:nth-child(6),
+    #employeeTable td:nth-child(7) {
+        text-align: center !important;
+    }
+    #employeeTable td:nth-child(9) {
+        text-align: center !important;
+    }
+    #employeeTable td:nth-child(9) div {
+        gap: 8px !important;
+    }
+
+
+    /* --- conversionList.html (#conversionTable) 特定調整 --- */
+    #conversionTable {
+        min-width: 400px !important;
+    }
+    #conversionTable th:nth-child(4), /* 名字 */
+    #conversionTable td:nth-child(4) {
+        display: none !important;
+    }
+    #conversionTable th:nth-child(1), #conversionTable td:nth-child(1) { width: 25% !important; }
+    #conversionTable th:nth-child(2), #conversionTable td:nth-child(2) { width: 25% !important; }
+    #conversionTable th:nth-child(3), #conversionTable td:nth-child(3) { width: 25% !important; }
+    #conversionTable th:nth-child(5), #conversionTable td:nth-child(5) { width: 25% !important; }
+
+
+    /* --- terminationList.html (#terminationTable) 特定調整 --- */
+    #terminationTable {
+        min-width: 350px !important; /* 可調整 */
+    }
+    /* 隱藏 terminationList 的「名字」欄 (第3欄) */
+    #terminationTable th:nth-child(3),
+    #terminationTable td:nth-child(3) {
+        display: none !important;
+    }
+    /* 隱藏 terminationList 的「部門」欄 (第4欄) */
+    #terminationTable th:nth-child(4),
+    #terminationTable td:nth-child(4) {
+        display: none !important;
+    }
+    /* 調整 terminationList 剩餘可見欄位的寬度 (ID, 姓名(原姓氏欄), 操作) */
+    #terminationTable th:nth-child(1), #terminationTable td:nth-child(1) { width: 35% !important; } /* ID */
+    #terminationTable th:nth-child(2), #terminationTable td:nth-child(2) { width: 35% !important; } /* 姓名 (JS會合併名字) */
+    #terminationTable th:nth-child(5), #terminationTable td:nth-child(5) { width: 30% !important; } /* 操作欄 */
+    /* terminationList 操作欄置中 */
+    #terminationTable td:nth-child(5) {
+        text-align: center !important;
+    }
+
+    /* --- 新增/修改：terminationList 的 Recover 按鈕圖示化 --- */
+    #terminationTable .recover-button .button-text {
+        display: none !important; /* 手機版隱藏文字 */
+    }
+    #terminationTable .recover-button .button-icon {
+        display: inline !important; /* 手機版顯示圖示 */
+        font-size: 1.1em !important; /* 調整圖示大小 */
+    }
+    /* 確保 recover-button 的 padding 和 min-width 也被套用 */
+    #terminationTable .recover-button {
+        padding: 6px 8px !important;
+        min-width: 36px !important;
+        text-align: center !important;
+    }
+
+
+    /* --- 通用分頁控制項調整 --- */
+    .pagination {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+    .pagination button {
+        padding: 6px 10px !important;
+        font-size: 0.85em !important;
+        margin: 5px 4px !important;
+    }
+    /* userLest 搜尋框樣式 */
+    .search-filter-container {
+        gap: 12px;
+        align-items: stretch; /* 在手機上讓 filter-group 等高 (如果需要) */
+    }
+    .search-filter-container > .filter-group {
+            min-width: calc(50% - 6px);
+    }
+    .search-filter-container > .filter-group.full-width-mobile,
+    .search-filter-container > .button-group {
+        min-width: 100%;
+        flex-basis: auto;
+    }
+        .search-filter-container .button-group button {
+        flex-grow: 1;
+    }
+    .checkbox-filter-group { /* 手機版可以讓 checkbox 列表高一點 */
+        max-height: 150px;
+    }
+}
+
+
+/* ------------------------------------ */
+/* 更小螢幕的 RWD 調整 (例如 480px 以下) */
+/* ------------------------------------ */
+@media screen and (max-width: 480px) {
+    table th,
+    table td {
+        font-size: 0.8rem !important;
+        padding: 6px 8px !important;
+    }
+
+    .button-icon {
+        font-size: 1em !important;
+    }
+    button.update-button,
+    button.delete-button,
+    button.recover-button {
+        padding: 5px 7px !important;
+        min-width: 32px !important;
+    }
+
+    #employeeTable td:nth-child(9) div button, /* userList 操作按鈕 */
+   /* --- 新增/修改：terminationList 的 Recover 按鈕在極小螢幕 --- */
+    #terminationTable .recover-button .button-icon {
+        font-size: 1em !important;
+    }
+    #terminationTable .recover-button {
+        padding: 5px 7px !important;
+        min-width: 32px !important;
+        width: 100% !important; /* 讓按鈕在極小螢幕上獨佔一行 */
+        margin-top: 3px !important;
+        margin-bottom: 3px !important;
+    }
+
+    .pagination button {
+        padding: 5px 8px !important;
+        font-size: 0.8em !important;
+    }
+
+
+    /* userLest 搜尋框樣式 */
+    .search-filter-container > .filter-group {
+        min-width: 100%; /* 在非常小的螢幕上一行放一個 */
+        flex-basis: 100%;
+    }
+}

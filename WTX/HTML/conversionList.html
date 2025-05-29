@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversion List</title>
     <link rel="stylesheet" href="../CSS/navbar.css">
-    <link rel="stylesheet" href="../CSS/conversionList.css"> </head>
+    <link rel="stylesheet" href="../CSS/conversionList.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">  
+</head>
 <body>
 
     <div id="navbar-placeholder"></div>
 
-    <div class="container" id="conversionDisplayArea">
-        <h1>Conversion List</h1> <table id="conversionTable"> <thead>
+<div class="container" id="conversionDisplayArea">
+    <h1>Conversion List</h1>
+    <div class="table-responsive-wrapper"> <table id="conversionTable">
+            <thead>
                 <tr>
                     <th>員工 ID</th>
-                    <th>員工前 ID</th> <th>姓氏</th>
+                    <th>員工前 ID</th>
+                    <th>姓氏</th>
                     <th>名字</th>
                     <th>部門</th>
                 </tr>
@@ -24,8 +29,9 @@
                     <td colspan="5" style="text-align: center;">正在載入資料...</td> </tr>
             </tbody>
         </table>
-        <div id="paginationControls" class="pagination"></div>
     </div>
+    <div id="paginationControls" class="pagination"></div>
+</div>
 
     <script src="../JS/navbar.js"></script>
     <script src="../JS/conversionList.js"></script>
