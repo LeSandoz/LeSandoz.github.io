@@ -484,3 +484,60 @@ document.addEventListener("DOMContentLoaded", function() {
     loadAllData(); // loadAllData 內部會填充下拉選單並綁定篩選器事件，最後呼叫 applyFiltersAndSearch
     console.log("DOMContentLoaded - 初始化結束");
 });
+
+// --- 在 DOMContentLoaded 中初始化所有元素和事件 ---
+document.addEventListener("DOMContentLoaded", function() {
+    // 初始化篩選器和主要 DOM 元素
+    keywordSearchInput = document.getElementById('keywordSearchInput');
+    systemFilterSelect = document.getElementById('systemFilterSelect');
+    statusFilterSelect = document.getElementById('statusFilterSelect');
+    departmentFilterSelect = document.getElementById('departmentFilterSelect');
+    clearFiltersButton = document.getElementById('clearFiltersButton');
+    applySearchButton = document.getElementById('applySearchButton'); // 假設有搜尋按鈕
+    tableBody = document.querySelector("#employeeTable tbody");
+    paginationControls = document.getElementById('paginationControls');
+
+    // **新增：獲取並設定 HC Report Upload 按鈕**
+    const hcReportUploadButton = document.getElementById('hcReportUploadButton');
+
+    if (hcReportUploadButton) {
+        hcReportUploadButton.addEventListener('click', function() {
+            // 1. 創建一個隱藏的 file input 元素
+            const fileInput = document.createElement('input');
+            fileInput.type = 'file';
+            fileInput.accept = '.xlsx, .xls, .csv'; // 限制檔案類型
+            fileInput.style.display = 'none'; // 確保它不可見
+
+            // 2. 監聽 file input 的 change 事件
+            fileInput.addEventListener('change', function() {
+                if (fileInput.files.length > 0) {
+                    const selectedFile = fileInput.files[0];
+                    const fileName = selectedFile.name;
+
+                    console.log(`已選擇檔案: ${fileName}`);
+
+                    // 3. 彈出確認對話框
+                    const isConfirmed = confirm(`您確定要上傳檔案 "${fileName}" 嗎？`);
+
+                    if (isConfirmed) {
+                        // 4. 顯示假的「上傳成功」提示
+                        alert(`HC Report "${fileName}" 上傳成功！\n(這是一個假的上傳功能，並未實際處理檔案。)`);
+                    } else {
+                        console.log("使用者取消了上傳。");
+                    }
+                }
+                // 無論成功或取消，都從 body 中移除這個暫時的 input
+                document.body.removeChild(fileInput);
+            });
+
+            // 5. 將 file input 加到頁面並觸發點擊
+            document.body.appendChild(fileInput);
+            fileInput.click();
+        });
+    }
+
+
+    // 初始載入
+    loadNavbar();
+    loadAllData();
+});

@@ -435,6 +435,32 @@ button#clearFiltersButton:hover {
     background-color: #5a6268;
 }
 
+.page-header {
+    display: flex; /* 使用 Flexbox */
+    justify-content: space-between; /* 讓子項目左右對齊 */
+    align-items: center; /* 讓子項目垂直置中 */
+    margin-bottom: 20px; /* 與下方的篩選區域保持間距 */
+}
+
+.page-header h1 {
+    margin: 0; /* 移除 h1 預設的 margin，避免影響對齊 */
+}
+
+/* 上傳按鈕的樣式 */
+#hcReportUploadButton {
+    background-color: #17a2b8; /* 青色 */
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    flex-shrink: 0; /* 確保按鈕不會被壓縮 */
+}
+#hcReportUploadButton:hover {
+    background-color: #138496;
+}
+
 @media screen and (max-width: 480px) {
     /* ... (其他 480px 樣式) ... */
 
