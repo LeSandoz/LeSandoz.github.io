@@ -42,7 +42,7 @@ async function scrapeLaneTalk() {
     let allGames = [];
     // 策略調整：為了接續之前的進度，我們從第 15 頁開始嘗試
     // (因為之前第 15 頁只有 23 筆，代表那是訪客視角的盡頭，但在會員視角下應該還有更多)
-    let page = 15; 
+    let page = 0; 
     let hasMore = true;
     let consecutiveErrors = 0;
 
