@@ -1,0 +1,8 @@
+
+{
+  "name": "LaneSync - Bowling Performance Tracker",
+  "description": "A high-performance bowling analytics dashboard inspired by LaneTalk, focused on tracking and visualizing data for Plano Super Bowl players and their friends.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
