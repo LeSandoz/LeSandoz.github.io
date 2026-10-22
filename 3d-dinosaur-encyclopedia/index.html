@@ -13,10 +13,17 @@
   nav { display:flex; gap:8px; padding:10px 16px; position:sticky; top:0; background:#0f1420; z-index:10; }
   nav button { flex:1; padding:10px; border:1px solid #2a3350; background:#182036; color:#cfd8ea; border-radius:12px; font-size:15px; }
   nav button.active { background:#2f6df6; border-color:#2f6df6; color:#fff; font-weight:700; }
-  main { padding:4px 16px 40px; }
+  main { padding:4px 16px 40px; max-width:1180px; margin:0 auto; }
+  nav { max-width:1180px; margin:0 auto; }
+  header { max-width:1180px; margin:0 auto; }
   section.view { display:none; }
   section.view.active { display:block; }
   .grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media (min-width:700px){ .grid{ grid-template-columns:repeat(3,1fr);} }
+  @media (min-width:1024px){ .grid{ grid-template-columns:repeat(4,1fr);} }
+  #cardList { max-width:520px; margin:0 auto; }
+  #scanWrap { max-width:520px; margin:0 auto; }
+  #view-scan .btn { max-width:520px; margin-left:auto; margin-right:auto; }
   .dcard { background:#182036; border:1px solid #2a3350; border-radius:14px; overflow:hidden; cursor:pointer; }
   .dcard img { width:100%; aspect-ratio:3/4; object-fit:cover; display:block; }
   .dcard .nm { padding:8px 10px; font-weight:700; font-size:15px; }
@@ -30,7 +37,7 @@
   .btn.ghost { background:#182036; border:1px solid #2a3350; color:#cfd8ea; }
   /* print cards */
   .pcard { background:#fff; color:#111; border-radius:14px; overflow:hidden; margin-bottom:16px; }
-  .pcard img.dino { width:100%; aspect-ratio:4/3; object-fit:cover; display:block; }
+  .pcard img.dino { width:100%; height:auto; display:block; }
   .pcard .body { padding:12px 14px; display:flex; gap:12px; align-items:center; }
   .pcard .info { flex:1; }
   .pcard .info h3 { margin:0 0 4px; font-size:18px; }
@@ -5163,8 +5170,11 @@ document.getElementById('photoInput').onchange=(e)=>{
   const img=new Image();
   img.onload=()=>{
     try{
-      cv.width=img.naturalWidth; cv.height=img.naturalHeight;
-      cx.drawImage(img,0,0);
+      let w=img.naturalWidth, h=img.naturalHeight;
+      const sc=Math.min(1, 1280/Math.max(w,h));
+      w=Math.max(1,Math.round(w*sc)); h=Math.max(1,Math.round(h*sc));
+      cv.width=w; cv.height=h;
+      cx.drawImage(img,0,0,w,h);
       const code=jsQR(cx.getImageData(0,0,cv.width,cv.height).data,cv.width,cv.height);
       if(code && code.data.startsWith('DINODEX:')){
         const id=code.data.slice(8);
@@ -5206,7 +5216,7 @@ const scene=new THREE.Scene();
 scene.background=null;
 const camera=new THREE.PerspectiveCamera(45,1,0.1,100);
 camera.position.set(2.6,1.8,3.2);
-const controls=new OrbitControls(camera,renderer.domElement);
+const controls=new THREE.OrbitControls(camera,renderer.domElement);
 controls.enableDamping=true; controls.target.set(0,0.7,0);
 controls.maxPolarAngle=Math.PI/2.05; controls.minDistance=1.5; controls.maxDistance=8;
 scene.add(new THREE.HemisphereLight(0xbfd4ff,0x33415e,1.1));
