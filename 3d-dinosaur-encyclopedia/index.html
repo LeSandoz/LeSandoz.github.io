@@ -5337,39 +5337,55 @@ const PERIODS = [
   { id:'bonus', name:'人氣番外', en:'Bonus', desc:'翼龍與海龍・不是恐龍但超受歡迎' },
 ];
 const ASSETS = {
-  COELOPHYSIS: { img:'assets/cards/COELOPHYSIS.jpg', glb:'', qr:'assets/qr/COELOPHYSIS.png' },
-  PLATEOSAURUS: { img:'assets/cards/PLATEOSAURUS.jpg', glb:'', qr:'assets/qr/PLATEOSAURUS.png' },
-  EORAPTOR: { img:'assets/cards/EORAPTOR.jpg', glb:'', qr:'assets/qr/EORAPTOR.png' },
-  HERRERASAURUS: { img:'assets/cards/HERRERASAURUS.jpg', glb:'', qr:'assets/qr/HERRERASAURUS.png' },
-  BRACHIOSAURUS: { img:'assets/cards/BRACHIOSAURUS.jpg', glb:'', qr:'assets/qr/BRACHIOSAURUS.png' },
-  DIPLODOCUS: { img:'assets/cards/DIPLODOCUS.jpg', glb:'assets/models/DIPLODOCUS.glb', qr:'assets/qr/DIPLODOCUS.png' },
-  APATOSAURUS: { img:'assets/cards/APATOSAURUS.jpg', glb:'assets/models/APATOSAURUS.glb', qr:'assets/qr/APATOSAURUS.png' },
-  STEGOSAURUS: { img:'assets/cards/STEGOSAURUS.jpg', glb:'assets/models/STEGOSAURUS.glb', qr:'assets/qr/STEGOSAURUS.png' },
-  ALLOSAURUS: { img:'assets/cards/ALLOSAURUS.jpg', glb:'', qr:'assets/qr/ALLOSAURUS.png' },
-  DILOPHOSAURUS: { img:'assets/cards/DILOPHOSAURUS.jpg', glb:'', qr:'assets/qr/DILOPHOSAURUS.png' },
-  CERATOSAURUS: { img:'assets/cards/CERATOSAURUS.jpg', glb:'', qr:'assets/qr/CERATOSAURUS.png' },
-  COMPSOGNATHUS: { img:'assets/cards/COMPSOGNATHUS.jpg', glb:'', qr:'assets/qr/COMPSOGNATHUS.png' },
-  MAMENCHISAURUS: { img:'assets/cards/MAMENCHISAURUS.jpg', glb:'', qr:'assets/qr/MAMENCHISAURUS.png' },
-  ARCHAEOPTERYX: { img:'assets/cards/ARCHAEOPTERYX.jpg', glb:'', qr:'assets/qr/ARCHAEOPTERYX.png' },
-  TREX: { img:'assets/cards/TREX.jpg', glb:'assets/models/TREX.glb', qr:'assets/qr/TREX.png' },
-  TRICERATOPS: { img:'assets/cards/TRICERATOPS.jpg', glb:'assets/models/TRICERATOPS.glb', qr:'assets/qr/TRICERATOPS.png' },
-  VELOCIRAPTOR: { img:'assets/cards/VELOCIRAPTOR.jpg', glb:'assets/models/VELOCIRAPTOR.glb', qr:'assets/qr/VELOCIRAPTOR.png' },
-  SPINOSAURUS: { img:'assets/cards/SPINOSAURUS.jpg', glb:'assets/models/SPINOSAURUS.glb', qr:'assets/qr/SPINOSAURUS.png' },
-  ANKYLOSAURUS: { img:'assets/cards/ANKYLOSAURUS.jpg', glb:'assets/models/ANKYLOSAURUS.glb', qr:'assets/qr/ANKYLOSAURUS.png' },
-  CARNOTAURUS: { img:'assets/cards/CARNOTAURUS.jpg', glb:'assets/models/CARNOTAURUS.glb', qr:'assets/qr/CARNOTAURUS.png' },
-  PACHYCEPHALOSAURUS: { img:'assets/cards/PACHYCEPHALOSAURUS.jpg', glb:'assets/models/PACHYCEPHALOSAURUS.glb', qr:'assets/qr/PACHYCEPHALOSAURUS.png' },
-  PARASAUROLOPHUS: { img:'assets/cards/PARASAUROLOPHUS.jpg', glb:'assets/models/PARASAUROLOPHUS.glb', qr:'assets/qr/PARASAUROLOPHUS.png' },
-  OVIRAPTOR: { img:'assets/cards/OVIRAPTOR.jpg', glb:'assets/models/OVIRAPTOR.glb', qr:'assets/qr/OVIRAPTOR.png' },
-  UTAHRAPTOR: { img:'assets/cards/UTAHRAPTOR.jpg', glb:'', qr:'assets/qr/UTAHRAPTOR.png' },
-  IGUANODON: { img:'assets/cards/IGUANODON.jpg', glb:'', qr:'assets/qr/IGUANODON.png' },
-  GALLIMIMUS: { img:'assets/cards/GALLIMIMUS.jpg', glb:'', qr:'assets/qr/GALLIMIMUS.png' },
-  THERIZINOSAURUS: { img:'assets/cards/THERIZINOSAURUS.jpg', glb:'', qr:'assets/qr/THERIZINOSAURUS.png' },
-  MICRORAPTOR: { img:'assets/cards/MICRORAPTOR.jpg', glb:'', qr:'assets/qr/MICRORAPTOR.png' },
-  PTERODACTYLUS: { img:'assets/cards/PTERODACTYLUS.jpg', glb:'assets/models/PTERODACTYLUS.glb', qr:'assets/qr/PTERODACTYLUS.png' },
-  QUETZALCOATLUS: { img:'assets/cards/QUETZALCOATLUS.jpg', glb:'', qr:'assets/qr/QUETZALCOATLUS.png' },
-  MOSASAURUS: { img:'assets/cards/MOSASAURUS.jpg', glb:'', qr:'assets/qr/MOSASAURUS.png' },
-  PLESIOSAURUS: { img:'assets/cards/PLESIOSAURUS.jpg', glb:'assets/models/PLESIOSAURUS.glb', qr:'assets/qr/PLESIOSAURUS.png' },
+  COELOPHYSIS: { img:'assets/cards/COELOPHYSIS.jpg.b64', glb:'', qr:'assets/qr/COELOPHYSIS.png.b64' },
+  PLATEOSAURUS: { img:'assets/cards/PLATEOSAURUS.jpg.b64', glb:'', qr:'assets/qr/PLATEOSAURUS.png.b64' },
+  EORAPTOR: { img:'assets/cards/EORAPTOR.jpg.b64', glb:'', qr:'assets/qr/EORAPTOR.png.b64' },
+  HERRERASAURUS: { img:'assets/cards/HERRERASAURUS.jpg.b64', glb:'', qr:'assets/qr/HERRERASAURUS.png.b64' },
+  BRACHIOSAURUS: { img:'assets/cards/BRACHIOSAURUS.jpg.b64', glb:'', qr:'assets/qr/BRACHIOSAURUS.png.b64' },
+  DIPLODOCUS: { img:'assets/cards/DIPLODOCUS.jpg.b64', glb:'assets/models/DIPLODOCUS.glb.b64', qr:'assets/qr/DIPLODOCUS.png.b64' },
+  APATOSAURUS: { img:'assets/cards/APATOSAURUS.jpg.b64', glb:'assets/models/APATOSAURUS.glb.b64', qr:'assets/qr/APATOSAURUS.png.b64' },
+  STEGOSAURUS: { img:'assets/cards/STEGOSAURUS.jpg.b64', glb:'assets/models/STEGOSAURUS.glb.b64', qr:'assets/qr/STEGOSAURUS.png.b64' },
+  ALLOSAURUS: { img:'assets/cards/ALLOSAURUS.jpg.b64', glb:'', qr:'assets/qr/ALLOSAURUS.png.b64' },
+  DILOPHOSAURUS: { img:'assets/cards/DILOPHOSAURUS.jpg.b64', glb:'', qr:'assets/qr/DILOPHOSAURUS.png.b64' },
+  CERATOSAURUS: { img:'assets/cards/CERATOSAURUS.jpg.b64', glb:'', qr:'assets/qr/CERATOSAURUS.png.b64' },
+  COMPSOGNATHUS: { img:'assets/cards/COMPSOGNATHUS.jpg.b64', glb:'', qr:'assets/qr/COMPSOGNATHUS.png.b64' },
+  MAMENCHISAURUS: { img:'assets/cards/MAMENCHISAURUS.jpg.b64', glb:'', qr:'assets/qr/MAMENCHISAURUS.png.b64' },
+  ARCHAEOPTERYX: { img:'assets/cards/ARCHAEOPTERYX.jpg.b64', glb:'', qr:'assets/qr/ARCHAEOPTERYX.png.b64' },
+  TREX: { img:'assets/cards/TREX.jpg.b64', glb:'assets/models/TREX.glb.b64', qr:'assets/qr/TREX.png.b64' },
+  TRICERATOPS: { img:'assets/cards/TRICERATOPS.jpg.b64', glb:'assets/models/TRICERATOPS.glb.b64', qr:'assets/qr/TRICERATOPS.png.b64' },
+  VELOCIRAPTOR: { img:'assets/cards/VELOCIRAPTOR.jpg.b64', glb:'assets/models/VELOCIRAPTOR.glb.b64', qr:'assets/qr/VELOCIRAPTOR.png.b64' },
+  SPINOSAURUS: { img:'assets/cards/SPINOSAURUS.jpg.b64', glb:'assets/models/SPINOSAURUS.glb.b64', qr:'assets/qr/SPINOSAURUS.png.b64' },
+  ANKYLOSAURUS: { img:'assets/cards/ANKYLOSAURUS.jpg.b64', glb:'assets/models/ANKYLOSAURUS.glb.b64', qr:'assets/qr/ANKYLOSAURUS.png.b64' },
+  CARNOTAURUS: { img:'assets/cards/CARNOTAURUS.jpg.b64', glb:'assets/models/CARNOTAURUS.glb.b64', qr:'assets/qr/CARNOTAURUS.png.b64' },
+  PACHYCEPHALOSAURUS: { img:'assets/cards/PACHYCEPHALOSAURUS.jpg.b64', glb:'assets/models/PACHYCEPHALOSAURUS.glb.b64', qr:'assets/qr/PACHYCEPHALOSAURUS.png.b64' },
+  PARASAUROLOPHUS: { img:'assets/cards/PARASAUROLOPHUS.jpg.b64', glb:'assets/models/PARASAUROLOPHUS.glb.b64', qr:'assets/qr/PARASAUROLOPHUS.png.b64' },
+  OVIRAPTOR: { img:'assets/cards/OVIRAPTOR.jpg.b64', glb:'assets/models/OVIRAPTOR.glb.b64', qr:'assets/qr/OVIRAPTOR.png.b64' },
+  UTAHRAPTOR: { img:'assets/cards/UTAHRAPTOR.jpg.b64', glb:'', qr:'assets/qr/UTAHRAPTOR.png.b64' },
+  IGUANODON: { img:'assets/cards/IGUANODON.jpg.b64', glb:'', qr:'assets/qr/IGUANODON.png.b64' },
+  GALLIMIMUS: { img:'assets/cards/GALLIMIMUS.jpg.b64', glb:'', qr:'assets/qr/GALLIMIMUS.png.b64' },
+  THERIZINOSAURUS: { img:'assets/cards/THERIZINOSAURUS.jpg.b64', glb:'', qr:'assets/qr/THERIZINOSAURUS.png.b64' },
+  MICRORAPTOR: { img:'assets/cards/MICRORAPTOR.jpg.b64', glb:'', qr:'assets/qr/MICRORAPTOR.png.b64' },
+  PTERODACTYLUS: { img:'assets/cards/PTERODACTYLUS.jpg.b64', glb:'assets/models/PTERODACTYLUS.glb.b64', qr:'assets/qr/PTERODACTYLUS.png.b64' },
+  QUETZALCOATLUS: { img:'assets/cards/QUETZALCOATLUS.jpg.b64', glb:'', qr:'assets/qr/QUETZALCOATLUS.png.b64' },
+  MOSASAURUS: { img:'assets/cards/MOSASAURUS.jpg.b64', glb:'', qr:'assets/qr/MOSASAURUS.png.b64' },
+  PLESIOSAURUS: { img:'assets/cards/PLESIOSAURUS.jpg.b64', glb:'assets/models/PLESIOSAURUS.glb.b64', qr:'assets/qr/PLESIOSAURUS.png.b64' },
 };
+
+// ---- async asset loader (base64 text files) ----
+const _b64cache = {};
+async function loadB64(url){
+  if(_b64cache[url]) return _b64cache[url];
+  const r = await fetch(url);
+  const txt = await r.text();
+  _b64cache[url] = txt.trim();
+  return _b64cache[url];
+}
+function b64ToBuf(b64){
+  const bin = atob(b64);
+  const buf = new Uint8Array(bin.length);
+  for(let i=0;i<bin.length;i++) buf[i]=bin.charCodeAt(i);
+  return buf.buffer;
+}
 
 // ---- tabs ----
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
@@ -5390,7 +5406,8 @@ function buildDex32(){
     Object.keys(DINOS).forEach(id=>{
       const d=DINOS[id]; if(d.period!==p.id) return;
       const el=document.createElement('div'); el.className='dcard';
-      el.innerHTML=`<img src="${ASSETS[id].img}"><div class="nm">${d.name}</div><div class="en">${d.en}</div>`+(d.has3D?'':'<div class="no3dTag">2D</div>');
+      el.innerHTML=`<img data-b64="${ASSETS[id].img}" src=""><div class="nm">${d.name}</div><div class="en">${d.en}</div>`;
+      loadB64(ASSETS[id].img).then(b64=>{ el.querySelector('img').src='data:image/jpeg;base64,'+b64; });+(d.has3D?'':'<div class="no3dTag">2D</div>');
       el.onclick=()=>window.DinoViewer.open(id);
       g.appendChild(el);
     });
@@ -5403,7 +5420,9 @@ const cl=document.getElementById('cardList');
 Object.keys(DINOS).forEach(id=>{
   const d=DINOS[id], el=document.createElement('div');
   el.className='pcard';
-  el.innerHTML=`<img class="dino" src="${ASSETS[id].img}"><div class="body"><div class="info"><h3>${d.name}</h3><p>${d.en}</p><p>${d.period}・${d.diet}</p><p>${d.size}・${d.weight}</p></div><img class="qr" src="${ASSETS[id].qr}"></div>`;
+  el.innerHTML=`<img class="dino" src=""><div class="body"><div class="info"><h3>${d.name}</h3><p>${d.en}</p><p>${d.period}・${d.diet}</p><p>${d.size}・${d.weight}</p></div><img class="qr" src=""></div>`;
+  loadB64(ASSETS[id].img).then(b64=>{ el.querySelector('img.dino').src='data:image/jpeg;base64,'+b64; });
+  loadB64(ASSETS[id].qr).then(b64=>{ el.querySelector('img.qr').src='data:image/png;base64,'+b64; });
   cl.appendChild(el);
 });
 // ---- scanner ----
@@ -5540,7 +5559,7 @@ window.DinoViewer={
     currentId=id; const d=DINOS[id];
     const v2d=document.getElementById('view2d');
     if(!d.has3D){
-      document.getElementById('img2d').src=ASSETS[id].img;
+      loadB64(ASSETS[id].img).then(b64=>{ document.getElementById('img2d').src='data:image/jpeg;base64,'+b64; });
       v2d.classList.add('active');
       document.getElementById('tagName').textContent=d.name;
       document.getElementById('tagEn').textContent=d.en;
@@ -5557,7 +5576,8 @@ window.DinoViewer={
     if(model) scene.remove(model);
     mixer=null; actions={}; model=null;
     toast('召喚'+d.name+'中…');
-    loader.load(ASSETS[id].glb,(gltf)=>{
+    loadB64(ASSETS[id].glb).then(b64=>{
+    loader.parse(b64ToBuf(b64),'',(gltf)=>{
       model=gltf.scene;
       model.traverse(o=>{ if(o.isMesh){ o.castShadow=true; } });
       const box=new THREE.Box3().setFromObject(model), size=box.getSize(new THREE.Vector3());
@@ -5569,6 +5589,7 @@ window.DinoViewer={
       gltf.animations.forEach(cl=>{ actions[cl.name]=mixer.clipAction(cl); });
       play('idle'); toast(d.name+'登場！');
     },(e)=>toast('模型載入失敗'));
+    });
   },
   close(){ view.classList.remove('active'); }
 };
