@@ -5268,7 +5268,7 @@ else
   <button data-v="cards">卡片</button>
 </nav>
 <main>
-  <section id="view-dex" class="view active"><div class="grid" id="dexGrid"></div></section>
+  <section id="view-dex" class="view active"><input id="dexSearch" type="search" placeholder="搜尋恐龍…（中文／英文）"><div id="periodTabs"></div><div class="grid" id="dexGrid"></div></section>
   <section id="view-scan" class="view">
     <div id="scanWrap"><video id="scanVideo" playsinline muted></video><div id="scanBox"></div></div>
     <p id="scanTip">把卡片上的 QR 碼對準框框</p>
@@ -5439,7 +5439,7 @@ function buildDex32(){
   });
   if(!grid.innerHTML) grid.innerHTML='<p class="empty">找不到符合的恐龍</p>';
 }
-document.getElementById('dexSearch').addEventListener('input',e=>{ searchQ=e.target.value; buildDex32(); });
+const _ds=document.getElementById('dexSearch'); if(_ds) _ds.addEventListener('input',e=>{ searchQ=e.target.value; buildDex32(); });
 buildPeriodTabs(); buildDex32();
 // ---- print cards ----
 const cl=document.getElementById('cardList');
