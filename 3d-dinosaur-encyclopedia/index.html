@@ -22,6 +22,11 @@
   @media (min-width:700px){ .grid{ grid-template-columns:repeat(3,1fr);} }
   @media (min-width:1024px){ .grid{ grid-template-columns:repeat(4,1fr);} }
   #cardList { max-width:520px; margin:0 auto; }
+  #dexSearch { width:100%; padding:10px 14px; margin:0 0 10px; border-radius:12px; border:1px solid #2a3350; background:#12172a; color:#fff; font-size:15px; box-sizing:border-box; }
+  #periodTabs { display:flex; gap:8px; margin-bottom:14px; overflow-x:auto; padding-bottom:4px; }
+  .ptab { flex:0 0 auto; padding:8px 16px; border-radius:20px; border:1px solid #2a3350; background:#12172a; color:#8b95a9; font-size:14px; }
+  .ptab.active { background:#2b6cff; border-color:#2b6cff; color:#fff; }
+  .empty { color:#8b95a9; text-align:center; padding:40px 0; }
   .periodSec { margin-bottom:28px; }
   .periodTitle { font-size:20px; margin:0 0 2px; color:#fff; }
   .periodTitle span { font-size:13px; color:#8b95a9; font-weight:normal; }
@@ -5395,26 +5400,47 @@ document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
   document.getElementById('view-'+b.dataset.v).classList.add('active');
   if(b.dataset.v!=='scan') stopCamera();
 });
-// ---- dex grid (grouped by period) ----
+// ---- dex grid with period tabs + search ----
 const grid=document.getElementById('dexGrid');
+let activePeriod='all', searchQ='';
+function buildPeriodTabs(){
+  const pt=document.getElementById('periodTabs'); pt.innerHTML='';
+  const mk=(id,label)=>{
+    const b=document.createElement('button');
+    b.className='ptab'+(activePeriod===id?' active':''); b.textContent=label;
+    b.onclick=()=>{ activePeriod=id; buildPeriodTabs(); buildDex32(); };
+    pt.appendChild(b);
+  };
+  mk('all','全部'); PERIODS.forEach(p=>mk(p.id,p.name));
+}
 function buildDex32(){
   grid.innerHTML='';
+  const q=searchQ.trim().toLowerCase();
   PERIODS.forEach(p=>{
+    if(activePeriod!=='all'&&activePeriod!==p.id) return;
+    const ids=Object.keys(DINOS).filter(id=>{
+      const d=DINOS[id]; if(d.period!==p.id) return false;
+      if(!q) return true;
+      return d.name.includes(searchQ.trim())||d.en.toLowerCase().includes(q);
+    });
+    if(!ids.length) return;
     const sec=document.createElement('div'); sec.className='periodSec';
-    sec.innerHTML=`<h2 class="periodTitle">${p.name} <span>${p.en}</span></h2><p class="periodDesc">${p.desc}</p><div class="grid"></div>`;
+    sec.innerHTML=`<h2 class="periodTitle">${p.name} <span>${p.en}</span></h2><div class="grid"></div>`;
     const g=sec.querySelector('.grid');
-    Object.keys(DINOS).forEach(id=>{
-      const d=DINOS[id]; if(d.period!==p.id) return;
+    ids.forEach(id=>{
+      const d=DINOS[id];
       const el=document.createElement('div'); el.className='dcard';
-      el.innerHTML=`<img data-b64="${ASSETS[id].img}" src=""><div class="nm">${d.name}</div><div class="en">${d.en}</div>`;
-      loadB64(ASSETS[id].img).then(b64=>{ el.querySelector('img').src='data:image/jpeg;base64,'+b64; });+(d.has3D?'':'<div class="no3dTag">2D</div>');
+      el.innerHTML=`<img src=""><div class="nm">${d.name}</div><div class="en">${d.en}</div>`+(d.has3D?'':'<div class="no3dTag">2D</div>');
+      loadB64(ASSETS[id].img).then(b64=>{ const im=el.querySelector('img'); if(im) im.src='data:image/jpeg;base64,'+b64; });
       el.onclick=()=>window.DinoViewer.open(id);
       g.appendChild(el);
     });
     grid.appendChild(sec);
   });
+  if(!grid.innerHTML) grid.innerHTML='<p class="empty">找不到符合的恐龍</p>';
 }
-buildDex32();
+document.getElementById('dexSearch').addEventListener('input',e=>{ searchQ=e.target.value; buildDex32(); });
+buildPeriodTabs(); buildDex32();
 // ---- print cards ----
 const cl=document.getElementById('cardList');
 Object.keys(DINOS).forEach(id=>{
@@ -5509,9 +5535,9 @@ glBox.prepend(renderer.domElement);
 const scene=new THREE.Scene();
 scene.background=null;
 const camera=new THREE.PerspectiveCamera(45,1,0.1,100);
-camera.position.set(2.6,1.8,3.2);
+camera.position.set(2.0,1.5,2.6);
 const controls=new THREE.OrbitControls(camera,renderer.domElement);
-controls.enableDamping=true; controls.target.set(0,0.7,0);
+controls.enableDamping=true; controls.target.set(0,1.0,0);
 controls.maxPolarAngle=Math.PI/2.05; controls.minDistance=1.5; controls.maxDistance=8;
 scene.add(new THREE.HemisphereLight(0xbfd4ff,0x33415e,1.1));
 const sun=new THREE.DirectionalLight(0xffffff,1.6);
@@ -5581,7 +5607,7 @@ window.DinoViewer={
       model=gltf.scene;
       model.traverse(o=>{ if(o.isMesh){ o.castShadow=true; } });
       const box=new THREE.Box3().setFromObject(model), size=box.getSize(new THREE.Vector3());
-      const s=2.0/Math.max(size.x,size.y,size.z); model.scale.setScalar(s);
+      const s=3.2/Math.max(size.x,size.y,size.z); model.scale.setScalar(s);
       const c=box.getCenter(new THREE.Vector3());
       model.position.set(-c.x*s, -box.min.y*s, -c.z*s);
       scene.add(model);
