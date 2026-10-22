@@ -5378,12 +5378,14 @@ const ASSETS = {
 
 // ---- async asset loader (base64 text files) ----
 const _b64cache = {};
+const ASSET_V='v20261022c';
 async function loadB64(url){
-  if(_b64cache[url]) return _b64cache[url];
-  const r = await fetch(url);
+  const vurl=url+'?'+ASSET_V;
+  if(_b64cache[vurl]) return _b64cache[vurl];
+  const r = await fetch(vurl);
   const txt = await r.text();
-  _b64cache[url] = txt.trim();
-  return _b64cache[url];
+  _b64cache[vurl] = txt.trim();
+  return _b64cache[vurl];
 }
 function b64ToBuf(b64){
   const bin = atob(b64);
