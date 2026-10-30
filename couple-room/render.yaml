@@ -1,0 +1,18 @@
+# Render Blueprint for the couple-room Socket.io server — FREE TIER ONLY.
+# Use this file when the whole couple-room/ folder is the root of a GitHub
+# repository (a new private repo is fine; Render's free tier works with
+# private repos). Render reads render.yaml from the repository root.
+# No database is used: rooms live in server memory only, so a sleeping
+# service waking up starts with empty rooms — that is expected behaviour.
+services:
+  - type: web
+    name: couple-room-server
+    env: node
+    plan: free
+    rootDir: .
+    buildCommand: npm --prefix server install && npm --prefix server run build
+    startCommand: node server/dist/index.js
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      # Render sets PORT itself; server/src/index.ts already reads process.env.PORT.
