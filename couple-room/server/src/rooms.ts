@@ -47,5 +47,5 @@ export function removePlayerFromRoom(code: string, playerId: string): Room | und
 
 export function spawnFor(index: number): { x: number; y: number } {
   // Two distinct, original spawn points inside the room.
-  return index === 0 ? { x: 220, y: 430 } : { x: 580, y: 430 };
+  return index === 0 ? { x: 400, y: 480 } : { x: 880, y: 480 };
 }

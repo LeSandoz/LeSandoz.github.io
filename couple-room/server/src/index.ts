@@ -156,8 +156,8 @@ io.on('connection', (socket: Socket) => {
     const room = getOrCreateRoom(st.roomCode);
     const player = room.players.find((p) => p.id === socket.id);
     if (!player || player.action === 'sit' || player.action === 'hug') return;
-    if (typeof data.x === 'number') player.x = Math.max(40, Math.min(760, data.x));
-    if (typeof data.y === 'number') player.y = Math.max(120, Math.min(560, data.y));
+    if (typeof data.x === 'number') player.x = Math.max(60, Math.min(1220, data.x));
+    if (typeof data.y === 'number') player.y = Math.max(180, Math.min(600, data.y));
     if (data.direction) player.direction = data.direction;
     player.action = data.action === 'walk' ? 'walk' : 'idle';
     socket.to(st.roomCode).emit('player-moved', { player });
