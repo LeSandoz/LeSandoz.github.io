@@ -156,8 +156,8 @@ io.on('connection', (socket: Socket) => {
     const room = getOrCreateRoom(st.roomCode);
     const player = room.players.find((p) => p.id === socket.id);
     if (!player || player.action === 'sit' || player.action === 'hug') return;
-    if (typeof data.x === 'number') player.x = Math.max(60, Math.min(1220, data.x));
-    if (typeof data.y === 'number') player.y = Math.max(180, Math.min(600, data.y));
+    if (typeof data.x === 'number') player.x = Math.max(80, Math.min(2480, data.x));
+    if (typeof data.y === 'number') player.y = Math.max(200, Math.min(920, data.y));
     if (data.direction) player.direction = data.direction;
     player.action = data.action === 'walk' ? 'walk' : 'idle';
     socket.to(st.roomCode).emit('player-moved', { player });
@@ -213,6 +213,11 @@ io.on('connection', (socket: Socket) => {
       return;
     }
     if (pendingHugs.has(code)) return;
+    const requester = getOrCreateRoom(code).players.find((p) => p.id === socket.id);
+    if (requester && Math.hypot(target.x - requester.x, target.y - requester.y) > 600) {
+      socket.emit('hug-error', { message: 'Walk closer to the other player first, then hug!' });
+      return;
+    }
     const timeout = setTimeout(() => {
       pendingHugs.delete(code);
       io.to(code).emit('hug-cancelled', { reason: 'timeout' });
@@ -246,6 +251,19 @@ io.on('connection', (socket: Socket) => {
   socket.on('punch', () => {
     const st = stateBySocket.get(socket.id);
     if (!st?.roomCode) return;
+    const code = st.roomCode;
+    const room = getOrCreateRoom(code);
+    const player = room.players.find((p) => p.id === socket.id);
+    if (!player || player.action === 'sit') return;
+    const target = otherPlayer(code, socket.id);
+    if (!target) {
+      socket.emit('punch-error', { message: 'Nobody else is in the room to punch.' });
+      return;
+    }
+    if (Math.hypot(target.x - player.x, target.y - player.y) > 600) {
+      socket.emit('punch-error', { message: 'Walk closer to the other player first, then punch!' });
+      return;
+    }
     const now = Date.now();
     const last = lastPunchAt.get(socket.id) ?? 0;
     if (now - last < 2000) {
@@ -253,12 +271,8 @@ io.on('connection', (socket: Socket) => {
       return;
     }
     lastPunchAt.set(socket.id, now);
-    const code = st.roomCode;
-    const room = getOrCreateRoom(code);
-    const player = room.players.find((p) => p.id === socket.id);
-    if (!player || player.action === 'sit') return;
     player.action = 'punch';
-    io.to(code).emit('player-punched', { playerId: socket.id });
+    io.to(code).emit('player-punched', { attackerId: socket.id, targetId: target.id });
     setTimeout(() => {
       const p = getOrCreateRoom(code).players.find((x) => x.id === socket.id);
       if (p && p.action === 'punch') p.action = 'idle';
