@@ -5,6 +5,7 @@ import {
   getOrCreateRoom,
   normalizeCode,
   removePlayerFromRoom,
+  rooms,
   seats,
   spawnFor,
 } from './rooms.js';
@@ -15,7 +16,15 @@ const httpServer = createServer((_req, res) => {
   res.writeHead(200, { 'content-type': 'text/plain' });
   res.end('couple-room server is running\n');
 });
-const io = new Server(httpServer, { cors: { origin: '*' } });
+const io = new Server(httpServer, {
+  cors: { origin: '*' },
+  // Detect a dead / closed mobile tab faster than the Socket.io defaults
+  // (25s interval + 20s timeout = ~45s before disconnect fires). 10s + 10s
+  // means a closed tab is normally swept in ~20s. The client auto-reconnects
+  // and re-joins on 'connect', so a brief background disconnect recovers.
+  pingInterval: 10_000,
+  pingTimeout: 10_000,
+});
 
 interface SocketState {
   roomCode: string | null;
@@ -49,6 +58,43 @@ function clearPendingHug(code: string, reason: 'accepted' | 'declined' | 'cancel
 io.on('connection', (socket: Socket) => {
   stateBySocket.set(socket.id, { roomCode: null, playerName: '' });
 
+  // Safety net: remove this socket from EVERY room, not just the one in
+  // stateBySocket. A socket can leak into an old room if join-room used to
+  // overwrite roomCode without leaving, or if state was lost mid-reconnect.
+  // Sweeping all rooms makes such a leak impossible to survive a leave or
+  // disconnect. Seats are freed by removePlayerFromRoom for each room.
+  function leaveAllRooms(s: Socket, playerName: string) {
+    for (const code of [...rooms.keys()]) {
+      const room = rooms.get(code);
+      if (!room?.players.some((p) => p.id === s.id)) continue;
+      const pending = pendingHugs.get(code);
+      if (pending && (pending.from === s.id || pending.to === s.id)) {
+        clearTimeout(pending.timeout);
+        pendingHugs.delete(code);
+        io.to(code).emit('hug-cancelled', { reason: 'left' });
+      }
+      removePlayerFromRoom(code, s.id);
+      s.leave(code);
+      io.to(code).emit('player-left', { playerId: s.id, name: playerName });
+    }
+  }
+
+  function leave(s: Socket) {
+    const st = stateBySocket.get(s.id);
+    const name = st?.playerName ?? '';
+    // Leave the tracked room first (preserves the old player-left ordering),
+    // then sweep every room so a leaked copy cannot survive.
+    if (st?.roomCode) {
+      clearPendingHug(st.roomCode, 'left');
+      removePlayerFromRoom(st.roomCode, s.id);
+      s.leave(st.roomCode);
+      io.to(st.roomCode).emit('player-left', { playerId: s.id, name });
+    }
+    leaveAllRooms(s, name);
+    lastPunchAt.delete(s.id);
+    stateBySocket.delete(s.id);
+  }
+
   socket.on('join-room', ({ code, name }: { code: string; name: string }) => {
     const cleanCode = normalizeCode(code);
     const cleanName = String(name ?? '').trim().slice(0, 24) || 'Player';
@@ -56,7 +102,31 @@ io.on('connection', (socket: Socket) => {
       socket.emit('join-error', { message: 'Please enter a room code.' });
       return;
     }
+    const st0 = stateBySocket.get(socket.id);
+    // 1) A socket may only be in one room at a time. Leave any previous
+    // room BEFORE joining a new one — the old code overwrote roomCode
+    // without removing the old player object, leaking it forever.
+    if (st0?.roomCode && st0.roomCode !== cleanCode) {
+      const oldCode = st0.roomCode;
+      clearPendingHug(oldCode, 'left');
+      removePlayerFromRoom(oldCode, socket.id);
+      socket.leave(oldCode);
+      io.to(oldCode).emit('player-left', { playerId: socket.id, name: st0.playerName });
+    }
     const room = getOrCreateRoom(cleanCode);
+    // Idempotent rejoin: the same socket re-joining the room it is already
+    // in (reconnect, double Join click, refresh race) must not count twice
+    // and must not block the room. Just re-send the current state.
+    const existing = room.players.find((p) => p.id === socket.id);
+    if (existing) {
+      existing.name = cleanName;
+      const st = stateBySocket.get(socket.id)!;
+      st.roomCode = cleanCode;
+      st.playerName = cleanName;
+      socket.join(cleanCode);
+      socket.emit('room-state', publicRoom(cleanCode));
+      return;
+    }
     if (room.players.length >= MAX_PLAYERS) {
       socket.emit('room-full', { code: cleanCode, maxPlayers: MAX_PLAYERS });
       return;
@@ -196,23 +266,9 @@ io.on('connection', (socket: Socket) => {
   });
 
   socket.on('leave-room', () => leave(socket));
+  // 'disconnect' fires after the transport is gone; leave() uses io.to()
+  // (not the dead socket) to broadcast, and sweeps all rooms.
   socket.on('disconnect', () => leave(socket));
-
-  function leave(s: Socket) {
-    const st = stateBySocket.get(s.id);
-    if (!st?.roomCode) {
-      stateBySocket.delete(s.id);
-      return;
-    }
-    const code = st.roomCode;
-    clearPendingHug(code, 'left');
-    removePlayerFromRoom(code, s.id);
-    s.leave(code);
-    // Use io.to, not the disconnecting socket: a disconnected socket can no
-    // longer broadcast to its room, so s.to(code) silently drops this event.
-    io.to(code).emit('player-left', { playerId: s.id, name: st.playerName });
-    stateBySocket.delete(s.id);
-  }
 });
 
 httpServer.listen(PORT, () => {
